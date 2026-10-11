@@ -33,6 +33,16 @@ The Instruction-set.txt and Driveway calculator.rtf were read completely. Sectio
 - Export checks reject visible DATA tokens, internal specification/review text, and multiple H1 elements.
 - Source repository: https://github.com/yes155/driveway-calculator. Preview-host editing controls are outside application source.
 
+## Project One design adaptation
+
+- Rebuilt the homepage around the reference's centered hero, floating tilted mockups, dark introduction, mixed-color tool grid, staggered process cards, curved dark section, material gallery, lime FAQ panel, and oversized footer wordmark.
+- Applied one shared off-white/charcoal/lime theme to all routes, including navigation, form controls, results, diagrams, formula panels, guide modules, bylines, sidebars, and trust pages.
+- Added code-native SVG driveway illustrations and calculator preview cards, without external image or font requests.
+- Added responsive layouts and a single-column phone input grid, visible keyboard focus, reduced-motion rules, and print styles.
+- Export verification now requires the shared theme marker on every checked page.
+- Existing calculation behavior, document metadata, and draft data gates are retained. No agency testimonials, projects, statistics, or pricing were copied.
+- Browser pixel, layout, and interaction checks remain unavailable. This is a design adaptation, not a verified pixel-identical reproduction.
+
 ## Executed checks
 
 | Check | Result |

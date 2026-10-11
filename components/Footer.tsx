@@ -34,6 +34,9 @@ export default function Footer() {
           <Link href="/disclosure/">Disclosure</Link>
         </div>
       </div>
+      <div className="footer-watermark" aria-hidden="true">
+        Driveway<span>Calculators.</span>
+      </div>
     </footer>
   );
 }

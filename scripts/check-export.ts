@@ -13,6 +13,8 @@ for (const url of urls) {
     continue;
   }
   const html = fs.readFileSync(file, 'utf8');
+  if (!html.includes('<body class="theme-projectone">'))
+    errors.push('Missing shared design theme ' + url);
   const visibleHtml = html
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '')
     .replace(/<style\b[^>]*>[\s\S]*?<\/style>/g, '');

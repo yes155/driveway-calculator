@@ -27,6 +27,7 @@ driveway-calculators/
 ├── .github/workflows/checks.yml
 ├── docs/
 │   ├── BUILD-STATUS.md
+│   ├── DESIGN-REVIEW.md         # Reference design and shared theme
 │   └── SOURCE-REVIEW.md          # File tree, every text file in full, commands
 ├── next.config.ts
 └── package.json
@@ -37,6 +38,12 @@ driveway-calculators/
 https://driveway-calculators-review.ekselllondon.chatgpt.site
 
 The review preview is separate from the planned GitHub → Cloudflare Pages production deployment. All 51 mapped pages remain drafts. Shared metadata, navigation, homepage cards, and calculator introductions have been corrected across the site.
+
+## Project One design adaptation
+
+The reference design at https://www.projectone.website/ is adapted to the driveway tools: off-white, charcoal, and lime colors; a dark pill navigation bar; a centered oversized hero with floating calculator mockups; mixed-color tool tiles; staggered process cards; curved dark sections; a lime FAQ panel; and a large footer wordmark. Code-native SVG driveway illustrations replace the reference's agency project imagery. Shared styles carry the same theme into all calculators, guides, and trust pages.
+
+See `docs/DESIGN-REVIEW.md` for the design mapping and verification limits.
 
 ## Sitewide screenshot corrections
 
@@ -66,8 +73,8 @@ npm run build
 ### GitHub → Cloudflare Pages
 
 1. Use the project repository: https://github.com/yes155/driveway-calculator.
-2. Copy the project contents to the repository root. Do not upload `node_modules`, `.next`, or `.env` files.
-3. Push the source and `package-lock.json` to the repository's production branch.
+2. The source and dependency lockfile are maintained at the repository root on `main`. Keep `node_modules`, `.next`, and `.env` files out of Git.
+3. Push future source changes to `main`.
 4. In Cloudflare, choose Workers & Pages → Create → Pages → Connect to Git. Select that repository.
 5. Use these build settings:
 
@@ -161,4 +168,4 @@ GA4 is optional and absent by default. A configured GA4 script loads after the f
 
 The static build, source validator, export checks, and 116 tests pass. Browser interaction, keyboard/phone checks, Lighthouse, field INP, and live lead integrations were not executed in the build environment. GitHub Actions includes a mobile Lighthouse job for home, asphalt tool, and asphalt cost guide, with the requested score/LCP/CLS budgets. Total blocking time is a lab diagnostic; it does not verify field INP.
 
-The source is prepared for synchronization to https://github.com/yes155/driveway-calculator. Cloudflare Pages account setup and its Git integration remain unverified.
+The source is synchronized to https://github.com/yes155/driveway-calculator. Cloudflare Pages account setup and its Git integration remain unverified.

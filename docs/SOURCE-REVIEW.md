@@ -1,176 +1,178 @@
-# BUILD — File tree and full source
+# BUILD — Complete source review
 
-The project is a draft. See README.md for data and launch requirements.
+The source tree, full source files, and local commands are collected below. Generated build output and dependency installation directories are excluded.
 
 ## File tree
 
 ```text
-driveway-calculators/
-  .env.example
-  .github/workflows/checks.yml
-  .gitignore
-  .prettierrc.json
-  README.md
-  app/about/page.tsx
-  app/asphalt-calculator/page.tsx
-  app/asphalt-cold-patch/page.tsx
-  app/asphalt-driveway-cost-calculator/page.tsx
-  app/asphalt-driveway-cost/page.tsx
-  app/asphalt-driveway-maintenance/page.tsx
-  app/asphalt-driveway-repair-cost/page.tsx
-  app/asphalt-driveway-thickness/page.tsx
-  app/asphalt-millings-calculator/page.tsx
-  app/asphalt-millings-cost/page.tsx
-  app/author/farrukh-abdullah/page.tsx
-  app/concrete-calculator/page.tsx
-  app/concrete-driveway-cost-calculator/page.tsx
-  app/concrete-driveway-cost/page.tsx
-  app/concrete-driveway-repair-cost/page.tsx
-  app/concrete-slab-cost-calculator/page.tsx
-  app/concrete-slab-cost/page.tsx
-  app/concrete-vs-asphalt-driveway/page.tsx
-  app/concrete-weight-per-cubic-yard/page.tsx
-  app/contact/page.tsx
-  app/crusher-run-calculator/page.tsx
-  app/cubic-yards-to-tons/page.tsx
-  app/disclosure/page.tsx
-  app/driveway-cost-calculator/page.tsx
-  app/driveway-cost/page.tsx
-  app/driveway-crack-filler/page.tsx
-  app/driveway-drainage/page.tsx
-  app/driveway-repair-cost/page.tsx
-  app/driveway-replacement-cost/page.tsx
-  app/driveway-sealcoating-cost/page.tsx
-  app/driveway-sealer/page.tsx
-  app/globals.css
-  app/gravel-calculator/page.tsx
-  app/gravel-driveway-calculator/page.tsx
-  app/gravel-driveway-cost/page.tsx
-  app/gravel-driveway/page.tsx
-  app/gravel-weight-per-cubic-yard/page.tsx
-  app/hot-mix-asphalt/page.tsx
-  app/how-to-lay-an-asphalt-driveway/page.tsx
-  app/how-to-repair-asphalt-driveway-cracks/page.tsx
-  app/how-to-repair-concrete-driveway-cracks/page.tsx
-  app/how-to-seal-a-driveway/page.tsx
-  app/layout.tsx
-  app/material-weights/page.tsx
-  app/methodology/page.tsx
-  app/not-found.tsx
-  app/page.tsx
-  app/paver-calculator/page.tsx
-  app/paver-driveway-cost/page.tsx
-  app/pea-gravel-calculator/page.tsx
-  app/privacy/page.tsx
-  app/repave-asphalt-driveway-cost/page.tsx
-  app/replace-concrete-driveway-cost/page.tsx
-  app/road-base-calculator/page.tsx
-  app/robots.ts
-  app/rock-calculator/page.tsx
-  app/sealcoat-calculator/page.tsx
-  app/sitemap.ts
-  app/stamped-concrete-driveway-cost/page.tsx
-  app/standard-driveway-width/page.tsx
-  app/tar-and-chip-driveway-cost/page.tsx
-  app/terms/page.tsx
-  components/Analytics.tsx
-  components/Calculator.tsx
-  components/DraftGuidance.tsx
-  components/Footer.tsx
-  components/Header.tsx
-  components/HelpfulVote.tsx
-  components/Modules.tsx
-  components/Navigation.tsx
-  components/QuoteCTA.tsx
-  components/ShapeDiagram.tsx
-  content/asphalt-calculator.mdx
-  content/asphalt-cold-patch.mdx
-  content/asphalt-driveway-cost-calculator.mdx
-  content/asphalt-driveway-cost.mdx
-  content/asphalt-driveway-maintenance.mdx
-  content/asphalt-driveway-repair-cost.mdx
-  content/asphalt-driveway-thickness.mdx
-  content/asphalt-millings-calculator.mdx
-  content/asphalt-millings-cost.mdx
-  content/concrete-calculator.mdx
-  content/concrete-driveway-cost-calculator.mdx
-  content/concrete-driveway-cost.mdx
-  content/concrete-driveway-repair-cost.mdx
-  content/concrete-slab-cost-calculator.mdx
-  content/concrete-slab-cost.mdx
-  content/concrete-vs-asphalt-driveway.mdx
-  content/concrete-weight-per-cubic-yard.mdx
-  content/crusher-run-calculator.mdx
-  content/cubic-yards-to-tons.mdx
-  content/driveway-cost-calculator.mdx
-  content/driveway-cost.mdx
-  content/driveway-crack-filler.mdx
-  content/driveway-drainage.mdx
-  content/driveway-repair-cost.mdx
-  content/driveway-replacement-cost.mdx
-  content/driveway-sealcoating-cost.mdx
-  content/driveway-sealer.mdx
-  content/gravel-calculator.mdx
-  content/gravel-driveway-calculator.mdx
-  content/gravel-driveway-cost.mdx
-  content/gravel-driveway.mdx
-  content/gravel-weight-per-cubic-yard.mdx
-  content/home.mdx
-  content/hot-mix-asphalt.mdx
-  content/how-to-lay-an-asphalt-driveway.mdx
-  content/how-to-repair-asphalt-driveway-cracks.mdx
-  content/how-to-repair-concrete-driveway-cracks.mdx
-  content/how-to-seal-a-driveway.mdx
-  content/material-weights.mdx
-  content/methodology.mdx
-  content/paver-calculator.mdx
-  content/paver-driveway-cost.mdx
-  content/pea-gravel-calculator.mdx
-  content/repave-asphalt-driveway-cost.mdx
-  content/replace-concrete-driveway-cost.mdx
-  content/road-base-calculator.mdx
-  content/rock-calculator.mdx
-  content/sealcoat-calculator.mdx
-  content/stamped-concrete-driveway-cost.mdx
-  content/standard-driveway-width.mdx
-  content/tar-and-chip-driveway-cost.mdx
-  data/defaults.json
-  data/launch-checklist.json
-  data/pages.json
-  data/prices.json
-  data/reviewers.json
-  data/schema.sql
-  data/source-metadata.json
-  data/sources.json
-  docs/BUILD-STATUS.md
-  eslint.config.mjs
-  functions/api/lead.ts
-  lib/analytics.ts
-  lib/calc/compare.ts
-  lib/calc/index.ts
-  lib/calc/ui.ts
-  lib/config.ts
-  lib/content.ts
-  lib/format.ts
-  lib/metadata-validation.ts
-  lib/page.tsx
-  lib/seo/index.tsx
-  lighthouserc.cjs
-  next-env.d.ts
-  next.config.ts
-  package-lock.json
-  package.json
-  postcss.config.mjs
-  public/_headers
-  public/icon.svg
-  scripts/check-export.ts
-  scripts/validate.ts
-  tests/calculators.test.ts
-  tests/lead.test.ts
-  tests/metadata.test.ts
-  tsconfig.json
-  vitest.config.ts
-  docs/SOURCE-REVIEW.md
+.env.example
+.github/workflows/checks.yml
+.gitignore
+.prettierrc.json
+README.md
+app/about/page.tsx
+app/asphalt-calculator/page.tsx
+app/asphalt-cold-patch/page.tsx
+app/asphalt-driveway-cost-calculator/page.tsx
+app/asphalt-driveway-cost/page.tsx
+app/asphalt-driveway-maintenance/page.tsx
+app/asphalt-driveway-repair-cost/page.tsx
+app/asphalt-driveway-thickness/page.tsx
+app/asphalt-millings-calculator/page.tsx
+app/asphalt-millings-cost/page.tsx
+app/author/farrukh-abdullah/page.tsx
+app/concrete-calculator/page.tsx
+app/concrete-driveway-cost-calculator/page.tsx
+app/concrete-driveway-cost/page.tsx
+app/concrete-driveway-repair-cost/page.tsx
+app/concrete-slab-cost-calculator/page.tsx
+app/concrete-slab-cost/page.tsx
+app/concrete-vs-asphalt-driveway/page.tsx
+app/concrete-weight-per-cubic-yard/page.tsx
+app/contact/page.tsx
+app/crusher-run-calculator/page.tsx
+app/cubic-yards-to-tons/page.tsx
+app/disclosure/page.tsx
+app/driveway-cost-calculator/page.tsx
+app/driveway-cost/page.tsx
+app/driveway-crack-filler/page.tsx
+app/driveway-drainage/page.tsx
+app/driveway-repair-cost/page.tsx
+app/driveway-replacement-cost/page.tsx
+app/driveway-sealcoating-cost/page.tsx
+app/driveway-sealer/page.tsx
+app/globals.css
+app/gravel-calculator/page.tsx
+app/gravel-driveway-calculator/page.tsx
+app/gravel-driveway-cost/page.tsx
+app/gravel-driveway/page.tsx
+app/gravel-weight-per-cubic-yard/page.tsx
+app/hot-mix-asphalt/page.tsx
+app/how-to-lay-an-asphalt-driveway/page.tsx
+app/how-to-repair-asphalt-driveway-cracks/page.tsx
+app/how-to-repair-concrete-driveway-cracks/page.tsx
+app/how-to-seal-a-driveway/page.tsx
+app/layout.tsx
+app/material-weights/page.tsx
+app/methodology/page.tsx
+app/not-found.tsx
+app/page.tsx
+app/paver-calculator/page.tsx
+app/paver-driveway-cost/page.tsx
+app/pea-gravel-calculator/page.tsx
+app/privacy/page.tsx
+app/repave-asphalt-driveway-cost/page.tsx
+app/replace-concrete-driveway-cost/page.tsx
+app/road-base-calculator/page.tsx
+app/robots.ts
+app/rock-calculator/page.tsx
+app/sealcoat-calculator/page.tsx
+app/sitemap.ts
+app/stamped-concrete-driveway-cost/page.tsx
+app/standard-driveway-width/page.tsx
+app/tar-and-chip-driveway-cost/page.tsx
+app/terms/page.tsx
+components/Analytics.tsx
+components/Calculator.tsx
+components/DraftGuidance.tsx
+components/Footer.tsx
+components/Header.tsx
+components/HelpfulVote.tsx
+components/HeroCollage.tsx
+components/MaterialGraphic.tsx
+components/Modules.tsx
+components/Navigation.tsx
+components/QuoteCTA.tsx
+components/ShapeDiagram.tsx
+content/asphalt-calculator.mdx
+content/asphalt-cold-patch.mdx
+content/asphalt-driveway-cost-calculator.mdx
+content/asphalt-driveway-cost.mdx
+content/asphalt-driveway-maintenance.mdx
+content/asphalt-driveway-repair-cost.mdx
+content/asphalt-driveway-thickness.mdx
+content/asphalt-millings-calculator.mdx
+content/asphalt-millings-cost.mdx
+content/concrete-calculator.mdx
+content/concrete-driveway-cost-calculator.mdx
+content/concrete-driveway-cost.mdx
+content/concrete-driveway-repair-cost.mdx
+content/concrete-slab-cost-calculator.mdx
+content/concrete-slab-cost.mdx
+content/concrete-vs-asphalt-driveway.mdx
+content/concrete-weight-per-cubic-yard.mdx
+content/crusher-run-calculator.mdx
+content/cubic-yards-to-tons.mdx
+content/driveway-cost-calculator.mdx
+content/driveway-cost.mdx
+content/driveway-crack-filler.mdx
+content/driveway-drainage.mdx
+content/driveway-repair-cost.mdx
+content/driveway-replacement-cost.mdx
+content/driveway-sealcoating-cost.mdx
+content/driveway-sealer.mdx
+content/gravel-calculator.mdx
+content/gravel-driveway-calculator.mdx
+content/gravel-driveway-cost.mdx
+content/gravel-driveway.mdx
+content/gravel-weight-per-cubic-yard.mdx
+content/home.mdx
+content/hot-mix-asphalt.mdx
+content/how-to-lay-an-asphalt-driveway.mdx
+content/how-to-repair-asphalt-driveway-cracks.mdx
+content/how-to-repair-concrete-driveway-cracks.mdx
+content/how-to-seal-a-driveway.mdx
+content/material-weights.mdx
+content/methodology.mdx
+content/paver-calculator.mdx
+content/paver-driveway-cost.mdx
+content/pea-gravel-calculator.mdx
+content/repave-asphalt-driveway-cost.mdx
+content/replace-concrete-driveway-cost.mdx
+content/road-base-calculator.mdx
+content/rock-calculator.mdx
+content/sealcoat-calculator.mdx
+content/stamped-concrete-driveway-cost.mdx
+content/standard-driveway-width.mdx
+content/tar-and-chip-driveway-cost.mdx
+data/defaults.json
+data/launch-checklist.json
+data/pages.json
+data/prices.json
+data/reviewers.json
+data/schema.sql
+data/source-metadata.json
+data/sources.json
+docs/BUILD-STATUS.md
+docs/DESIGN-REVIEW.md
+eslint.config.mjs
+functions/api/lead.ts
+lib/analytics.ts
+lib/calc/compare.ts
+lib/calc/index.ts
+lib/calc/ui.ts
+lib/config.ts
+lib/content.ts
+lib/format.ts
+lib/metadata-validation.ts
+lib/page.tsx
+lib/seo/index.tsx
+lighthouserc.cjs
+next-env.d.ts
+next.config.ts
+package-lock.json
+package.json
+postcss.config.mjs
+public/_headers
+public/icon.svg
+scripts/check-export.ts
+scripts/validate.ts
+tests/calculators.test.ts
+tests/lead.test.ts
+tests/metadata.test.ts
+tsconfig.json
+vitest.config.ts
+docs/SOURCE-REVIEW.md
 ```
 
 ## .env.example
@@ -275,6 +277,7 @@ driveway-calculators/
 ├── .github/workflows/checks.yml
 ├── docs/
 │   ├── BUILD-STATUS.md
+│   ├── DESIGN-REVIEW.md         # Reference design and shared theme
 │   └── SOURCE-REVIEW.md          # File tree, every text file in full, commands
 ├── next.config.ts
 └── package.json
@@ -285,6 +288,12 @@ driveway-calculators/
 https://driveway-calculators-review.ekselllondon.chatgpt.site
 
 The review preview is separate from the planned GitHub → Cloudflare Pages production deployment. All 51 mapped pages remain drafts. Shared metadata, navigation, homepage cards, and calculator introductions have been corrected across the site.
+
+## Project One design adaptation
+
+The reference design at https://www.projectone.website/ is adapted to the driveway tools: off-white, charcoal, and lime colors; a dark pill navigation bar; a centered oversized hero with floating calculator mockups; mixed-color tool tiles; staggered process cards; curved dark sections; a lime FAQ panel; and a large footer wordmark. Code-native SVG driveway illustrations replace the reference's agency project imagery. Shared styles carry the same theme into all calculators, guides, and trust pages.
+
+See `docs/DESIGN-REVIEW.md` for the design mapping and verification limits.
 
 ## Sitewide screenshot corrections
 
@@ -314,8 +323,8 @@ npm run build
 ### GitHub → Cloudflare Pages
 
 1. Use the project repository: https://github.com/yes155/driveway-calculator.
-2. Copy the project contents to the repository root. Do not upload `node_modules`, `.next`, or `.env` files.
-3. Push the source and `package-lock.json` to the repository's production branch.
+2. The source and dependency lockfile are maintained at the repository root on `main`. Keep `node_modules`, `.next`, and `.env` files out of Git.
+3. Push future source changes to `main`.
 4. In Cloudflare, choose Workers & Pages → Create → Pages → Connect to Git. Select that repository.
 5. Use these build settings:
 
@@ -409,7 +418,7 @@ GA4 is optional and absent by default. A configured GA4 script loads after the f
 
 The static build, source validator, export checks, and 116 tests pass. Browser interaction, keyboard/phone checks, Lighthouse, field INP, and live lead integrations were not executed in the build environment. GitHub Actions includes a mobile Lighthouse job for home, asphalt tool, and asphalt cost guide, with the requested score/LCP/CLS budgets. Total blocking time is a lab diagnostic; it does not verify field INP.
 
-The source is prepared for synchronization to https://github.com/yes155/driveway-calculator. Cloudflare Pages account setup and its Git integration remain unverified.
+The source is synchronized to https://github.com/yes155/driveway-calculator. Cloudflare Pages account setup and its Git integration remain unverified.
 ````
 
 ## app/about/page.tsx
@@ -819,13 +828,14 @@ export default async function Page() {
 ````css
 @import 'tailwindcss';
 :root {
-  --paper: #f7f6f0;
+  --paper: #fafaf8;
   --white: #fff;
-  --ink: #172d35;
-  --muted: #52646a;
-  --line: #d8dfd9;
-  --orange: #b74721;
-  --pale: #edf0e9;
+  --ink: #1d1e1b;
+  --muted: #63655e;
+  --line: #d9dad2;
+  --lime: #c7ff52;
+  --cream: #f0f0e5;
+  --pale: #f2f3ed;
   --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
   --font: Arial, Helvetica, sans-serif;
 }
@@ -834,7 +844,7 @@ export default async function Page() {
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 30px;
+  scroll-padding-top: 24px;
 }
 body {
   margin: 0;
@@ -843,6 +853,7 @@ body {
   font-family: var(--font);
   font-size: 17px;
   line-height: 1.6;
+  color-scheme: light;
 }
 a {
   color: inherit;
@@ -865,14 +876,15 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 summary:focus-visible {
-  outline: 3px solid var(--orange);
+  outline: 3px solid #727d63;
 }
-button {
+button,
+summary {
   cursor: pointer;
 }
 button:disabled {
+  opacity: 0.5;
   cursor: not-allowed;
-  opacity: 0.55;
 }
 h1,
 h2,
@@ -883,637 +895,1065 @@ p {
 h1,
 h2,
 h3 {
-  font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -0.035em;
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.055em;
 }
 h1 {
-  font-size: clamp(36px, 4.6vw, 64px);
+  font-size: clamp(36px, 5vw, 64px);
 }
 h2 {
-  font-size: clamp(28px, 3vw, 40px);
+  font-size: clamp(34px, 4.4vw, 56px);
 }
 h3 {
-  font-size: 24px;
+  font-size: 25px;
 }
 p {
   color: var(--muted);
 }
-.eyebrow {
-  font: 11px/1.4 var(--mono);
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  font-weight: 600;
+mark {
+  color: var(--ink);
+  background: var(--lime);
+  padding: 0 0.08em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
-.orange-dot {
+.eyebrow {
+  font: 11px/1.5 var(--mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+.accent-dot {
   display: inline-block;
   width: 7px;
   height: 7px;
-  background: var(--orange);
   border-radius: 50%;
+  background: var(--lime);
+  border: 1px solid var(--ink);
   margin-right: 8px;
 }
 .skip-link {
   position: absolute;
-  left: 20px;
   top: -100px;
-  z-index: 20;
-  background: white;
-  padding: 10px 20px;
+  left: 20px;
+  z-index: 50;
+  background: var(--lime);
+  padding: 12px 20px;
 }
 .skip-link:focus {
   top: 10px;
 }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 48px;
+  padding: 7px 7px 7px 20px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 700;
+  box-shadow: 0 3px 0 var(--ink);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 var(--ink);
+}
+.button.primary {
+  color: var(--ink);
+  background: var(--lime);
+}
+.button > span:last-child {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: var(--lime);
+  background: var(--ink);
+  font-size: 21px;
+  border-radius: 2px;
+}
+.button.secondary {
+  background: white;
+  color: var(--ink);
+  padding: 12px 16px;
+  box-shadow: none;
+}
+.dark-button {
+  background: var(--ink);
+  color: white;
+  box-shadow: none;
+}
+.dark-button > span:last-child {
+  background: var(--lime);
+  color: var(--ink);
+}
+.arrow-box {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  background: var(--ink);
+  color: var(--lime);
+  border-radius: 3px;
+  font-size: 21px;
+  flex-shrink: 0;
+}
 .site-header {
   background: var(--paper);
-  border-bottom: 1px solid var(--line);
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
 .header-inner {
-  max-width: 1280px;
+  max-width: 1320px;
   margin: auto;
-  padding: 24px 32px;
+  padding: 24px 32px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 24px;
+  position: relative;
 }
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  letter-spacing: -0.035em;
-  font-size: 20px;
-  font-weight: 700;
+  gap: 9px;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.045em;
   white-space: nowrap;
 }
 .brand-mark {
-  width: 35px;
-  height: 35px;
-  background: var(--ink);
-  color: var(--paper);
-  border-radius: 7px;
+  width: 32px;
+  height: 32px;
   display: grid;
   place-items: center;
+  border-radius: 6px;
+  background: var(--lime);
+  color: var(--ink);
+  border: 1px solid var(--ink);
 }
 .brand-mark svg {
-  width: 24px;
-  height: 24px;
+  width: 23px;
+  height: 23px;
 }
-nav {
+.site-header nav {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 18px;
+  padding: 7px 17px;
+  background: var(--ink);
+  color: white;
+  border-radius: 30px;
   font-size: 12px;
   font-weight: 600;
-}
-summary {
-  cursor: pointer;
-  list-style: none;
-}
-summary::-webkit-details-marker {
-  display: none;
-}
-summary span {
-  margin-left: 7px;
-  color: var(--muted);
 }
 .nav-group {
   position: relative;
 }
+.nav-trigger {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  padding: 9px 0;
+  font: inherit;
+  white-space: nowrap;
+}
+.nav-trigger > span {
+  margin-left: 5px;
+  color: var(--lime);
+}
+.nav-trigger:hover,
+.nav-about:hover {
+  color: var(--lime);
+}
+.nav-about {
+  padding: 9px 0;
+}
 .nav-dropdown {
   position: absolute;
-  top: 35px;
-  left: 0;
-  min-width: 290px;
-  max-height: 70vh;
+  top: calc(100% + 15px);
+  left: -10px;
+  width: 305px;
+  max-height: 65dvh;
   overflow-y: auto;
-  padding: 10px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 35px #172d3510;
-  z-index: 12;
+  padding: 9px;
+  color: var(--ink);
+  background: white;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  box-shadow: 0 5px 0 var(--ink);
+  z-index: 30;
+}
+.nav-group:nth-child(n + 3) .nav-dropdown {
+  left: auto;
+  right: -10px;
+}
+.nav-dropdown[hidden] {
+  display: none;
 }
 .nav-dropdown a {
-  display: block;
-  padding: 9px 12px;
-  font-size: 13px;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 9px 11px;
+  font-size: 14px;
+  line-height: 1.4;
   border-bottom: 1px solid var(--line);
+}
+.nav-dropdown a:last-child {
+  border: 0;
 }
 .nav-dropdown a:hover {
-  background: var(--pale);
+  background: var(--lime);
+  border-radius: 4px;
 }
 .header-tool {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
   font-size: 12px;
+  font-weight: 700;
   white-space: nowrap;
-  border-bottom: 1px solid var(--ink);
-  padding-bottom: 2px;
+  background: var(--lime);
+  border: 1px solid var(--ink);
+  border-radius: 3px;
+  padding: 7px 7px 7px 13px;
 }
 .header-tool span {
-  margin-left: 14px;
+  background: var(--ink);
+  color: var(--lime);
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
 }
 .draft-banner {
+  padding: 6px 20px;
   text-align: center;
+  background: var(--cream);
+  color: #606356;
   font-size: 12px;
-  padding: 8px 20px;
-  background: #eceee6;
-  color: #52646a;
+  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
+.section-wrap {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .home-hero {
-  max-width: 1280px;
+  position: relative;
+  max-width: 1320px;
+  min-height: 630px;
   margin: auto;
-  padding: 80px 48px 76px;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 80px;
-  align-items: center;
+  padding: 83px 28px 100px;
+  isolation: isolate;
+}
+.hero-halo {
+  position: absolute;
+  width: 640px;
+  height: 620px;
+  left: 50%;
+  top: -45px;
+  transform: translateX(-50%);
+  background: #f2f2ef;
+  border-radius: 50%;
+  z-index: -1;
+}
+.hero-copy {
+  position: relative;
+  max-width: 630px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 2;
+}
+.hero-kicker {
+  display: inline-block;
+  margin-bottom: 25px;
+  color: var(--muted);
 }
 .hero-copy h1 {
-  font-size: clamp(46px, 5.5vw, 76px);
-  line-height: 1.04;
-  margin: 26px 0;
+  font-size: clamp(58px, 7.1vw, 96px);
+  font-weight: 850;
+  letter-spacing: -0.066em;
+  line-height: 0.97;
+  margin-bottom: 27px;
 }
-.hero-copy em {
+.hero-copy h1 em {
   font-style: normal;
-  color: var(--orange);
 }
 .hero-description {
-  font-size: 18px;
-  line-height: 1.65;
-  max-width: 480px;
-  margin-bottom: 30px;
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 470px;
+  margin: 0 auto 25px;
+  color: #43453f;
 }
 .hero-actions {
   display: flex;
-  align-items: center;
-  gap: 26px;
-  flex-wrap: wrap;
-}
-.button {
-  padding: 14px 20px;
-  border: 1px solid var(--ink);
-  font-size: 14px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
   justify-content: center;
-  gap: 26px;
-  border-radius: 3px;
-  min-height: 48px;
-}
-.primary {
-  background: var(--ink);
-  color: var(--paper);
-}
-.primary:hover {
-  background: #24434d;
-}
-.secondary {
-  background: transparent;
-  color: var(--ink);
-  border-color: var(--line);
-}
-.hero-link {
-  font-size: 13px;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 4px;
-}
-.hero-link span {
-  margin-left: 12px;
 }
 .hero-footnote {
-  display: flex;
-  gap: 18px;
-  font: 10px var(--mono);
+  display: block;
+  font-size: 12px;
+  margin: 22px 0 0;
   color: var(--muted);
-  margin-top: 36px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
-.hero-footnote span + span {
-  border-left: 1px solid var(--line);
-  padding-left: 18px;
+.hero-footnote span {
+  margin: 0 7px;
 }
-.hero-visual {
-  border: 1px solid var(--line);
-  background: #f0f1ea;
-  box-shadow: 12px 12px 0 #e7eae0;
-  padding: 26px;
+.hero-collage {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
-.visual-caption {
+.orbit-card {
+  position: absolute;
+  width: 192px;
+  padding: 9px;
+  background: var(--white);
+  border: 1px solid var(--ink);
+  border-radius: 7px;
+  box-shadow: 7px 8px 0 #d9dbd1;
+  pointer-events: auto;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.orbit-card:hover {
+  z-index: 5;
+  box-shadow: 10px 12px 0 #c7ff52;
+}
+.orbit-1 {
+  left: 3.5%;
+  top: 53px;
+  transform: rotate(-12deg);
+}
+.orbit-2 {
+  right: 3.5%;
+  top: 25px;
+  transform: rotate(14deg);
+}
+.orbit-3 {
+  left: 12%;
+  bottom: 48px;
+  transform: rotate(-14deg);
+}
+.orbit-4 {
+  right: 12%;
+  bottom: 42px;
+  transform: rotate(12deg);
+}
+.mockup-toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 7px;
+  color: var(--muted);
+  padding: 0 1px 7px;
 }
-.unit-badge {
-  font: 10px var(--mono);
-  border: 1px solid var(--line);
-  padding: 4px 7px;
-  border-radius: 3px;
-  white-space: nowrap;
+.mockup-dots {
+  font-size: 5px;
+  letter-spacing: 1px;
 }
-.shape-diagram {
+.material-graphic {
   width: 100%;
   height: auto;
-  color: var(--ink);
+  display: block;
 }
-.shape-diagram text {
-  font: 9px var(--mono);
-  letter-spacing: 0.05em;
-  fill: currentColor;
-}
-.shape-diagram .diagram-label {
-  font-size: 10px;
-  font-weight: 600;
-}
-.hero-visual .shape-diagram {
-  margin: 24px 0 8px;
-}
-.visual-footer {
+.mockup-title {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #cdd6cb;
-  border-bottom: 1px solid #cdd6cb;
-  padding: 15px 0;
-  font: 11px var(--mono);
-}
-.visual-footer code {
   font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+  padding: 10px 0 4px;
 }
-.visual-label {
-  font-size: 11px;
-  margin-top: 18px;
-  color: var(--muted);
+.mockup-unit {
+  display: inline-block;
+  font: 8px/1.3 var(--mono);
+  background: var(--lime);
+  padding: 3px 5px;
 }
-.home-section {
-  max-width: 1280px;
-  margin: auto;
-  padding: 60px 48px;
-}
-.section-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 32px;
-}
-.section-header h2 {
-  margin: 12px 0 0;
-}
-.section-header > a {
-  font-size: 13px;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 5px;
-  white-space: nowrap;
-}
-.section-header > a span {
-  margin-left: 20px;
-}
-.section-header > p {
-  max-width: 330px;
-  font-size: 15px;
-  line-height: 1.65;
-  margin-bottom: 0;
-}
-.featured-section {
-  border-top: 1px solid var(--line);
-}
-.featured-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-.featured-card {
-  padding: 28px;
-  border: 1px solid var(--line);
-  background: var(--white);
-  transition:
-    border-color 0.15s,
-    transform 0.15s;
-}
-.featured-card:hover {
-  border-color: var(--ink);
-  transform: translateY(-3px);
-}
-.card-number {
-  font: 10px var(--mono);
-  letter-spacing: 0.06em;
-  color: var(--muted);
-}
-.featured-card h3 {
-  margin: 40px 0 14px;
-  font-size: 27px;
-  max-width: 250px;
-  min-height: 60px;
-}
-.featured-card p {
-  font-size: 14px;
-  min-height: 45px;
-}
-.card-bottom {
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid var(--line);
-  padding-top: 17px;
-  margin-top: 26px;
-  font-size: 12px;
-}
-.card-bottom > span:last-child {
-  font-size: 20px;
-  color: var(--orange);
-}
-.surface-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border: 1px solid var(--line);
-}
-.surface-card {
-  border-right: 1px solid var(--line);
-  position: relative;
-  overflow: hidden;
-}
-.surface-card:last-child {
-  border: 0;
-}
-.surface-card:hover h3 {
-  text-decoration: underline;
-}
-.material-swatch {
-  height: 105px;
-  background: #4c5656;
-  background-image:
-    radial-gradient(#899193 1px, transparent 1px), radial-gradient(#788183 1px, transparent 1px);
-  background-size:
-    7px 9px,
-    13px 13px;
-  border-bottom: 1px solid var(--line);
-}
-.surface-concrete .material-swatch {
-  background-color: #c7c8be;
-  background-image: linear-gradient(90deg, transparent 49%, #92998f 50%, transparent 51%);
-  background-size: 130px;
-}
-.surface-gravel .material-swatch {
-  background-color: #8c8874;
-  background-image:
-    radial-gradient(ellipse at center, #d2c7ac 20%, transparent 22%),
-    radial-gradient(ellipse at center, #5d6252 20%, transparent 25%);
-  background-size:
-    21px 19px,
-    29px 27px;
-  background-position:
-    0 0,
-    8px 5px;
-}
-.surface-paver .material-swatch {
-  background-color: #a99c81;
-  background-image:
-    linear-gradient(#f7f6f090 1px, transparent 1px),
-    linear-gradient(90deg, #f7f6f090 1px, transparent 1px);
-  background-size: 51px 27px;
-}
-.surface-details {
-  padding: 25px 22px 47px;
-}
-.surface-details h3 {
-  font-size: 23px;
-  margin: 20px 0 14px;
-}
-.surface-details p {
-  font-size: 13px;
-  margin: 0;
-}
-.surface-arrow {
+.hero-handwritten {
   position: absolute;
-  right: 22px;
-  bottom: 18px;
-  color: var(--orange);
-  font-size: 23px;
+  right: 31%;
+  bottom: 43px;
+  transform: rotate(-8deg);
+  font:
+    italic 16px/1.2 Georgia,
+    serif;
 }
-.method-strip {
+.project-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 75px;
+  align-items: center;
   background: var(--ink);
   color: var(--paper);
-  padding: 50px max(48px, calc((100vw - 1184px) / 2));
+  padding: 65px;
+  border-radius: 8px;
+  position: relative;
+}
+.planning-list {
+  background: #272822;
+  border: 1px solid #494c40;
+  border-radius: 5px;
+  padding: 12px;
+  transform: rotate(-2deg);
+}
+.planning-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-height: 54px;
+  padding: 9px 10px;
+  border-bottom: 1px solid #42453a;
+  font-size: 14px;
+  color: #d2d5c7;
+}
+.planning-row > span:last-child {
+  margin-left: auto;
+  font: 10px var(--mono);
+  color: #868c79;
+}
+.step-check {
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #687357;
   display: grid;
-  grid-template-columns: 1fr 1.25fr 1.2fr;
-  gap: 48px;
-  align-items: start;
-  margin: 30px 0;
+  place-items: center;
+  color: var(--lime);
+  flex-shrink: 0;
 }
-.method-strip > .eyebrow {
-  padding-top: 9px;
-  color: #a5b7b9;
-  max-width: 150px;
+.planning-active {
+  color: var(--ink);
+  background: var(--lime);
+  border-radius: 3px;
+  border: 0;
+  margin: 5px -2px;
 }
-.method-strip h2 {
-  font-size: 36px;
+.planning-active .step-check {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.planning-active > span:last-child {
+  color: var(--ink);
+}
+.planning-link {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 15px 10px 5px;
+  color: var(--lime);
+}
+.intro-copy .eyebrow {
+  color: #b9c1a7;
+}
+.intro-copy h2 {
+  font-size: clamp(35px, 4vw, 50px);
+  margin: 20px 0;
+}
+.intro-copy p {
+  color: #c2c8b5;
+  font-size: 16px;
+  max-width: 380px;
+  margin-bottom: 20px;
+}
+.handwritten {
+  display: inline-block;
+  color: var(--lime);
+  font:
+    italic 18px/1.2 Georgia,
+    serif;
+  transform: rotate(-5deg);
+  border-bottom: 2px solid var(--lime);
+}
+.home-section {
+  max-width: 1160px;
+  margin: auto;
+  padding: 85px 28px;
+}
+.section-title {
+  text-align: center;
+  max-width: 670px;
+  margin: 0 auto 44px;
+}
+.section-title .eyebrow {
+  color: var(--muted);
+  display: inline-block;
+  margin-bottom: 17px;
+}
+.section-title h2 {
+  margin: 0 0 22px;
+}
+.section-title p {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.tool-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.tool-tile {
+  display: flex;
+  flex-direction: column;
+  min-height: 285px;
+  padding: 27px;
+  border: 1px solid var(--ink);
+  border-radius: 7px;
+  box-shadow: 0 3px 0 var(--ink);
+  transition: transform 0.2s;
+}
+.tool-tile:hover {
+  transform: translateY(-4px);
+}
+.tile-dark {
+  background: var(--ink);
+  color: white;
+}
+.tile-dark p {
+  color: #c9cdbc;
+}
+.tile-dark .arrow-box {
+  background: var(--lime);
+  color: var(--ink);
+}
+.tile-lime {
+  background: var(--lime);
+}
+.tile-lime p {
+  color: #424d2e;
+}
+.tile-cream {
+  background: var(--cream);
+}
+.tile-icon {
+  font-size: 27px;
+  line-height: 1;
+  margin-bottom: 38px;
+}
+.tool-tile h3 {
+  font-size: 26px;
+  line-height: 1.08;
+  margin: 0 0 15px;
+}
+.tool-tile p {
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 28px;
+}
+.tile-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: auto;
+}
+.steps-section {
+  padding-top: 25px;
+}
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.process-card {
+  border: 1px solid var(--ink);
+  border-radius: 6px;
+  background: var(--lime);
+  padding: 26px;
+  box-shadow: 0 3px 0 var(--ink);
+}
+.process-card:nth-child(2) {
+  background: var(--cream);
+  transform: translateY(24px);
+}
+.process-card:nth-child(3) {
+  background: var(--lime);
+  transform: translateY(48px);
+}
+.process-number {
+  display: inline-block;
+  font: 11px var(--mono);
+  margin-bottom: 35px;
+  background: var(--ink);
+  color: var(--lime);
+  padding: 5px 8px;
+  border-radius: 2px;
+}
+.process-card h3 {
+  margin-bottom: 15px;
+}
+.process-card p {
+  font-size: 14px;
+  color: #48523b;
+  line-height: 1.65;
+}
+.process-equation {
+  font: 11px/1.6 var(--mono);
+  border-top: 1px solid #1d1e1b3b;
+  display: block;
+  padding-top: 16px;
+  margin-top: 24px;
+}
+.lime-ticker {
+  margin-top: 30px;
+  padding: 17px 24px;
+  background: var(--lime);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  text-align: center;
+  font: 12px/1.6 var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+}
+.lime-ticker b {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 24px;
+}
+.purpose-section {
+  padding: 90px 24px 160px;
+  color: white;
+  background: var(--ink);
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+.purpose-section::after {
+  content: '';
+  position: absolute;
+  height: 135px;
+  width: 120%;
+  bottom: -85px;
+  left: -10%;
+  border-radius: 50% 50% 0 0;
+  background: var(--cream);
+}
+.purpose-section > .eyebrow {
+  color: #c7ceba;
+}
+.purpose-section h2 {
+  margin: 26px auto 22px;
+  max-width: 650px;
+}
+.purpose-section p {
+  color: #c2c8b6;
+  max-width: 450px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+}
+.purpose-formula {
+  position: absolute;
+  top: 145px;
+  display: block;
+  font: 15px/1.7 var(--mono);
+  text-align: left;
+  padding: 21px;
+  border: 1px solid #626854;
+  background: #2b2e24;
+  box-shadow: 6px 6px 0 #0e100b;
+  border-radius: 5px;
+}
+.purpose-formula strong {
+  color: var(--lime);
+  font-size: 18px;
+}
+.purpose-formula > span {
+  display: block;
+  font-size: 10px;
+  margin-top: 10px;
+  color: #b8c4a3;
+}
+.formula-left {
+  left: max(4%, calc((100vw - 1200px) / 2));
+  transform: rotate(-13deg);
+}
+.formula-right {
+  right: max(4%, calc((100vw - 1200px) / 2));
+  transform: rotate(12deg);
+}
+.surface-section {
+  background: var(--cream);
+  max-width: none;
+  padding: 40px max(28px, calc((100vw - 1104px) / 2)) 85px;
+}
+.surface-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.material-card {
+  background: white;
+  border: 1px solid var(--ink);
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 3px 0 var(--ink);
+  transition: transform 0.2s;
+}
+.material-card:hover {
+  transform: translateY(-5px);
+}
+.material-card .material-graphic {
+  border-bottom: 1px solid var(--ink);
+  border-radius: 0;
+}
+.material-card > div {
+  position: relative;
+  padding: 23px 20px 65px;
+}
+.material-card h3 {
+  font-size: 29px;
+  margin: 12px 0 10px;
+}
+.material-card p {
+  font-size: 13px;
   margin: 0;
 }
-.method-strip p {
-  color: #b4c5c8;
-  font-size: 15px;
+.material-card .arrow-box {
+  position: absolute;
+  right: 17px;
+  bottom: 18px;
 }
-.method-strip a {
-  font-size: 13px;
-  border-bottom: 1px solid #5c737a;
-  padding-bottom: 5px;
-}
-.method-strip a span {
-  margin-left: 18px;
+.material-concrete > div,
+.material-paver > div {
+  background: var(--lime);
 }
 .library-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.library-column {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: white;
 }
 .library-column h3 {
-  font-size: 18px;
-  letter-spacing: -0.01em;
-  padding-bottom: 16px;
+  font-size: 21px;
+  margin: 0 0 16px;
+  padding-bottom: 18px;
   border-bottom: 2px solid var(--ink);
 }
 .library-column > a {
   display: flex;
+  gap: 12px;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  padding: 15px 0;
+  padding: 13px 0;
   border-bottom: 1px solid var(--line);
   font-size: 14px;
+  line-height: 1.5;
 }
-.library-column a:hover {
-  color: var(--orange);
+.library-column a:hover > span:first-child {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
-.library-column > a > span:last-child {
-  color: var(--muted);
+.library-column a > span:last-child {
+  flex-shrink: 0;
+}
+.faq-section {
+  background: var(--lime);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  padding: 42px 45px;
+  box-shadow: 0 4px 0 var(--ink);
+}
+.faq-section h2 {
+  font-size: 52px;
+  margin: 15px 0 30px;
+}
+.faq-list details {
+  border-top: 1px solid #1d1e1b45;
+}
+.faq-list details:last-child {
+  border-bottom: 1px solid #1d1e1b45;
+}
+.faq-list summary {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 600;
+  padding: 20px 0;
+  list-style: none;
+}
+.faq-toggle {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  font-weight: 400;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.faq-list details[open] .faq-toggle {
+  transform: rotate(45deg);
+}
+.faq-list p {
+  font-size: 16px;
+  color: #334023;
+  max-width: 820px;
+  margin: 0 40px 23px 0;
+}
+.faq-footer {
+  margin-top: 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  font-size: 15px;
+}
+.final-cta {
+  text-align: center;
+  padding: 95px 24px;
+}
+.final-cta h2 {
+  margin: 22px 0;
+}
+.final-cta p {
+  font-size: 16px;
+  margin-bottom: 25px;
 }
 .site-footer {
-  border-top: 1px solid var(--line);
-  padding: 50px 48px 25px;
-  margin-top: 45px;
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 50px max(28px, calc((100vw - 1160px) / 2)) 0;
+  overflow: hidden;
 }
 .footer-main {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 50px;
+  gap: 60px;
 }
 .footer-brand {
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: -0.035em;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.055em;
 }
 .footer-main p {
-  font-size: 13px;
+  font-size: 14px;
+  color: #b9c0a8;
   margin-top: 15px;
 }
 .footer-main > div > .eyebrow {
   display: block;
-  margin-bottom: 17px;
+  color: var(--lime);
+  margin-bottom: 20px;
 }
 .footer-main > div > a:not(.footer-brand) {
   display: block;
-  font-size: 13px;
-  margin: 8px 0;
+  font-size: 14px;
+  margin-bottom: 11px;
+}
+.footer-main a:hover {
+  color: var(--lime);
 }
 .footer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(--line);
-  padding-top: 24px;
-  margin-top: 35px;
-  font-size: 11px;
-  color: var(--muted);
+  gap: 25px;
+  margin-top: 45px;
+  border-top: 1px solid #41463a;
+  padding: 22px 0;
+  font-size: 12px;
+  color: #b9c0a8;
 }
 .footer-bottom > div {
   display: flex;
-  gap: 25px;
+  flex-wrap: wrap;
+  gap: 22px;
 }
+.footer-watermark {
+  font-size: clamp(75px, 14vw, 182px);
+  letter-spacing: -0.075em;
+  font-weight: 900;
+  line-height: 0.9;
+  padding: 28px 0 0;
+  color: #30322a;
+  text-align: center;
+  user-select: none;
+}
+.footer-watermark > span {
+  display: block;
+}
+/* Shared content and calculators use the same palette, type, and panel language. */
 .page-container {
   max-width: 1216px;
   margin: auto;
-  padding: 32px 48px;
+  padding: 30px 40px;
 }
 .breadcrumb {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   align-items: center;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--muted);
-  margin: 0 0 45px;
-  flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 .breadcrumb a:hover {
-  color: var(--orange);
+  text-decoration: underline;
 }
 .page-heading {
-  max-width: 800px;
-  margin-bottom: 40px;
+  max-width: 970px;
+  margin-bottom: 30px;
+}
+.page-heading > .eyebrow {
+  display: inline-block;
+  padding: 5px 9px;
+  background: var(--lime);
+  border: 1px solid var(--ink);
+  border-radius: 3px;
+  font-size: 10px;
 }
 .page-heading h1 {
-  margin: 18px 0 20px;
-  font-size: clamp(35px, 4.2vw, 52px);
+  font-size: clamp(34px, 4vw, 51px);
+  margin: 15px 0;
+  line-height: 1.08;
 }
 .answer-block {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.65;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .answer-block strong {
-  color: var(--ink);
   font-weight: 500;
+  color: var(--ink);
 }
 .byline {
   display: flex;
-  gap: 9px;
-  align-items: center;
   flex-wrap: wrap;
-  font-size: 14px;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
   color: var(--muted);
 }
 .byline a {
-  border-bottom: 1px solid var(--line);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.tool-page {
+  padding-top: 22px;
+}
+.tool-page .breadcrumb {
+  margin-bottom: 20px;
+}
+.tool-page .page-heading {
+  margin-bottom: 25px;
+}
+.tool-page .page-heading h1 {
+  font-size: clamp(32px, 3.5vw, 46px);
 }
 .calculator-shell {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 1px solid var(--line);
-  background: var(--white);
-  border-radius: 5px;
+  border: 1px solid var(--ink);
+  background: white;
+  border-radius: 9px;
   overflow: hidden;
+  box-shadow: 0 4px 0 var(--ink);
+  scroll-margin-top: 20px;
 }
 .calculator-inputs {
   padding: 30px;
-  border-right: 1px solid var(--line);
+  min-width: 0;
 }
 .calculator-output {
   padding: 30px;
-  background: #edf0e9;
   min-width: 0;
+  background: var(--ink);
+  color: white;
+}
+.calculator-output p {
+  color: #c7cebb;
 }
 .panel-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
+}
+.unit-badge {
+  display: inline-block;
+  padding: 4px 7px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--muted);
+  font: 10px/1.4 var(--mono);
 }
 .status-dot {
-  font: 10px var(--mono);
-  color: var(--muted);
+  font: 10px/1.5 var(--mono);
+  color: #c7cebb;
   white-space: nowrap;
 }
-.status-dot:before {
+.status-dot::before {
   content: '';
+  display: inline-block;
   width: 5px;
   height: 5px;
-  display: inline-block;
+  background: var(--lime);
   border-radius: 50%;
-  background: #738675;
   margin-right: 6px;
 }
 fieldset {
   border: 0;
-  margin: 0 0 22px;
+  margin: 0 0 20px;
   padding: 0;
   min-width: 0;
 }
 legend {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 12px;
 }
 .measurement-section + .measurement-section {
   border-top: 1px solid var(--line);
-  padding-top: 22px;
+  padding-top: 20px;
 }
 .field-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 15px;
 }
 .field {
   display: block;
-  margin: 0 0 17px;
   min-width: 0;
+  margin: 0 0 17px;
 }
 .field > span:first-child {
   display: block;
   font-size: 14px;
+  font-weight: 600;
   line-height: 1.4;
   margin-bottom: 8px;
-  font-weight: 600;
 }
 .field small {
   font-size: 13px;
   line-height: 1.4;
-  font-weight: 400;
   color: var(--muted);
+  font-weight: 400;
 }
 .field > small {
   display: block;
@@ -1522,17 +1962,18 @@ legend {
 .input-wrap {
   display: flex;
   align-items: center;
-  border: 1px solid #bbc8c2;
-  background: var(--white);
-  border-radius: 3px;
+  border: 1px solid #aeb2a3;
+  background: white;
+  border-radius: 4px;
   overflow: hidden;
+  min-height: 49px;
 }
 .input-wrap:focus-within {
-  outline: 2px solid var(--orange);
+  outline: 2px solid var(--ink);
   outline-offset: 2px;
 }
 .input-wrap input {
-  border: none;
+  border: 0;
   outline: none;
   min-width: 0;
   width: 100%;
@@ -1542,62 +1983,66 @@ legend {
   color: var(--ink);
 }
 .input-wrap > span {
-  font: 12px var(--mono);
+  font: 11px/1.4 var(--mono);
   white-space: nowrap;
   color: var(--muted);
-  padding-right: 11px;
+  padding-right: 10px;
 }
 .field > input,
 .field select {
   width: 100%;
-  border: 1px solid #bbc8c2;
-  border-radius: 3px;
+  min-height: 49px;
+  border: 1px solid #aeb2a3;
+  border-radius: 4px;
   padding: 12px;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--ink);
-  background: var(--white);
-  min-height: 48px;
+  background: white;
 }
 .check {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.45;
-  color: var(--muted);
-  margin: 7px 0;
+  margin: 5px 0;
+  min-height: 30px;
 }
 .check input {
   accent-color: var(--ink);
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   margin: 0;
   flex-shrink: 0;
 }
 .section-options {
   display: flex;
-  gap: 20px;
-  margin: 0 0 12px;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 10px;
 }
 .add-section {
-  border: 1px dashed #adbdb4;
   width: 100%;
-  padding: 10px;
-  background: transparent;
+  min-height: 43px;
+  border: 1px dashed #a3aa96;
+  background: var(--pale);
   font-size: 13px;
-  border-radius: 3px;
+  border-radius: 4px;
+  padding: 9px;
+}
+.add-section:hover {
+  background: var(--lime);
 }
 .input-hint {
   font-size: 13px;
   line-height: 1.6;
   margin: 12px 0;
-  color: var(--muted);
 }
 .subheading {
-  margin-top: 30px;
-  margin-bottom: 20px;
   border-top: 1px solid var(--line);
-  padding-top: 25px;
+  padding-top: 23px;
+  margin-top: 27px;
+  margin-bottom: 20px;
 }
 .form-actions {
   display: flex;
@@ -1605,61 +2050,118 @@ legend {
   align-items: center;
   margin-top: 25px;
 }
-.form-actions > .primary {
+.form-actions .primary {
   flex: 1;
+  min-width: 0;
 }
-.form-actions > .secondary {
-  padding-left: 16px;
-  padding-right: 16px;
+.form-actions .secondary {
+  padding-left: 14px;
+  padding-right: 14px;
 }
 .text-button {
   border: 0;
-  padding: 0;
-  background: none;
-  color: var(--orange);
+  background: transparent;
+  padding: 5px 0;
+  font-size: 13px;
+  text-decoration: underline;
+}
+.optional-inputs {
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+}
+summary {
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+.optional-inputs summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.optional-inputs summary > span {
+  margin-left: auto;
+  color: var(--muted);
   font-size: 12px;
+  font-weight: 400;
+}
+.optional-inputs summary::after {
+  content: '+';
+  font-size: 20px;
+  font-weight: 400;
+}
+.optional-inputs[open] summary::after {
+  content: '−';
+}
+.optional-inputs[open] summary {
+  margin-bottom: 12px;
 }
 .error {
   padding: 12px 14px;
-  background: #fff0e9;
-  color: #963b1d;
-  border-left: 3px solid var(--orange);
-  font-size: 13px;
+  border: 1px solid #ae573a;
+  background: #fff1e9;
+  color: #922e17;
+  border-radius: 4px;
+  font-size: 14px;
 }
 .empty-result {
   text-align: center;
-  padding: 20px 5px;
+  padding: 18px 0;
 }
 .empty-result .shape-diagram {
-  max-width: 340px;
-  margin-bottom: 30px;
-  opacity: 0.7;
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto 16px;
+  display: block;
+  color: var(--lime);
+  opacity: 0.9;
+}
+.shape-diagram text {
+  font: 9px var(--mono);
+  letter-spacing: 0.06em;
+  fill: currentColor;
+}
+.shape-diagram .diagram-label {
+  font-size: 10px;
 }
 .empty-result h3 {
-  font-size: 25px;
+  font-size: 27px;
+  margin-bottom: 13px;
 }
 .empty-result p {
+  max-width: 310px;
+  margin: 0 auto 27px;
   font-size: 14px;
-  max-width: 300px;
-  margin: 0 auto 30px;
 }
 .empty-rule {
   display: block;
-  font: 12px var(--mono);
-  letter-spacing: 0.01em;
-  color: var(--muted);
+  font: 11px/1.5 var(--mono);
   padding-top: 20px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid #424839;
+  color: #b8c2a6;
+}
+.conversion-diagram {
+  padding: 38px 15px;
+  margin: 20px 0 30px;
+  border: 1px solid #66744f;
+  color: var(--lime);
+  font: 16px/1.8 var(--mono);
+  border-radius: 5px;
 }
 .output-note {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   align-items: center;
-  margin-top: 35px;
+  margin-top: 28px;
 }
 .output-note > span {
-  font-size: 28px;
-  color: var(--orange);
+  font-size: 27px;
+  color: var(--lime);
 }
 .output-note p {
   font-size: 12px;
@@ -1669,39 +2171,46 @@ legend {
   margin: 0;
 }
 .metrics > div {
-  border-bottom: 1px solid #d1d9cf;
   padding: 20px 0;
+  border-bottom: 1px solid #424839;
 }
 .metrics > div:first-child {
   padding-top: 5px;
 }
 .metrics dt {
-  font: 12px var(--mono);
+  color: #c4ceaf;
+  font: 11px/1.5 var(--mono);
   text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--muted);
+  letter-spacing: 0.06em;
   margin-bottom: 8px;
 }
 .metrics dd {
-  font-size: clamp(25px, 3vw, 39px);
-  letter-spacing: -0.04em;
-  font-weight: 600;
-  line-height: 1.15;
   margin: 0;
+  font-size: clamp(27px, 3.2vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.15;
   overflow-wrap: anywhere;
+  color: var(--lime);
 }
 .metrics dd small {
-  font: 12px var(--mono);
-  letter-spacing: 0;
-  color: var(--muted);
-  margin-left: 10px;
   display: inline-block;
+  font: 12px var(--mono);
+  color: #c7cebb;
+  margin-left: 9px;
+  letter-spacing: 0;
+}
+.worked-inputs {
+  font-size: 22px;
+  margin-top: 30px;
 }
 .formula-box {
-  background: #edf0e9;
-  border-left: 2px solid var(--orange);
+  background: var(--cream);
+  border: 1px solid var(--ink);
+  border-left: 4px solid var(--ink);
+  border-radius: 5px;
   padding: 18px 20px;
-  margin: 25px 0;
+  margin: 24px 0;
   font-size: 14px;
   line-height: 1.8;
   overflow-wrap: anywhere;
@@ -1709,19 +2218,26 @@ legend {
 .formula-box > .eyebrow {
   display: block;
   margin-bottom: 12px;
+  font-size: 10px;
   color: var(--muted);
 }
 .formula-box code {
-  font: 14px/1.8 var(--mono);
-  white-space: normal;
   display: block;
+  font: 12px/1.8 var(--mono);
+  white-space: normal;
 }
 .formula-box p {
-  font-size: 14px;
+  font-size: 13px;
   margin: 12px 0 0;
 }
 .calculator-output .formula-box {
-  background: #e2e8dc;
+  background: #2e3326;
+  color: #eef3e5;
+  border-color: #5c674b;
+  border-left-color: var(--lime);
+}
+.calculator-output .formula-box > .eyebrow {
+  color: var(--lime);
 }
 .result-actions {
   display: flex;
@@ -1730,28 +2246,34 @@ legend {
 }
 .result-actions button,
 .helpful button {
-  border: 1px solid #b3c2b7;
+  border: 1px solid #b7c3a0;
   background: transparent;
+  border-radius: 4px;
+  min-height: 42px;
   padding: 9px 14px;
-  border-radius: 3px;
-  font-size: 14px;
+  font-size: 13px;
+}
+.result-actions button:hover {
+  background: var(--lime);
+  color: var(--ink);
 }
 .data-note {
-  background: #fbf5e7;
-  border: 1px solid #dfd5bb;
-  color: #76602b;
+  margin: 17px 0;
+  background: #eef3df;
+  border: 1px solid #b5c393;
+  color: #455a26;
+  border-radius: 5px;
   padding: 12px 14px;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.65;
-  margin: 18px 0;
 }
 .data-note p {
-  font-size: 12px;
-  margin: 5px 0 0;
   color: inherit;
+  font-size: 13px;
+  margin: 5px 0 0;
 }
-.checks {
-  margin-bottom: 20px;
+.calculator-output .data-note p {
+  color: inherit;
 }
 .surface-choices {
   display: grid;
@@ -1759,27 +2281,38 @@ legend {
   gap: 8px;
   margin-bottom: 20px;
 }
+.checks {
+  margin-bottom: 20px;
+}
 .estimate-note {
-  font-size: 11px;
+  font-size: 12px;
   margin: 16px 0;
+}
+.result-assumptions {
+  font-size: 13px;
+}
+.result-assumptions p {
+  margin-bottom: 10px;
 }
 .article-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 270px;
-  gap: 70px;
-  margin-top: 60px;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 65px;
+  margin-top: 45px;
 }
 .prose {
   font-size: 17px;
   line-height: 1.8;
+  min-width: 0;
 }
 .prose h2 {
-  font-size: 27px;
-  margin: 35px 0 17px;
-  line-height: 1.25;
+  font-size: 29px;
+  line-height: 1.2;
+  margin: 35px 0 18px;
+  letter-spacing: -0.045em;
 }
 .prose h3 {
-  font-size: 22px;
+  font-size: 23px;
   margin-top: 30px;
 }
 .prose strong {
@@ -1798,53 +2331,62 @@ legend {
   text-underline-offset: 3px;
 }
 .prose code {
-  font: 12px/1.8 var(--mono);
+  font: 13px/1.8 var(--mono);
   overflow-wrap: anywhere;
 }
 .qa {
-  margin-bottom: 35px;
+  margin-bottom: 32px;
+}
+.article-sidebar {
+  align-self: start;
 }
 .side-box {
-  border: 1px solid var(--line);
+  border: 1px solid var(--ink);
+  background: var(--lime);
   padding: 24px;
+  border-radius: 6px;
   margin-bottom: 25px;
+  box-shadow: 0 3px 0 var(--ink);
 }
 .side-box h3 {
-  font-size: 23px;
+  font-size: 26px;
   margin: 17px 0;
 }
 .side-box p {
   font-size: 14px;
   line-height: 1.7;
+  color: #475b2b;
 }
 .side-box > a {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  border-top: 1px solid var(--line);
-  padding: 12px 0;
+  padding: 12px 0 0;
+  border-top: 1px solid #1d1e1b45;
   font-size: 14px;
   line-height: 1.5;
-}
-.side-box > a:last-child {
-  padding-bottom: 0;
+  font-weight: 600;
 }
 .related-link {
-  display: block;
   border-top: 1px solid var(--line);
-  padding-top: 16px;
-  margin: 16px 0;
+  padding-top: 17px;
+  margin: 17px 0;
 }
 .related-link > a {
-  font-size: 16px;
   display: flex;
+  gap: 15px;
   justify-content: space-between;
   color: var(--ink);
+  font-size: 17px;
+  font-weight: 600;
+}
+.related-link > a:hover {
+  text-decoration: underline;
 }
 .related-link > span {
-  font-size: 14px;
   display: block;
-  margin-top: 5px;
+  margin-top: 6px;
+  font-size: 14px;
 }
 .source-note {
   border-top: 1px solid var(--line);
@@ -1855,11 +2397,11 @@ legend {
 .source-note p {
   margin: 8px 0;
 }
-.editorial-status,
-.disclosure {
-  font-size: 13px;
-  color: var(--muted);
+.disclosure,
+.editorial-status {
+  font-size: 12px;
   line-height: 1.6;
+  color: var(--muted);
 }
 .helpful {
   display: flex;
@@ -1869,7 +2411,7 @@ legend {
   border-top: 1px solid var(--line);
   padding-top: 25px;
   margin-top: 35px;
-  font-size: 12px;
+  font-size: 13px;
 }
 .table-scroll {
   overflow-x: auto;
@@ -1883,47 +2425,52 @@ table {
 }
 th,
 td {
-  text-align: left;
-  border-bottom: 1px solid var(--line);
   padding: 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
   vertical-align: top;
 }
 th {
   font-weight: 600;
 }
 thead {
-  background: var(--pale);
+  background: var(--cream);
 }
 caption {
   text-align: left;
   padding-bottom: 10px;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
 }
-details {
-  font-size: 13px;
+.calculator-output table th,
+.calculator-output table td {
+  border-color: #5d6851;
 }
-details > summary {
-  padding: 10px 0;
+.calculator-output thead {
+  background: #2c3423;
+  color: var(--lime);
+}
+.calculator-output caption {
+  color: #c7cebb;
 }
 .ad-slot {
   min-height: 280px;
   display: flex;
   justify-content: center;
-  font-size: 10px;
-  background: var(--pale);
   padding-top: 15px;
+  background: var(--pale);
+  font-size: 10px;
 }
 .quote-cta {
-  border-top: 1px solid var(--line);
-  padding-top: 22px;
+  border-top: 1px solid #5d6851;
   margin-top: 22px;
+  padding-top: 22px;
 }
 .quote-cta h3 {
-  font-size: 22px;
+  font-size: 24px;
 }
 .quote-cta > p {
-  font-size: 13px;
+  font-size: 14px;
 }
 .quote-form {
   margin-top: 24px;
@@ -1936,352 +2483,503 @@ details > summary {
   display: none;
 }
 .not-found {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0;
 }
 .trust-container {
-  max-width: 780px;
+  max-width: 860px;
   margin: auto;
-  padding: 60px 35px;
+  padding: 55px 35px 65px;
+}
+.trust-container > .eyebrow {
+  background: var(--lime);
+  padding: 5px 9px;
+  border: 1px solid var(--ink);
+  border-radius: 3px;
 }
 .trust-container h1 {
-  font-size: 43px;
-  margin-top: 20px;
+  font-size: clamp(35px, 4vw, 51px);
+  margin-top: 22px;
 }
 .trust-container .prose {
   margin-top: 30px;
 }
-@media (max-width: 1100px) {
-  .header-inner {
-    padding: 20px 25px;
-    gap: 20px;
-  }
-  nav {
-    gap: 15px;
-    font-size: 11px;
-  }
+@media (max-width: 1180px) {
   .header-tool {
     display: none;
   }
-  .home-hero {
-    gap: 45px;
-    padding: 60px 35px;
+  .header-inner {
+    gap: 20px;
+  }
+  .site-header nav {
+    gap: 15px;
+  }
+  .orbit-card {
+    width: 166px;
+  }
+  .hero-copy {
+    max-width: 550px;
   }
   .hero-copy h1 {
-    font-size: 59px;
+    font-size: 78px;
   }
-  .home-section {
-    padding: 45px 35px;
+  .orbit-1 {
+    left: 2%;
+    top: 72px;
   }
-  .article-layout {
-    gap: 35px;
-    grid-template-columns: minmax(0, 1fr) 230px;
+  .orbit-2 {
+    right: 2%;
+    top: 66px;
   }
-  .page-container {
-    padding: 30px 35px;
+  .project-intro,
+  .faq-section {
+    margin-left: 28px;
+    margin-right: 28px;
   }
-  .method-strip {
-    padding: 45px 35px;
-    gap: 35px;
+  .project-intro {
+    gap: 45px;
+    padding: 45px;
   }
-  .method-strip h2 {
-    font-size: 30px;
+  .purpose-formula {
+    font-size: 12px;
+    padding: 14px;
   }
-  .surface-details {
-    padding: 22px 17px 40px;
+  .purpose-formula strong {
+    font-size: 15px;
   }
-  .surface-details h3 {
-    font-size: 21px;
+  .formula-left {
+    left: 2%;
+  }
+  .formula-right {
+    right: 2%;
   }
 }
-@media (max-width: 820px) {
+@media (max-width: 940px) {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
   }
   .site-header nav {
-    gap: 20px;
     width: 100%;
     justify-content: space-between;
-  }
-  .brand {
-    font-size: 21px;
-  }
-  .nav-dropdown {
-    min-width: 240px;
-  }
-  .nav-group:nth-child(n + 3) .nav-dropdown {
-    left: auto;
-    right: 0;
-  }
-  .home-hero {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 50px 30px;
-  }
-  .hero-copy h1 {
-    font-size: 63px;
-  }
-  .hero-visual {
-    max-width: 490px;
-  }
-  .hero-description {
-    max-width: 580px;
-  }
-  .featured-grid {
     gap: 12px;
   }
-  .featured-card {
-    padding: 20px;
+  .nav-group {
+    position: static;
   }
-  .featured-card h3 {
+  .nav-dropdown,
+  .nav-group:nth-child(n + 3) .nav-dropdown {
+    left: 28px;
+    right: 28px;
+    top: calc(100% + 6px);
+    width: calc(100% - 56px);
+  }
+  .hero-copy h1 {
+    font-size: 74px;
+  }
+  .hero-description {
+    max-width: 420px;
+    font-size: 16px;
+  }
+  .orbit-card {
+    width: 140px;
+  }
+  .orbit-1 {
+    top: 100px;
+    left: 2%;
+  }
+  .orbit-2 {
+    top: 100px;
+    right: 2%;
+  }
+  .mockup-toolbar {
+    font-size: 5px;
+  }
+  .mockup-title {
+    font-size: 11px;
+  }
+  .hero-handwritten {
+    display: none;
+  }
+  .project-intro {
+    gap: 30px;
+    padding: 35px;
+  }
+  .intro-copy h2 {
+    font-size: 36px;
+  }
+  .planning-row {
+    font-size: 12px;
+    gap: 9px;
+  }
+  .tool-tile {
+    padding: 23px;
+  }
+  .tool-tile h3 {
     font-size: 23px;
   }
-  .surface-grid {
+  .purpose-formula {
+    display: none;
+  }
+  .purpose-section {
+    padding-bottom: 130px;
+  }
+  .surface-gallery {
     grid-template-columns: 1fr 1fr;
-  }
-  .surface-card:nth-child(2) {
-    border-right: 0;
-  }
-  .surface-card:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--line);
-  }
-  .method-strip {
-    grid-template-columns: 1fr 1.3fr;
-    gap: 25px;
-  }
-  .method-strip > .eyebrow {
-    grid-column: 1/-1;
-    max-width: none;
+    gap: 18px;
   }
   .library-grid {
-    gap: 24px;
+    gap: 14px;
+  }
+  .library-column {
+    padding: 18px;
+  }
+  .library-column h3 {
+    font-size: 19px;
+  }
+  .article-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
   .calculator-shell {
     grid-template-columns: 1fr;
   }
-  .calculator-inputs {
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .calculator-output {
-    min-height: 430px;
-  }
-  .empty-result .shape-diagram {
-    max-width: 250px;
-    margin-bottom: 20px;
-  }
-  .article-layout {
-    grid-template-columns: 1fr;
-  }
   .article-sidebar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    max-width: 500px;
   }
   .footer-main {
-    grid-template-columns: 1.4fr 1fr 1fr;
-    gap: 25px;
+    gap: 30px;
+    grid-template-columns: 1.7fr 1fr 1fr;
+  }
+  .page-container {
+    padding: 25px 28px;
   }
   .mobile-call {
     display: block;
-    font-size: 14px;
     margin-top: 20px;
+    font-size: 14px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 760px) {
+  .home-hero {
+    padding-top: 58px;
+    padding-bottom: 50px;
+    min-height: 0;
+  }
+  .hero-copy {
+    max-width: 100%;
+  }
+  .hero-copy h1 {
+    font-size: clamp(46px, 10vw, 74px);
+  }
+  .hero-halo {
+    width: 96%;
+    max-width: 600px;
+    height: 530px;
+    top: 0;
+  }
+  .hero-collage {
+    position: relative;
+    inset: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    max-width: 385px;
+    margin: 60px auto 5px;
+  }
+  .orbit-card {
+    width: auto;
+    position: relative;
+    inset: auto;
+    padding: 9px;
+  }
+  .orbit-1,
+  .orbit-3 {
+    transform: rotate(-6deg);
+  }
+  .orbit-2,
+  .orbit-4 {
+    transform: rotate(6deg);
+  }
+  .mockup-toolbar {
+    font-size: 6px;
+  }
+  .mockup-title {
+    font-size: 12px;
+  }
+  .project-intro {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .planning-list {
+    order: 2;
+  }
+  .intro-copy {
+    text-align: center;
+  }
+  .intro-copy h2 {
+    font-size: 43px;
+  }
+  .intro-copy p {
+    margin: 0 auto 20px;
+  }
+  .planning-row {
+    font-size: 14px;
+  }
+  .tool-bento {
+    grid-template-columns: 1fr 1fr;
+  }
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .process-card:nth-child(n) {
+    transform: none;
+  }
+  .process-card {
+    padding: 25px;
+  }
+  .process-number {
+    margin-bottom: 24px;
+  }
+  .steps-section {
+    padding-bottom: 50px;
+  }
+  .lime-ticker {
+    margin-top: 0;
+    font-size: 10px;
+  }
+  .lime-ticker b {
+    margin: 0 10px;
+  }
+  .library-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .library-column {
+    padding: 24px;
+  }
+  .faq-section {
+    padding: 30px;
+  }
+  .faq-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 480px) {
   body {
     font-size: 16px;
   }
   .header-inner {
     padding: 18px 20px;
   }
+  .brand {
+    font-size: 18px;
+  }
   .site-header nav {
-    font-size: 10px;
-    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 20px;
+    row-gap: 0;
+    font-size: 12px;
+    padding: 9px 15px;
+    border-radius: 12px;
   }
-  summary span {
-    margin-left: 3px;
-  }
-  .nav-dropdown {
-    width: calc(100vw - 40px);
-    min-width: 0;
-    position: fixed;
-    left: 20px !important;
-    right: 20px !important;
-    top: 112px;
+  .nav-dropdown,
+  .nav-group:nth-child(n + 3) .nav-dropdown {
+    left: 20px;
+    right: 20px;
+    width: calc(100% - 40px);
   }
   .draft-banner {
-    font-size: 10px;
+    font-size: 11px;
     text-align: left;
     padding: 8px 20px;
   }
   .home-hero {
-    padding: 40px 22px;
-    gap: 35px;
+    padding: 48px 23px 45px;
   }
   .hero-copy h1 {
-    font-size: 47px;
+    font-size: clamp(43px, 11.5vw, 56px);
   }
-  .hero-copy > .eyebrow {
+  .hero-kicker {
     font-size: 10px;
+    margin-bottom: 20px;
   }
   .hero-description {
-    font-size: 16px;
+    font-size: 15px;
   }
-  .hero-actions {
-    gap: 22px;
+  .hero-description br {
+    display: none;
   }
   .hero-footnote {
-    gap: 12px;
-    font-size: 9px;
+    font-size: 11px;
   }
-  .hero-footnote span + span {
-    padding-left: 12px;
+  .hero-footnote span {
+    margin: 0 4px;
   }
-  .hero-visual {
-    padding: 22px;
-    box-shadow: 7px 7px 0 #e7eae0;
+  .hero-collage {
+    gap: 19px;
+    max-width: 330px;
+  }
+  .mockup-title {
+    font-size: 11px;
+  }
+  .mockup-toolbar {
+    font-size: 5px;
+  }
+  .mockup-unit {
+    font-size: 7px;
+  }
+  .project-intro,
+  .faq-section {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 27px 22px;
+  }
+  .intro-copy h2 {
+    font-size: 38px;
+  }
+  .planning-row {
+    font-size: 12px;
+    gap: 8px;
   }
   .home-section {
-    padding: 38px 22px;
+    padding: 55px 20px;
   }
-  .section-header {
-    display: block;
+  .section-title {
+    margin-bottom: 32px;
   }
-  .section-header > a {
-    display: inline-block;
-    margin-top: 20px;
+  .section-title h2 {
+    font-size: 36px;
   }
-  .section-header > p {
-    margin-top: 16px;
-    max-width: 100%;
+  .section-title p {
+    font-size: 15px;
   }
-  .section-header h2 {
-    font-size: 30px;
-  }
-  .featured-grid {
+  .tool-bento {
     grid-template-columns: 1fr;
+    gap: 17px;
   }
-  .featured-card h3 {
-    margin: 24px 0 10px;
-    min-height: 0;
-    max-width: 100%;
-    font-size: 25px;
+  .tool-tile {
+    min-height: 240px;
+    padding: 27px;
   }
-  .featured-card p {
-    min-height: 0;
+  .tool-tile h3 {
+    font-size: 28px;
   }
-  .card-bottom {
-    margin-top: 20px;
+  .tile-icon {
+    margin-bottom: 27px;
   }
-  .surface-details h3 {
-    font-size: 21px;
+  .purpose-section {
+    padding: 65px 20px 110px;
   }
-  .surface-details {
-    padding: 22px 15px 45px;
+  .purpose-section h2 {
+    font-size: 37px;
   }
-  .surface-details > .eyebrow {
-    font-size: 9px;
+  .surface-section {
+    padding-top: 20px;
   }
-  .material-swatch {
-    height: 85px;
-  }
-  .method-strip {
-    padding: 35px 22px;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    margin: 15px 0;
-  }
-  .method-strip h2 {
-    font-size: 32px;
-  }
-  .library-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .site-footer {
-    padding: 35px 22px 20px;
-  }
-  .footer-main {
-    grid-template-columns: 1fr 1fr;
-  }
-  .footer-main > div:first-child {
-    grid-column: 1/-1;
-  }
-  .footer-bottom {
-    align-items: flex-start;
-    gap: 20px;
-    font-size: 10px;
-  }
-  .footer-bottom > div {
+  .surface-gallery {
     gap: 12px;
   }
+  .material-card > div {
+    padding: 17px 14px 59px;
+  }
+  .material-card h3 {
+    font-size: 25px;
+  }
+  .material-card p {
+    font-size: 12px;
+  }
+  .material-card .eyebrow {
+    font-size: 9px;
+  }
+  .faq-section h2 {
+    font-size: 43px;
+  }
+  .faq-list summary {
+    font-size: 15px;
+    padding: 17px 0;
+    gap: 13px;
+  }
+  .faq-list p {
+    font-size: 14px;
+    margin-right: 0;
+  }
+  .final-cta h2 {
+    font-size: 38px;
+  }
   .page-container {
-    padding: 24px 20px;
+    padding: 22px 20px;
   }
-  .breadcrumb {
-    font-size: 10px;
-    margin-bottom: 30px;
+  .tool-page {
+    padding-top: 20px;
   }
-  .page-heading h1 {
-    font-size: 35px;
+  .page-heading h1,
+  .tool-page .page-heading h1 {
+    font-size: 32px;
+  }
+  .page-heading > .eyebrow {
+    font-size: 9px;
   }
   .answer-block {
     font-size: 16px;
   }
   .byline {
-    font-size: 10px;
+    font-size: 12px;
     gap: 7px;
+  }
+  .breadcrumb {
+    font-size: 12px;
   }
   .calculator-inputs,
   .calculator-output {
     padding: 22px;
   }
-  .panel-heading > .eyebrow {
-    font-size: 10px;
-  }
   .panel-heading {
     gap: 8px;
   }
+  .panel-heading .eyebrow,
   .status-dot {
-    font-size: 9px;
+    font-size: 10px;
   }
   .field-grid {
-    gap: 12px;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
   .field > span:first-child {
-    font-size: 12px;
-  }
-  .input-wrap > span {
-    font-size: 9px;
-    padding-right: 7px;
+    font-size: 13px;
   }
   .input-wrap input {
-    padding: 11px 10px;
+    padding: 10px;
+  }
+  .input-wrap > span {
+    font-size: 12px;
+    padding-right: 7px;
   }
   .form-actions {
-    gap: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
   }
-  .form-actions .button {
-    font-size: 12px;
-    padding-left: 14px;
-    padding-right: 14px;
+  .form-actions .primary {
+    flex: 1 1 180px;
+    padding-left: 13px;
     gap: 12px;
+    font-size: 13px;
   }
-  .article-layout {
-    margin-top: 40px;
+  .form-actions .secondary {
+    font-size: 13px;
   }
   .prose {
     font-size: 16px;
-    line-height: 1.8;
   }
   .prose h2 {
-    font-size: 25px;
+    font-size: 26px;
   }
-  .article-sidebar {
-    grid-template-columns: 1fr;
+  .side-box {
+    padding: 23px;
   }
   .trust-container {
     padding: 40px 22px;
@@ -2289,13 +2987,41 @@ details > summary {
   .trust-container h1 {
     font-size: 35px;
   }
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+  }
+  .footer-main > div:first-child {
+    grid-column: 1/-1;
+  }
+  .footer-brand {
+    font-size: 25px;
+  }
+  .site-footer {
+    padding: 40px 22px 0;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 25px;
+  }
+  .footer-bottom > div {
+    gap: 18px;
+  }
+  .footer-watermark {
+    font-size: clamp(44px, 15vw, 70px);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  * {
+  *,
+  *::before,
+  *::after {
     transition: none !important;
+    animation: none !important;
   }
 }
 @media print {
@@ -2325,7 +3051,8 @@ details > summary {
   .page-heading {
     margin-bottom: 12px;
   }
-  .page-heading h1 {
+  .page-heading h1,
+  .tool-page .page-heading h1 {
     font-size: 24px;
   }
   .answer-block {
@@ -2334,10 +3061,18 @@ details > summary {
   .calculator-shell {
     display: block;
     border: 0;
+    box-shadow: none;
   }
   .calculator-output {
     padding: 0;
     background: white;
+    color: black;
+  }
+  .calculator-output p,
+  .metrics dt,
+  .metrics dd,
+  .metrics dd small {
+    color: black;
   }
   .metrics {
     display: grid;
@@ -2346,21 +3081,32 @@ details > summary {
   }
   .metrics > div {
     padding: 10px 0;
+    border-color: #aaa;
   }
   .metrics dd {
     font-size: 24px;
   }
-  .formula-box {
+  .formula-box,
+  .calculator-output .formula-box {
     font-size: 10px;
     padding: 10px;
     margin: 15px 0;
+    color: black;
+    background: white;
+    border-color: #aaa;
     break-inside: avoid;
   }
   .formula-box code {
     font-size: 10px;
   }
+  .calculator-output .formula-box > .eyebrow {
+    color: black;
+  }
   .calculator-output .panel-heading {
     margin: 15px 0;
+  }
+  .status-dot {
+    color: black;
   }
   .byline {
     font-size: 9px;
@@ -2371,237 +3117,6 @@ details > summary {
   .page-heading,
   .calculator-output {
     break-inside: avoid;
-  }
-}
-
-/* Shared navigation and compact tool introduction, across all routes. */
-.nav-dropdown[hidden] {
-  display: none;
-}
-.nav-trigger {
-  border: 0;
-  background: transparent;
-  color: inherit;
-  padding: 8px 0;
-  font: inherit;
-  font-weight: inherit;
-  white-space: nowrap;
-}
-.nav-trigger > span {
-  margin-left: 7px;
-  color: var(--muted);
-}
-.site-header nav {
-  font-size: 14px;
-  gap: 20px;
-}
-.nav-dropdown {
-  top: calc(100% + 8px);
-  width: 310px;
-  min-width: 0;
-}
-.nav-dropdown a {
-  font-size: 14px;
-  font-weight: 500;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  line-height: 1.4;
-}
-.nav-about {
-  padding: 8px 0;
-}
-.tool-page {
-  padding-top: 20px;
-}
-.tool-page .breadcrumb {
-  margin-bottom: 18px;
-}
-.tool-page .page-heading {
-  max-width: 940px;
-  margin-bottom: 22px;
-}
-.tool-page .page-heading h1 {
-  font-size: clamp(30px, 3.4vw, 44px);
-  line-height: 1.12;
-  margin: 10px 0 12px;
-}
-.tool-page .answer-block {
-  font-size: 17px;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-.tool-page .calculator-shell {
-  scroll-margin-top: 18px;
-}
-.tool-page .panel-heading {
-  margin-bottom: 20px;
-}
-.featured-card h3 {
-  min-height: 0;
-}
-.featured-card {
-  display: flex;
-  flex-direction: column;
-}
-.featured-card .card-bottom {
-  margin-top: auto;
-}
-.featured-card p {
-  margin-bottom: 26px;
-}
-@media (max-width: 1100px) {
-  .site-header nav {
-    font-size: 13px;
-    gap: 16px;
-  }
-}
-@media (max-width: 820px) {
-  .site-header nav {
-    gap: 18px;
-  }
-}
-@media (max-width: 600px) {
-  .site-header nav {
-    font-size: 12px;
-    gap: 8px;
-  }
-  .nav-trigger > span {
-    margin-left: 3px;
-  }
-  .nav-dropdown {
-    top: 114px;
-    width: calc(100vw - 40px);
-    max-height: calc(100dvh - 135px);
-  }
-  .tool-page {
-    padding-top: 16px;
-  }
-  .tool-page .breadcrumb {
-    font-size: 11px;
-    margin-bottom: 14px;
-  }
-  .tool-page .page-heading {
-    margin-bottom: 18px;
-  }
-  .tool-page .page-heading h1 {
-    font-size: 30px;
-  }
-  .tool-page .answer-block {
-    font-size: 16px;
-  }
-}
-@media print {
-  .tool-page .page-heading h1 {
-    font-size: 24px;
-  }
-}
-@media (max-width: 600px) {
-  .header-inner {
-    position: relative;
-  }
-  .site-header nav {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    column-gap: 18px;
-    row-gap: 2px;
-  }
-  .nav-group {
-    position: static;
-  }
-  .nav-trigger,
-  .nav-about {
-    padding: 6px 0;
-  }
-  .nav-dropdown {
-    position: absolute;
-    left: 20px !important;
-    right: 20px !important;
-    top: calc(100% + 1px);
-    width: calc(100% - 40px);
-    max-height: 60dvh;
-  }
-}
-
-/* Optional quantities stay discoverable without extending every initial form. */
-.optional-inputs {
-  border-top: 1px solid var(--line);
-  margin-top: 8px;
-}
-.optional-inputs summary {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 44px;
-  padding: 10px 0;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  list-style: none;
-}
-.optional-inputs summary::-webkit-details-marker {
-  display: none;
-}
-.optional-inputs summary > span {
-  margin-left: auto;
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 400;
-}
-.optional-inputs summary::after {
-  content: '+';
-  font-size: 20px;
-  font-weight: 400;
-}
-.optional-inputs[open] summary::after {
-  content: '−';
-}
-.optional-inputs[open] summary {
-  margin-bottom: 12px;
-}
-.empty-result .shape-diagram {
-  width: 100%;
-  max-width: 280px;
-  margin-bottom: 18px;
-}
-.conversion-diagram {
-  padding: 36px 10px;
-  margin-bottom: 20px;
-  border: 1px solid var(--line);
-  font: 16px/1.8 var(--mono);
-}
-.prose table caption {
-  text-align: left;
-  font-size: 14px;
-  margin-bottom: 12px;
-  color: var(--muted);
-}
-.article-layout {
-  margin-top: 40px;
-}
-.article-sidebar {
-  align-self: start;
-}
-.page-heading {
-  max-width: 940px;
-}
-.breadcrumb {
-  margin-bottom: 28px;
-}
-@media (max-width: 600px) {
-  .tool-page .breadcrumb {
-    font-size: 13px;
-  }
-  .site-header nav {
-    font-size: 13px;
-  }
-  .byline {
-    font-size: 13px;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
   }
 }
 ````
@@ -2726,7 +3241,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-US">
-      <body>
+      <body className="theme-projectone">
         <a href="#main" className="skip-link">
           Skip to content
         </a>
@@ -2792,24 +3307,117 @@ export default function NotFound() {
 
 ````tsx
 import Link from 'next/link';
-import { pages, getPage, isPublic } from '@/lib/content';
+import { pages, getPage } from '@/lib/content';
 import { pageMetadata } from '@/lib/page';
 import { breadcrumbs, JsonLd } from '@/lib/seo';
-import ShapeDiagram from '@/components/ShapeDiagram';
+import HeroCollage from '@/components/HeroCollage';
+import MaterialGraphic from '@/components/MaterialGraphic';
 export const metadata = pageMetadata('/');
 const featured = [
-  { seq: 2, symbol: '01', description: 'Length, width, and thickness → short tons.' },
-  { seq: 8, symbol: '02', description: 'Separate base and surface layers → yards and tons.' },
-  { seq: 6, symbol: '03', description: 'Driveway dimensions → volume and sourced cost.' },
+  {
+    seq: 2,
+    icon: '↗',
+    tone: 'dark',
+    description: 'Turn length, width, and thickness into asphalt short tons.',
+  },
+  {
+    seq: 35,
+    icon: '▦',
+    tone: 'lime',
+    description: 'Work out concrete cubic yards and optional bag quantities.',
+  },
+  {
+    seq: 9,
+    icon: '∴',
+    tone: 'cream',
+    description: 'Calculate gravel volume and weight with your supplier density.',
+  },
+  {
+    seq: 8,
+    icon: '≋',
+    tone: 'cream',
+    description: 'Keep base and surface layers separate, then add the totals.',
+  },
+  {
+    seq: 36,
+    icon: '▤',
+    tone: 'lime',
+    description: 'Count pavers and calculate base material and bedding sand.',
+  },
+  {
+    seq: 21,
+    icon: '◒',
+    tone: 'dark',
+    description: 'Use product-label coverage to calculate gallons and containers.',
+  },
 ];
-const surfaces = ['asphalt', 'concrete', 'gravel', 'paver'];
+const materials = [
+  {
+    key: 'asphalt' as const,
+    label: 'Asphalt',
+    line: 'Thickness. Tonnage. Base work.',
+    href: '/asphalt-driveway-cost/',
+  },
+  {
+    key: 'concrete' as const,
+    label: 'Concrete',
+    line: 'Volume. Finish. Reinforcement.',
+    href: '/concrete-driveway-cost/',
+  },
+  {
+    key: 'gravel' as const,
+    label: 'Gravel',
+    line: 'Layers. Material weight. Delivery.',
+    href: '/gravel-driveway-cost/',
+  },
+  {
+    key: 'paver' as const,
+    label: 'Pavers',
+    line: 'Paver size. Base. Bedding sand.',
+    href: '/paver-driveway-cost/',
+  },
+];
+const faqs = [
+  {
+    question: 'Which units do these calculators use?',
+    answer:
+      'Measurements use feet and inches. Results use square feet, cubic yards, US short tons, bags, pavers, or gallons, depending on the tool.',
+  },
+  {
+    question: 'Can I measure an irregular or tapered driveway?',
+    answer:
+      'Yes. Add separate measured sections and use the tapered-width option for different start and end widths. Each section contributes to the total area. Slope inputs account for the way you measured the length.',
+  },
+  {
+    question: 'Where do I get the material density or product yield?',
+    answer:
+      'Use your supplier’s material density or the coverage and yield printed on the product label. The fields remain editable, so the result follows the material you are ordering.',
+  },
+  {
+    question: 'Does the calculator include waste and compaction?',
+    answer:
+      'The relevant tools include separate allowance fields. Enter your project allowance, or enter 0 to exclude it. The worked calculation shows how the entered values affect the result.',
+  },
+  {
+    question: 'Are driveway price ranges available in this preview?',
+    answer:
+      'Price ranges remain unavailable until verified source records are added. Quantity calculators work with your measurements and material values. Cost calculators calculate measured area while pricing is unavailable.',
+  },
+  {
+    question: 'Can I copy, print, or share my calculation?',
+    answer:
+      'Yes. Calculate a result to access copy, print, and share controls. A shared link contains the calculator inputs so you can reopen the same calculation.',
+  },
+];
 export default function Home() {
   return (
     <>
       <section className="home-hero">
+        <div className="hero-halo" aria-hidden="true" />
         <div className="hero-copy">
-          <span className="eyebrow">
-            <span className="orange-dot" /> Your driveway, worked out.
+          <span className="eyebrow hero-kicker">
+            <span className="accent-dot" />
+            Your driveway, worked out.
           </span>
           <h1>
             Driveway
@@ -2817,132 +3425,220 @@ export default function Home() {
             <em>Calculators.</em>
           </h1>
           <p className="hero-description">
-            Driveway cost guides and material calculators. Turn your measurements into asphalt tons,
-            concrete yards, and gravel quantities.
+            Your measurements. Your materials. The math in view.
+            <br />
+            Free tools for asphalt, concrete, gravel, and pavers.
           </p>
           <div className="hero-actions">
             <Link href="/asphalt-calculator/" className="button primary">
-              Calculate material <span aria-hidden="true">↗</span>
-            </Link>
-            <Link href="#surfaces" className="hero-link">
-              Explore cost guides <span aria-hidden="true">↓</span>
+              Start calculating <span aria-hidden="true">↗</span>
             </Link>
           </div>
-          <div className="hero-footnote">
-            <span>US units</span>
-            <span>Editable inputs</span>
-            <span>Visible formulas</span>
-          </div>
+          <p className="hero-footnote">
+            US units <span>·</span> Editable inputs <span>·</span> No sign-up
+          </p>
         </div>
-        <div className="hero-visual">
-          <div className="visual-caption">
-            <span className="eyebrow">Project geometry</span>
-            <span className="unit-badge">ft / in</span>
-          </div>
-          <ShapeDiagram tapered />
-          <div className="visual-footer">
-            <span>AREA</span>
-            <code>L × (W₁ + W₂) / 2</code>
-          </div>
-          <div className="visual-label">
-            <span className="orange-dot" /> Measure each section. Add them together.
-          </div>
-        </div>
+        <HeroCollage />
+        <span className="hero-handwritten" aria-hidden="true">
+          a little planning.
+          <br />a clearer order. ↗
+        </span>
       </section>
-      <section className="home-section featured-section">
-        <div className="section-header">
-          <div>
-            <span className="eyebrow">The workbench</span>
-            <h2>Start with your material.</h2>
+      <section className="project-intro section-wrap">
+        <div className="planning-list">
+          <div className="planning-row">
+            <span className="step-check" aria-hidden="true">
+              ✓
+            </span>
+            Measure each section <span>01</span>
           </div>
-          <Link href="#library">
-            Browse all tools <span aria-hidden="true">↗</span>
+          <div className="planning-row">
+            <span className="step-check" aria-hidden="true">
+              ✓
+            </span>
+            Choose your material <span>02</span>
+          </div>
+          <div className="planning-row planning-active">
+            <span className="step-check" aria-hidden="true">
+              ↗
+            </span>
+            See the quantity and formula <span>03</span>
+          </div>
+          <div className="planning-row">
+            <span className="step-check" aria-hidden="true">
+              ✓
+            </span>
+            Check the supplier values <span>04</span>
+          </div>
+          <Link className="planning-link" href="/methodology/">
+            The calculation method <span aria-hidden="true">↗</span>
           </Link>
         </div>
-        <div className="featured-grid">
+        <div className="intro-copy">
+          <span className="eyebrow">Start with the measurements</span>
+          <h2>
+            One project.
+            <br />
+            Every input,
+            <br />
+            <mark>in view.</mark>
+          </h2>
+          <p>
+            From the first measurement to material quantities. Keep the dimensions, density,
+            allowances, and formula together.
+          </p>
+          <span className="handwritten">measure first. order second.</span>
+        </div>
+      </section>
+      <section className="home-section workbench-section" id="workbench">
+        <div className="section-title">
+          <span className="eyebrow">Meet your workbench</span>
+          <h2>
+            Your material.
+            <br />
+            <mark>Your calculator.</mark>
+          </h2>
+          <p>Pick a tool. Enter your measurements. Inspect the result.</p>
+        </div>
+        <div className="tool-bento">
           {featured.map((f) => {
             const p = pages.find((p) => p.seq === f.seq)!;
             return (
-              <Link className="featured-card" href={p.url} key={f.seq}>
-                <span className="card-number">{f.symbol} / MATERIAL TOOL</span>
+              <Link href={p.url} className={'tool-tile tile-' + f.tone} key={f.seq}>
+                <span className="tile-icon" aria-hidden="true">
+                  {f.icon}
+                </span>
                 <h3>{p.h1}</h3>
                 <p>{f.description}</p>
-                <div className="card-bottom">
-                  <span>Open calculator</span>
-                  <span aria-hidden="true">↗</span>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-      <section className="surface-section home-section" id="surfaces">
-        <div className="section-header">
-          <div>
-            <span className="eyebrow">Plan by surface</span>
-            <h2>
-              A different material.
-              <br />A different set of inputs.
-            </h2>
-          </div>
-          <p>Read the cost guide, then use its matching calculator to work through your project.</p>
-        </div>
-        <div className="surface-grid">
-          {surfaces.map((s, i) => {
-            const p = pages.find((p) => p.url === `/${s}-driveway-cost/`)!;
-            return (
-              <Link key={s} className={'surface-card surface-' + s} href={p.url}>
-                <div className="material-swatch" aria-hidden="true" />
-                <div className="surface-details">
-                  <span className="eyebrow">0{i + 1} / COST GUIDE</span>
-                  <h3>{p.h1}</h3>
-                  <p>
-                    {s === 'asphalt'
-                      ? 'Thickness, tonnage, and base work.'
-                      : s === 'concrete'
-                        ? 'Slab thickness, finish, and reinforcement.'
-                        : s === 'gravel'
-                          ? 'Layers, material weight, and delivery.'
-                          : 'Paver size, base material, and bedding sand.'}
-                  </p>
-                  <span className="surface-arrow" aria-hidden="true">
+                <span className="tile-bottom">
+                  Open calculator{' '}
+                  <span className="arrow-box" aria-hidden="true">
                     ↗
                   </span>
-                </div>
+                </span>
               </Link>
             );
           })}
         </div>
       </section>
-      <section className="method-strip">
-        <span className="eyebrow">Built around the calculation</span>
+      <section className="home-section steps-section">
+        <div className="section-title">
+          <span className="eyebrow">A calculation you can follow</span>
+          <h2>
+            Measure. Enter.
+            <br />
+            <mark>Understand.</mark>
+          </h2>
+        </div>
+        <div className="process-grid">
+          <div className="process-card">
+            <span className="process-number">01</span>
+            <h3>Map the area.</h3>
+            <p>
+              Enter length and width. Add sections for an irregular driveway, or use different end
+              widths for a taper.
+            </p>
+            <span className="process-equation">L × W → ft²</span>
+          </div>
+          <div className="process-card">
+            <span className="process-number">02</span>
+            <h3>Set the inputs.</h3>
+            <p>
+              Enter your depth and allowances. Use supplier density or product-label yield and
+              coverage.
+            </p>
+            <span className="process-equation">Area × depth → volume</span>
+          </div>
+          <div className="process-card">
+            <span className="process-number">03</span>
+            <h3>Read the result.</h3>
+            <p>
+              See quantities, purchase rounding, and the formula. Copy, print, or share the
+              calculation.
+            </p>
+            <span className="process-equation">Volume × density → weight</span>
+          </div>
+        </div>
+      </section>
+      <div className="lime-ticker" aria-label="Calculator features">
+        <span>
+          US units <b aria-hidden="true">✳</b> Your supplier values <b aria-hidden="true">✳</b>{' '}
+          Visible formulas <b aria-hidden="true">✳</b> Separate layers <b aria-hidden="true">✳</b>{' '}
+          Copy. Print. Share.
+        </span>
+      </div>
+      <section className="purpose-section">
+        <span className="eyebrow">The method behind the number</span>
         <h2>
-          See the inputs.
+          Every measurement.
           <br />
-          Understand the result.
+          Every allowance.
+          <br />
+          <mark>Out in the open.</mark>
         </h2>
-        <div>
+        <p>
+          The tools show the math behind the result. Material density, yield, and coverage follow
+          the values you supply.
+        </p>
+        <Link href="/methodology/" className="button primary">
+          Explore the method <span aria-hidden="true">↗</span>
+        </Link>
+        <span className="purpose-formula formula-left" aria-hidden="true">
+          ft² × in
+          <br />
+          <strong>÷ 12 ÷ 27</strong>
+          <span>cubic yards</span>
+        </span>
+        <span className="purpose-formula formula-right" aria-hidden="true">
+          yd³ × density
+          <br />
+          <strong>= short tons</strong>
+          <span>supplier values</span>
+        </span>
+      </section>
+      <section className="home-section surface-section" id="surfaces">
+        <div className="section-title">
+          <span className="eyebrow">Plan by surface</span>
+          <h2>
+            Different materials.
+            <br />
+            <mark>Different inputs.</mark>
+          </h2>
           <p>
-            Material densities and product coverage stay editable. Cost results use approved source
-            data. Every calculator displays the math behind its output.
+            Explore the matching cost guide for your surface. Price ranges await verified source
+            data.
           </p>
-          <Link href="/methodology/">
-            Read the Methodology <span aria-hidden="true">↗</span>
-          </Link>
+        </div>
+        <div className="surface-gallery">
+          {materials.map((m) => (
+            <Link href={m.href} className={'material-card material-' + m.key} key={m.key}>
+              <MaterialGraphic material={m.key} />
+              <div>
+                <span className="eyebrow">Cost guide</span>
+                <h3>{m.label}</h3>
+                <p>{m.line}</p>
+                <span className="arrow-box" aria-hidden="true">
+                  ↗
+                </span>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
       <section className="home-section library-section" id="library">
-        <div className="section-header">
-          <div>
-            <span className="eyebrow">Tool library</span>
-            <h2>Keep the project moving.</h2>
-          </div>
-          <p>Choose a quantity tool, cost estimator, or material reference.</p>
+        <div className="section-title">
+          <span className="eyebrow">More ways to work it out</span>
+          <h2>
+            The full
+            <br />
+            <mark>tool library.</mark>
+          </h2>
+          <p>Quantity calculators, cost tools, and material references in one place.</p>
         </div>
         <div className="library-grid">
           {[
             { label: 'Quantity calculators', filter: (t: string) => t === 'Quantity tool' },
-            { label: 'Cost estimators', filter: (t: string) => /estimator/.test(t) },
+            { label: 'Cost estimators', filter: (t: string) => /estimator|Compare/.test(t) },
             {
               label: 'Material references',
               filter: (t: string) => /Reference|Converter|Spec/.test(t),
@@ -2961,6 +3657,41 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
+      <section className="faq-section section-wrap" id="faqs">
+        <span className="eyebrow">A few things to know</span>
+        <h2>FAQs.</h2>
+        <div className="faq-list">
+          {faqs.map((faq) => (
+            <details key={faq.question}>
+              <summary>
+                {faq.question}
+                <span className="faq-toggle" aria-hidden="true">
+                  +
+                </span>
+              </summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+        <div className="faq-footer">
+          <span>Want to inspect the formulas?</span>
+          <Link href="/methodology/" className="button dark-button">
+            Read the method <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
+      </section>
+      <section className="home-section final-cta">
+        <span className="eyebrow">Your next step</span>
+        <h2>
+          Start with
+          <br />
+          <mark>a measurement.</mark>
+        </h2>
+        <p>Choose a material calculator and work through your project.</p>
+        <Link href="/asphalt-calculator/" className="button primary">
+          Start calculating <span aria-hidden="true">↗</span>
+        </Link>
       </section>
       <JsonLd data={breadcrumbs(getPage('/'))} />
     </>
@@ -4063,6 +4794,9 @@ export default function Footer() {
           <Link href="/disclosure/">Disclosure</Link>
         </div>
       </div>
+      <div className="footer-watermark" aria-hidden="true">
+        Driveway<span>Calculators.</span>
+      </div>
     </footer>
   );
 }
@@ -4154,6 +4888,119 @@ export default function HelpfulVote() {
         </>
       )}
     </div>
+  );
+}
+````
+
+## components/HeroCollage.tsx
+
+````tsx
+import Link from 'next/link';
+import MaterialGraphic from './MaterialGraphic';
+const cards = [
+  {
+    material: 'asphalt' as const,
+    title: 'Asphalt Calculator',
+    unit: 'SHORT TONS',
+    href: '/asphalt-calculator/',
+  },
+  {
+    material: 'concrete' as const,
+    title: 'Concrete Calculator',
+    unit: 'CUBIC YARDS',
+    href: '/concrete-calculator/',
+  },
+  {
+    material: 'gravel' as const,
+    title: 'Gravel Calculator',
+    unit: 'YARDS + TONS',
+    href: '/gravel-calculator/',
+  },
+  {
+    material: 'paver' as const,
+    title: 'Paver Calculator',
+    unit: 'PAVERS + BASE',
+    href: '/paver-calculator/',
+  },
+];
+export default function HeroCollage() {
+  return (
+    <div className="hero-collage" aria-label="Choose a material calculator">
+      {cards.map((card, index) => (
+        <Link
+          href={card.href}
+          className={`orbit-card orbit-${index + 1}`}
+          key={card.material}
+          aria-label={card.title}
+        >
+          <div className="mockup-toolbar" aria-hidden="true">
+            <span className="mockup-dots" aria-hidden="true">
+              ● ● ●
+            </span>
+            <span>Driveway Calculators</span>
+          </div>
+          <MaterialGraphic material={card.material} />
+          <div className="mockup-title">
+            {card.title}
+            <span aria-hidden="true">↗</span>
+          </div>
+          <span className="mockup-unit">{card.unit}</span>
+        </Link>
+      ))}
+    </div>
+  );
+}
+````
+
+## components/MaterialGraphic.tsx
+
+````tsx
+type Material = 'asphalt' | 'concrete' | 'gravel' | 'paver';
+export default function MaterialGraphic({ material }: { material: Material }) {
+  const surface = { asphalt: '#30312d', concrete: '#d2d1c7', gravel: '#bcb99c', paver: '#b49376' }[
+    material
+  ];
+  return (
+    <svg viewBox="0 0 240 170" className="material-graphic" aria-hidden="true">
+      <rect width="240" height="170" rx="8" fill="#eae9e0" />
+      <path d="M0 138H240V170H0Z" fill="#cfcec3" />
+      <path d="M0 151H240" stroke="#f9f9f3" strokeWidth="2" strokeDasharray="18 12" />
+      <path d="M21 0H218V133H21Z" fill="#d4d9be" />
+      <path d="M68 52H174L191 138H50Z" fill={surface} stroke="#37382f" />
+      {material === 'concrete' && <path d="M63 82H180M57 110H185M121 52V138" stroke="#a4a499" />}
+      {material === 'gravel' && (
+        <g fill="#e4dec1">
+          {Array.from({ length: 42 }, (_, i) => (
+            <circle
+              key={i}
+              cx={74 + (i % 7) * 15 + (i % 2) * 3}
+              cy={66 + Math.floor(i / 7) * 12}
+              r={i % 3 === 0 ? 3 : 2}
+            />
+          ))}
+        </g>
+      )}
+      {material === 'paver' && (
+        <g stroke="#dac7af">
+          {Array.from({ length: 5 }, (_, i) => (
+            <path
+              key={i}
+              d={`M${65 - i * 3} ${66 + i * 15}H${177 + i * 3} M${85 + (i % 2) * 10} ${52 + i * 15}v15 M${116 + (i % 2) * 10} ${52 + i * 15}v15 M${147 + (i % 2) * 10} ${52 + i * 15}v15`}
+            />
+          ))}
+        </g>
+      )}
+      <rect x="62" y="21" width="117" height="36" rx="2" fill="#f6f5ee" stroke="#33342d" />
+      <path d="M55 23L119 5L187 23" fill="#55574a" stroke="#33342d" />
+      <rect x="76" y="31" width="38" height="26" fill="#afb5a7" stroke="#33342d" />
+      <rect x="124" y="31" width="38" height="26" fill="#afb5a7" stroke="#33342d" />
+      <path d="M80 38H110M80 46H110M128 38H158M128 46H158" stroke="#e4e6da" />
+      <circle cx="34" cy="85" r="19" fill="#697252" />
+      <circle cx="32" cy="81" r="14" fill="#879264" />
+      <circle cx="209" cy="104" r="17" fill="#697252" />
+      <circle cx="206" cy="100" r="12" fill="#879264" />
+      <path d="M50 140H191" stroke="#33342d" strokeWidth="2" />
+    </svg>
   );
 }
 ````
@@ -10579,6 +11426,16 @@ The Instruction-set.txt and Driveway calculator.rtf were read completely. Sectio
 - Export checks reject visible DATA tokens, internal specification/review text, and multiple H1 elements.
 - Source repository: https://github.com/yes155/driveway-calculator. Preview-host editing controls are outside application source.
 
+## Project One design adaptation
+
+- Rebuilt the homepage around the reference's centered hero, floating tilted mockups, dark introduction, mixed-color tool grid, staggered process cards, curved dark section, material gallery, lime FAQ panel, and oversized footer wordmark.
+- Applied one shared off-white/charcoal/lime theme to all routes, including navigation, form controls, results, diagrams, formula panels, guide modules, bylines, sidebars, and trust pages.
+- Added code-native SVG driveway illustrations and calculator preview cards, without external image or font requests.
+- Added responsive layouts and a single-column phone input grid, visible keyboard focus, reduced-motion rules, and print styles.
+- Export verification now requires the shared theme marker on every checked page.
+- Existing calculation behavior, document metadata, and draft data gates are retained. No agency testimonials, projects, statistics, or pricing were copied.
+- Browser pixel, layout, and interaction checks remain unavailable. This is a design adaptation, not a verified pixel-identical reproduction.
+
 ## Executed checks
 
 | Check | Result |
@@ -10602,9 +11459,55 @@ The Instruction-set.txt and Driveway calculator.rtf were read completely. Sectio
 All site pages remain drafts. This is the initial engineering build, not a public launch.
 ````
 
+## docs/DESIGN-REVIEW.md
+
+````markdown
+# BUILD — Project One design adaptation
+
+Reference: https://www.projectone.website/ and the supplied full-page screenshot.
+
+The design language is adapted to Driveway Calculators across the homepage, calculator pages, guides, and supporting trust pages. The reference's agency copy, testimonials, projects, numbers, and pricing are not part of this implementation.
+
+| Reference element | Driveway implementation |
+| --- | --- |
+| Off-white, charcoal, and lime palette | Shared CSS tokens: `#fafaf8`, `#1d1e1b`, `#c7ff52`; cream `#f0f0e5` |
+| Bold centered opening | Large two-line homepage title, concise description, lime action, circular backdrop |
+| Tilted website mockups | Four linked calculator cards with material-specific SVG scenes |
+| Dark pill navigation | Existing functional dropdown navigation restyled in charcoal with lime accents |
+| Dark checklist introduction | Measurement checklist paired with an oversized highlighted heading |
+| Mixed-color feature grid | Six real calculator links in charcoal, lime, and cream tiles |
+| Staggered process cards | Measure, enter material values, inspect the formula |
+| Lime feature strip | Static strip listing supported calculator features |
+| Dark panel and curved transition | Centered formula section with rotated formula cards and a curved cream boundary |
+| Project image gallery | Four illustrative driveway material cards linking to the relevant cost guides |
+| Lime FAQ panel | Native accessible disclosure controls with accurate calculator information |
+| Large footer lettering | Decorative two-line Driveway Calculators wordmark above the existing footer links |
+| Consistent inner pages | Shared form, result, formula, diagram, sidebar, source, and trust-page styles |
+| Phone layouts | Two-column hero mockups, stacked calculator panels, single-column narrow-screen input fields |
+
+## Source files
+
+- `app/page.tsx`: homepage composition and content.
+- `app/globals.css`: shared theme, all page and calculator styles, responsive and print rules.
+- `app/layout.tsx`: shared body theme marker.
+- `components/HeroCollage.tsx`: linked floating calculator preview cards.
+- `components/MaterialGraphic.tsx`: deterministic material-specific SVG scenes.
+- `components/Footer.tsx`: large decorative footer lettering.
+- `public/icon.svg`: matching lime and charcoal icon.
+- `scripts/check-export.ts`: shared theme verification for all checked exports.
+
+## Validation
+
+Strict TypeScript, 116 existing tests, the source map validator, and the production static export passed. All 57 content and trust pages passed exported HTML checks, including the shared theme marker, H1, metadata, canonical URLs, internal links, generated examples, and draft indexing controls.
+
+Supported browser tooling is unavailable in this environment. Pixel matching, phone rendering, keyboard interactions, and visual layout checks were not executed. The reference screenshot is narrow, so the desktop composition is interpreted rather than copied pixel for pixel. System sans-serif fonts keep the build self-contained.
+
+Prices and material defaults still require verified DATA records. All mapped pages remain drafts and retain noindex controls. GitHub contains the source; the owner's Cloudflare Pages Git connection remains unverified.
+````
+
 ## eslint.config.mjs
 
-````text
+````javascript
 import next from 'eslint-config-next/core-web-vitals';
 export default [...next, { ignores: ['out/**', '.next/**', 'docs/source-review.md'] }];
 ````
@@ -25800,7 +26703,7 @@ export default config;
 
 ## postcss.config.mjs
 
-````text
+````javascript
 export default { plugins: { '@tailwindcss/postcss': {} } };
 ````
 
@@ -25820,7 +26723,7 @@ export default { plugins: { '@tailwindcss/postcss': {} } };
 ## public/icon.svg
 
 ````xml
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#172d35"/><path d="M14 54L25 10H39L50 54M32 16V24M32 31V39M32 46V54" stroke="#f7f6f0" stroke-width="4" fill="none"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#c7ff52"/><path d="M14 54L25 10H39L50 54M32 16V24M32 31V39M32 46V54" stroke="#1d1e1b" stroke-width="4" fill="none"/></svg>
 ````
 
 ## scripts/check-export.ts
@@ -25841,6 +26744,8 @@ for (const url of urls) {
     continue;
   }
   const html = fs.readFileSync(file, 'utf8');
+  if (!html.includes('<body class="theme-projectone">'))
+    errors.push('Missing shared design theme ' + url);
   const visibleHtml = html
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '')
     .replace(/<style\b[^>]*>[\s\S]*?<\/style>/g, '');
@@ -26458,7 +27363,7 @@ export default defineConfig({
 });
 ````
 
-## Commands to run
+## Commands
 
 ```sh
 npm ci
@@ -26466,4 +27371,4 @@ npm run dev
 npm run check
 ```
 
-Cloudflare Pages: build command `npm run build`; output directory `out`; keep `SITE_STAGE=draft` until the launch checks pass.
+Cloudflare Pages: build command `npm run build`, output directory `out`, Node.js 22. See README.md for draft-stage environment settings.
