@@ -1,0 +1,40 @@
+{
+  "name": "driveway-calculators",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "validate": "node --import tsx scripts/validate.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "npm run validate && next build --webpack && node --import tsx scripts/check-export.ts",
+    "build:launch": "SITE_STAGE=launch npm run build",
+    "check": "npm run typecheck && npm test && npm run build",
+    "format": "prettier --write .",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "next-mdx-remote": "5.0.0",
+    "gray-matter": "4.0.3",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "tailwindcss": "4.1.18",
+    "@tailwindcss/postcss": "4.1.18",
+    "vitest": "5.0.3",
+    "tsx": "4.21.0",
+    "prettier": "3.7.4",
+    "eslint": "9.39.2",
+    "eslint-config-next": "16.4.0",
+    "@cloudflare/workers-types": "5.20261011.1",
+    "@lhci/cli": "0.15.1"
+  },
+  "type": "module"
+}

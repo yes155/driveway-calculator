@@ -1,0 +1,2584 @@
+[
+  {
+    "order": 1,
+    "seq": 1,
+    "url": "/methodology/",
+    "section": "Outer",
+    "type": "Reference",
+    "phase": "1",
+    "primary": "",
+    "primaryVolume": null,
+    "primaryKd": null,
+    "primaryCpc": null,
+    "keywords": [],
+    "title": "How We Calculate Driveway Costs and Material Quantities",
+    "h1": "Methodology",
+    "description": "How the formulas, default densities and price ranges on this site are calculated, with sources and update dates.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["formula", "default density", "source name", "update date", "rounding", "units"],
+    "imageAlt": "Spreadsheet of cost sources and formulas",
+    "related": [
+      {
+        "slug": "/asphalt-calculator/",
+        "annotation": "explains the related asphalt calculator inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-cost/",
+        "annotation": "explains the related asphalt driveway cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-cost-calculator/",
+        "annotation": "explains the related asphalt driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost/",
+        "annotation": "explains the related concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost-calculator/",
+        "annotation": "explains the related concrete driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway-cost/",
+        "annotation": "explains the related gravel driveway cost inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway-calculator/",
+        "annotation": "explains the related gravel driveway calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-calculator/",
+        "annotation": "explains the related gravel calculator inputs or next step"
+      },
+      {
+        "slug": "/",
+        "annotation": "explains the related  inputs or next step"
+      },
+      {
+        "slug": "/driveway-cost-calculator/",
+        "annotation": "explains the related driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-slab-cost-calculator/",
+        "annotation": "explains the related concrete slab cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-slab-cost/",
+        "annotation": "explains the related concrete slab cost inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway/",
+        "annotation": "explains the related gravel driveway inputs or next step"
+      },
+      {
+        "slug": "/driveway-sealcoating-cost/",
+        "annotation": "explains the related driveway sealcoating cost inputs or next step"
+      },
+      {
+        "slug": "/repave-asphalt-driveway-cost/",
+        "annotation": "explains the related repave asphalt driveway cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-repair-cost/",
+        "annotation": "explains the related asphalt driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-vs-asphalt-driveway/",
+        "annotation": "explains the related concrete vs asphalt driveway inputs or next step"
+      },
+      {
+        "slug": "/replace-concrete-driveway-cost/",
+        "annotation": "explains the related replace concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/stamped-concrete-driveway-cost/",
+        "annotation": "explains the related stamped concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/paver-driveway-cost/",
+        "annotation": "explains the related paver driveway cost inputs or next step"
+      },
+      {
+        "slug": "/tar-and-chip-driveway-cost/",
+        "annotation": "explains the related tar and chip driveway cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-millings-cost/",
+        "annotation": "explains the related asphalt millings cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-thickness/",
+        "annotation": "explains the related asphalt driveway thickness inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-repair-cost/",
+        "annotation": "explains the related concrete driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-repair-cost/",
+        "annotation": "explains the related driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-replacement-cost/",
+        "annotation": "explains the related driveway replacement cost inputs or next step"
+      },
+      {
+        "slug": "/standard-driveway-width/",
+        "annotation": "explains the related standard driveway width inputs or next step"
+      },
+      {
+        "slug": "/concrete-calculator/",
+        "annotation": "explains the related concrete calculator inputs or next step"
+      },
+      {
+        "slug": "/paver-calculator/",
+        "annotation": "explains the related paver calculator inputs or next step"
+      },
+      {
+        "slug": "/how-to-lay-an-asphalt-driveway/",
+        "annotation": "explains the related how to lay an asphalt driveway inputs or next step"
+      },
+      {
+        "slug": "/hot-mix-asphalt/",
+        "annotation": "explains the related hot mix asphalt inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-maintenance/",
+        "annotation": "explains the related asphalt driveway maintenance inputs or next step"
+      },
+      {
+        "slug": "/driveway-drainage/",
+        "annotation": "explains the related driveway drainage inputs or next step"
+      },
+      {
+        "slug": "/how-to-repair-concrete-driveway-cracks/",
+        "annotation": "explains the related how to repair concrete driveway cracks inputs or next step"
+      },
+      {
+        "slug": "/how-to-repair-asphalt-driveway-cracks/",
+        "annotation": "explains the related how to repair asphalt driveway cracks inputs or next step"
+      },
+      {
+        "slug": "/sealcoat-calculator/",
+        "annotation": "explains the related sealcoat calculator inputs or next step"
+      },
+      {
+        "slug": "/asphalt-millings-calculator/",
+        "annotation": "explains the related asphalt millings calculator inputs or next step"
+      },
+      {
+        "slug": "/material-weights/",
+        "annotation": "explains the related material weights inputs or next step"
+      },
+      {
+        "slug": "/cubic-yards-to-tons/",
+        "annotation": "explains the related cubic yards to tons inputs or next step"
+      },
+      {
+        "slug": "/rock-calculator/",
+        "annotation": "explains the related rock calculator inputs or next step"
+      },
+      {
+        "slug": "/pea-gravel-calculator/",
+        "annotation": "explains the related pea gravel calculator inputs or next step"
+      },
+      {
+        "slug": "/crusher-run-calculator/",
+        "annotation": "explains the related crusher run calculator inputs or next step"
+      },
+      {
+        "slug": "/road-base-calculator/",
+        "annotation": "explains the related road base calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-weight-per-cubic-yard/",
+        "annotation": "explains the related concrete weight per cubic yard inputs or next step"
+      },
+      {
+        "slug": "/gravel-weight-per-cubic-yard/",
+        "annotation": "explains the related gravel weight per cubic yard inputs or next step"
+      },
+      {
+        "slug": "/driveway-sealer/",
+        "annotation": "explains the related driveway sealer inputs or next step"
+      },
+      {
+        "slug": "/how-to-seal-a-driveway/",
+        "annotation": "explains the related how to seal a driveway inputs or next step"
+      },
+      {
+        "slug": "/driveway-crack-filler/",
+        "annotation": "explains the related driveway crack filler inputs or next step"
+      },
+      {
+        "slug": "/asphalt-cold-patch/",
+        "annotation": "explains the related asphalt cold patch inputs or next step"
+      },
+      {
+        "slug": "/driveway-cost/",
+        "annotation": "explains the related driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: every tool and cost page (each page cites this page for its formulas). In: from every page footer"
+  },
+  {
+    "order": 2,
+    "seq": 2,
+    "url": "/asphalt-calculator/",
+    "section": "Core",
+    "type": "Quantity tool",
+    "phase": "1",
+    "primary": "asphalt calculator",
+    "primaryVolume": 22200.0,
+    "primaryKd": 15.0,
+    "primaryCpc": 1.16,
+    "keywords": [
+      "figuring asphalt",
+      "asphalt tonnage calculator",
+      "asphalt calculator online",
+      "asphalt driveway calculator",
+      "how to calculate asphalt tonnage",
+      "how to figure asphalt tonnage",
+      "how do you calculate asphalt tonnage",
+      "how to figure out asphalt tonnage",
+      "how to calculate tons of asphalt",
+      "how to figure tons of asphalt",
+      "bitumen calculator"
+    ],
+    "title": "Asphalt Calculator: Tons Needed for a Driveway or Lot",
+    "h1": "Asphalt Calculator",
+    "description": "Calculate tons of asphalt from length, width and thickness. Editable density and waste allowance. Free, no sign-up.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "hot mix asphalt",
+      "short ton (2",
+      "000 lb)",
+      "density in lb per cubic foot",
+      "thickness in inches",
+      "waste allowance",
+      "compaction",
+      "square feet",
+      "base course"
+    ],
+    "imageAlt": "Asphalt calculator with length, width and thickness inputs and a tons result",
+    "related": [
+      {
+        "slug": "/asphalt-driveway-cost-calculator/",
+        "annotation": "explains the related asphalt driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-thickness/",
+        "annotation": "explains the related asphalt driveway thickness inputs or next step"
+      },
+      {
+        "slug": "/material-weights/",
+        "annotation": "explains the related material weights inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-driveway-cost-calculator/ (this calculator converts driveway dimensions into tons that the cost estimator then prices); /asphalt-driveway-thickness/ (thickness sets the tonnage); /material-weights/ (the density default comes from the weight chart). In: from /, /asphalt-driveway-cost/, /asphalt-millings-calculator/"
+  },
+  {
+    "order": 3,
+    "seq": 3,
+    "url": "/asphalt-driveway-cost/",
+    "section": "Core",
+    "type": "Cost guide",
+    "phase": "1",
+    "primary": "asphalt driveway cost",
+    "primaryVolume": 6600.0,
+    "primaryKd": 9.0,
+    "primaryCpc": 3.14,
+    "keywords": [
+      "cost of asphalt driveway",
+      "how much does it cost to pave a driveway",
+      "blacktop driveway cost",
+      "asphalt driveway cost per square foot",
+      "how much does an asphalt driveway cost",
+      "how much does it cost to asphalt a driveway",
+      "20x20 asphalt driveway cost",
+      "cost of asphalt per ton",
+      "hot mix asphalt cost per ton"
+    ],
+    "title": "Asphalt Driveway Cost per Sq Ft (2026)",
+    "h1": "Asphalt Driveway Cost in 2026",
+    "description": "Asphalt driveway cost per square foot, per ton and for a 20x20 driveway, plus what moves the price. Includes a free estimator.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "hot mix asphalt",
+      "base course",
+      "subgrade",
+      "thickness",
+      "square footage",
+      "tonnage",
+      "removal and disposal",
+      "labor",
+      "delivery",
+      "regional price level"
+    ],
+    "imageAlt": "Freshly paved asphalt driveway with a tape measure across the width",
+    "related": [
+      {
+        "slug": "/asphalt-calculator/",
+        "annotation": "explains the related asphalt calculator inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-cost-calculator/",
+        "annotation": "explains the related asphalt driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-vs-asphalt-driveway/",
+        "annotation": "explains the related concrete vs asphalt driveway inputs or next step"
+      },
+      {
+        "slug": "/driveway-sealcoating-cost/",
+        "annotation": "explains the related driveway sealcoating cost inputs or next step"
+      },
+      {
+        "slug": "/repave-asphalt-driveway-cost/",
+        "annotation": "explains the related repave asphalt driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-calculator/ (the calculator turns driveway size into tons to price); /asphalt-driveway-cost-calculator/; /concrete-vs-asphalt-driveway/; /driveway-sealcoating-cost/ (sealcoating adds upkeep cost across the asphalt lifespan); /repave-asphalt-driveway-cost/. In: from /, /driveway-cost/, /asphalt-calculator/, /asphalt-driveway-thickness/"
+  },
+  {
+    "order": 4,
+    "seq": 4,
+    "url": "/asphalt-driveway-cost-calculator/",
+    "section": "Core",
+    "type": "Cost estimator",
+    "phase": "1",
+    "primary": "asphalt driveway cost calculator",
+    "primaryVolume": 1900.0,
+    "primaryKd": 24.0,
+    "primaryCpc": null,
+    "keywords": ["driveway paving cost calculator"],
+    "title": "Asphalt Driveway Cost Calculator: Free Estimate",
+    "h1": "Asphalt Driveway Cost Calculator",
+    "description": "Estimate your asphalt driveway cost from size, thickness, base work and removal. Low-to-high range with editable assumptions.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "square feet",
+      "thickness",
+      "base preparation",
+      "removal",
+      "low and high range",
+      "cost tier selector",
+      "editable assumptions"
+    ],
+    "imageAlt": "Cost estimator form for an asphalt driveway with a price range result",
+    "related": [
+      {
+        "slug": "/asphalt-driveway-cost/",
+        "annotation": "explains the related asphalt driveway cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-calculator/",
+        "annotation": "explains the related asphalt calculator inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-driveway-cost/ (the guide explains each input and its price range); /asphalt-calculator/. In: from /asphalt-driveway-cost/, /repave-asphalt-driveway-cost/"
+  },
+  {
+    "order": 5,
+    "seq": 5,
+    "url": "/concrete-driveway-cost/",
+    "section": "Core",
+    "type": "Cost guide",
+    "phase": "1",
+    "primary": "concrete driveway cost",
+    "primaryVolume": 4400.0,
+    "primaryKd": 21.0,
+    "primaryCpc": 3.67,
+    "keywords": [
+      "concrete driveway",
+      "cost of concrete driveway",
+      "how much does a concrete driveway cost",
+      "how much does it cost to concrete a driveway",
+      "how much does concrete driveway cost",
+      "how much does it cost for a concrete driveway",
+      "how much does it cost to pour a concrete driveway",
+      "how much is a concrete driveway",
+      "how much to cement a driveway",
+      "how much does it cost to cement a driveway",
+      "how much to concrete a driveway",
+      "how much does a cement driveway cost",
+      "how much to concrete driveway",
+      "how much is a concrete driveway per square foot"
+    ],
+    "title": "Concrete Driveway Cost per Sq Ft (2026)",
+    "h1": "Concrete Driveway Cost in 2026",
+    "description": "Concrete driveway cost per square foot and in total, with what raises or lowers the price. Includes a free cost estimator.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "concrete slab",
+      "slab thickness",
+      "reinforcement (rebar",
+      "wire mesh)",
+      "control joints",
+      "finish",
+      "cubic yards",
+      "formwork",
+      "subbase",
+      "cement (the everyday word searchers use for concrete)"
+    ],
+    "imageAlt": "Concrete driveway slab with broom finish and control joints",
+    "related": [
+      {
+        "slug": "/concrete-driveway-cost-calculator/",
+        "annotation": "explains the related concrete driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-vs-asphalt-driveway/",
+        "annotation": "explains the related concrete vs asphalt driveway inputs or next step"
+      },
+      {
+        "slug": "/stamped-concrete-driveway-cost/",
+        "annotation": "explains the related stamped concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/replace-concrete-driveway-cost/",
+        "annotation": "explains the related replace concrete driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /concrete-driveway-cost-calculator/; /concrete-vs-asphalt-driveway/; /stamped-concrete-driveway-cost/ (stamping adds pattern cost to the base slab price); /replace-concrete-driveway-cost/. In: from /, /driveway-cost/, /concrete-calculator/"
+  },
+  {
+    "order": 6,
+    "seq": 6,
+    "url": "/concrete-driveway-cost-calculator/",
+    "section": "Core",
+    "type": "Cost estimator",
+    "phase": "1",
+    "primary": "concrete driveway cost calculator",
+    "primaryVolume": 1300.0,
+    "primaryKd": 33.0,
+    "primaryCpc": null,
+    "keywords": [
+      "concrete driveway calculator",
+      "driveway concrete calculator",
+      "how much concrete do i need for a driveway"
+    ],
+    "title": "Concrete Driveway Cost Calculator: Free Estimate",
+    "h1": "Concrete Driveway Cost Calculator",
+    "description": "Estimate concrete driveway cost and cubic yards from size and thickness. Editable price and waste assumptions, low-to-high range.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "cubic yards",
+      "thickness",
+      "waste allowance",
+      "finish",
+      "reinforcement",
+      "price per cubic yard",
+      "price per square foot"
+    ],
+    "imageAlt": "Concrete driveway cost estimator showing cubic yards and a price range",
+    "related": [
+      {
+        "slug": "/concrete-driveway-cost/",
+        "annotation": "explains the related concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-calculator/",
+        "annotation": "explains the related concrete calculator inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /concrete-driveway-cost/ (the guide explains how finish and reinforcement change price); /concrete-calculator/ (volume math). In: from /concrete-driveway-cost/"
+  },
+  {
+    "order": 7,
+    "seq": 7,
+    "url": "/gravel-driveway-cost/",
+    "section": "Core",
+    "type": "Cost guide",
+    "phase": "1",
+    "primary": "gravel driveway cost",
+    "primaryVolume": 2400.0,
+    "primaryKd": 11.0,
+    "primaryCpc": 1.76,
+    "keywords": [
+      "gravel delivery cost",
+      "cost to put in gravel driveway",
+      "cost to install gravel driveway",
+      "driveway gravel cost",
+      "gravel driveway cost calculator",
+      "driveway gravel prices"
+    ],
+    "title": "Gravel Driveway Cost per Sq Ft (2026)",
+    "h1": "Gravel Driveway Cost in 2026",
+    "description": "Gravel driveway cost per square foot, per ton and with delivery, plus base layers and upkeep. Includes a free estimator.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "crusher run",
+      "road base",
+      "pea gravel",
+      "base layer",
+      "surface layer",
+      "geotextile fabric",
+      "edging",
+      "delivery fee",
+      "tons",
+      "cubic yards"
+    ],
+    "imageAlt": "Gravel driveway with a compacted crushed stone surface and edging",
+    "related": [
+      {
+        "slug": "/gravel-driveway-calculator/",
+        "annotation": "explains the related gravel driveway calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-calculator/",
+        "annotation": "explains the related gravel calculator inputs or next step"
+      },
+      {
+        "slug": "/crusher-run-calculator/",
+        "annotation": "explains the related crusher run calculator inputs or next step"
+      },
+      {
+        "slug": "/road-base-calculator/",
+        "annotation": "explains the related road base calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-vs-asphalt-driveway/",
+        "annotation": "explains the related concrete vs asphalt driveway inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /gravel-driveway-calculator/ (the calculator turns driveway size into tons to price); /gravel-calculator/; /crusher-run-calculator/; /road-base-calculator/; /concrete-vs-asphalt-driveway/. In: from /, /driveway-cost/, /gravel-calculator/"
+  },
+  {
+    "order": 8,
+    "seq": 8,
+    "url": "/gravel-driveway-calculator/",
+    "section": "Core",
+    "type": "Quantity tool",
+    "phase": "1",
+    "primary": "gravel driveway calculator",
+    "primaryVolume": 1300.0,
+    "primaryKd": 20.0,
+    "primaryCpc": 0.44,
+    "keywords": ["how much gravel do i need for a driveway"],
+    "title": "Gravel Driveway Calculator: Tons and Yards Needed",
+    "h1": "Gravel Driveway Calculator",
+    "description": "Calculate tons and cubic yards of gravel for a driveway from length, width and depth, with base and surface layers.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "base layer",
+      "surface layer",
+      "depth",
+      "compaction",
+      "tons per cubic yard",
+      "delivery load rounding"
+    ],
+    "imageAlt": "Gravel driveway calculator with base and surface layer inputs",
+    "related": [
+      {
+        "slug": "/gravel-driveway-cost/",
+        "annotation": "explains the related gravel driveway cost inputs or next step"
+      },
+      {
+        "slug": "/cubic-yards-to-tons/",
+        "annotation": "explains the related cubic yards to tons inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /gravel-driveway-cost/ (the cost guide prices the tons this calculator returns); /cubic-yards-to-tons/. In: from /gravel-calculator/, /gravel-driveway-cost/"
+  },
+  {
+    "order": 9,
+    "seq": 9,
+    "url": "/gravel-calculator/",
+    "section": "Outer",
+    "type": "Quantity tool",
+    "phase": "1",
+    "primary": "gravel calculator",
+    "primaryVolume": 40500.0,
+    "primaryKd": 22.0,
+    "primaryCpc": 0.69,
+    "keywords": [
+      "gravel calculator yards",
+      "how much gravel do i need calculator",
+      "how to calculate how much gravel i need",
+      "how to calculate how much gravel you need",
+      "how to calculate yards of gravel",
+      "how to calculate gravel needed",
+      "figuring gravel",
+      "how much gravel do i need",
+      "how many yards of gravel do i need",
+      "stone calculator",
+      "crushed stone calculator",
+      "river stone calculator",
+      "57 stone calculator",
+      "stone calculator tons",
+      "how much stone do i need calculator"
+    ],
+    "title": "Gravel Calculator: Tons and Cubic Yards Needed",
+    "h1": "Gravel Calculator",
+    "description": "Calculate tons and cubic yards of gravel from length, width and depth. Editable density and delivery rounding. Free.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "gravel",
+      "crushed stone",
+      "cubic yards",
+      "tons",
+      "density",
+      "depth",
+      "delivery load"
+    ],
+    "imageAlt": "Gravel pile beside a measured gravel bed",
+    "related": [
+      {
+        "slug": "/gravel-driveway-calculator/",
+        "annotation": "explains the related gravel driveway calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway-cost/",
+        "annotation": "explains the related gravel driveway cost inputs or next step"
+      },
+      {
+        "slug": "/cubic-yards-to-tons/",
+        "annotation": "explains the related cubic yards to tons inputs or next step"
+      },
+      {
+        "slug": "/material-weights/",
+        "annotation": "explains the related material weights inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /gravel-driveway-calculator/ (driveway projects need separate base and surface layers); /gravel-driveway-cost/; /cubic-yards-to-tons/; /material-weights/. In: from /, /gravel-driveway-cost/"
+  },
+  {
+    "order": 10,
+    "seq": 10,
+    "url": "/",
+    "section": "Core",
+    "type": "Hub",
+    "phase": "1",
+    "primary": "",
+    "primaryVolume": null,
+    "primaryKd": null,
+    "primaryCpc": null,
+    "keywords": [],
+    "title": "Driveway Calculators: Cost Guides and Material Tools",
+    "h1": "Driveway Calculators",
+    "description": "Free driveway cost guides and calculators for asphalt, concrete, gravel and pavers: tons, cubic yards, square feet and price ranges.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "driveway",
+      "cost",
+      "calculator",
+      "asphalt",
+      "concrete",
+      "gravel",
+      "pavers",
+      "tons",
+      "cubic yards"
+    ],
+    "imageAlt": "Driveway cost and material calculators site banner",
+    "related": [
+      {
+        "slug": "/methodology/",
+        "annotation": "explains the related methodology inputs or next step"
+      },
+      {
+        "slug": "/asphalt-calculator/",
+        "annotation": "explains the related asphalt calculator inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-cost/",
+        "annotation": "explains the related asphalt driveway cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-cost-calculator/",
+        "annotation": "explains the related asphalt driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost/",
+        "annotation": "explains the related concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost-calculator/",
+        "annotation": "explains the related concrete driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway-cost/",
+        "annotation": "explains the related gravel driveway cost inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway-calculator/",
+        "annotation": "explains the related gravel driveway calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-calculator/",
+        "annotation": "explains the related gravel calculator inputs or next step"
+      },
+      {
+        "slug": "/driveway-cost-calculator/",
+        "annotation": "explains the related driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-slab-cost-calculator/",
+        "annotation": "explains the related concrete slab cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-slab-cost/",
+        "annotation": "explains the related concrete slab cost inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway/",
+        "annotation": "explains the related gravel driveway inputs or next step"
+      },
+      {
+        "slug": "/driveway-sealcoating-cost/",
+        "annotation": "explains the related driveway sealcoating cost inputs or next step"
+      },
+      {
+        "slug": "/repave-asphalt-driveway-cost/",
+        "annotation": "explains the related repave asphalt driveway cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-repair-cost/",
+        "annotation": "explains the related asphalt driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-vs-asphalt-driveway/",
+        "annotation": "explains the related concrete vs asphalt driveway inputs or next step"
+      },
+      {
+        "slug": "/replace-concrete-driveway-cost/",
+        "annotation": "explains the related replace concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/stamped-concrete-driveway-cost/",
+        "annotation": "explains the related stamped concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/paver-driveway-cost/",
+        "annotation": "explains the related paver driveway cost inputs or next step"
+      },
+      {
+        "slug": "/tar-and-chip-driveway-cost/",
+        "annotation": "explains the related tar and chip driveway cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-millings-cost/",
+        "annotation": "explains the related asphalt millings cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-thickness/",
+        "annotation": "explains the related asphalt driveway thickness inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-repair-cost/",
+        "annotation": "explains the related concrete driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-repair-cost/",
+        "annotation": "explains the related driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-replacement-cost/",
+        "annotation": "explains the related driveway replacement cost inputs or next step"
+      },
+      {
+        "slug": "/standard-driveway-width/",
+        "annotation": "explains the related standard driveway width inputs or next step"
+      },
+      {
+        "slug": "/concrete-calculator/",
+        "annotation": "explains the related concrete calculator inputs or next step"
+      },
+      {
+        "slug": "/paver-calculator/",
+        "annotation": "explains the related paver calculator inputs or next step"
+      },
+      {
+        "slug": "/how-to-lay-an-asphalt-driveway/",
+        "annotation": "explains the related how to lay an asphalt driveway inputs or next step"
+      },
+      {
+        "slug": "/hot-mix-asphalt/",
+        "annotation": "explains the related hot mix asphalt inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-maintenance/",
+        "annotation": "explains the related asphalt driveway maintenance inputs or next step"
+      },
+      {
+        "slug": "/driveway-drainage/",
+        "annotation": "explains the related driveway drainage inputs or next step"
+      },
+      {
+        "slug": "/how-to-repair-concrete-driveway-cracks/",
+        "annotation": "explains the related how to repair concrete driveway cracks inputs or next step"
+      },
+      {
+        "slug": "/how-to-repair-asphalt-driveway-cracks/",
+        "annotation": "explains the related how to repair asphalt driveway cracks inputs or next step"
+      },
+      {
+        "slug": "/sealcoat-calculator/",
+        "annotation": "explains the related sealcoat calculator inputs or next step"
+      },
+      {
+        "slug": "/asphalt-millings-calculator/",
+        "annotation": "explains the related asphalt millings calculator inputs or next step"
+      },
+      {
+        "slug": "/material-weights/",
+        "annotation": "explains the related material weights inputs or next step"
+      },
+      {
+        "slug": "/cubic-yards-to-tons/",
+        "annotation": "explains the related cubic yards to tons inputs or next step"
+      },
+      {
+        "slug": "/rock-calculator/",
+        "annotation": "explains the related rock calculator inputs or next step"
+      },
+      {
+        "slug": "/pea-gravel-calculator/",
+        "annotation": "explains the related pea gravel calculator inputs or next step"
+      },
+      {
+        "slug": "/crusher-run-calculator/",
+        "annotation": "explains the related crusher run calculator inputs or next step"
+      },
+      {
+        "slug": "/road-base-calculator/",
+        "annotation": "explains the related road base calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-weight-per-cubic-yard/",
+        "annotation": "explains the related concrete weight per cubic yard inputs or next step"
+      },
+      {
+        "slug": "/gravel-weight-per-cubic-yard/",
+        "annotation": "explains the related gravel weight per cubic yard inputs or next step"
+      },
+      {
+        "slug": "/driveway-sealer/",
+        "annotation": "explains the related driveway sealer inputs or next step"
+      },
+      {
+        "slug": "/how-to-seal-a-driveway/",
+        "annotation": "explains the related how to seal a driveway inputs or next step"
+      },
+      {
+        "slug": "/driveway-crack-filler/",
+        "annotation": "explains the related driveway crack filler inputs or next step"
+      },
+      {
+        "slug": "/asphalt-cold-patch/",
+        "annotation": "explains the related asphalt cold patch inputs or next step"
+      },
+      {
+        "slug": "/driveway-cost/",
+        "annotation": "explains the related driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: every Core page and every tool through the main navigation. In: from every page logo link"
+  },
+  {
+    "order": 11,
+    "seq": 42,
+    "url": "/driveway-cost-calculator/",
+    "section": "Core",
+    "type": "Compare estimator",
+    "phase": "1b",
+    "primary": "driveway cost calculator",
+    "primaryVolume": 590.0,
+    "primaryKd": 19.0,
+    "primaryCpc": 2.45,
+    "keywords": ["driveway calculator", "driveway cost estimator"],
+    "title": "Driveway Cost Calculator: Compare Asphalt, Concrete, Gravel",
+    "h1": "Driveway Cost Calculator",
+    "description": "Enter your driveway size once and compare estimated cost, lifespan and upkeep for asphalt, concrete, gravel and pavers.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["surface", "lifespan", "upkeep", "cost per year", "cost area tier"],
+    "related": [
+      {
+        "slug": "/asphalt-driveway-cost/",
+        "annotation": "explains the related asphalt driveway cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-cost-calculator/",
+        "annotation": "explains the related asphalt driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost/",
+        "annotation": "explains the related concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost-calculator/",
+        "annotation": "explains the related concrete driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway-cost/",
+        "annotation": "explains the related gravel driveway cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-slab-cost-calculator/",
+        "annotation": "explains the related concrete slab cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-slab-cost/",
+        "annotation": "explains the related concrete slab cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-sealcoating-cost/",
+        "annotation": "explains the related driveway sealcoating cost inputs or next step"
+      },
+      {
+        "slug": "/repave-asphalt-driveway-cost/",
+        "annotation": "explains the related repave asphalt driveway cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-repair-cost/",
+        "annotation": "explains the related asphalt driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/replace-concrete-driveway-cost/",
+        "annotation": "explains the related replace concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/stamped-concrete-driveway-cost/",
+        "annotation": "explains the related stamped concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/paver-driveway-cost/",
+        "annotation": "explains the related paver driveway cost inputs or next step"
+      },
+      {
+        "slug": "/tar-and-chip-driveway-cost/",
+        "annotation": "explains the related tar and chip driveway cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-millings-cost/",
+        "annotation": "explains the related asphalt millings cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-repair-cost/",
+        "annotation": "explains the related concrete driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-repair-cost/",
+        "annotation": "explains the related driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-replacement-cost/",
+        "annotation": "explains the related driveway replacement cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: every surface cost guide and estimator. In: from /, /driveway-cost/, every cost guide"
+  },
+  {
+    "order": 12,
+    "seq": 50,
+    "url": "/concrete-slab-cost-calculator/",
+    "section": "Outer",
+    "type": "Cost estimator",
+    "phase": "1b",
+    "primary": "concrete slab cost calculator",
+    "primaryVolume": 5400.0,
+    "primaryKd": 22.0,
+    "primaryCpc": 2.04,
+    "keywords": [
+      "concrete pad cost calculator",
+      "concrete patio cost calculator",
+      "calculating concrete slab cost",
+      "concrete slab calculator cost",
+      "concrete slab installation cost calculator",
+      "concrete slab foundation cost calculator",
+      "concrete pad installation cost calculator",
+      "concrete pad calculator cost"
+    ],
+    "title": "Concrete Slab Cost Calculator: Free Estimate",
+    "h1": "Concrete Slab Cost Calculator",
+    "description": "Estimate slab, pad and patio cost and cubic yards from size and thickness, with editable price, waste and removal assumptions.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "square feet",
+      "thickness",
+      "cubic yards",
+      "waste",
+      "removal of the old slab",
+      "stone base",
+      "delivery",
+      "short-load fee"
+    ],
+    "related": [
+      {
+        "slug": "/concrete-slab-cost/",
+        "annotation": "explains the related concrete slab cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-calculator/",
+        "annotation": "explains the related concrete calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost-calculator/",
+        "annotation": "explains the related concrete driveway cost calculator inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /concrete-slab-cost/ (the guide explains each input); /concrete-calculator/ (volume only); /concrete-driveway-cost-calculator/. In: from /concrete-slab-cost/, /concrete-calculator/"
+  },
+  {
+    "order": 13,
+    "seq": 49,
+    "url": "/concrete-slab-cost/",
+    "section": "Outer",
+    "type": "Cost guide",
+    "phase": "1b",
+    "primary": "concrete slab cost",
+    "primaryVolume": 6600.0,
+    "primaryKd": 18.0,
+    "primaryCpc": 3.13,
+    "keywords": [
+      "concrete pad cost",
+      "concrete slab cost per square foot",
+      "garage slab cost",
+      "cost to pour concrete slab",
+      "cost of concrete slab",
+      "cost to install concrete slab",
+      "cost to lay a concrete pad",
+      "cost to pour concrete pad",
+      "cost to install a concrete pad"
+    ],
+    "title": "Concrete Slab Cost per Sq Ft (2026)",
+    "h1": "Concrete Slab Cost",
+    "description": "Concrete slab and pad cost per square foot by thickness, finish and reinforcement, with a free estimator.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "slab thickness",
+      "reinforcement",
+      "subbase",
+      "finish",
+      "control joints",
+      "pad",
+      "patio",
+      "garage floor"
+    ],
+    "related": [
+      {
+        "slug": "/concrete-slab-cost-calculator/",
+        "annotation": "explains the related concrete slab cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost/",
+        "annotation": "explains the related concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-calculator/",
+        "annotation": "explains the related concrete calculator inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /concrete-slab-cost-calculator/ (the estimator prices the size entered here); /concrete-driveway-cost/ (a driveway is a slab built for vehicle loads, so its guide adds base and thickness); /concrete-calculator/. In: from /concrete-driveway-cost/"
+  },
+  {
+    "order": 14,
+    "seq": 43,
+    "url": "/gravel-driveway/",
+    "section": "Outer",
+    "type": "How-to guide",
+    "phase": "1b",
+    "primary": "gravel driveway",
+    "primaryVolume": 8100.0,
+    "primaryKd": 29.0,
+    "primaryCpc": 2.37,
+    "keywords": [
+      "driveway gravel",
+      "gravel for driveway",
+      "how to build a gravel driveway",
+      "how do you lay a gravel driveway",
+      "how to gravel driveway",
+      "how to make a gravel driveway",
+      "how do i lay a gravel driveway",
+      "gravel driveway maintenance"
+    ],
+    "title": "How to Build a Gravel Driveway: Layers and Maintenance",
+    "h1": "Gravel Driveway",
+    "description": "What a gravel driveway is, which stone to use, the layers it needs and how to maintain it.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "crushed stone",
+      "base layer",
+      "surface layer",
+      "geotextile fabric",
+      "edging",
+      "grading",
+      "potholes",
+      "regrading"
+    ],
+    "related": [
+      {
+        "slug": "/gravel-driveway-cost/",
+        "annotation": "explains the related gravel driveway cost inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway-calculator/",
+        "annotation": "explains the related gravel driveway calculator inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /gravel-driveway-cost/ (the cost guide prices each layer described here); /gravel-driveway-calculator/ (the calculator turns driveway size into tons). In: from /driveway-cost/, /concrete-vs-asphalt-driveway/. Keep cost terms on Seq 7."
+  },
+  {
+    "order": 15,
+    "seq": 12,
+    "url": "/driveway-sealcoating-cost/",
+    "section": "Core",
+    "type": "Cost guide",
+    "phase": "1b",
+    "primary": "driveway sealcoating",
+    "primaryVolume": 6600.0,
+    "primaryKd": 38.0,
+    "primaryCpc": 3.5,
+    "keywords": [
+      "driveway sealcoating cost",
+      "sealcoating cost per square foot",
+      "driveway sealing",
+      "how much to seal a driveway",
+      "how much does it cost to seal a driveway"
+    ],
+    "title": "Driveway Sealcoating Cost per Sq Ft",
+    "h1": "Driveway Sealcoating Cost",
+    "description": "Driveway sealcoating cost per square foot and per driveway, with how often it is needed and what changes the price.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "sealer",
+      "coverage per gallon",
+      "coats",
+      "cure time",
+      "crack filling before sealing",
+      "sealing frequency"
+    ],
+    "imageAlt": "Sealcoat being applied to an asphalt driveway with a squeegee",
+    "related": [
+      {
+        "slug": "/sealcoat-calculator/",
+        "annotation": "explains the related sealcoat calculator inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-repair-cost/",
+        "annotation": "explains the related asphalt driveway repair cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /sealcoat-calculator/ (the calculator converts driveway area into gallons); /asphalt-driveway-repair-cost/. In: from /asphalt-driveway-cost/"
+  },
+  {
+    "order": 16,
+    "seq": 11,
+    "url": "/repave-asphalt-driveway-cost/",
+    "section": "Core",
+    "type": "Cost guide",
+    "phase": "1b",
+    "primary": "asphalt resurfacing driveway cost",
+    "primaryVolume": 2400.0,
+    "primaryKd": 29.0,
+    "primaryCpc": null,
+    "keywords": [
+      "cost to replace asphalt driveway",
+      "how much does it cost to repave a driveway",
+      "asphalt overlay cost"
+    ],
+    "title": "Repave Asphalt Driveway Cost: Resurface vs Replace (2026)",
+    "h1": "Cost to Repave an Asphalt Driveway",
+    "description": "Repaving cost for an asphalt driveway: overlay, resurfacing and full replacement, with when each option applies.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "overlay",
+      "resurfacing",
+      "milling",
+      "tear-out",
+      "base repair",
+      "drainage",
+      "asphalt lifespan"
+    ],
+    "imageAlt": "Asphalt driveway with an overlay layer being rolled",
+    "related": [
+      {
+        "slug": "/asphalt-driveway-repair-cost/",
+        "annotation": "explains the related asphalt driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-cost-calculator/",
+        "annotation": "explains the related asphalt driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/driveway-sealcoating-cost/",
+        "annotation": "explains the related driveway sealcoating cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-driveway-repair-cost/ (repair applies while damage is limited); /asphalt-driveway-cost-calculator/; /driveway-sealcoating-cost/. In: from /asphalt-driveway-cost/"
+  },
+  {
+    "order": 17,
+    "seq": 13,
+    "url": "/asphalt-driveway-repair-cost/",
+    "section": "Core",
+    "type": "Cost guide",
+    "phase": "1b",
+    "primary": "asphalt driveway repair cost",
+    "primaryVolume": 320.0,
+    "primaryKd": 20.0,
+    "primaryCpc": 3.8,
+    "keywords": ["asphalt driveway repair"],
+    "title": "Asphalt Driveway Repair Cost: Cracks, Patches, Potholes",
+    "h1": "Asphalt Driveway Repair Cost",
+    "description": "Asphalt driveway repair cost by repair type: crack filling, patching, potholes and sections, with when repair beats repaving.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "crack filler",
+      "cold patch",
+      "hot patch",
+      "pothole",
+      "alligator cracking",
+      "sealing"
+    ],
+    "imageAlt": "Cracked asphalt driveway section marked for repair",
+    "related": [
+      {
+        "slug": "/driveway-crack-filler/",
+        "annotation": "explains the related driveway crack filler inputs or next step"
+      },
+      {
+        "slug": "/asphalt-cold-patch/",
+        "annotation": "explains the related asphalt cold patch inputs or next step"
+      },
+      {
+        "slug": "/repave-asphalt-driveway-cost/",
+        "annotation": "explains the related repave asphalt driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /driveway-crack-filler/; /asphalt-cold-patch/; /repave-asphalt-driveway-cost/ (repaving replaces repair once damage spreads). In: from /asphalt-driveway-cost/, /driveway-sealcoating-cost/"
+  },
+  {
+    "order": 18,
+    "seq": 14,
+    "url": "/concrete-vs-asphalt-driveway/",
+    "section": "Core",
+    "type": "Comparison",
+    "phase": "1b",
+    "primary": "concrete vs asphalt driveway",
+    "primaryVolume": 1300.0,
+    "primaryKd": 15.0,
+    "primaryCpc": 1.26,
+    "keywords": [
+      "concrete vs asphalt driveway cost",
+      "how long does an asphalt driveway last",
+      "how long does a concrete driveway last",
+      "asphalt driveway lifespan",
+      "concrete driveway lifespan"
+    ],
+    "title": "Concrete vs Asphalt Driveway: Cost, Lifespan, Upkeep",
+    "h1": "Concrete vs Asphalt Driveway",
+    "description": "Concrete vs asphalt driveway compared on cost, lifespan, maintenance and climate fit, with a side-by-side table.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "lifespan",
+      "upfront cost",
+      "maintenance",
+      "freeze-thaw",
+      "heat",
+      "repair",
+      "appearance"
+    ],
+    "imageAlt": "Asphalt and concrete driveways side by side",
+    "related": [
+      {
+        "slug": "/asphalt-driveway-cost/",
+        "annotation": "explains the related asphalt driveway cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost/",
+        "annotation": "explains the related concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-cost/",
+        "annotation": "explains the related driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-driveway-cost/; /concrete-driveway-cost/; /driveway-cost/. In: from both cost pages"
+  },
+  {
+    "order": 19,
+    "seq": 15,
+    "url": "/replace-concrete-driveway-cost/",
+    "section": "Core",
+    "type": "Cost guide",
+    "phase": "1b",
+    "primary": "cost to replace concrete driveway",
+    "primaryVolume": 1300.0,
+    "primaryKd": 15.0,
+    "primaryCpc": null,
+    "keywords": [],
+    "title": "Replace Concrete Driveway Cost: Removal and New Pour",
+    "h1": "Cost to Replace a Concrete Driveway",
+    "description": "Cost to replace a concrete driveway: demolition, disposal and the new pour, with price ranges and when replacement beats repair.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["demolition", "hauling", "disposal", "subbase", "new pour", "slab replacement"],
+    "imageAlt": "Old concrete driveway being broken up for replacement",
+    "related": [
+      {
+        "slug": "/concrete-driveway-cost/",
+        "annotation": "explains the related concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost-calculator/",
+        "annotation": "explains the related concrete driveway cost calculator inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /concrete-driveway-cost/; /concrete-driveway-cost-calculator/. In: from /concrete-driveway-cost/"
+  },
+  {
+    "order": 20,
+    "seq": 16,
+    "url": "/stamped-concrete-driveway-cost/",
+    "section": "Core",
+    "type": "Cost guide",
+    "phase": "1b",
+    "primary": "stamped concrete driveway cost",
+    "primaryVolume": 320.0,
+    "primaryKd": 15.0,
+    "primaryCpc": 2.43,
+    "keywords": [],
+    "title": "Stamped Concrete Driveway Cost per Sq Ft",
+    "h1": "Stamped Concrete Driveway Cost",
+    "description": "Stamped concrete driveway cost per square foot, what pattern and color add, and how it compares with plain concrete.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["stamp pattern", "color hardener", "release agent", "sealer", "resealing"],
+    "imageAlt": "Stamped concrete driveway with a slate pattern",
+    "related": [
+      {
+        "slug": "/concrete-driveway-cost/",
+        "annotation": "explains the related concrete driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /concrete-driveway-cost/ (plain concrete sets the base price that stamping adds to). In: from /concrete-driveway-cost/"
+  },
+  {
+    "order": 21,
+    "seq": 17,
+    "url": "/paver-driveway-cost/",
+    "section": "Core",
+    "type": "Cost guide",
+    "phase": "1b",
+    "primary": "paver driveway cost",
+    "primaryVolume": 880.0,
+    "primaryKd": 28.0,
+    "primaryCpc": 3.35,
+    "keywords": [],
+    "title": "Paver Driveway Cost per Sq Ft (2026)",
+    "h1": "Paver Driveway Cost",
+    "description": "Paver driveway cost per square foot by material, base work and pattern, compared with asphalt and concrete.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "concrete pavers",
+      "brick pavers",
+      "natural stone",
+      "base depth",
+      "bedding sand",
+      "edge restraint",
+      "joint sand"
+    ],
+    "imageAlt": "Paver driveway with a herringbone pattern",
+    "related": [
+      {
+        "slug": "/paver-calculator/",
+        "annotation": "explains the related paver calculator inputs or next step"
+      },
+      {
+        "slug": "/driveway-cost/",
+        "annotation": "explains the related driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /paver-calculator/; /driveway-cost/. In: from /driveway-cost/, /concrete-vs-asphalt-driveway/"
+  },
+  {
+    "order": 22,
+    "seq": 18,
+    "url": "/tar-and-chip-driveway-cost/",
+    "section": "Core",
+    "type": "Cost guide",
+    "phase": "1b",
+    "primary": "tar and chip driveway cost",
+    "primaryVolume": 480.0,
+    "primaryKd": 6.0,
+    "primaryCpc": 2.41,
+    "keywords": ["chip seal driveway"],
+    "title": "Tar and Chip Driveway Cost per Sq Ft (2026)",
+    "h1": "Tar and Chip Driveway Cost",
+    "description": "Tar and chip driveway cost per square foot, how it is laid, lifespan and how it compares with asphalt.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["bituminous binder", "aggregate chips", "rolling", "chip seal", "lifespan"],
+    "imageAlt": "Tar and chip driveway surface close up",
+    "related": [
+      {
+        "slug": "/asphalt-driveway-cost/",
+        "annotation": "explains the related asphalt driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-driveway-cost/ (tar and chip is the lower-cost alternative to hot mix asphalt). In: from /asphalt-driveway-cost/"
+  },
+  {
+    "order": 23,
+    "seq": 19,
+    "url": "/asphalt-millings-cost/",
+    "section": "Core",
+    "type": "Cost guide",
+    "phase": "1b",
+    "primary": "asphalt millings cost",
+    "primaryVolume": 320.0,
+    "primaryKd": 4.0,
+    "primaryCpc": 2.68,
+    "keywords": [],
+    "title": "Asphalt Millings Cost: Per Ton and Per Driveway",
+    "h1": "Asphalt Millings Cost",
+    "description": "Asphalt millings cost per ton and per driveway, delivery charges and how much a driveway needs.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["reclaimed asphalt pavement", "tons", "delivery", "compaction", "base depth"],
+    "imageAlt": "Pile of asphalt millings on a driveway base",
+    "related": [
+      {
+        "slug": "/asphalt-millings-calculator/",
+        "annotation": "explains the related asphalt millings calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway-cost/",
+        "annotation": "explains the related gravel driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-millings-calculator/; /gravel-driveway-cost/. In: from /asphalt-driveway-cost/"
+  },
+  {
+    "order": 24,
+    "seq": 20,
+    "url": "/asphalt-driveway-thickness/",
+    "section": "Core",
+    "type": "Spec guide",
+    "phase": "1b",
+    "primary": "asphalt driveway thickness",
+    "primaryVolume": 260.0,
+    "primaryKd": 0.0,
+    "primaryCpc": 2.81,
+    "keywords": [],
+    "title": "Asphalt Driveway Thickness: How Many Inches Is Needed",
+    "h1": "Asphalt Driveway Thickness",
+    "description": "Recommended asphalt driveway thickness by use, base depth and how thickness changes cost and tonnage.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["base thickness", "asphalt layers", "traffic load", "subgrade", "compaction"],
+    "imageAlt": "Cross section diagram of an asphalt driveway layers",
+    "related": [
+      {
+        "slug": "/asphalt-calculator/",
+        "annotation": "explains the related asphalt calculator inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-cost/",
+        "annotation": "explains the related asphalt driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-calculator/ (thickness is an input to tonnage); /asphalt-driveway-cost/. In: from /asphalt-calculator/"
+  },
+  {
+    "order": 25,
+    "seq": 37,
+    "url": "/concrete-driveway-repair-cost/",
+    "section": "Core",
+    "type": "Cost guide",
+    "phase": "1b",
+    "primary": "concrete driveway repair cost",
+    "primaryVolume": 1300.0,
+    "primaryKd": 24.0,
+    "primaryCpc": 4.7,
+    "keywords": [
+      "concrete driveway repair",
+      "concrete driveway crack repair",
+      "driveway concrete repair cost"
+    ],
+    "title": "Concrete Driveway Repair Cost: Cracks and Resurfacing",
+    "h1": "Concrete Driveway Repair Cost",
+    "description": "Concrete driveway repair cost by repair type: crack filling, resurfacing and slab replacement, with when to repair or replace.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["crack filling", "resurfacing", "slab leveling", "mudjacking", "control joints"],
+    "related": [
+      {
+        "slug": "/replace-concrete-driveway-cost/",
+        "annotation": "explains the related replace concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost/",
+        "annotation": "explains the related concrete driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /replace-concrete-driveway-cost/ (replacement applies once damage spreads across slabs); /concrete-driveway-cost/. In: from /concrete-driveway-cost/"
+  },
+  {
+    "order": 26,
+    "seq": 38,
+    "url": "/driveway-repair-cost/",
+    "section": "Core",
+    "type": "Cost hub",
+    "phase": "1b",
+    "primary": "driveway repair",
+    "primaryVolume": 9900.0,
+    "primaryKd": 26.0,
+    "primaryCpc": 8.3,
+    "keywords": [],
+    "title": "Driveway Repair Cost by Surface: Asphalt, Concrete, Gravel",
+    "h1": "Driveway Repair Cost",
+    "description": "Driveway repair cost for asphalt, concrete and gravel, with typical repair types and when repair stops making sense.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["crack", "pothole", "settling", "resurfacing", "regrading"],
+    "related": [
+      {
+        "slug": "/asphalt-driveway-repair-cost/",
+        "annotation": "explains the related asphalt driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-repair-cost/",
+        "annotation": "explains the related concrete driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-replacement-cost/",
+        "annotation": "explains the related driveway replacement cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-driveway-repair-cost/; /concrete-driveway-repair-cost/; /driveway-replacement-cost/. In: from /driveway-cost/"
+  },
+  {
+    "order": 27,
+    "seq": 39,
+    "url": "/driveway-replacement-cost/",
+    "section": "Core",
+    "type": "Cost guide",
+    "phase": "1b",
+    "primary": "driveway replacement",
+    "primaryVolume": 5400.0,
+    "primaryKd": 32.0,
+    "primaryCpc": 6.01,
+    "keywords": [
+      "how much is it to replace a driveway",
+      "how much does it cost to replace a driveway"
+    ],
+    "title": "Driveway Replacement Cost by Surface (2026)",
+    "h1": "Driveway Replacement Cost",
+    "description": "Driveway replacement cost for asphalt, concrete, gravel and pavers, including removal and disposal.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["demolition", "hauling", "disposal", "subbase", "new surface"],
+    "related": [
+      {
+        "slug": "/repave-asphalt-driveway-cost/",
+        "annotation": "explains the related repave asphalt driveway cost inputs or next step"
+      },
+      {
+        "slug": "/replace-concrete-driveway-cost/",
+        "annotation": "explains the related replace concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-cost-calculator/",
+        "annotation": "explains the related driveway cost calculator inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /repave-asphalt-driveway-cost/; /replace-concrete-driveway-cost/; /driveway-cost-calculator/. In: from /driveway-repair-cost/"
+  },
+  {
+    "order": 28,
+    "seq": 46,
+    "url": "/standard-driveway-width/",
+    "section": "Outer",
+    "type": "Reference",
+    "phase": "1b",
+    "primary": "standard driveway width",
+    "primaryVolume": 1300.0,
+    "primaryKd": 10.0,
+    "primaryCpc": 0.0,
+    "keywords": ["standard driveway size"],
+    "title": "Standard Driveway Width and Size: 1, 2 and 3 Car",
+    "h1": "Standard Driveway Width and Size",
+    "description": "Standard driveway width and size for one-car, two-car and three-car driveways, with the area each covers.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["width", "length", "one-car", "two-car", "three-car", "turnaround", "square feet"],
+    "related": [
+      {
+        "slug": "/driveway-cost-calculator/",
+        "annotation": "explains the related driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/asphalt-calculator/",
+        "annotation": "explains the related asphalt calculator inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /driveway-cost-calculator/ (size sets the cost); /asphalt-calculator/. In: from /driveway-cost/ and the size table on every cost guide"
+  },
+  {
+    "order": 29,
+    "seq": 35,
+    "url": "/concrete-calculator/",
+    "section": "Outer",
+    "type": "Quantity tool",
+    "phase": "2",
+    "primary": "concrete calculator",
+    "primaryVolume": 301000.0,
+    "primaryKd": 49.0,
+    "primaryCpc": 0.93,
+    "keywords": [
+      "concrete slab calculator",
+      "concrete bag calculator",
+      "concrete pad calculator",
+      "calculator concrete yards",
+      "concrete yards calculator",
+      "how to calculate concrete",
+      "how to calculate concrete yards",
+      "how to calculate yards of concrete",
+      "how do i calculate yards of concrete",
+      "how do you calculate how much concrete you need",
+      "concrete calculator bags",
+      "bag concrete calculator",
+      "bags of concrete calculator",
+      "concrete bags calculator",
+      "how many bags of concrete do i need",
+      "material calculator for concrete slab",
+      "concrete calculator for slab",
+      "concrete calculator slab"
+    ],
+    "title": "Concrete Calculator: Cubic Yards and Bags Needed",
+    "h1": "Concrete Calculator",
+    "description": "Calculate cubic yards and bags of concrete for slabs and driveways from length, width and thickness, with waste allowance.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["cubic yards", "bags", "thickness", "slab", "waste"],
+    "imageAlt": "Concrete slab being poured and leveled",
+    "related": [
+      {
+        "slug": "/concrete-driveway-cost-calculator/",
+        "annotation": "explains the related concrete driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost/",
+        "annotation": "explains the related concrete driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /concrete-driveway-cost-calculator/; /concrete-driveway-cost/. In: from /concrete-driveway-cost-calculator/"
+  },
+  {
+    "order": 30,
+    "seq": 36,
+    "url": "/paver-calculator/",
+    "section": "Outer",
+    "type": "Quantity tool",
+    "phase": "2",
+    "primary": "paver calculator",
+    "primaryVolume": 6600.0,
+    "primaryKd": 42.0,
+    "primaryCpc": 0.51,
+    "keywords": [
+      "paver base calculator",
+      "paver sand calculator",
+      "calculate paver sand",
+      "cost calculator for paver patio"
+    ],
+    "title": "Paver Calculator: Pavers, Base and Sand Needed",
+    "h1": "Paver Calculator",
+    "description": "Calculate pavers, base material and sand for a driveway or patio from area, paver size and waste allowance.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["pavers", "square feet", "base", "bedding sand", "waste"],
+    "imageAlt": "Paver layout over a compacted base",
+    "related": [
+      {
+        "slug": "/paver-driveway-cost/",
+        "annotation": "explains the related paver driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /paver-driveway-cost/. In: from /paver-driveway-cost/"
+  },
+  {
+    "order": 31,
+    "seq": 40,
+    "url": "/how-to-lay-an-asphalt-driveway/",
+    "section": "Outer",
+    "type": "How-to guide",
+    "phase": "2",
+    "primary": "laying asphalt driveway",
+    "primaryVolume": 2900.0,
+    "primaryKd": 11.0,
+    "primaryCpc": 5.92,
+    "keywords": [],
+    "title": "How to Lay an Asphalt Driveway: Steps, Tools and Cost",
+    "h1": "How to Lay an Asphalt Driveway",
+    "description": "The steps to lay an asphalt driveway, the tools involved and what a DIY job costs against hiring a paving crew.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["excavation", "base course", "compaction", "hot mix asphalt", "rolling", "curing"],
+    "related": [
+      {
+        "slug": "/asphalt-calculator/",
+        "annotation": "explains the related asphalt calculator inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-cost/",
+        "annotation": "explains the related asphalt driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-calculator/ (the calculator gives the tons to order before the work starts); /asphalt-driveway-cost/. In: from /asphalt-driveway-thickness/"
+  },
+  {
+    "order": 32,
+    "seq": 41,
+    "url": "/hot-mix-asphalt/",
+    "section": "Outer",
+    "type": "Reference",
+    "phase": "2",
+    "primary": "hot mix asphalt",
+    "primaryVolume": 5400.0,
+    "primaryKd": 13.0,
+    "primaryCpc": 4.73,
+    "keywords": [],
+    "title": "Hot Mix Asphalt: What It Is and How Driveways Use It",
+    "h1": "Hot Mix Asphalt",
+    "description": "What hot mix asphalt is, what goes into it and how it is used on driveways.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["aggregate", "asphalt binder", "mix temperature", "compaction", "density"],
+    "related": [
+      {
+        "slug": "/asphalt-calculator/",
+        "annotation": "explains the related asphalt calculator inputs or next step"
+      },
+      {
+        "slug": "/material-weights/",
+        "annotation": "explains the related material weights inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-calculator/; /material-weights/. In: from /asphalt-driveway-cost/"
+  },
+  {
+    "order": 33,
+    "seq": 44,
+    "url": "/asphalt-driveway-maintenance/",
+    "section": "Outer",
+    "type": "Guide",
+    "phase": "2",
+    "primary": "asphalt driveway maintenance",
+    "primaryVolume": 1300.0,
+    "primaryKd": 12.0,
+    "primaryCpc": 3.54,
+    "keywords": [],
+    "title": "Asphalt Driveway Maintenance: Sealing, Cracks, Cleaning",
+    "h1": "Asphalt Driveway Maintenance",
+    "description": "The maintenance an asphalt driveway needs, how often it is done and what each task costs.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["sealcoating", "crack filling", "cleaning", "edging", "patching", "drainage"],
+    "related": [
+      {
+        "slug": "/driveway-sealcoating-cost/",
+        "annotation": "explains the related driveway sealcoating cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-repair-cost/",
+        "annotation": "explains the related asphalt driveway repair cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /driveway-sealcoating-cost/; /asphalt-driveway-repair-cost/. In: from /asphalt-driveway-cost/"
+  },
+  {
+    "order": 34,
+    "seq": 45,
+    "url": "/driveway-drainage/",
+    "section": "Outer",
+    "type": "Guide",
+    "phase": "2",
+    "primary": "driveway drainage",
+    "primaryVolume": 1300.0,
+    "primaryKd": 26.0,
+    "primaryCpc": 1.81,
+    "keywords": ["driveway slope"],
+    "title": "Driveway Drainage: Slope, Drains and Fixes",
+    "h1": "Driveway Drainage",
+    "description": "How much slope a driveway needs, which drains fix standing water and when drainage faults cause damage.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["slope", "crown", "culvert", "trench drain", "French drain", "grading", "runoff"],
+    "related": [
+      {
+        "slug": "/driveway-repair-cost/",
+        "annotation": "explains the related driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway/",
+        "annotation": "explains the related gravel driveway inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /driveway-repair-cost/ (drainage faults are a common cause of surface damage); /gravel-driveway/. In: from /driveway-cost/"
+  },
+  {
+    "order": 35,
+    "seq": 47,
+    "url": "/how-to-repair-concrete-driveway-cracks/",
+    "section": "Outer",
+    "type": "How-to guide",
+    "phase": "2",
+    "primary": "how to repair cracks in concrete driveway",
+    "primaryVolume": 880.0,
+    "primaryKd": 22.0,
+    "primaryCpc": 1.06,
+    "keywords": [
+      "how to repair driveway cracks",
+      "how to repair concrete driveway",
+      "how to repair large cracks in concrete driveway",
+      "how to repair concrete driveway cracks"
+    ],
+    "title": "How to Repair Cracks in a Concrete Driveway",
+    "h1": "How to Repair Cracks in a Concrete Driveway",
+    "description": "How to repair small and large cracks in a concrete driveway, the materials needed and when to replace the slab instead.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["crack width", "filler", "backer rod", "patch compound", "slab replacement"],
+    "related": [
+      {
+        "slug": "/concrete-driveway-repair-cost/",
+        "annotation": "explains the related concrete driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-crack-filler/",
+        "annotation": "explains the related driveway crack filler inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /concrete-driveway-repair-cost/ (repair cost by crack type); /driveway-crack-filler/. In: from /concrete-driveway-repair-cost/"
+  },
+  {
+    "order": 36,
+    "seq": 48,
+    "url": "/how-to-repair-asphalt-driveway-cracks/",
+    "section": "Outer",
+    "type": "How-to guide",
+    "phase": "2",
+    "primary": "how to repair asphalt driveway",
+    "primaryVolume": 390.0,
+    "primaryKd": 34.0,
+    "primaryCpc": null,
+    "keywords": ["how to repair cracks in asphalt driveway"],
+    "title": "How to Repair Cracks in an Asphalt Driveway",
+    "h1": "How to Repair Cracks in an Asphalt Driveway",
+    "description": "How to repair cracks and holes in an asphalt driveway, the filler to use and when to repave instead.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["crack filler", "cold patch", "pothole", "cleaning", "sealing"],
+    "related": [
+      {
+        "slug": "/asphalt-driveway-repair-cost/",
+        "annotation": "explains the related asphalt driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-crack-filler/",
+        "annotation": "explains the related driveway crack filler inputs or next step"
+      },
+      {
+        "slug": "/asphalt-cold-patch/",
+        "annotation": "explains the related asphalt cold patch inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-driveway-repair-cost/; /driveway-crack-filler/; /asphalt-cold-patch/. In: from /asphalt-driveway-repair-cost/"
+  },
+  {
+    "order": 37,
+    "seq": 21,
+    "url": "/sealcoat-calculator/",
+    "section": "Outer",
+    "type": "Quantity tool",
+    "phase": "2",
+    "primary": "sealcoat calculator",
+    "primaryVolume": 390.0,
+    "primaryKd": 5.0,
+    "primaryCpc": 0.56,
+    "keywords": [
+      "how much sealer do i need",
+      "driveway sealer calculator",
+      "asphalt sealer calculator"
+    ],
+    "title": "Sealcoat Calculator: Gallons Needed for a Driveway",
+    "h1": "Sealcoat Calculator",
+    "description": "Calculate gallons of sealcoat from driveway area, product coverage and number of coats, with container rounding.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["sealer", "gallons", "coverage per gallon", "coats", "container size"],
+    "imageAlt": "Sealcoat buckets beside a driveway",
+    "related": [
+      {
+        "slug": "/driveway-sealcoating-cost/",
+        "annotation": "explains the related driveway sealcoating cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /driveway-sealcoating-cost/ (the cost guide prices the gallons returned). In: from /driveway-sealcoating-cost/"
+  },
+  {
+    "order": 38,
+    "seq": 22,
+    "url": "/asphalt-millings-calculator/",
+    "section": "Outer",
+    "type": "Quantity tool",
+    "phase": "2",
+    "primary": "asphalt millings calculator",
+    "primaryVolume": 590.0,
+    "primaryKd": 2.0,
+    "primaryCpc": 0.04,
+    "keywords": [],
+    "title": "Asphalt Millings Calculator: Tons for a Driveway",
+    "h1": "Asphalt Millings Calculator",
+    "description": "Calculate tons of asphalt millings for a driveway from length, width and depth, with an editable density.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["reclaimed asphalt pavement", "tons", "depth", "compaction"],
+    "imageAlt": "Asphalt millings spread on a driveway",
+    "related": [
+      {
+        "slug": "/asphalt-millings-cost/",
+        "annotation": "explains the related asphalt millings cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-calculator/",
+        "annotation": "explains the related asphalt calculator inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-millings-cost/; /asphalt-calculator/. In: from /asphalt-millings-cost/"
+  },
+  {
+    "order": 39,
+    "seq": 23,
+    "url": "/material-weights/",
+    "section": "Outer",
+    "type": "Reference table",
+    "phase": "2",
+    "primary": "asphalt weight per cubic foot",
+    "primaryVolume": 90.0,
+    "primaryKd": 6.0,
+    "primaryCpc": null,
+    "keywords": ["asphalt density", "weight of asphalt", "how much does a yard of asphalt weigh"],
+    "title": "Material Weight Chart: Asphalt, Gravel and Concrete",
+    "h1": "Material Weight Chart",
+    "description": "Weight per cubic foot and per cubic yard for asphalt, gravel, crushed stone and concrete, with tons per cubic yard.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["density", "pounds per cubic foot", "tons per cubic yard", "material list"],
+    "imageAlt": "Table of material weights per cubic yard",
+    "related": [
+      {
+        "slug": "/asphalt-calculator/",
+        "annotation": "explains the related asphalt calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-calculator/",
+        "annotation": "explains the related gravel calculator inputs or next step"
+      },
+      {
+        "slug": "/cubic-yards-to-tons/",
+        "annotation": "explains the related cubic yards to tons inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-calculator/; /gravel-calculator/; /cubic-yards-to-tons/. In: from every quantity tool"
+  },
+  {
+    "order": 40,
+    "seq": 24,
+    "url": "/cubic-yards-to-tons/",
+    "section": "Outer",
+    "type": "Converter",
+    "phase": "2",
+    "primary": "cubic yards to tons",
+    "primaryVolume": 2900.0,
+    "primaryKd": 16.0,
+    "primaryCpc": 0.0,
+    "keywords": ["how many yards in a ton of gravel", "how many tons in a cubic yard of gravel"],
+    "title": "Cubic Yards to Tons Converter by Material",
+    "h1": "Cubic Yards to Tons",
+    "description": "Convert cubic yards to tons for gravel, asphalt, sand and concrete using an editable density for each material.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["cubic yards", "tons", "density", "material type"],
+    "imageAlt": "Cubic yards to tons conversion widget",
+    "related": [
+      {
+        "slug": "/material-weights/",
+        "annotation": "explains the related material weights inputs or next step"
+      },
+      {
+        "slug": "/gravel-calculator/",
+        "annotation": "explains the related gravel calculator inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /material-weights/; /gravel-calculator/. In: from /gravel-calculator/, /gravel-driveway-calculator/"
+  },
+  {
+    "order": 41,
+    "seq": 25,
+    "url": "/rock-calculator/",
+    "section": "Outer",
+    "type": "Quantity tool",
+    "phase": "2",
+    "primary": "rock calculator",
+    "primaryVolume": 9900.0,
+    "primaryKd": 9.0,
+    "primaryCpc": 0.48,
+    "keywords": [
+      "river rock calculator",
+      "landscape rock calculator",
+      "crushed rock calculator",
+      "how much rock do i need calculator",
+      "how much river rock do i need calculator"
+    ],
+    "title": "Rock Calculator: Tons and Cubic Yards Needed",
+    "h1": "Rock Calculator",
+    "description": "Calculate tons and cubic yards of landscape rock from area and depth, with editable density and coverage.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["landscape rock", "cubic yards", "depth", "tons"],
+    "imageAlt": "Landscape rock bed with measured depth",
+    "related": [
+      {
+        "slug": "/gravel-calculator/",
+        "annotation": "explains the related gravel calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway-cost/",
+        "annotation": "explains the related gravel driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /gravel-calculator/ (rock and gravel differ in size and use); /river-rock-calculator/. In: from /gravel-calculator/"
+  },
+  {
+    "order": 42,
+    "seq": 27,
+    "url": "/pea-gravel-calculator/",
+    "section": "Outer",
+    "type": "Quantity tool",
+    "phase": "2",
+    "primary": "pea gravel calculator",
+    "primaryVolume": 4400.0,
+    "primaryKd": 9.0,
+    "primaryCpc": 0.38,
+    "keywords": [
+      "calculate pea gravel",
+      "calculating pea gravel",
+      "how much pea gravel do i need calculator",
+      "pea gravel cost calculator"
+    ],
+    "title": "Pea Gravel Calculator: Tons and Yards Needed",
+    "h1": "Pea Gravel Calculator",
+    "description": "Calculate tons and cubic yards of pea gravel for paths, patios and driveways from area and depth.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["pea gravel", "depth", "tons", "cubic yards", "paths and patios"],
+    "imageAlt": "Pea gravel path edging",
+    "related": [
+      {
+        "slug": "/gravel-calculator/",
+        "annotation": "explains the related gravel calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway-cost/",
+        "annotation": "explains the related gravel driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /gravel-calculator/; /gravel-driveway-cost/. In: from /gravel-calculator/"
+  },
+  {
+    "order": 43,
+    "seq": 29,
+    "url": "/crusher-run-calculator/",
+    "section": "Outer",
+    "type": "Quantity tool",
+    "phase": "2",
+    "primary": "crusher run calculator",
+    "primaryVolume": 1000.0,
+    "primaryKd": 5.0,
+    "primaryCpc": 0.08,
+    "keywords": [],
+    "title": "Crusher Run Calculator: Tons Needed for a Base",
+    "h1": "Crusher Run Calculator",
+    "description": "Calculate tons of crusher run for a driveway or path base from area, depth and compaction.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["crusher run", "base layer", "compaction", "tons"],
+    "imageAlt": "Compacted crusher run base",
+    "related": [
+      {
+        "slug": "/gravel-driveway-calculator/",
+        "annotation": "explains the related gravel driveway calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway-cost/",
+        "annotation": "explains the related gravel driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /gravel-driveway-calculator/ (crusher run forms the compacted base layer); /gravel-driveway-cost/. In: from /gravel-driveway-calculator/"
+  },
+  {
+    "order": 44,
+    "seq": 30,
+    "url": "/road-base-calculator/",
+    "section": "Outer",
+    "type": "Quantity tool",
+    "phase": "2",
+    "primary": "road base calculator",
+    "primaryVolume": 1000.0,
+    "primaryKd": 15.0,
+    "primaryCpc": 0.73,
+    "keywords": [],
+    "title": "Road Base Calculator: Tons and Yards Needed",
+    "h1": "Road Base Calculator",
+    "description": "Calculate tons and cubic yards of road base from length, width and depth, with a compaction allowance.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["road base", "base layer", "compaction", "tons"],
+    "imageAlt": "Road base being graded for a driveway",
+    "related": [
+      {
+        "slug": "/gravel-driveway-calculator/",
+        "annotation": "explains the related gravel driveway calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway-cost/",
+        "annotation": "explains the related gravel driveway cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /gravel-driveway-calculator/; /gravel-driveway-cost/. In: from /gravel-driveway-calculator/"
+  },
+  {
+    "order": 45,
+    "seq": 53,
+    "url": "/concrete-weight-per-cubic-yard/",
+    "section": "Outer",
+    "type": "Reference",
+    "phase": "2",
+    "primary": "how much does a yard of concrete weigh",
+    "primaryVolume": 2900.0,
+    "primaryKd": 7.0,
+    "primaryCpc": 0.0,
+    "keywords": [
+      "how much does a cubic yard of concrete weigh",
+      "concrete weight per cubic yard",
+      "how much does a yard of crushed concrete weigh",
+      "how much does a yard of cured concrete weigh",
+      "how much does a yard of dry concrete weigh"
+    ],
+    "title": "How Much Does a Yard of Concrete Weigh?",
+    "h1": "Concrete Weight per Cubic Yard",
+    "description": "The weight of a cubic yard of concrete by mix, with pounds per cubic foot and tons per cubic yard.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "normal-weight concrete",
+      "lightweight concrete",
+      "density",
+      "pounds per cubic foot",
+      "tons per cubic yard"
+    ],
+    "related": [
+      {
+        "slug": "/concrete-calculator/",
+        "annotation": "explains the related concrete calculator inputs or next step"
+      },
+      {
+        "slug": "/material-weights/",
+        "annotation": "explains the related material weights inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /concrete-calculator/; /material-weights/. In: from /cubic-yards-to-tons/. Confirmed as a separate page on 11 October 2026, because dedicated concrete weight pages rank."
+  },
+  {
+    "order": 46,
+    "seq": 54,
+    "url": "/gravel-weight-per-cubic-yard/",
+    "section": "Outer",
+    "type": "Reference",
+    "phase": "2",
+    "primary": "how much does a yard of gravel weigh",
+    "primaryVolume": 1900.0,
+    "primaryKd": 3.0,
+    "primaryCpc": 0.0,
+    "keywords": [
+      "how much does a cubic yard of gravel weigh",
+      "how much does a yard of pea gravel weigh",
+      "how much does a yard of 3 4 gravel weigh",
+      "how much does a cubic yard of pea gravel weigh",
+      "cubic yard of gravel weight",
+      "gravel weight per cubic yard",
+      "how much does a ton of gravel cover",
+      "how many cubic feet in a ton of gravel",
+      "how many square feet does a ton of gravel cover"
+    ],
+    "title": "How Much Does a Yard of Gravel Weigh?",
+    "h1": "Gravel Weight per Cubic Yard",
+    "description": "The weight of a cubic yard of gravel by type, how much area a ton covers and how many cubic feet are in a ton.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "crushed stone",
+      "pea gravel",
+      "road base",
+      "density",
+      "moisture",
+      "coverage depth"
+    ],
+    "related": [
+      {
+        "slug": "/gravel-calculator/",
+        "annotation": "explains the related gravel calculator inputs or next step"
+      },
+      {
+        "slug": "/cubic-yards-to-tons/",
+        "annotation": "explains the related cubic yards to tons inputs or next step"
+      },
+      {
+        "slug": "/material-weights/",
+        "annotation": "explains the related material weights inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /gravel-calculator/; /cubic-yards-to-tons/; /material-weights/. In: from /gravel-calculator/. Confirmed as a separate page on 11 October 2026, because dedicated gravel weight pages rank beside charts."
+  },
+  {
+    "order": 47,
+    "seq": 51,
+    "url": "/driveway-sealer/",
+    "section": "Outer",
+    "type": "Product guide",
+    "phase": "2",
+    "primary": "driveway sealer",
+    "primaryVolume": 12100.0,
+    "primaryKd": 34.0,
+    "primaryCpc": 3.5,
+    "keywords": ["asphalt driveway sealer", "asphalt sealer for driveways"],
+    "title": "Best Driveway Sealer: Types and How to Choose",
+    "h1": "Driveway Sealer",
+    "description": "The main types of driveway sealer, how to choose one for asphalt or concrete, and how to apply it.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "acrylic sealer",
+      "asphalt emulsion sealer",
+      "coal tar sealer",
+      "coverage per gallon",
+      "cure time",
+      "temperature",
+      "primer",
+      "crack filling"
+    ],
+    "related": [
+      {
+        "slug": "/driveway-sealcoating-cost/",
+        "annotation": "explains the related driveway sealcoating cost inputs or next step"
+      },
+      {
+        "slug": "/sealcoat-calculator/",
+        "annotation": "explains the related sealcoat calculator inputs or next step"
+      },
+      {
+        "slug": "/driveway-crack-filler/",
+        "annotation": "explains the related driveway crack filler inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /driveway-sealcoating-cost/ (the cost guide prices the job this guide describes); /sealcoat-calculator/ (the calculator turns driveway area into gallons); /driveway-crack-filler/ (fill cracks before sealing). In: from /asphalt-driveway-maintenance/, /asphalt-driveway-cost/. Source any state restriction on coal tar sealers before stating one."
+  },
+  {
+    "order": 48,
+    "seq": 55,
+    "url": "/how-to-seal-a-driveway/",
+    "section": "Outer",
+    "type": "How-to guide",
+    "phase": "2",
+    "primary": "how to seal a driveway",
+    "primaryVolume": 1000.0,
+    "primaryKd": 35.0,
+    "primaryCpc": null,
+    "keywords": ["how to seal coat a driveway", "how to seal driveway"],
+    "title": "How to Seal a Driveway: Steps, Tools and Timing",
+    "h1": "How to Seal a Driveway",
+    "description": "The steps to seal an asphalt driveway, the tools and sealer needed, and the weather and cure times to plan for.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "cleaning",
+      "crack filling",
+      "primer",
+      "sealer",
+      "squeegee",
+      "coats",
+      "cure time",
+      "temperature"
+    ],
+    "related": [
+      {
+        "slug": "/driveway-sealer/",
+        "annotation": "explains the related driveway sealer inputs or next step"
+      },
+      {
+        "slug": "/sealcoat-calculator/",
+        "annotation": "explains the related sealcoat calculator inputs or next step"
+      },
+      {
+        "slug": "/driveway-sealcoating-cost/",
+        "annotation": "explains the related driveway sealcoating cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-crack-filler/",
+        "annotation": "explains the related driveway crack filler inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /driveway-sealer/ (the buying guide covers which sealer to use); /sealcoat-calculator/ (gallons needed); /driveway-sealcoating-cost/ (cost to hire the job); /driveway-crack-filler/. In: from /asphalt-driveway-maintenance/"
+  },
+  {
+    "order": 49,
+    "seq": 31,
+    "url": "/driveway-crack-filler/",
+    "section": "Outer",
+    "type": "Product guide",
+    "phase": "2",
+    "primary": "driveway crack filler",
+    "primaryVolume": 3600.0,
+    "primaryKd": 40.0,
+    "primaryCpc": 1.35,
+    "keywords": [],
+    "title": "Best Driveway Crack Filler: How to Choose and Apply",
+    "h1": "Driveway Crack Filler",
+    "description": "How to choose a driveway crack filler by crack width and surface, with application steps and what to avoid.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["crack filler", "sealant", "cold pour", "hot pour", "crack width", "cure time"],
+    "imageAlt": "Crack filler applied to an asphalt crack",
+    "related": [
+      {
+        "slug": "/asphalt-driveway-repair-cost/",
+        "annotation": "explains the related asphalt driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-sealcoating-cost/",
+        "annotation": "explains the related driveway sealcoating cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-driveway-repair-cost/; /driveway-sealcoating-cost/ (fill cracks before sealcoating). In: from /asphalt-driveway-repair-cost/"
+  },
+  {
+    "order": 50,
+    "seq": 32,
+    "url": "/asphalt-cold-patch/",
+    "section": "Outer",
+    "type": "Product guide",
+    "phase": "2",
+    "primary": "asphalt cold patch",
+    "primaryVolume": 3600.0,
+    "primaryKd": 31.0,
+    "primaryCpc": 1.22,
+    "keywords": [],
+    "title": "Asphalt Cold Patch: How to Use It on Potholes",
+    "h1": "Asphalt Cold Patch",
+    "description": "What asphalt cold patch is, how to apply it to a pothole and how long a cold patch repair lasts.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": ["cold patch", "pothole", "compaction", "temporary repair"],
+    "imageAlt": "Cold patch compacted into a pothole",
+    "related": [
+      {
+        "slug": "/asphalt-driveway-repair-cost/",
+        "annotation": "explains the related asphalt driveway repair cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: /asphalt-driveway-repair-cost/. In: from /asphalt-driveway-repair-cost/"
+  },
+  {
+    "order": 51,
+    "seq": 33,
+    "url": "/driveway-cost/",
+    "section": "Core",
+    "type": "Pillar",
+    "phase": "3",
+    "primary": "driveway cost",
+    "primaryVolume": 590.0,
+    "primaryKd": 19.0,
+    "primaryCpc": 3.01,
+    "keywords": [
+      "driveway installation",
+      "new driveway cost",
+      "driveway paving cost",
+      "how much does a driveway cost",
+      "cost to pave a driveway",
+      "how much will a driveway cost",
+      "how much does it cost for a driveway",
+      "how much would a new driveway cost",
+      "cost of a new driveway",
+      "driveway cost per square foot",
+      "how much does it cost to build a driveway",
+      "how much should a new driveway cost"
+    ],
+    "title": "Driveway Cost by Material: Asphalt, Concrete, Gravel, Pavers",
+    "h1": "Driveway Cost by Material",
+    "description": "Driveway cost compared across asphalt, concrete, gravel and pavers, with price ranges, lifespan and a free estimator for each.",
+    "status": "draft",
+    "updated": "2026-10-11",
+    "author": "Farrukh Abdullah",
+    "entities": [
+      "asphalt",
+      "concrete",
+      "gravel",
+      "pavers",
+      "tar and chip",
+      "cost per square foot",
+      "lifespan"
+    ],
+    "imageAlt": "Four driveway surfaces compared in a grid",
+    "related": [
+      {
+        "slug": "/asphalt-driveway-cost/",
+        "annotation": "explains the related asphalt driveway cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-cost-calculator/",
+        "annotation": "explains the related asphalt driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost/",
+        "annotation": "explains the related concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-cost-calculator/",
+        "annotation": "explains the related concrete driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/gravel-driveway-cost/",
+        "annotation": "explains the related gravel driveway cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-cost-calculator/",
+        "annotation": "explains the related driveway cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-slab-cost-calculator/",
+        "annotation": "explains the related concrete slab cost calculator inputs or next step"
+      },
+      {
+        "slug": "/concrete-slab-cost/",
+        "annotation": "explains the related concrete slab cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-sealcoating-cost/",
+        "annotation": "explains the related driveway sealcoating cost inputs or next step"
+      },
+      {
+        "slug": "/repave-asphalt-driveway-cost/",
+        "annotation": "explains the related repave asphalt driveway cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-driveway-repair-cost/",
+        "annotation": "explains the related asphalt driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/replace-concrete-driveway-cost/",
+        "annotation": "explains the related replace concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/stamped-concrete-driveway-cost/",
+        "annotation": "explains the related stamped concrete driveway cost inputs or next step"
+      },
+      {
+        "slug": "/paver-driveway-cost/",
+        "annotation": "explains the related paver driveway cost inputs or next step"
+      },
+      {
+        "slug": "/tar-and-chip-driveway-cost/",
+        "annotation": "explains the related tar and chip driveway cost inputs or next step"
+      },
+      {
+        "slug": "/asphalt-millings-cost/",
+        "annotation": "explains the related asphalt millings cost inputs or next step"
+      },
+      {
+        "slug": "/concrete-driveway-repair-cost/",
+        "annotation": "explains the related concrete driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-repair-cost/",
+        "annotation": "explains the related driveway repair cost inputs or next step"
+      },
+      {
+        "slug": "/driveway-replacement-cost/",
+        "annotation": "explains the related driveway replacement cost inputs or next step"
+      }
+    ],
+    "contextualBridges": "Out: every cost page and estimator. In: from every cost page"
+  }
+]

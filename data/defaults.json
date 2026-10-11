@@ -1,0 +1,114 @@
+{
+  "inchesPerFoot": {
+    "value": 12,
+    "unit": "in/ft",
+    "source": "Project specification: exact US unit conversion",
+    "retrievedOn": "2026-10-11",
+    "verified": true
+  },
+  "cubicFeetPerYard": {
+    "value": 27,
+    "unit": "ft\u00b3/yd\u00b3",
+    "source": "Project specification: exact US unit conversion",
+    "retrievedOn": "2026-10-11",
+    "verified": true
+  },
+  "poundsPerShortTon": {
+    "value": 2000,
+    "unit": "lb/short ton",
+    "source": "Project specification: exact US unit conversion",
+    "retrievedOn": "2026-10-11",
+    "verified": true
+  },
+  "asphaltDensity": {
+    "value": null,
+    "unit": "lb/ft\u00b3",
+    "source": null,
+    "retrievedOn": null,
+    "verified": false
+  },
+  "asphaltThickness": {
+    "value": null,
+    "unit": "in",
+    "source": null,
+    "retrievedOn": null,
+    "verified": false
+  },
+  "millingsDensity": {
+    "value": null,
+    "unit": "lb/ft\u00b3",
+    "source": null,
+    "retrievedOn": null,
+    "verified": false
+  },
+  "gravelDensity": {
+    "value": null,
+    "unit": "short tons/yd\u00b3",
+    "source": null,
+    "retrievedOn": null,
+    "verified": false
+  },
+  "rockDensity": {
+    "value": null,
+    "unit": "short tons/yd\u00b3",
+    "source": null,
+    "retrievedOn": null,
+    "verified": false
+  },
+  "peaGravelDensity": {
+    "value": null,
+    "unit": "short tons/yd\u00b3",
+    "source": null,
+    "retrievedOn": null,
+    "verified": false
+  },
+  "crusherRunDensity": {
+    "value": null,
+    "unit": "short tons/yd\u00b3",
+    "source": null,
+    "retrievedOn": null,
+    "verified": false
+  },
+  "roadBaseDensity": {
+    "value": null,
+    "unit": "short tons/yd\u00b3",
+    "source": null,
+    "retrievedOn": null,
+    "verified": false
+  },
+  "concreteThickness": {
+    "value": null,
+    "unit": "in",
+    "source": null,
+    "retrievedOn": null,
+    "verified": false
+  },
+  "waste": {
+    "value": null,
+    "unit": "%",
+    "source": null,
+    "retrievedOn": null,
+    "verified": false
+  },
+  "compaction": {
+    "value": null,
+    "unit": "%",
+    "source": null,
+    "retrievedOn": null,
+    "verified": false
+  },
+  "sealcoatCoverage": {
+    "value": null,
+    "unit": "ft\u00b2/gal",
+    "source": null,
+    "retrievedOn": null,
+    "verified": false
+  },
+  "bagYield": {
+    "value": null,
+    "unit": "ft\u00b3/bag",
+    "source": null,
+    "retrievedOn": null,
+    "verified": false
+  }
+}

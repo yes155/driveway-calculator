@@ -1,0 +1,1125 @@
+{
+  "asphalt": {
+    "installedLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "installedHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd\u00b3",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "concrete": {
+    "installedLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "installedHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd\u00b3",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "stamped-concrete": {
+    "installedLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "installedHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd\u00b3",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "gravel": {
+    "installedLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "installedHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd\u00b3",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "pavers": {
+    "installedLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "installedHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd\u00b3",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "tar-and-chip": {
+    "installedLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "installedHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd\u00b3",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "slab": {
+    "installedLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "installedHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd\u00b3",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "millings": {
+    "installedLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "installedHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd\u00b3",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "sealcoating": {
+    "installedLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "installedHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd\u00b3",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "repair": {
+    "installedLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "installedHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd\u00b3",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "replacement": {
+    "installedLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "installedHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd\u00b3",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft\u00b2",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "tiers": {
+    "low": {
+      "value": null,
+      "unit": "multiplier",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "average": {
+      "value": null,
+      "unit": "multiplier",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "high": {
+      "value": null,
+      "unit": "multiplier",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  }
+}
