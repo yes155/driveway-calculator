@@ -7,7 +7,7 @@
     "validate": "node --import tsx scripts/validate.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "build": "npm run validate && next build --webpack && node --import tsx scripts/check-export.ts",
+    "build": "npm run validate && node --import tsx scripts/check-research.ts && next build --webpack && node --import tsx scripts/check-export.ts",
     "build:launch": "SITE_STAGE=launch npm run build",
     "check": "npm run typecheck && npm test && npm run build",
     "format": "prettier --write .",

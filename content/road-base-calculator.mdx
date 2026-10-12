@@ -3,20 +3,46 @@ title: "Road Base Calculator: Tons and Yards Needed"
 description: "Calculate tons and cubic yards of road base from length, width and depth, with a compaction allowance."
 slug: "/road-base-calculator/"
 type: "Quantity tool"
-updated: "2026-10-11"
+updated: "2026-10-12"
 author: "Farrukh Abdullah"
 primaryKeyword: "road base calculator"
 keywords: []
-related: [{"slug": "/gravel-driveway-calculator/", "annotation": "explains the related gravel driveway calculator inputs or next step"}, {"slug": "/gravel-driveway-cost/", "annotation": "explains the related gravel driveway cost inputs or next step"}]
+related: [{"slug": "/gravel-driveway-calculator/", "annotation": "Calculates the quantities used in this project’s material order."}, {"slug": "/gravel-driveway-cost/", "annotation": "Explains the gravel driveway cost in 2026 scope to compare with the measurements and work described here."}]
 status: "draft"
+contentReady: true
 seq: 30
+answer: "The road base calculator calculates cubic yards and tons for an entered base layer using its depth, product density and documented compaction allowance."
+sourceNames: ["Sutherland Landscape Supplies — Gravel-Sand", "Lyngso Garden Materials — Virgin Class 2 Base Rock", "Rock N Yard — Recycled Road Base 1.5-inch Minus"]
+sourceIds: ["defaults-sutherland", "defaults-lyngso", "defaults-rocknyard"]
+unresolvedData: []
+keywordVariants: []
 dataRequired: []
 defaultsUsed: []
 modules: ["AnswerBlock", "CalculatorShell", "ResultCard", "FormulaBox", "QASection", "RelatedLink", "SourceNote", "LastUpdated", "Disclosure"]
 ---
 
-## What information is needed?
+## How do you calculate a road base quantity?
 
-**Verified source data completes this page.**
+**Convert layer depth to feet, multiply by area and divide by 27 for cubic yards.**
 
-{{DATA: sourced figures, named sources, retrieval dates, and editorial review for Road Base Calculator}}
+Then multiply cubic yards by the selected US short tons per cubic yard. The base layer is one part of the pavement structure; do not include asphalt, concrete, pavers or bedding sand in its thickness. Divide irregular areas into measured sections before adding their quantities.
+
+## Which density belongs to road base?
+
+**Match the conversion to the supplier’s exact base product.**
+
+Sutherland lists AB-minus crushed road base at 2,860 lb per cubic yard, equivalent to 1.43 US short tons. Lyngso lists virgin Class 2 base at 1.5 tons per yard. Rock N Yard lists its recycled 1.5-inch-minus base at about 1.3. These grades and sources differ. The calculator’s named Sutherland preset stays editable, with the alternatives visible in the reference table.
+
+## What does the compaction input mean?
+
+**It records an entered adjustment between the measured finished layer and loose delivered volume.**
+
+Confirm that relationship with the supplier for the material on the order. Moisture affects stockpile weight, and grading affects packing. The current Rock N Yard page gives no numerical universal shrinkage factor, so an older search snippet is not a valid default. Zero compaction allowance excludes an adjustment and makes no recommendation about base construction.
+
+## What needs checking before ordering road base?
+
+**Check the project’s material specification, depth condition and supplier sale unit.**
+
+Confirm tons or cubic yards, delivery minimum, purchase increment and truck capacity. A material estimate does not establish structural depth or drainage design. The [Gravel Driveway Calculator](/gravel-driveway-calculator/) keeps a road base and its surface topping separate. The [Gravel Driveway Cost in 2026](/gravel-driveway-cost/) connects the material quantities with excavation, grading and installation scope.
+
+<MaterialReferences material="base" />

@@ -22,7 +22,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {SITE.stage === 'draft' && (
           <div className="draft-banner">
-            Development preview · Prices and material defaults await verified source data.
+            Development preview · Researched benchmarks; local quotes and material conditions
+            govern.
           </div>
         )}
         <main id="main">{children}</main>

@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useId, useState, type FormEvent } from 'react';
+import { useEffect, useId, useState, useRef, type FormEvent } from 'react';
 import {
   emptyState,
   evaluateTool,
@@ -14,6 +14,7 @@ import { track } from '@/lib/analytics';
 import { FormulaBox, ResultCard } from './Modules';
 import ShapeDiagram from './ShapeDiagram';
 import QuoteCTA from './QuoteCTA';
+import { initialToolState, priceBook, hasPrice, sealcoatPresets, defaultBook } from '@/lib/data';
 const human = (text: string) => text.replace(/-/g, ' ').replace(/^./, (x) => x.toUpperCase());
 type Props = { kind: ToolKind; slug: string; surface?: string; material?: string };
 export default function Calculator({
@@ -22,11 +23,26 @@ export default function Calculator({
   surface = 'asphalt',
   material = 'material',
 }: Props) {
-  const [state, setState] = useState<ToolState>(emptyState);
+  const [state, setState] = useState<ToolState>(() => initialToolState(kind, material));
   const [result, setResult] = useState<ToolResult | null>(null);
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
   const id = useId();
+  const outputRef = useRef<HTMLDivElement>(null);
+  const currentPrice = priceBook[surface];
+  const pricingAvailable = hasPrice(surface);
+  const densityKey =
+    material === 'pea gravel'
+      ? 'peaGravelDensity'
+      : material === 'rock'
+        ? 'rockDensity'
+        : material === 'crusher run'
+          ? 'crusherRunDensity'
+          : material === 'road base'
+            ? 'roadBaseDensity'
+            : material === 'asphalt'
+              ? 'asphaltDensity'
+              : null;
   useEffect(() => {
     const raw = new URLSearchParams(location.search).get('inputs');
     if (raw)
@@ -55,6 +71,14 @@ export default function Calculator({
       setError('');
       track('calculator_used', slug);
       track('result_viewed', slug);
+      requestAnimationFrame(() => {
+        outputRef.current?.focus({ preventScroll: true });
+        if (matchMedia('(max-width: 940px)').matches)
+          outputRef.current?.scrollIntoView({
+            behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+            block: 'start',
+          });
+      });
     } catch (e) {
       setResult(null);
       setError(e instanceof Error ? e.message : 'Check the inputs.');
@@ -87,7 +111,21 @@ export default function Calculator({
       <input
         type="checkbox"
         checked={state.fields[key] === 'true'}
-        onChange={(e) => field(key, String(e.target.checked))}
+        onChange={(e) => {
+          if (e.target.checked && (key === 'removal' || key === 'base')) {
+            const low = currentPrice?.[key + 'Low'],
+              high = currentPrice?.[key + 'High'];
+            change({
+              ...state,
+              fields: {
+                ...state.fields,
+                [key]: 'true',
+                [key + 'Low']: low?.verified && low.value !== null ? String(low.value) : '',
+                [key + 'High']: high?.verified && high.value !== null ? String(high.value) : '',
+              },
+            });
+          } else field(key, String(e.target.checked));
+        }}
       />
       {label}
     </label>
@@ -112,7 +150,14 @@ export default function Calculator({
     <div className="calculator-shell" id="calculator">
       <form className="calculator-inputs" onSubmit={calculate}>
         <div className="panel-heading">
-          <span className="eyebrow">01 / Your measurements</span>
+          <span className="eyebrow">
+            01 /{' '}
+            {surface === 'repair'
+              ? 'Patch area'
+              : surface === 'concrete-repair'
+                ? 'Resurfacing area'
+                : 'Your measurements'}
+          </span>
           <span className="unit-badge">US units</span>
         </div>
         {kind === 'converter' ? (
@@ -306,32 +351,110 @@ export default function Calculator({
         {cost ? (
           <>
             <label className="field">
-              <span>Cost area tier</span>
+              <span>Price basis</span>
               <select
-                value={state.fields.tier ?? 'average'}
+                value={state.fields.tier ?? 'baseline'}
                 onChange={(e) => field('tier', e.target.value)}
               >
-                <option value="low">Low cost area</option>
-                <option value="average">Average cost area</option>
-                <option value="high">High cost area</option>
+                <option value="baseline">Published benchmark · no regional adjustment</option>
+                <option value="low" disabled>
+                  Low-cost region · index unavailable
+                </option>
+                <option value="average" disabled>
+                  Average-cost region · index unavailable
+                </option>
+                <option value="high" disabled>
+                  High-cost region · index unavailable
+                </option>
               </select>
-              <small>Regional multipliers require approved source data.</small>
+              <small>
+                Baseline uses the published range unchanged. No regional multiplier is assumed.
+              </small>
             </label>
-            <div className="checks">
-              {checkbox('removal', 'Include removal and disposal')}
-              {checkbox('base', 'Include base preparation')}
-              {checkbox('delivery', 'Include delivery')}
-            </div>
-            {state.fields.delivery === 'true' && input('loads', 'Truckload count', 'loads')}
-            {(surface === 'concrete' || surface === 'slab') && (
+            {kind !== 'compare' && (
               <>
-                <div className="field-grid">
-                  {input('depth', 'Slab thickness', 'in', false)}
-                  {input('waste', 'Waste allowance', '%', false)}
-                </div>
-                {checkbox('shortLoad', 'Check concrete short-load fee')}
+                <p className="benchmark-note">
+                  {pricingAvailable ? (
+                    <>
+                      Reference: {currentPrice.installedLow.source}. $
+                      {currentPrice.installedLow.value}–${currentPrice.installedHigh.value}/ft².
+                      Retrieved {currentPrice.installedLow.retrievedOn}.
+                    </>
+                  ) : (
+                    'Published pricing is unavailable for this scope. Measure area or enter an itemized quote.'
+                  )}
+                </p>
+                {checkbox('customRates', 'Use my quoted unit rates')}
+                {state.fields.customRates === 'true' && (
+                  <div className="field-grid">
+                    {input('unitLow', 'Quoted low rate', 'USD/ft²')}
+                    {input('unitHigh', 'Quoted high rate', 'USD/ft²')}
+                  </div>
+                )}
               </>
             )}
+            <details className="optional-inputs">
+              <summary>
+                Additional quoted work <span>Optional</span>
+              </summary>
+              <p className="input-hint">
+                Add only work excluded from the installed range. Removal and ordinary base work
+                already included in a quote stay excluded here.
+              </p>
+              {checkbox('removal', 'Add separate removal and disposal')}
+              {state.fields.removal === 'true' && (
+                <div className="field-grid">
+                  {input('removalLow', 'Removal low rate', 'USD/ft²', true)}
+                  {input('removalHigh', 'Removal high rate', 'USD/ft²', true)}
+                </div>
+              )}
+              {checkbox('base', 'Add separate base preparation')}
+              {state.fields.base === 'true' && (
+                <div className="field-grid">
+                  {input('baseLow', 'Additional base low rate', 'USD/ft²', true)}
+                  {input('baseHigh', 'Additional base high rate', 'USD/ft²', true)}
+                </div>
+              )}
+              {checkbox('delivery', 'Add separately quoted delivery')}
+              {state.fields.delivery === 'true' && (
+                <div className="field-grid">
+                  {input('loads', 'Truckload count', 'loads')}
+                  {input('deliveryFee', 'Quoted delivery fee', 'USD/load')}
+                </div>
+              )}
+              {(surface === 'concrete' || surface === 'slab') && (
+                <>
+                  <div className="field-grid">
+                    {input('depth', 'Slab thickness', 'in', false)}
+                    {input('waste', 'Concrete contingency', '%', false)}
+                  </div>
+                  {checkbox('shortLoad', 'Check quoted concrete short-load fee')}
+                  {state.fields.shortLoad === 'true' && (
+                    <div className="field-grid">
+                      {input('minimumOrder', 'Supplier minimum', 'yd³')}
+                      {input('shortLoadFee', 'Quoted short-load fee', 'USD')}
+                    </div>
+                  )}
+                </>
+              )}
+            </details>
+            {kind !== 'compare' &&
+              ['asphalt', 'overlay', 'asphalt-replacement'].includes(surface) && (
+                <details className="optional-inputs">
+                  <summary>
+                    Asphalt material quantity <span>Optional</span>
+                  </summary>
+                  <div className="field-grid">
+                    {input('depth', 'Planned asphalt thickness', 'in', false)}
+                    {input('density', 'Producer mix density', 'lb/ft³', false)}
+                    {input('waste', 'Quantity allowance', '%', false)}
+                  </div>
+                  <p className="input-hint">
+                    Enter thickness and producer density together. These calculate tonnage
+                    separately; they do not invent a price adjustment.
+                  </p>
+                </details>
+              )}
             {kind === 'compare' && (
               <fieldset>
                 <legend>Surfaces to compare</legend>
@@ -391,16 +514,50 @@ export default function Calculator({
                 </label>
               </fieldset>
             )}
-            <p className="data-note">
-              Price data not loaded. Cost ranges stay hidden until source data is approved.
+            <p className="input-hint">
+              Estimate only. Installed work and material-only prices cover different scopes.
             </p>
           </>
         ) : kind === 'sealcoat' ? (
-          <div className="field-grid">
-            {input('coats', 'Number of coats', 'coats')}
-            {input('coverage', 'Label coverage', 'ft²/gal')}
-            {input('containerSize', 'Container size', 'gal')}
-          </div>
+          <>
+            <label className="field">
+              <span>Product coverage reference</span>
+              <select
+                value={state.fields.product ?? 'custom'}
+                onChange={(e) => {
+                  const p = sealcoatPresets.find((p) => p.id === e.target.value);
+                  change({
+                    ...state,
+                    fields: {
+                      ...state.fields,
+                      product: e.target.value,
+                      coverage: p?.selectedCoverageSqFtPerGallon
+                        ? String(p.selectedCoverageSqFtPerGallon)
+                        : '',
+                      coats: p?.coats ? String(p.coats) : '',
+                      containerSize: p?.containerGallons ? String(p.containerGallons) : '',
+                    },
+                  });
+                }}
+              >
+                <option value="custom">Enter my product label values</option>
+                {sealcoatPresets.map((p) => (
+                  <option value={p.id} key={p.id}>
+                    {p.name}
+                  </option>
+                ))}
+              </select>
+              <small>
+                Coverage is per coat. Named references differ by surface condition and product.
+                Check your current container label; lower published coverage is used for planning.
+              </small>
+            </label>
+            <div className="field-grid">
+              {input('coats', 'Number of coats', 'coats')}
+              {input('coverage', 'Label coverage', 'ft²/gal')}
+              {input('containerSize', 'Container size', 'gal')}
+            </div>
+          </>
         ) : kind === 'paver' ? (
           <div className="field-grid">
             {input('paverLength', 'Paver length', 'in')}
@@ -436,6 +593,27 @@ export default function Calculator({
                 true,
                 'Use the density provided by your supplier.',
               )}
+            {densityKey && defaultBook[densityKey]?.verified && (
+              <p className="input-hint">
+                Reference: {defaultBook[densityKey].source}. {defaultBook[densityKey].scope} Every
+                value stays editable.
+              </p>
+            )}
+            {(material === 'gravel' || kind === 'layers') && (
+              <button
+                className="text-button"
+                type="button"
+                onClick={() => field('density', String(defaultBook.crushedStoneDensity.value))}
+              >
+                Use Two Rivers 5/8-inch crushed-stone reference: 1.4 short tons/yd³
+              </button>
+            )}
+            {material === 'asphalt millings' && (
+              <p className="input-hint">
+                Enter a supplier density matching the measured material condition. Stockpile density
+                and compacted thickness describe different volumes.
+              </p>
+            )}
             {(kind === 'gravel' || kind === 'layers') &&
               input(
                 'compaction',
@@ -449,8 +627,30 @@ export default function Calculator({
                 <summary>
                   Bag quantities <span>Optional</span>
                 </summary>
+                <button
+                  type="button"
+                  className="text-button"
+                  onClick={() =>
+                    change({
+                      ...state,
+                      fields: {
+                        ...state.fields,
+                        bagSize: '80',
+                        bagYield: String(defaultBook.bagYield.value),
+                      },
+                    })
+                  }
+                >
+                  Use QUIKRETE Concrete Mix 1101 · 80 lb bag reference
+                </button>
                 <div className="field-grid">
-                  {input('bagSize', 'Bag weight', 'lb', false)}
+                  {input(
+                    'bagSize',
+                    'Bag weight',
+                    'lb',
+                    false,
+                    'Weight alone does not set yield. Enter the matching bag-label yield.',
+                  )}
                   {input('bagYield', 'Label yield per bag', 'ft³/bag', false)}
                 </div>
                 <p className="input-hint">The yield printed on the bag determines the bag count.</p>
@@ -482,13 +682,18 @@ export default function Calculator({
         )}
         <div className="form-actions">
           <button className="button primary" type="submit">
-            {cost ? 'Calculate estimate' : 'Calculate quantity'} <span aria-hidden="true">↗</span>
+            {cost
+              ? pricingAvailable || state.fields.customRates === 'true' || kind === 'compare'
+                ? 'Calculate estimate'
+                : 'Calculate area'
+              : 'Calculate quantity'}{' '}
+            <span aria-hidden="true">↗</span>
           </button>
           <button
             className="button secondary"
             type="button"
             onClick={() => {
-              change(emptyState());
+              change(initialToolState(kind, material));
               history.replaceState(null, '', location.pathname);
             }}
           >
@@ -496,10 +701,24 @@ export default function Calculator({
           </button>
         </div>
       </form>
-      <div className="calculator-output">
+      <div
+        className="calculator-output"
+        ref={outputRef}
+        tabIndex={-1}
+        role="region"
+        aria-label="Calculation result"
+      >
         <div className="panel-heading">
           <span className="eyebrow">03 / Your result</span>
-          <span className="status-dot">{result ? 'Calculated' : 'Ready for inputs'}</span>
+          <span className="status-dot">
+            {result
+              ? result.missing?.length
+                ? 'Pricing incomplete'
+                : cost
+                  ? 'Estimate calculated'
+                  : 'Quantity calculated'
+              : 'Ready for inputs'}
+          </span>
         </div>
         <ResultCard>
           {result ? (
@@ -519,8 +738,8 @@ export default function Calculator({
                 <div className="data-note">
                   <strong>Price data not loaded</strong>
                   <p>
-                    {result.missing.map(human).join(', ')}. Verified price ranges and multipliers
-                    are required.
+                    {result.missing.map(human).join(', ')}. The available measurements remain
+                    visible; missing price components are excluded from estimates.
                   </p>
                 </div>
               )}
@@ -540,21 +759,25 @@ export default function Calculator({
                     <tbody>
                       {result.rows.map((r) => (
                         <tr key={r.name}>
-                          <th>{human(r.name)}</th>
+                          <th>
+                            {r.name === 'stamped-concrete'
+                              ? 'Basic stamped concrete'
+                              : human(r.name)}
+                          </th>
                           <td>
                             {money(r.low)}–{money(r.high)}
                           </td>
                           <td>
                             {r.lifespan
                               ? `${number(r.lifespan.low)}–${number(r.lifespan.high)} years`
-                              : 'Not loaded'}
+                              : 'Not available'}
                           </td>
                           <td>
                             {r.annual
                               ? `${money(r.annual.low)}–${money(r.annual.high)}`
-                              : 'Not loaded'}
+                              : 'Not available'}
                           </td>
-                          <td>{r.upkeep.length ? r.upkeep.join('; ') : 'Not loaded'}</td>
+                          <td>{r.upkeep.length ? r.upkeep.join('; ') : 'Not available'}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -573,9 +796,12 @@ export default function Calculator({
                   <div className="result-assumptions">
                     <strong>Assumptions</strong>
                     <p>
-                      Cost tier: {state.fields.tier ?? 'average'}. Removal:{' '}
-                      {state.fields.removal === 'true' ? 'included' : 'excluded'}. Base work:{' '}
-                      {state.fields.base === 'true' ? 'included' : 'excluded'}. Delivery:{' '}
+                      Price basis:{' '}
+                      {state.fields.customRates === 'true'
+                        ? 'your quoted rates'
+                        : (state.fields.tier ?? 'baseline')}
+                      . Removal: {state.fields.removal === 'true' ? 'included' : 'excluded'}. Base
+                      work: {state.fields.base === 'true' ? 'included' : 'excluded'}. Delivery:{' '}
                       {state.fields.delivery === 'true' ? 'included' : 'excluded'}.
                     </p>
                     {result.assumptions?.map((a) => (
@@ -603,7 +829,9 @@ export default function Calculator({
                 {kind === 'converter'
                   ? 'Enter a quantity and material density, then calculate.'
                   : cost
-                    ? 'Enter your dimensions to calculate area. Price ranges require verified source data.'
+                    ? pricingAvailable || kind === 'compare'
+                      ? 'Enter your dimensions to estimate installed cost using named published ranges.'
+                      : 'Enter your dimensions to calculate area. Pricing is unavailable for this scope.'
                     : 'Enter your dimensions and material inputs, then calculate.'}
               </p>
               <span className="empty-rule">No sign-up · US units</span>
@@ -640,7 +868,9 @@ export default function Calculator({
             <p>
               Every result shows its formula.
               <br />
-              Bags, containers, and delivery loads round up.
+              {cost
+                ? 'The range includes the displayed scope and selected extras.'
+                : 'Bags, containers, and delivery loads round up.'}
             </p>
           </div>
         )}

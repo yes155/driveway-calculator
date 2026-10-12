@@ -1,0 +1,78 @@
+[
+  {
+    "id": "latex-ultra-smooth",
+    "name": "Latex-ite Ultra Shield — smooth / previously sealed",
+    "containerGallons": 4.75,
+    "coverageLowSqFtPerContainer": 400,
+    "coverageHighSqFtPerContainer": 500,
+    "coverageLowSqFtPerGallon": 84.21052631578948,
+    "coverageHighSqFtPerGallon": 105.26315789473684,
+    "selectedCoverageSqFtPerGallon": 84.21052631578948,
+    "coats": 2,
+    "sourceIds": [
+      "defaults-latex-ultra",
+      "defaults-latex-ultra-page"
+    ],
+    "reason": "Lowerlabelcoverageboundusedforplanning; two thincoat guidance. Calculate fullrangeifpossible."
+  },
+  {
+    "id": "latex-ultra-rough",
+    "name": "Latex-ite Ultra Shield — rough / porous / never sealed",
+    "containerGallons": 4.75,
+    "coverageLowSqFtPerContainer": 300,
+    "coverageHighSqFtPerContainer": 400,
+    "coverageLowSqFtPerGallon": 63.1578947368421,
+    "coverageHighSqFtPerGallon": 84.21052631578948,
+    "selectedCoverageSqFtPerGallon": 63.1578947368421,
+    "coats": 2,
+    "sourceIds": [
+      "defaults-latex-ultra",
+      "defaults-latex-ultra-page"
+    ],
+    "reason": "Lowerlabelcoverageboundusedforplanning; two thincoat guidance."
+  },
+  {
+    "id": "henry200",
+    "name": "Henry 200 Driveway E-Z Stir — linked TDS reference",
+    "containerGallons": 5,
+    "coverageLowSqFtPerContainer": 250,
+    "coverageHighSqFtPerContainer": 400,
+    "coverageLowSqFtPerGallon": 50,
+    "coverageHighSqFtPerGallon": 80,
+    "selectedCoverageSqFtPerGallon": 50,
+    "coats": 1,
+    "sourceIds": [
+      "defaults-henry-he200",
+      "defaults-henry-he200-page"
+    ],
+    "reason": "LinkedmanufacturerTDS prohibits multiplecoats. Showcoverageconflict/web250–500 andverifycurrentpaillabel."
+  },
+  {
+    "id": "master-ultra",
+    "name": "SealMaster MasterSeal Ultra — factory blended",
+    "containerGallons": null,
+    "coverageLowSqFtPerGallon": 70,
+    "coverageHighSqFtPerGallon": 82,
+    "selectedCoverageSqFtPerGallon": 70,
+    "coats": 2,
+    "sourceIds": [
+      "defaults-master-ultra"
+    ],
+    "reason": "Namedready-mixedproduct; askuserforsoldcontainer volume."
+  },
+  {
+    "id": "rust-blacktop",
+    "name": "Rust-Oleum EpoxyShield Blacktop Filler Sealer, SKU262245",
+    "containerGallons": 3.5,
+    "coverageLowSqFtPerContainer": null,
+    "coverageHighSqFtPerContainer": 350,
+    "coverageLowSqFtPerGallon": null,
+    "coverageHighSqFtPerGallon": 100,
+    "selectedCoverageSqFtPerGallon": null,
+    "coats": null,
+    "sourceIds": [
+      "defaults-rust-blacktop"
+    ],
+    "reason": "Up-to350 limitdoesnotestablishguaranteedmin; retainreference, requireusercoverage."
+  }
+]

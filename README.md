@@ -1,6 +1,6 @@
 # Driveway Calculators
 
-An initial engineering build for **drivewaycalc.online**, using Next.js App Router, strict TypeScript, Tailwind, MDX, and a static export for Cloudflare Pages connected to GitHub.
+A researched draft build for **drivewaycalc.online**, using Next.js App Router, strict TypeScript, Tailwind, MDX, and a static export for Cloudflare Pages connected to GitHub.
 
 ## File tree
 
@@ -101,9 +101,9 @@ Official deployment references:
 
 ## Data and publication
 
-The uploaded plan defines the map and formulas, not a verified DATA block. Only exact US unit conversions are filled. Every price, regional multiplier, material density, yield, coverage rate, recommended thickness, lifespan, and supplier fee remains null.
+The owner authorized source research. The evidence register now contains 134 named sources and 216 observations; see `docs/DATA-RESEARCH.md` and `data/research/source-values.csv`. Installed ranges retain one named publisher's scope, with conflicts recorded. Product and supplier examples remain labeled; no source ranges are silently averaged.
 
-Quantity tools work with user-entered supplier or label values. Cost tools display measured area and hide price results until verified data exists. Arithmetic examples use the fixtures supplied in Section 8.3 and are explicitly labeled as arithmetic examples.
+All 51 mapped pages now have source-grounded draft content. Quantity tools use editable named material references or user values. Cost tools use attributed baseline ranges with no regional adjustment, plus explicitly selected separate quote items. Unsupported national freight, annual upkeep, and regional values remain unavailable. Human review, contact/trust approval, and browser checks remain outstanding, so draft indexing controls stay enabled.
 
 For each sourced entry record `value`, `unit`, `source`, `retrievedOn`, and `verified`. Add the corresponding named source and its URL to `data/sources.json`. External citation URLs belong on the Methodology page.
 
@@ -166,6 +166,6 @@ GA4 is optional and absent by default. A configured GA4 script loads after the f
 
 ## Verification limits
 
-The static build, source validator, export checks, and 116 tests pass. Browser interaction, keyboard/phone checks, Lighthouse, field INP, and live lead integrations were not executed in the build environment. GitHub Actions includes a mobile Lighthouse job for home, asphalt tool, and asphalt cost guide, with the requested score/LCP/CLS budgets. Total blocking time is a lab diagnostic; it does not verify field INP.
+The static build, source validator, export checks, and 128 tests pass. Browser interaction, keyboard/phone checks, Lighthouse, field INP, and live lead integrations were not executed in the build environment. GitHub Actions includes a mobile Lighthouse job for home, asphalt tool, and asphalt cost guide, with the requested score/LCP/CLS budgets. Total blocking time is a lab diagnostic; it does not verify field INP.
 
 The source is synchronized to https://github.com/yes155/driveway-calculator. Cloudflare Pages account setup and its Git integration remain unverified.

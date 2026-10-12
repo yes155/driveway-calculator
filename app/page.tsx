@@ -91,9 +91,9 @@ const faqs = [
       'The relevant tools include separate allowance fields. Enter your project allowance, or enter 0 to exclude it. The worked calculation shows how the entered values affect the result.',
   },
   {
-    question: 'Are driveway price ranges available in this preview?',
+    question: 'Which prices do the estimators use?',
     answer:
-      'Price ranges remain unavailable until verified source records are added. Quantity calculators work with your measurements and material values. Cost calculators calculate measured area while pricing is unavailable.',
+      'The estimators use attributed published ranges with no regional adjustment. Sources differ in work scope. Delivery and supplier-specific charges come from your quote; unresolved figures remain unavailable.',
   },
   {
     question: 'Can I copy, print, or share my calculation?',
@@ -122,9 +122,24 @@ export default function Home() {
             Free tools for asphalt, concrete, gravel, and pavers.
           </p>
           <div className="hero-actions">
-            <Link href="/asphalt-calculator/" className="button primary">
-              Start calculating <span aria-hidden="true">↗</span>
+            <Link href="#workbench" className="button primary">
+              Calculate material <span aria-hidden="true">↗</span>
             </Link>
+            <Link href="/driveway-cost-calculator/" className="button secondary">
+              Estimate project cost <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
+          <div className="hero-materials" aria-label="Choose your driveway material">
+            {[
+              { label: 'Asphalt', href: '/asphalt-calculator/' },
+              { label: 'Concrete', href: '/concrete-calculator/' },
+              { label: 'Gravel', href: '/gravel-driveway-calculator/' },
+              { label: 'Pavers', href: '/paver-calculator/' },
+            ].map((m) => (
+              <Link href={m.href} key={m.label}>
+                {m.label}
+              </Link>
+            ))}
           </div>
           <p className="hero-footnote">
             US units <span>·</span> Editable inputs <span>·</span> No sign-up
@@ -297,8 +312,8 @@ export default function Home() {
             <mark>Different inputs.</mark>
           </h2>
           <p>
-            Explore the matching cost guide for your surface. Price ranges await verified source
-            data.
+            Explore the matching cost guide for your surface. Each published benchmark includes its
+            source and scope.
           </p>
         </div>
         <div className="surface-gallery">
@@ -381,8 +396,8 @@ export default function Home() {
           <mark>a measurement.</mark>
         </h2>
         <p>Choose a material calculator and work through your project.</p>
-        <Link href="/asphalt-calculator/" className="button primary">
-          Start calculating <span aria-hidden="true">↗</span>
+        <Link href="#workbench" className="button primary">
+          Choose a calculator <span aria-hidden="true">↗</span>
         </Link>
       </section>
       <JsonLd data={breadcrumbs(getPage('/'))} />

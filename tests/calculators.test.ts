@@ -230,10 +230,11 @@ describe('The same engine drives page results and worked examples', () => {
     expect(r.area).toBe(300);
     expect(r.metrics.find((m) => m.label === 'Calculated weight')?.value).toBe('5.19');
   });
-  it('keeps the empty-price cost UI from producing an estimate', () => {
+  it('keeps an unsupported regional-tier cost UI from producing an estimate', () => {
     const s = emptyState();
     s.sections[0].length = '20';
     s.sections[0].width = '20';
+    s.fields.tier = 'low';
     const r = evaluateTool('cost', s);
     expect(r.missing).toEqual(['asphalt']);
     expect(r.metrics).toHaveLength(1);

@@ -1,0 +1,1192 @@
+[
+  {
+    "item": "asphalt.installedLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 7,
+    "reason": "Use Angi’s intact 2026 range of $7–$13/ft² for new installation with labor and without major grading. The register contains at least 3 named guides and 3 independent contractor price pages. Show their ranges separately; do not average."
+  },
+  {
+    "item": "asphalt.installedHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 13,
+    "reason": "Use Angi’s intact 2026 range of $7–$13/ft² for new installation with labor and without major grading. The register contains at least 3 named guides and 3 independent contractor price pages. Show their ranges separately; do not average."
+  },
+  {
+    "item": "asphalt.lifespanLow",
+    "unit": "years",
+    "status": "sourced",
+    "value": 15,
+    "reason": "Use HomeGuide’s 15–30 years as an attributed planning range for proper installation and maintenance. Fixr reports the same range; Blacktop Concepts and LawnStarter differ. No warranty is implied."
+  },
+  {
+    "item": "asphalt.lifespanHigh",
+    "unit": "years",
+    "status": "sourced",
+    "value": 30,
+    "reason": "Use HomeGuide’s 15–30 years as an attributed planning range for proper installation and maintenance. Fixr reports the same range; Blacktop Concepts and LawnStarter differ. No warranty is implied."
+  },
+  {
+    "item": "asphalt.upkeep",
+    "unit": "USD/year",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "asphalt.delivery",
+    "unit": "USD/load",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "asphalt.shortLoadFee",
+    "unit": "USD",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "asphalt.minimumOrder",
+    "unit": "yd³",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "asphalt.materialLow",
+    "unit": "USD/short ton",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "asphalt.materialHigh",
+    "unit": "USD/short ton",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "asphalt.removalLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 1,
+    "reason": "Use Angi’s $1–$2/ft² removal component only as an optional extra outside an existing replacement quote. Inch Calculator corroborates removal labor. HomeGuide’s standalone demolition and hauling has a different scope."
+  },
+  {
+    "item": "asphalt.removalHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 2,
+    "reason": "Use Angi’s $1–$2/ft² removal component only as an optional extra outside an existing replacement quote. Inch Calculator corroborates removal labor. HomeGuide’s standalone demolition and hauling has a different scope."
+  },
+  {
+    "item": "asphalt.baseLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 0.5,
+    "reason": "Use LawnStarter’s $0.50–$1/ft² additional gravel substrate benchmark, corroborated by Angi. This is a supplemental base layer, not full excavation or remediation. Do not double count an included base."
+  },
+  {
+    "item": "asphalt.baseHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 1,
+    "reason": "Use LawnStarter’s $0.50–$1/ft² additional gravel substrate benchmark, corroborated by Angi. This is a supplemental base layer, not full excavation or remediation. Do not double count an included base."
+  },
+  {
+    "item": "concrete.installedLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 6,
+    "reason": "Select HomeGuide standardgray/broom installed benchmark verbatim, not average. Threeindependent guides andthreecontractor pages checked;local contractor replacement prices arecomparators only."
+  },
+  {
+    "item": "concrete.installedHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 10,
+    "reason": "Select HomeGuide standardgray/broom installed benchmark verbatim, not average. Threeindependent guides andthreecontractor pages checked;local contractor replacement prices arecomparators only."
+  },
+  {
+    "item": "concrete.lifespanLow",
+    "unit": "years",
+    "status": "sourced",
+    "value": 30,
+    "reason": "Select finiteHomeGuide comparisonrange verbatim, conditionalproperinstallation/maintenance, not guarantee."
+  },
+  {
+    "item": "concrete.lifespanHigh",
+    "unit": "years",
+    "status": "sourced",
+    "value": 40,
+    "reason": "Select finiteHomeGuide comparisonrange verbatim, conditionalproperinstallation/maintenance, not guarantee."
+  },
+  {
+    "item": "concrete.upkeep",
+    "unit": "USD/year",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "concrete.delivery",
+    "unit": "USD/load",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "concrete.shortLoadFee",
+    "unit": "USD",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "concrete.minimumOrder",
+    "unit": "yd³",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "concrete.materialLow",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "concrete.materialHigh",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "concrete.removalLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 2,
+    "reason": "Select Angi3–6inch demolition+dumping benchmark verbatim corroboratedFixr;HGhighercomparison."
+  },
+  {
+    "item": "concrete.removalHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 6,
+    "reason": "Select Angi3–6inch demolition+dumping benchmark verbatim corroboratedFixr;HGhighercomparison."
+  },
+  {
+    "item": "concrete.baseLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "concrete.baseHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "stamped-concrete.installedLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 10,
+    "reason": "Select CN onepattern/onecolor class verbatim."
+  },
+  {
+    "item": "stamped-concrete.installedHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 14,
+    "reason": "Select CN onepattern/onecolor class verbatim."
+  },
+  {
+    "item": "stamped-concrete.lifespanLow",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "stamped-concrete.lifespanHigh",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "stamped-concrete.upkeep",
+    "unit": "USD/year",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "stamped-concrete.delivery",
+    "unit": "USD/load",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "stamped-concrete.shortLoadFee",
+    "unit": "USD",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "stamped-concrete.minimumOrder",
+    "unit": "yd³",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "stamped-concrete.materialLow",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "stamped-concrete.materialHigh",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "stamped-concrete.removalLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 2,
+    "reason": "Select Angi3–6inch demolition+dumping benchmark verbatim corroboratedFixr;HGhighercomparison."
+  },
+  {
+    "item": "stamped-concrete.removalHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 6,
+    "reason": "Select Angi3–6inch demolition+dumping benchmark verbatim corroboratedFixr;HGhighercomparison."
+  },
+  {
+    "item": "stamped-concrete.baseLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "stamped-concrete.baseHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "gravel.installedLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 4,
+    "reason": "Select HomeGuide materials-and-installation benchmark for full new-driveway planning. No averaging or merging. Display named selection and alternative guide ranges."
+  },
+  {
+    "item": "gravel.installedHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 10,
+    "reason": "Select HomeGuide materials-and-installation benchmark for full new-driveway planning. No averaging or merging. Display named selection and alternative guide ranges."
+  },
+  {
+    "item": "gravel.lifespanLow",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "gravel.lifespanHigh",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "gravel.upkeep",
+    "unit": "USD/year",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "gravel.delivery",
+    "unit": "USD/load",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "gravel.shortLoadFee",
+    "unit": "USD",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "gravel.minimumOrder",
+    "unit": "yd³",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "gravel.materialLow",
+    "unit": "USD/short ton",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "gravel.materialHigh",
+    "unit": "USD/short ton",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "gravel.removalLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "gravel.removalHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "gravel.baseLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "gravel.baseHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "pavers.installedLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 10,
+    "reason": "Generic paver comparison benchmark from HomeGuide; use material-specific Angi ranges within guide. Includes base/materials/labor; excludes removal."
+  },
+  {
+    "item": "pavers.installedHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 30,
+    "reason": "Generic paver comparison benchmark from HomeGuide; use material-specific Angi ranges within guide. Includes base/materials/labor; excludes removal."
+  },
+  {
+    "item": "pavers.lifespanLow",
+    "unit": "years",
+    "status": "sourced",
+    "value": 25,
+    "reason": "Select concrete-paver range25-50 with contractor corroboration. Generic paver comparison defaults to concrete paver construction; qualify maintained installed system. Do not reuse automatically for every natural stone product."
+  },
+  {
+    "item": "pavers.lifespanHigh",
+    "unit": "years",
+    "status": "sourced",
+    "value": 50,
+    "reason": "Select concrete-paver range25-50 with contractor corroboration. Generic paver comparison defaults to concrete paver construction; qualify maintained installed system. Do not reuse automatically for every natural stone product."
+  },
+  {
+    "item": "pavers.upkeep",
+    "unit": "USD/year",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "pavers.delivery",
+    "unit": "USD/load",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "pavers.shortLoadFee",
+    "unit": "USD",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "pavers.minimumOrder",
+    "unit": "yd³",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "pavers.materialLow",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "pavers.materialHigh",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "pavers.removalLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "pavers.removalHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "pavers.baseLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "pavers.baseHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "tar-and-chip.installedLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 2,
+    "reason": "Select HomeGuide driveway installation scope; corroborate Angi single/double seal2-3 and3-5. Do not blend resurfacing."
+  },
+  {
+    "item": "tar-and-chip.installedHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 5,
+    "reason": "Select HomeGuide driveway installation scope; corroborate Angi single/double seal2-3 and3-5. Do not blend resurfacing."
+  },
+  {
+    "item": "tar-and-chip.lifespanLow",
+    "unit": "years",
+    "status": "sourced",
+    "value": 7,
+    "reason": "Same7-10 driveway range across national guide and two independent US contractors. Treat as interval to substantial surface renewal, not permanent base replacement."
+  },
+  {
+    "item": "tar-and-chip.lifespanHigh",
+    "unit": "years",
+    "status": "sourced",
+    "value": 10,
+    "reason": "Same7-10 driveway range across national guide and two independent US contractors. Treat as interval to substantial surface renewal, not permanent base replacement."
+  },
+  {
+    "item": "tar-and-chip.upkeep",
+    "unit": "USD/year",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "tar-and-chip.delivery",
+    "unit": "USD/load",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "tar-and-chip.shortLoadFee",
+    "unit": "USD",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "tar-and-chip.minimumOrder",
+    "unit": "yd³",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "tar-and-chip.materialLow",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "tar-and-chip.materialHigh",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "tar-and-chip.removalLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "tar-and-chip.removalHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "tar-and-chip.baseLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "tar-and-chip.baseHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "slab.installedLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 6,
+    "reason": "Select HomeGuide range verbatim for genericflat slab planning; no arbitrary thickness/finish multipliers."
+  },
+  {
+    "item": "slab.installedHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 12,
+    "reason": "Select HomeGuide range verbatim for genericflat slab planning; no arbitrary thickness/finish multipliers."
+  },
+  {
+    "item": "slab.lifespanLow",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "slab.lifespanHigh",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "slab.upkeep",
+    "unit": "USD/year",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "slab.delivery",
+    "unit": "USD/load",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "slab.shortLoadFee",
+    "unit": "USD",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "slab.minimumOrder",
+    "unit": "yd³",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "slab.materialLow",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "slab.materialHigh",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "slab.removalLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 2,
+    "reason": "Select Angi3–6inch demolition+dumping benchmark verbatim corroboratedFixr;HGhighercomparison."
+  },
+  {
+    "item": "slab.removalHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 6,
+    "reason": "Select Angi3–6inch demolition+dumping benchmark verbatim corroboratedFixr;HGhighercomparison."
+  },
+  {
+    "item": "slab.baseLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "slab.baseHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "millings.installedLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 2,
+    "reason": "Use HomeGuide’s $2–$5/ft² as a named planning benchmark, corroborated by Black Diamond Paving. Angi reports $3–$8 and Fragale reports $1–$3. Preserve differences."
+  },
+  {
+    "item": "millings.installedHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 5,
+    "reason": "Use HomeGuide’s $2–$5/ft² as a named planning benchmark, corroborated by Black Diamond Paving. Angi reports $3–$8 and Fragale reports $1–$3. Preserve differences."
+  },
+  {
+    "item": "millings.lifespanLow",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "millings.lifespanHigh",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "millings.upkeep",
+    "unit": "USD/year",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "millings.delivery",
+    "unit": "USD/load",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "millings.shortLoadFee",
+    "unit": "USD",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "millings.minimumOrder",
+    "unit": "yd³",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "millings.materialLow",
+    "unit": "USD/short ton",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "millings.materialHigh",
+    "unit": "USD/short ton",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "millings.removalLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "millings.removalHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "millings.baseLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "millings.baseHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "sealcoating.installedLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 1.25,
+    "reason": "Use Angi’s 2026 $1.25–$1.50/ft² materials-and-labor range. Repairs, extra cleaning, and service fees remain separate unless a quote includes them. Other guides appear in the comparison register."
+  },
+  {
+    "item": "sealcoating.installedHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 1.5,
+    "reason": "Use Angi’s 2026 $1.25–$1.50/ft² materials-and-labor range. Repairs, extra cleaning, and service fees remain separate unless a quote includes them. Other guides appear in the comparison register."
+  },
+  {
+    "item": "sealcoating.lifespanLow",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "sealcoating.lifespanHigh",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "sealcoating.upkeep",
+    "unit": "USD/year",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "sealcoating.delivery",
+    "unit": "USD/load",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "sealcoating.shortLoadFee",
+    "unit": "USD",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "sealcoating.minimumOrder",
+    "unit": "yd³",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "sealcoating.materialLow",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "sealcoating.materialHigh",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "sealcoating.removalLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "sealcoating.removalHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "sealcoating.baseLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "sealcoating.baseHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "repair.installedLow",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 2,
+    "reason": "Use HomeGuide’s method-specific hot-patch range of $2–$5/ft². Angi and Fixr report the same range for general asphalt repairs; preserve that scope distinction."
+  },
+  {
+    "item": "repair.installedHigh",
+    "unit": "USD/ft²",
+    "status": "sourced",
+    "value": 5,
+    "reason": "Use HomeGuide’s method-specific hot-patch range of $2–$5/ft². Angi and Fixr report the same range for general asphalt repairs; preserve that scope distinction."
+  },
+  {
+    "item": "repair.lifespanLow",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "repair.lifespanHigh",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "repair.upkeep",
+    "unit": "USD/year",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "repair.delivery",
+    "unit": "USD/load",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "repair.shortLoadFee",
+    "unit": "USD",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "repair.minimumOrder",
+    "unit": "yd³",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "repair.materialLow",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "repair.materialHigh",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "repair.removalLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "repair.removalHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "repair.baseLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "repair.baseHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "replacement.installedLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "replacement.installedHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "replacement.lifespanLow",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "replacement.lifespanHigh",
+    "unit": "years",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "replacement.upkeep",
+    "unit": "USD/year",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "replacement.delivery",
+    "unit": "USD/load",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "replacement.shortLoadFee",
+    "unit": "USD",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "replacement.minimumOrder",
+    "unit": "yd³",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "replacement.materialLow",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "replacement.materialHigh",
+    "unit": "USD/short ton",
+    "status": "NOT APPLICABLE",
+    "value": null,
+    "reason": "Generic schema field does not match this product unit or installed-work model. Kept null; never populated with a synthetic zero."
+  },
+  {
+    "item": "replacement.removalLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "replacement.removalHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "replacement.baseLow",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "replacement.baseHigh",
+    "unit": "USD/ft²",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "tiers.low",
+    "unit": "multiplier",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "tiers.average",
+    "unit": "multiplier",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "tiers.high",
+    "unit": "multiplier",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "asphaltDensity",
+    "unit": "lb/ft³",
+    "status": "sourced",
+    "value": 148,
+    "reason": "Compacted hot-mix asphalt; replace with producer mix density."
+  },
+  {
+    "item": "asphaltThickness",
+    "unit": "in",
+    "status": "sourced",
+    "value": 3,
+    "reason": "CAPA residential asphalt over a suitable aggregate base; structural design governs."
+  },
+  {
+    "item": "millingsDensity",
+    "unit": "lb/ft³",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "gravelDensity",
+    "unit": "short tons/yd³",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "rockDensity",
+    "unit": "short tons/yd³",
+    "status": "sourced",
+    "value": 1.3,
+    "reason": "Two Rivers 3/4-inch washed round rock; moisture and size dependent."
+  },
+  {
+    "item": "peaGravelDensity",
+    "unit": "short tons/yd³",
+    "status": "sourced",
+    "value": 1.3,
+    "reason": "Two Rivers 1/2-inch washed pea gravel; supplier product example."
+  },
+  {
+    "item": "crusherRunDensity",
+    "unit": "short tons/yd³",
+    "status": "sourced",
+    "value": 1.225,
+    "reason": "Triple R 1.5-inch crusher run; supplier bulk product example."
+  },
+  {
+    "item": "roadBaseDensity",
+    "unit": "short tons/yd³",
+    "status": "sourced",
+    "value": 1.43,
+    "reason": "Sutherland AB-minus; supplier bulk product example."
+  },
+  {
+    "item": "concreteThickness",
+    "unit": "in",
+    "status": "sourced",
+    "value": 4,
+    "reason": "Concrete Network residential driveway reference; load and soil design governs."
+  },
+  {
+    "item": "waste",
+    "unit": "%",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "compaction",
+    "unit": "%",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "sealcoatCoverage",
+    "unit": "ft²/gal",
+    "status": "NOT FOUND",
+    "value": null,
+    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+  },
+  {
+    "item": "bagYield",
+    "unit": "ft³/bag",
+    "status": "sourced",
+    "value": 0.6,
+    "reason": "QUIKRETE Concrete Mix 1101, 80 lb bag only; label yield."
+  }
+]

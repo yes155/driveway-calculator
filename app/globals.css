@@ -1010,7 +1010,7 @@ mark {
   margin-bottom: 15px;
 }
 .answer-block strong {
-  font-weight: 500;
+  font-weight: 700;
   color: var(--ink);
 }
 .byline {
@@ -1134,7 +1134,7 @@ legend {
 .input-wrap {
   display: flex;
   align-items: center;
-  border: 1px solid #aeb2a3;
+  border: 1px solid #72786a;
   background: white;
   border-radius: 4px;
   overflow: hidden;
@@ -1164,7 +1164,7 @@ legend {
 .field select {
   width: 100%;
   min-height: 49px;
-  border: 1px solid #aeb2a3;
+  border: 1px solid #72786a;
   border-radius: 4px;
   padding: 12px;
   font-size: 16px;
@@ -2289,5 +2289,111 @@ caption {
   .page-heading,
   .calculator-output {
     break-inside: avoid;
+  }
+}
+
+/* Research and task-first refinements apply to every page. */
+.hero-actions {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.hero-materials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0;
+}
+.hero-materials a {
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+.hero-copy {
+  max-width: 640px;
+}
+.home-hero {
+  min-height: 660px;
+}
+.reference-panel {
+  margin: 30px 0;
+}
+.reference-panel p {
+  margin-bottom: 16px;
+}
+.reference-panel .source-caption {
+  font-size: 13px;
+}
+.benchmark-note {
+  font-size: 13px;
+  line-height: 1.7;
+  background: var(--cream);
+  border-left: 3px solid var(--ink);
+  padding: 12px;
+}
+.text-button {
+  color: var(--ink);
+  background: var(--cream);
+  padding: 10px 12px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  font-size: 13px;
+  margin: 0 0 16px;
+  text-align: left;
+}
+.metrics > div:first-child dd {
+  font-size: clamp(38px, 4vw, 56px);
+}
+.metrics > div:not(:first-child) dd {
+  font-size: 26px;
+}
+.research-details {
+  border: 1px solid var(--line);
+  padding: 14px 16px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+.research-details > summary {
+  font-weight: 700;
+}
+.source-register {
+  padding-left: 20px;
+}
+.source-register li {
+  margin: 15px 0;
+  font-size: 14px;
+}
+.source-register a {
+  text-decoration: underline;
+}
+.article-sidebar .side-box {
+  background: var(--cream);
+  box-shadow: none;
+}
+.article-sidebar .side-box h3 {
+  font-size: 24px;
+}
+.site-footer:not(.footer-home) .footer-watermark {
+  display: none;
+}
+.site-footer:not(.footer-home) {
+  padding-bottom: 24px;
+}
+@media (max-width: 760px) {
+  .home-hero {
+    min-height: auto;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-actions .button {
+    width: max-content;
+    max-width: 100%;
+  }
+  .research-details {
+    padding: 12px;
   }
 }

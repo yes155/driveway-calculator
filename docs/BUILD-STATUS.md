@@ -49,7 +49,7 @@ The Instruction-set.txt and Driveway calculator.rtf were read completely. Sectio
 | --- | --- |
 | Section 11 row and phase counts | Pass |
 | TypeScript strict check | Pass |
-| Vitest | 116 tests passed |
+| Vitest | 128 tests passed |
 | Next.js production static export | Pass |
 | Exported page heading/title/description/route/canonical/link checks | 57 pages verified |
 | Generated worked examples compared with engine output | Pass |
@@ -57,10 +57,20 @@ The Instruction-set.txt and Driveway calculator.rtf were read completely. Sectio
 
 ## Remaining work
 
-1. Supply the DATA block and complete sourced Phase 1 page content; no final cost guide was fabricated.
+1. Review the source-grounded page drafts and resolve only the remaining NOT FOUND items against actual project/supplier scope.
 2. Approve privacy/terms/disclosures and supply contact information. Appoint a reviewer only if an actual reviewer is engaged.
 3. Complete browser, phone, keyboard, and performance review; run CI Lighthouse after repository setup.
 4. Connect https://github.com/yes155/driveway-calculator to Cloudflare Pages and verify its build.
 5. Configure Search Console/analytics as approved. Keep leads/ads disabled until approvals and integration testing are complete.
 
 All site pages remain drafts. This is the initial engineering build, not a public launch.
+
+## Researched data and corrections — October 12, 2026
+
+- Researched 134 named sources and recorded 216 observations without averaging incompatible scopes.
+- Added attributed installed rates, source-specific material defaults, product coverage choices, source comparisons, and explicit unresolved-field dispositions.
+- Added source-grounded content to all 51 mapped pages, generated examples to every calculator, method-specific repair and replacement tables, and contextual links.
+- Added baseline pricing without invented regional multipliers, editable quote rates, quoted delivery/short-load inputs, visible separate extras, and protection against duplicate replacement removal.
+- Made primary results dominant, added result focus/phone scrolling, strengthened input borders, added early material/cost choices, reduced inner-page footer/sidebar emphasis, and preserved the reference theme.
+- Added research integrity and actual calculator-adapter regression checks. Browser rendering and interaction checks remain unavailable.
+- Human review and draft launch gates remain incomplete; private preview is not a public launch.

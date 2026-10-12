@@ -17,7 +17,14 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["formula", "default density", "source name", "update date", "rounding", "units"],
+    "entities": [
+      "formula",
+      "default density",
+      "source name",
+      "update date",
+      "rounding",
+      "units"
+    ],
     "imageAlt": "Spreadsheet of cost sources and formulas",
     "related": [
       {
@@ -255,8 +262,7 @@
     "author": "Farrukh Abdullah",
     "entities": [
       "hot mix asphalt",
-      "short ton (2",
-      "000 lb)",
+      "short ton (2,000 lb)",
       "density in lb per cubic foot",
       "thickness in inches",
       "waste allowance",
@@ -357,7 +363,9 @@
     "primaryVolume": 1900.0,
     "primaryKd": 24.0,
     "primaryCpc": null,
-    "keywords": ["driveway paving cost calculator"],
+    "keywords": [
+      "driveway paving cost calculator"
+    ],
     "title": "Asphalt Driveway Cost Calculator: Free Estimate",
     "h1": "Asphalt Driveway Cost Calculator",
     "description": "Estimate your asphalt driveway cost from size, thickness, base work and removal. Low-to-high range with editable assumptions.",
@@ -422,14 +430,15 @@
     "entities": [
       "concrete slab",
       "slab thickness",
-      "reinforcement (rebar",
-      "wire mesh)",
       "control joints",
       "finish",
       "cubic yards",
       "formwork",
       "subbase",
-      "cement (the everyday word searchers use for concrete)"
+      "reinforcement",
+      "rebar",
+      "wire mesh",
+      "cement"
     ],
     "imageAlt": "Concrete driveway slab with broom finish and control joints",
     "related": [
@@ -569,7 +578,9 @@
     "primaryVolume": 1300.0,
     "primaryKd": 20.0,
     "primaryCpc": 0.44,
-    "keywords": ["how much gravel do i need for a driveway"],
+    "keywords": [
+      "how much gravel do i need for a driveway"
+    ],
     "title": "Gravel Driveway Calculator: Tons and Yards Needed",
     "h1": "Gravel Driveway Calculator",
     "description": "Calculate tons and cubic yards of gravel for a driveway from length, width and depth, with base and surface layers.",
@@ -906,14 +917,23 @@
     "primaryVolume": 590.0,
     "primaryKd": 19.0,
     "primaryCpc": 2.45,
-    "keywords": ["driveway calculator", "driveway cost estimator"],
+    "keywords": [
+      "driveway calculator",
+      "driveway cost estimator"
+    ],
     "title": "Driveway Cost Calculator: Compare Asphalt, Concrete, Gravel",
     "h1": "Driveway Cost Calculator",
     "description": "Enter your driveway size once and compare estimated cost, lifespan and upkeep for asphalt, concrete, gravel and pavers.",
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["surface", "lifespan", "upkeep", "cost per year", "cost area tier"],
+    "entities": [
+      "surface",
+      "lifespan",
+      "upkeep",
+      "cost per year",
+      "cost area tier"
+    ],
     "related": [
       {
         "slug": "/asphalt-driveway-cost/",
@@ -1250,7 +1270,9 @@
     "primaryVolume": 320.0,
     "primaryKd": 20.0,
     "primaryCpc": 3.8,
-    "keywords": ["asphalt driveway repair"],
+    "keywords": [
+      "asphalt driveway repair"
+    ],
     "title": "Asphalt Driveway Repair Cost: Cracks, Patches, Potholes",
     "h1": "Asphalt Driveway Repair Cost",
     "description": "Asphalt driveway repair cost by repair type: crack filling, patching, potholes and sections, with when repair beats repaving.",
@@ -1350,7 +1372,14 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["demolition", "hauling", "disposal", "subbase", "new pour", "slab replacement"],
+    "entities": [
+      "demolition",
+      "hauling",
+      "disposal",
+      "subbase",
+      "new pour",
+      "slab replacement"
+    ],
     "imageAlt": "Old concrete driveway being broken up for replacement",
     "related": [
       {
@@ -1382,7 +1411,13 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["stamp pattern", "color hardener", "release agent", "sealer", "resealing"],
+    "entities": [
+      "stamp pattern",
+      "color hardener",
+      "release agent",
+      "sealer",
+      "resealing"
+    ],
     "imageAlt": "Stamped concrete driveway with a slate pattern",
     "related": [
       {
@@ -1443,14 +1478,22 @@
     "primaryVolume": 480.0,
     "primaryKd": 6.0,
     "primaryCpc": 2.41,
-    "keywords": ["chip seal driveway"],
+    "keywords": [
+      "chip seal driveway"
+    ],
     "title": "Tar and Chip Driveway Cost per Sq Ft (2026)",
     "h1": "Tar and Chip Driveway Cost",
     "description": "Tar and chip driveway cost per square foot, how it is laid, lifespan and how it compares with asphalt.",
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["bituminous binder", "aggregate chips", "rolling", "chip seal", "lifespan"],
+    "entities": [
+      "bituminous binder",
+      "aggregate chips",
+      "rolling",
+      "chip seal",
+      "lifespan"
+    ],
     "imageAlt": "Tar and chip driveway surface close up",
     "related": [
       {
@@ -1478,7 +1521,13 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["reclaimed asphalt pavement", "tons", "delivery", "compaction", "base depth"],
+    "entities": [
+      "reclaimed asphalt pavement",
+      "tons",
+      "delivery",
+      "compaction",
+      "base depth"
+    ],
     "imageAlt": "Pile of asphalt millings on a driveway base",
     "related": [
       {
@@ -1510,7 +1559,13 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["base thickness", "asphalt layers", "traffic load", "subgrade", "compaction"],
+    "entities": [
+      "base thickness",
+      "asphalt layers",
+      "traffic load",
+      "subgrade",
+      "compaction"
+    ],
     "imageAlt": "Cross section diagram of an asphalt driveway layers",
     "related": [
       {
@@ -1546,7 +1601,13 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["crack filling", "resurfacing", "slab leveling", "mudjacking", "control joints"],
+    "entities": [
+      "crack filling",
+      "resurfacing",
+      "slab leveling",
+      "mudjacking",
+      "control joints"
+    ],
     "related": [
       {
         "slug": "/replace-concrete-driveway-cost/",
@@ -1577,7 +1638,13 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["crack", "pothole", "settling", "resurfacing", "regrading"],
+    "entities": [
+      "crack",
+      "pothole",
+      "settling",
+      "resurfacing",
+      "regrading"
+    ],
     "related": [
       {
         "slug": "/asphalt-driveway-repair-cost/",
@@ -1615,7 +1682,13 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["demolition", "hauling", "disposal", "subbase", "new surface"],
+    "entities": [
+      "demolition",
+      "hauling",
+      "disposal",
+      "subbase",
+      "new surface"
+    ],
     "related": [
       {
         "slug": "/repave-asphalt-driveway-cost/",
@@ -1643,14 +1716,24 @@
     "primaryVolume": 1300.0,
     "primaryKd": 10.0,
     "primaryCpc": 0.0,
-    "keywords": ["standard driveway size"],
+    "keywords": [
+      "standard driveway size"
+    ],
     "title": "Standard Driveway Width and Size: 1, 2 and 3 Car",
     "h1": "Standard Driveway Width and Size",
     "description": "Standard driveway width and size for one-car, two-car and three-car driveways, with the area each covers.",
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["width", "length", "one-car", "two-car", "three-car", "turnaround", "square feet"],
+    "entities": [
+      "width",
+      "length",
+      "one-car",
+      "two-car",
+      "three-car",
+      "turnaround",
+      "square feet"
+    ],
     "related": [
       {
         "slug": "/driveway-cost-calculator/",
@@ -1700,7 +1783,13 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["cubic yards", "bags", "thickness", "slab", "waste"],
+    "entities": [
+      "cubic yards",
+      "bags",
+      "thickness",
+      "slab",
+      "waste"
+    ],
     "imageAlt": "Concrete slab being poured and leveled",
     "related": [
       {
@@ -1737,7 +1826,13 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["pavers", "square feet", "base", "bedding sand", "waste"],
+    "entities": [
+      "pavers",
+      "square feet",
+      "base",
+      "bedding sand",
+      "waste"
+    ],
     "imageAlt": "Paver layout over a compacted base",
     "related": [
       {
@@ -1765,7 +1860,14 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["excavation", "base course", "compaction", "hot mix asphalt", "rolling", "curing"],
+    "entities": [
+      "excavation",
+      "base course",
+      "compaction",
+      "hot mix asphalt",
+      "rolling",
+      "curing"
+    ],
     "related": [
       {
         "slug": "/asphalt-calculator/",
@@ -1796,7 +1898,13 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["aggregate", "asphalt binder", "mix temperature", "compaction", "density"],
+    "entities": [
+      "aggregate",
+      "asphalt binder",
+      "mix temperature",
+      "compaction",
+      "density"
+    ],
     "related": [
       {
         "slug": "/asphalt-calculator/",
@@ -1827,7 +1935,14 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["sealcoating", "crack filling", "cleaning", "edging", "patching", "drainage"],
+    "entities": [
+      "sealcoating",
+      "crack filling",
+      "cleaning",
+      "edging",
+      "patching",
+      "drainage"
+    ],
     "related": [
       {
         "slug": "/driveway-sealcoating-cost/",
@@ -1851,14 +1966,24 @@
     "primaryVolume": 1300.0,
     "primaryKd": 26.0,
     "primaryCpc": 1.81,
-    "keywords": ["driveway slope"],
+    "keywords": [
+      "driveway slope"
+    ],
     "title": "Driveway Drainage: Slope, Drains and Fixes",
     "h1": "Driveway Drainage",
     "description": "How much slope a driveway needs, which drains fix standing water and when drainage faults cause damage.",
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["slope", "crown", "culvert", "trench drain", "French drain", "grading", "runoff"],
+    "entities": [
+      "slope",
+      "crown",
+      "culvert",
+      "trench drain",
+      "French drain",
+      "grading",
+      "runoff"
+    ],
     "related": [
       {
         "slug": "/driveway-repair-cost/",
@@ -1894,7 +2019,13 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["crack width", "filler", "backer rod", "patch compound", "slab replacement"],
+    "entities": [
+      "crack width",
+      "filler",
+      "backer rod",
+      "patch compound",
+      "slab replacement"
+    ],
     "related": [
       {
         "slug": "/concrete-driveway-repair-cost/",
@@ -1918,14 +2049,22 @@
     "primaryVolume": 390.0,
     "primaryKd": 34.0,
     "primaryCpc": null,
-    "keywords": ["how to repair cracks in asphalt driveway"],
+    "keywords": [
+      "how to repair cracks in asphalt driveway"
+    ],
     "title": "How to Repair Cracks in an Asphalt Driveway",
     "h1": "How to Repair Cracks in an Asphalt Driveway",
     "description": "How to repair cracks and holes in an asphalt driveway, the filler to use and when to repave instead.",
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["crack filler", "cold patch", "pothole", "cleaning", "sealing"],
+    "entities": [
+      "crack filler",
+      "cold patch",
+      "pothole",
+      "cleaning",
+      "sealing"
+    ],
     "related": [
       {
         "slug": "/asphalt-driveway-repair-cost/",
@@ -1964,7 +2103,13 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["sealer", "gallons", "coverage per gallon", "coats", "container size"],
+    "entities": [
+      "sealer",
+      "gallons",
+      "coverage per gallon",
+      "coats",
+      "container size"
+    ],
     "imageAlt": "Sealcoat buckets beside a driveway",
     "related": [
       {
@@ -1992,7 +2137,12 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["reclaimed asphalt pavement", "tons", "depth", "compaction"],
+    "entities": [
+      "reclaimed asphalt pavement",
+      "tons",
+      "depth",
+      "compaction"
+    ],
     "imageAlt": "Asphalt millings spread on a driveway",
     "related": [
       {
@@ -2017,14 +2167,23 @@
     "primaryVolume": 90.0,
     "primaryKd": 6.0,
     "primaryCpc": null,
-    "keywords": ["asphalt density", "weight of asphalt", "how much does a yard of asphalt weigh"],
+    "keywords": [
+      "asphalt density",
+      "weight of asphalt",
+      "how much does a yard of asphalt weigh"
+    ],
     "title": "Material Weight Chart: Asphalt, Gravel and Concrete",
     "h1": "Material Weight Chart",
     "description": "Weight per cubic foot and per cubic yard for asphalt, gravel, crushed stone and concrete, with tons per cubic yard.",
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["density", "pounds per cubic foot", "tons per cubic yard", "material list"],
+    "entities": [
+      "density",
+      "pounds per cubic foot",
+      "tons per cubic yard",
+      "material list"
+    ],
     "imageAlt": "Table of material weights per cubic yard",
     "related": [
       {
@@ -2053,14 +2212,22 @@
     "primaryVolume": 2900.0,
     "primaryKd": 16.0,
     "primaryCpc": 0.0,
-    "keywords": ["how many yards in a ton of gravel", "how many tons in a cubic yard of gravel"],
+    "keywords": [
+      "how many yards in a ton of gravel",
+      "how many tons in a cubic yard of gravel"
+    ],
     "title": "Cubic Yards to Tons Converter by Material",
     "h1": "Cubic Yards to Tons",
     "description": "Convert cubic yards to tons for gravel, asphalt, sand and concrete using an editable density for each material.",
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["cubic yards", "tons", "density", "material type"],
+    "entities": [
+      "cubic yards",
+      "tons",
+      "density",
+      "material type"
+    ],
     "imageAlt": "Cubic yards to tons conversion widget",
     "related": [
       {
@@ -2098,7 +2265,12 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["landscape rock", "cubic yards", "depth", "tons"],
+    "entities": [
+      "landscape rock",
+      "cubic yards",
+      "depth",
+      "tons"
+    ],
     "imageAlt": "Landscape rock bed with measured depth",
     "related": [
       {
@@ -2135,7 +2307,13 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["pea gravel", "depth", "tons", "cubic yards", "paths and patios"],
+    "entities": [
+      "pea gravel",
+      "depth",
+      "tons",
+      "cubic yards",
+      "paths and patios"
+    ],
     "imageAlt": "Pea gravel path edging",
     "related": [
       {
@@ -2167,7 +2345,12 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["crusher run", "base layer", "compaction", "tons"],
+    "entities": [
+      "crusher run",
+      "base layer",
+      "compaction",
+      "tons"
+    ],
     "imageAlt": "Compacted crusher run base",
     "related": [
       {
@@ -2199,7 +2382,12 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["road base", "base layer", "compaction", "tons"],
+    "entities": [
+      "road base",
+      "base layer",
+      "compaction",
+      "tons"
+    ],
     "imageAlt": "Road base being graded for a driveway",
     "related": [
       {
@@ -2319,7 +2507,10 @@
     "primaryVolume": 12100.0,
     "primaryKd": 34.0,
     "primaryCpc": 3.5,
-    "keywords": ["asphalt driveway sealer", "asphalt sealer for driveways"],
+    "keywords": [
+      "asphalt driveway sealer",
+      "asphalt sealer for driveways"
+    ],
     "title": "Best Driveway Sealer: Types and How to Choose",
     "h1": "Driveway Sealer",
     "description": "The main types of driveway sealer, how to choose one for asphalt or concrete, and how to apply it.",
@@ -2363,7 +2554,10 @@
     "primaryVolume": 1000.0,
     "primaryKd": 35.0,
     "primaryCpc": null,
-    "keywords": ["how to seal coat a driveway", "how to seal driveway"],
+    "keywords": [
+      "how to seal coat a driveway",
+      "how to seal driveway"
+    ],
     "title": "How to Seal a Driveway: Steps, Tools and Timing",
     "h1": "How to Seal a Driveway",
     "description": "The steps to seal an asphalt driveway, the tools and sealer needed, and the weather and cure times to plan for.",
@@ -2418,7 +2612,14 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["crack filler", "sealant", "cold pour", "hot pour", "crack width", "cure time"],
+    "entities": [
+      "crack filler",
+      "sealant",
+      "cold pour",
+      "hot pour",
+      "crack width",
+      "cure time"
+    ],
     "imageAlt": "Crack filler applied to an asphalt crack",
     "related": [
       {
@@ -2450,7 +2651,12 @@
     "status": "draft",
     "updated": "2026-10-11",
     "author": "Farrukh Abdullah",
-    "entities": ["cold patch", "pothole", "compaction", "temporary repair"],
+    "entities": [
+      "cold patch",
+      "pothole",
+      "compaction",
+      "temporary repair"
+    ],
     "imageAlt": "Cold patch compacted into a pothole",
     "related": [
       {

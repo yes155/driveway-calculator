@@ -167,6 +167,10 @@ export function evaluateTool(kind: ToolKind, state: ToolState, surface = 'asphal
     measured: s.sloped ? s.measured : 'slope',
   }));
   const area = computeArea(sections);
+  if (surface.includes('replacement') && fields.removal === 'true' && fields.customRates !== 'true')
+    throw new Error(
+      'Removal is already included in this replacement benchmark. Use your separate quoted rates to change scope.',
+    );
   const metrics: Metric[] = [{ label: 'Measured area', value: number(area), unit: 'ft²' }];
   const steps = sections.map(
     (s, i) =>
@@ -178,31 +182,49 @@ export function evaluateTool(kind: ToolKind, state: ToolState, surface = 'asphal
   let notice: string | undefined;
   let assumptions: string[] = [];
   if (kind === 'cost' || kind === 'compare') {
-    const tierName = ['low', 'high'].includes(fields.tier) ? fields.tier : 'average';
-    const tier = known(prices.tiers[tierName as keyof typeof prices.tiers]);
+    const tierName = ['low', 'average', 'high'].includes(fields.tier) ? fields.tier : 'baseline';
+    const tier =
+      tierName === 'baseline' ? 1 : known(prices.tiers[tierName as keyof typeof prices.tiers]);
     const list = kind === 'compare' ? state.surfaces : [surface];
-    assumptions = list.map((name) => {
-      const p = prices[name as keyof typeof prices];
-      return p && 'installedLow' in p
-        ? `${name}: ${p.installedLow.source ?? 'price source not loaded'}; retrieved ${p.installedLow.retrievedOn ?? 'not loaded'}.`
-        : name;
-    });
+    assumptions =
+      kind !== 'compare' && fields.customRates === 'true'
+        ? ['Unit range: your quoted rates. The published installation benchmark is not used.']
+        : list.map((name) => {
+            const p = prices[name as keyof typeof prices];
+            return p && 'installedLow' in p
+              ? `${name}: ${p.installedLow.source ?? 'price source not loaded'}; retrieved ${p.installedLow.retrievedOn ?? 'not loaded'}.`
+              : name;
+          });
     const mapped = list.map((name) => {
       const p = prices[name as keyof typeof prices];
       if (!p || !('installedLow' in p)) throw new Error('Select a supported surface.');
       const extras: Range[] = [];
       if (fields.removal === 'true') {
-        const r = ranged(p.removalLow, p.removalHigh);
+        const r =
+          fields.removalLow?.trim() && fields.removalHigh?.trim()
+            ? {
+                low: num('removalLow', 'removal low rate'),
+                high: num('removalHigh', 'removal high rate'),
+              }
+            : ranged(p.removalLow, p.removalHigh);
         if (!r) return { name, unit: null, lifespan: null, upkeep: [], extras };
         extras.push({ low: r.low * area, high: r.high * area });
       }
       if (fields.base === 'true') {
-        const r = ranged(p.baseLow, p.baseHigh);
+        const r =
+          fields.baseLow?.trim() && fields.baseHigh?.trim()
+            ? {
+                low: num('baseLow', 'additional base low rate'),
+                high: num('baseHigh', 'additional base high rate'),
+              }
+            : ranged(p.baseLow, p.baseHigh);
         if (!r) return { name, unit: null, lifespan: null, upkeep: [], extras };
         extras.push({ low: r.low * area, high: r.high * area });
       }
       if (fields.delivery === 'true') {
-        const fee = known(p.delivery);
+        const fee = fields.deliveryFee?.trim()
+          ? num('deliveryFee', 'quoted delivery fee')
+          : known(p.delivery);
         if (fee === null) return { name, unit: null, lifespan: null, upkeep: [], extras };
         const loads = num('loads', 'truckload count');
         if (!Number.isInteger(loads) || loads <= 0)
@@ -211,7 +233,13 @@ export function evaluateTool(kind: ToolKind, state: ToolState, surface = 'asphal
       }
       return {
         name,
-        unit: ranged(p.installedLow, p.installedHigh),
+        unit:
+          kind !== 'compare' && fields.customRates === 'true'
+            ? {
+                low: num('unitLow', 'quoted low unit rate'),
+                high: num('unitHigh', 'quoted high unit rate'),
+              }
+            : ranged(p.installedLow, p.installedHigh),
         lifespan: ranged(p.lifespanLow, p.lifespanHigh),
         upkeep: known(p.upkeep) === null ? [] : [`${money(p.upkeep.value!)} per year`],
         extras,
@@ -251,16 +279,49 @@ export function evaluateTool(kind: ToolKind, state: ToolState, surface = 'asphal
     }
     if (!formula)
       formula = 'Total = area × sourced unit price × sourced tier multiplier + selected extras';
-    notice =
-      'Price data not loaded. Cost results require verified prices and regional multipliers.';
+    if (fields.removal === 'true')
+      assumptions.push(
+        `Removal: ${fields.removalLow || 'published low'}–${fields.removalHigh || 'published high'} USD/ft², separately selected.`,
+      );
+    if (fields.base === 'true')
+      assumptions.push(
+        `Additional base: ${fields.baseLow || 'published low'}–${fields.baseHigh || 'published high'} USD/ft², separately selected.`,
+      );
+    if (fields.delivery === 'true')
+      assumptions.push(
+        `Delivery: ${fields.loads} loads × ${fields.deliveryFee || 'published fee'} USD/load from your supplier quote.`,
+      );
+    notice = missing?.length
+      ? 'Required price data is unavailable for selected items.'
+      : 'Published benchmark estimate. Local quotes and site conditions determine the project price.';
+    if (['asphalt', 'overlay', 'asphalt-replacement'].includes(surface) && fields.depth?.trim()) {
+      const quantity = computeAsphalt({
+        area,
+        depth: num('depth'),
+        density: num('density', 'producer density'),
+        waste: fields.waste?.trim() ? num('waste') : 0,
+      });
+      metrics.push({
+        label: 'Asphalt order quantity',
+        value: number(quantity.orderTons),
+        unit: 'short tons',
+      });
+      steps.push(
+        'Asphalt quantity uses entered depth and density; installed unit pricing is not automatically scaled by thickness.',
+      );
+    }
     if (surface === 'concrete' || surface === 'slab') {
       if (fields.depth?.trim() && fields.waste?.trim()) {
         const v = computeConcrete({ area, depth: num('depth'), waste: num('waste') });
         metrics.push({ label: 'Concrete volume', value: number(v.cubicYards), unit: 'yd³' });
         if (fields.shortLoad === 'true') {
           const p = prices[surface];
-          const min = known(p.minimumOrder),
-            fee = known(p.shortLoadFee);
+          const min = fields.minimumOrder?.trim()
+              ? num('minimumOrder', 'supplier minimum')
+              : known(p.minimumOrder),
+            fee = fields.shortLoadFee?.trim()
+              ? num('shortLoadFee', 'quoted short-load fee')
+              : known(p.shortLoadFee);
           if (min === null || fee === null) {
             missing = Array.from(new Set([...(missing ?? []), 'short-load fee']));
             metrics.splice(1, metrics.length - 2);
@@ -390,6 +451,16 @@ export function evaluateTool(kind: ToolKind, state: ToolState, surface = 'asphal
           `${r.name}: ${money(r.low)}–${money(r.high)}${r.annual ? `; cost per year ${money(r.annual.low)}–${money(r.annual.high)}` : ''}`,
       )
       .join('\n') ?? '';
+  const order = metrics.findIndex((m) =>
+    [
+      'Order quantity',
+      'Concrete needed',
+      'Pavers to buy',
+      'Sealcoat needed',
+      'Estimated cost range',
+    ].includes(m.label),
+  );
+  if (order > 0) metrics.unshift(...metrics.splice(order, 1));
   const summary =
     metrics.map((m) => `${m.label}: ${m.value} ${m.unit ?? ''}`).join('\n') +
     '\n' +
@@ -407,15 +478,27 @@ export function toolFor(seq: number): ToolKind | null {
   if (seq === 24) return 'converter';
   if (seq === 36) return 'paver';
   if (seq === 42) return 'compare';
-  if ([3, 4, 5, 6, 7, 49, 50].includes(seq)) return 'cost';
+  if ([3, 4, 5, 6, 7, 11, 12, 13, 15, 16, 17, 18, 19, 37, 49, 50].includes(seq)) return 'cost';
   return null;
 }
 export function surfaceFor(seq: number) {
-  return [5, 6].includes(seq)
-    ? 'concrete'
-    : [49, 50].includes(seq)
-      ? 'slab'
-      : seq === 7
-        ? 'gravel'
-        : 'asphalt';
+  const mapped: Record<number, string> = {
+    3: 'asphalt',
+    4: 'asphalt',
+    5: 'concrete',
+    6: 'concrete',
+    7: 'gravel',
+    11: 'overlay',
+    12: 'sealcoating',
+    13: 'repair',
+    15: 'concrete-replacement',
+    16: 'stamped-concrete',
+    17: 'pavers',
+    18: 'tar-and-chip',
+    19: 'millings',
+    37: 'concrete-repair',
+    49: 'slab',
+    50: 'slab',
+  };
+  return mapped[seq] ?? 'asphalt';
 }

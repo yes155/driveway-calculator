@@ -3,20 +3,46 @@ title: "How Much Does a Yard of Concrete Weigh?"
 description: "The weight of a cubic yard of concrete by mix, with pounds per cubic foot and tons per cubic yard."
 slug: "/concrete-weight-per-cubic-yard/"
 type: "Reference"
-updated: "2026-10-11"
+updated: "2026-10-12"
 author: "Farrukh Abdullah"
 primaryKeyword: "how much does a yard of concrete weigh"
 keywords: ["how much does a cubic yard of concrete weigh", "concrete weight per cubic yard", "how much does a yard of crushed concrete weigh", "how much does a yard of cured concrete weigh", "how much does a yard of dry concrete weigh"]
-related: [{"slug": "/concrete-calculator/", "annotation": "explains the related concrete calculator inputs or next step"}, {"slug": "/material-weights/", "annotation": "explains the related material weights inputs or next step"}]
+related: [{"slug": "/concrete-calculator/", "annotation": "Calculates the quantities used in this project’s material order."}, {"slug": "/material-weights/", "annotation": "Explains material weight chart and connects it to this page’s inputs or next decision."}]
 status: "draft"
+contentReady: true
 seq: 53
+answer: "A yard of normal-weight concrete weighs about 4,050 pounds at the selected 150-pound-per-cubic-foot density; the value is a volume-to-weight calculation, not a bag-weight rule."
+sourceNames: ["American Concrete Institute — ACI CT-25: 2025 ACI Concrete Terminology", "National Ready Mixed Concrete Association — CIP36 Structural Lightweight Concrete", "Federal Highway Administration, US Department of Transportation — FHWA-HRT-05-056 Volume I Chapter3: HPC bridge specifications review", "Quikrete — Concrete Mix1101 data sheet"]
+sourceIds: ["concrete-aci-terminology", "concrete-nrmca-cip36", "concrete-fhwa-normalweight", "concrete-quikrete-mix"]
+unresolvedData: ["Generic crushed-concrete, dry-concrete, and separately conditioned cured-concrete densities remain NOT FOUND in this dataset.", "Generate short-ton and lightweight range conversions with the engine, never manual page totals."]
+keywordVariants: [{"keyword": "how much does a cubic yard of concrete weigh", "placement": "second heading"}, {"keyword": "concrete weight per cubic yard", "placement": "first answer"}, {"keyword": "how much does a yard of crushed concrete weigh", "placement": "fourth heading"}, {"keyword": "how much does a yard of cured concrete weigh", "placement": "third heading"}, {"keyword": "how much does a yard of dry concrete weigh", "placement": "third section"}]
 dataRequired: []
 defaultsUsed: []
 modules: ["AnswerBlock", "CalculatorShell", "ResultCard", "FormulaBox", "QASection", "RelatedLink", "SourceNote", "LastUpdated", "Disclosure"]
 ---
 
-## What information is needed?
+## How much does a yard of concrete weigh?
 
-**Verified source data completes this page.**
+**Concrete weight per cubic yard equals density multiplied by the cubic feet in a yard.**
 
-{{DATA: sourced figures, named sources, retrieval dates, and editorial review for Concrete Weight per Cubic Yard}}
+ACI’s retrieved concrete terminology gives normal-weight concrete an approximate density of 150 pounds per cubic foot. Multiplying that reference by 27 cubic feet gives 4,050 pounds per cubic yard. NRMCA lists normal-weight concrete at 140–150 pounds per cubic foot; FHWA’s archived engineering classification spans 135–155. These are compatible reference scopes, not identical universal densities. Keep the density editable.
+
+## How much does a cubic yard of concrete weigh by mix?
+
+**The mix density determines the weight, rather than the volume label alone.**
+
+NRMCA lists structural lightweight concrete at 90–120 pounds per cubic foot, distinct from the normal-weight reference. The calculator-generated conversion supplies pounds per cubic yard and short tons per cubic yard for the selected density. Ask the producer for the mix-specific density when material weight affects transport, equipment, or loading. Do not substitute the reference weight for a structural assessment.
+
+## How much does a yard of cured concrete weigh?
+
+**A cured concrete weight requires a density stated for the material’s condition.**
+
+Moisture condition, mix composition, and aggregate type affect density. The research does not establish a single separate cured-concrete or dry-concrete density for every driveway mix. “How much does a yard of dry concrete weigh?” also describes bagged dry mix in some searches; dry bag mass is not the finished wet yield. The [Concrete Calculator](/concrete-calculator/) uses a named bag product’s stated yield for bag counts.
+
+## How much does a yard of crushed concrete weigh?
+
+**Crushed concrete needs its supplier’s bulk density, rather than the density of an intact slab.**
+
+Loose crushed material contains void space and belongs to a different material condition. No compatible crushed-concrete density is selected in this concrete dataset. Enter the supplier’s weight per measured volume instead of carrying over 150 pounds per cubic foot. The [Material Weight Chart](/material-weights/) identifies material and density assumptions, and the [Cubic Yards to Tons](/cubic-yards-to-tons/) applies the selected value. Before using a weight result, confirm the mix or material, moisture condition, density units, and transport limits.
+
+<WeightReference material="concrete" />

@@ -1,7 +1,10 @@
+'use client';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 export default function Footer() {
+  const home = usePathname() === '/';
   return (
-    <footer className="site-footer">
+    <footer className={'site-footer' + (home ? ' footer-home' : '')}>
       <div className="footer-main">
         <div>
           <Link href="/" className="footer-brand">

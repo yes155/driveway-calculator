@@ -35,8 +35,8 @@ export default function Header() {
               .map((page) => ({ href: page.url, label: page.h1 })),
           }))}
         />
-        <Link href="/asphalt-calculator/" className="header-tool">
-          Start calculating <span aria-hidden="true">↗</span>
+        <Link href="/#workbench" className="header-tool">
+          Choose a calculator <span aria-hidden="true">↗</span>
         </Link>
       </div>
     </header>

@@ -8,7 +8,7 @@
   },
   "cubicFeetPerYard": {
     "value": 27,
-    "unit": "ft\u00b3/yd\u00b3",
+    "unit": "ft³/yd³",
     "source": "Project specification: exact US unit conversion",
     "retrievedOn": "2026-10-11",
     "verified": true
@@ -21,67 +21,118 @@
     "verified": true
   },
   "asphaltDensity": {
-    "value": null,
-    "unit": "lb/ft\u00b3",
-    "source": null,
-    "retrievedOn": null,
-    "verified": false
+    "value": 148,
+    "unit": "lb/ft³",
+    "source": "Asphalt Institute — Engineering FAQs",
+    "sourceId": "defaults-ai-faq",
+    "sourceIds": [
+      "defaults-ai-faq",
+      "defaults-craig-asphalt",
+      "defaults-mapa-asphalt",
+      "defaults-vulcan-asphalt"
+    ],
+    "retrievedOn": "2026-10-12",
+    "verified": true,
+    "scope": "Compacted hot-mix asphalt; replace with producer mix density."
   },
   "asphaltThickness": {
-    "value": null,
+    "value": 3,
     "unit": "in",
-    "source": null,
-    "retrievedOn": null,
-    "verified": false
+    "source": "Colorado Asphalt Pavement Association — Asphalt Driveways Technical Brief",
+    "sourceId": "defaults-capa-driveway",
+    "sourceIds": [
+      "defaults-capa-driveway",
+      "defaults-harrison-depth",
+      "defaults-nathan-depth"
+    ],
+    "retrievedOn": "2026-10-12",
+    "verified": true,
+    "scope": "CAPA residential asphalt over a suitable aggregate base; structural design governs."
   },
   "millingsDensity": {
     "value": null,
-    "unit": "lb/ft\u00b3",
+    "unit": "lb/ft³",
     "source": null,
     "retrievedOn": null,
     "verified": false
   },
   "gravelDensity": {
     "value": null,
-    "unit": "short tons/yd\u00b3",
+    "unit": "short tons/yd³",
     "source": null,
     "retrievedOn": null,
     "verified": false
   },
   "rockDensity": {
-    "value": null,
-    "unit": "short tons/yd\u00b3",
-    "source": null,
-    "retrievedOn": null,
-    "verified": false
+    "value": 1.3,
+    "unit": "short tons/yd³",
+    "source": "Two Rivers Sand & Gravel — Our Products",
+    "sourceId": "defaults-tworivers",
+    "sourceIds": [
+      "defaults-tworivers",
+      "defaults-threez-river",
+      "defaults-fick-river"
+    ],
+    "retrievedOn": "2026-10-12",
+    "verified": true,
+    "scope": "Two Rivers 3/4-inch washed round rock; moisture and size dependent."
   },
   "peaGravelDensity": {
-    "value": null,
-    "unit": "short tons/yd\u00b3",
-    "source": null,
-    "retrievedOn": null,
-    "verified": false
+    "value": 1.3,
+    "unit": "short tons/yd³",
+    "source": "Two Rivers Sand & Gravel — Our Products",
+    "sourceId": "defaults-tworivers",
+    "sourceIds": [
+      "defaults-tworivers",
+      "defaults-threez-river",
+      "defaults-lasalle",
+      "defaults-rockpros"
+    ],
+    "retrievedOn": "2026-10-12",
+    "verified": true,
+    "scope": "Two Rivers 1/2-inch washed pea gravel; supplier product example."
   },
   "crusherRunDensity": {
-    "value": null,
-    "unit": "short tons/yd\u00b3",
-    "source": null,
-    "retrievedOn": null,
-    "verified": false
+    "value": 1.225,
+    "unit": "short tons/yd³",
+    "source": "Triple R Dirt Works — 1.5-inch Crusher Run",
+    "sourceId": "defaults-triple-r",
+    "sourceIds": [
+      "defaults-triple-r",
+      "defaults-ls-excavation",
+      "defaults-american-rock"
+    ],
+    "retrievedOn": "2026-10-12",
+    "verified": true,
+    "scope": "Triple R 1.5-inch crusher run; supplier bulk product example."
   },
   "roadBaseDensity": {
-    "value": null,
-    "unit": "short tons/yd\u00b3",
-    "source": null,
-    "retrievedOn": null,
-    "verified": false
+    "value": 1.43,
+    "unit": "short tons/yd³",
+    "source": "Sutherland Landscape Supplies — Gravel-Sand",
+    "sourceId": "defaults-sutherland",
+    "sourceIds": [
+      "defaults-sutherland",
+      "defaults-lyngso",
+      "defaults-rocknyard"
+    ],
+    "retrievedOn": "2026-10-12",
+    "verified": true,
+    "scope": "Sutherland AB-minus; supplier bulk product example."
   },
   "concreteThickness": {
-    "value": null,
+    "value": 4,
     "unit": "in",
-    "source": null,
-    "retrievedOn": null,
-    "verified": false
+    "source": "Concrete Network — Driveway construction essentials",
+    "sourceId": "concrete-cn-installation",
+    "sourceIds": [
+      "concrete-cn-installation",
+      "concrete-hg-concrete",
+      "concrete-angi-concrete"
+    ],
+    "retrievedOn": "2026-10-12",
+    "verified": true,
+    "scope": "Concrete Network residential driveway reference; load and soil design governs."
   },
   "waste": {
     "value": null,
@@ -99,16 +150,80 @@
   },
   "sealcoatCoverage": {
     "value": null,
-    "unit": "ft\u00b2/gal",
+    "unit": "ft²/gal",
     "source": null,
     "retrievedOn": null,
     "verified": false
   },
   "bagYield": {
-    "value": null,
-    "unit": "ft\u00b3/bag",
-    "source": null,
-    "retrievedOn": null,
-    "verified": false
+    "value": 0.6,
+    "unit": "ft³/bag",
+    "source": "Quikrete — Concrete Mix1101 data sheet",
+    "sourceId": "concrete-quikrete-mix",
+    "sourceIds": [
+      "concrete-quikrete-mix",
+      "concrete-sakrete-mix",
+      "concrete-cts-mix"
+    ],
+    "retrievedOn": "2026-10-12",
+    "verified": true,
+    "scope": "QUIKRETE Concrete Mix 1101, 80 lb bag only; label yield."
+  },
+  "concreteDensity": {
+    "value": 150,
+    "unit": "lb/ft³",
+    "source": "National Ready Mixed Concrete Association — CIP36 Structural Lightweight Concrete",
+    "sourceId": "concrete-nrmca-cip36",
+    "sourceIds": [
+      "concrete-nrmca-cip36",
+      "concrete-aci-terminology",
+      "concrete-fhwa-normalweight"
+    ],
+    "retrievedOn": "2026-10-12",
+    "verified": true,
+    "scope": "Normalweight concrete reference; not lightweight or loose crushed concrete."
+  },
+  "concreteWaste": {
+    "value": 10,
+    "unit": "%",
+    "source": "National Ready Mixed Concrete Association — CIP31 Ordering Ready Mixed Concrete",
+    "sourceId": "concrete-nrmca-cip31",
+    "sourceIds": [
+      "concrete-nrmca-cip31",
+      "concrete-sakrete-slab",
+      "concrete-ozinga-ordering"
+    ],
+    "retrievedOn": "2026-10-12",
+    "verified": true,
+    "scope": "Concrete ordering contingency; editable, not a universal allowance for all materials."
+  },
+  "crushedStoneDensity": {
+    "value": 1.4,
+    "unit": "short tons/yd³",
+    "source": "Two Rivers Sand & Gravel — Our Products",
+    "sourceId": "defaults-tworivers",
+    "sourceIds": [
+      "defaults-tworivers",
+      "defaults-threez-limestone",
+      "defaults-rockpros"
+    ],
+    "retrievedOn": "2026-10-12",
+    "verified": true,
+    "scope": "Two Rivers 5/8-inch top course crushed stone; product-specific supplier bulk reference."
+  },
+  "millingsBulkDensity": {
+    "value": 1.4,
+    "unit": "short tons/yd³",
+    "source": "Anchorage Sand & Gravel — Recycled Asphalt Pavement",
+    "sourceId": "defaults-anch-rap",
+    "sourceIds": [
+      "defaults-lasalle",
+      "defaults-anch-rap",
+      "defaults-hello-millings",
+      "defaults-fhwa-rap"
+    ],
+    "retrievedOn": "2026-10-12",
+    "verified": true,
+    "scope": "Anchorage 1-inch-minus loose stockpile reference, not compacted-pavement density."
   }
 }

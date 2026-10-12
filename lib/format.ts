@@ -6,3 +6,10 @@ export const money = (n: number) =>
     currency: 'USD',
     maximumFractionDigits: 0,
   }).format(n);
+
+export const rateMoney = (n: number) =>
+  new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 2,
+  }).format(n);

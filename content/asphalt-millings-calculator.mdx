@@ -3,20 +3,46 @@ title: "Asphalt Millings Calculator: Tons for a Driveway"
 description: "Calculate tons of asphalt millings for a driveway from length, width and depth, with an editable density."
 slug: "/asphalt-millings-calculator/"
 type: "Quantity tool"
-updated: "2026-10-11"
+updated: "2026-10-12"
 author: "Farrukh Abdullah"
 primaryKeyword: "asphalt millings calculator"
 keywords: []
-related: [{"slug": "/asphalt-millings-cost/", "annotation": "explains the related asphalt millings cost inputs or next step"}, {"slug": "/asphalt-calculator/", "annotation": "explains the related asphalt calculator inputs or next step"}]
+related: [{"slug": "/asphalt-millings-cost/", "annotation": "Explains the asphalt millings cost scope to compare with the measurements and work described here."}, {"slug": "/asphalt-calculator/", "annotation": "Calculates the quantities used in this project’s material order."}]
 status: "draft"
+contentReady: true
 seq: 22
+answer: "The asphalt millings calculator converts driveway area and depth into cubic yards and uses an editable supplier bulk weight to calculate tons of reclaimed asphalt pavement."
+sourceNames: ["Anchorage Sand & Gravel — Recycled Asphalt Pavement", "Lasalle Sand & Gravel — Pricing and Material Weights", "Hello Gravel — Asphalt Millings Calculator", "FHWA — Reclaimed Asphalt Pavement Material Description, FHWA-RD-97-148"]
+sourceIds: ["defaults-anch-rap", "defaults-lasalle", "defaults-hello-millings", "defaults-fhwa-rap"]
+unresolvedData: []
+keywordVariants: []
 dataRequired: []
 defaultsUsed: []
 modules: ["AnswerBlock", "CalculatorShell", "ResultCard", "FormulaBox", "QASection", "RelatedLink", "SourceNote", "LastUpdated", "Disclosure"]
 ---
 
-## What information is needed?
+## How do you calculate asphalt millings?
 
-**Verified source data completes this page.**
+**Volume equals area × depth in feet, and tons equal cubic yards × the selected tons-per-yard factor.**
 
-{{DATA: sourced figures, named sources, retrieval dates, and editorial review for Asphalt Millings Calculator}}
+Divide cubic feet by 27 for cubic yards. Keep the finished layer depth separate from the loose quantity delivered. Reclaimed asphalt pavement retains asphalt binder and aggregate, but its delivered stockpile weight is different from the in-place density of fresh hot mix.
+
+## Which density belongs to millings?
+
+**Use the supplier’s factor for the delivered material and its stated condition.**
+
+Anchorage Sand & Gravel lists 1-inch-minus RAP at about 2,800 lb per cubic yard, or 1.4 US short tons. It identifies these as stockpile weights that vary with moisture, texture and gradation. Lasalle lists millings and screened millings at 2,500 lb per yard, equivalent to 1.25 tons. Hello Gravel uses 1.4 as its planning conversion. The calculator’s named reference is editable; the difference between suppliers stays visible.
+
+## How does compaction change the order?
+
+**Compaction changes the volume relationship, so use a documented allowance for the actual product.**
+
+A stockpile conversion applied to a compacted finished volume needs the supplier’s loose-to-finished adjustment. Do not add the same allowance twice. Zero excludes an extra adjustment; it is not a recommendation for uncompacted construction. FHWA publishes separate processed-RAP and compacted-density observations. Those conditions do not form one interchangeable default.
+
+## What needs checking before delivery?
+
+**Confirm gradation, depth condition, purchase increment, truck capacity and the drop location.**
+
+Ask whether the supplier sells screened or unscreened material and whether its quote is per ton or per yard. Use the [Asphalt Millings Cost](/asphalt-millings-cost/) for driveway installation scope. Use the [Asphalt Calculator](/asphalt-calculator/) for fresh hot mix, whose compacted density and quantity assumptions differ.
+
+<MaterialReferences material="millings" />

@@ -1,32 +1,70 @@
 {
   "asphalt": {
     "installedLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 7,
+      "unit": "USD/ft²",
+      "source": "Angi — Asphalt driveway cost",
+      "sourceId": "asphalt-angi-asphalt",
+      "sourceIds": [
+        "asphalt-angi-asphalt",
+        "asphalt-hg-asphalt",
+        "asphalt-ls-asphalt",
+        "asphalt-erickson-asphalt",
+        "asphalt-blacktop-price",
+        "asphalt-diamond-asphalt",
+        "asphalt-inch-asphalt"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use Angi’s intact 2026 range of $7–$13/ft² for new installation with labor and without major grading. The register contains at least 3 named guides and 3 independent contractor price pages. Show their ranges separately; do not average."
     },
     "installedHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 13,
+      "unit": "USD/ft²",
+      "source": "Angi — Asphalt driveway cost",
+      "sourceId": "asphalt-angi-asphalt",
+      "sourceIds": [
+        "asphalt-angi-asphalt",
+        "asphalt-hg-asphalt",
+        "asphalt-ls-asphalt",
+        "asphalt-erickson-asphalt",
+        "asphalt-blacktop-price",
+        "asphalt-diamond-asphalt",
+        "asphalt-inch-asphalt"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use Angi’s intact 2026 range of $7–$13/ft² for new installation with labor and without major grading. The register contains at least 3 named guides and 3 independent contractor price pages. Show their ranges separately; do not average."
     },
     "lifespanLow": {
-      "value": null,
+      "value": 15,
       "unit": "years",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "source": "HomeGuide — Asphalt driveway cost",
+      "sourceId": "asphalt-hg-asphalt",
+      "sourceIds": [
+        "asphalt-hg-asphalt",
+        "asphalt-fixr-asphalt",
+        "asphalt-blacktop-asphalt",
+        "asphalt-ls-asphalt"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use HomeGuide’s 15–30 years as an attributed planning range for proper installation and maintenance. Fixr reports the same range; Blacktop Concepts and LawnStarter differ. No warranty is implied."
     },
     "lifespanHigh": {
-      "value": null,
+      "value": 30,
       "unit": "years",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "source": "HomeGuide — Asphalt driveway cost",
+      "sourceId": "asphalt-hg-asphalt",
+      "sourceIds": [
+        "asphalt-hg-asphalt",
+        "asphalt-fixr-asphalt",
+        "asphalt-blacktop-asphalt",
+        "asphalt-ls-asphalt"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use HomeGuide’s 15–30 years as an attributed planning range for proper installation and maintenance. Fixr reports the same range; Blacktop Concepts and LawnStarter differ. No warranty is implied."
     },
     "upkeep": {
       "value": null,
@@ -51,7 +89,7 @@
     },
     "minimumOrder": {
       "value": null,
-      "unit": "yd\u00b3",
+      "unit": "yd³",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -71,62 +109,124 @@
       "verified": false
     },
     "removalLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 1,
+      "unit": "USD/ft²",
+      "source": "Angi — Asphalt driveway cost",
+      "sourceId": "asphalt-angi-asphalt",
+      "sourceIds": [
+        "asphalt-angi-asphalt",
+        "asphalt-inch-asphalt",
+        "asphalt-hg-removal"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use Angi’s $1–$2/ft² removal component only as an optional extra outside an existing replacement quote. Inch Calculator corroborates removal labor. HomeGuide’s standalone demolition and hauling has a different scope."
     },
     "removalHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 2,
+      "unit": "USD/ft²",
+      "source": "Angi — Asphalt driveway cost",
+      "sourceId": "asphalt-angi-asphalt",
+      "sourceIds": [
+        "asphalt-angi-asphalt",
+        "asphalt-inch-asphalt",
+        "asphalt-hg-removal"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use Angi’s $1–$2/ft² removal component only as an optional extra outside an existing replacement quote. Inch Calculator corroborates removal labor. HomeGuide’s standalone demolition and hauling has a different scope."
     },
     "baseLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 0.5,
+      "unit": "USD/ft²",
+      "source": "LawnStarter — Asphalt driveway price",
+      "sourceId": "asphalt-ls-asphalt",
+      "sourceIds": [
+        "asphalt-angi-asphalt",
+        "asphalt-ls-asphalt",
+        "asphalt-fixr-asphalt"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use LawnStarter’s $0.50–$1/ft² additional gravel substrate benchmark, corroborated by Angi. This is a supplemental base layer, not full excavation or remediation. Do not double count an included base."
     },
     "baseHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 1,
+      "unit": "USD/ft²",
+      "source": "LawnStarter — Asphalt driveway price",
+      "sourceId": "asphalt-ls-asphalt",
+      "sourceIds": [
+        "asphalt-angi-asphalt",
+        "asphalt-ls-asphalt",
+        "asphalt-fixr-asphalt"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use LawnStarter’s $0.50–$1/ft² additional gravel substrate benchmark, corroborated by Angi. This is a supplemental base layer, not full excavation or remediation. Do not double count an included base."
     }
   },
   "concrete": {
     "installedLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 6,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Concrete driveway cost",
+      "sourceId": "concrete-hg-concrete",
+      "sourceIds": [
+        "concrete-hg-concrete",
+        "concrete-cn-concrete",
+        "concrete-angi-concrete",
+        "concrete-lcc-concrete",
+        "concrete-olathe-concrete",
+        "concrete-zbl-concrete"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select HomeGuide standardgray/broom installed benchmark verbatim, not average. Threeindependent guides andthreecontractor pages checked;local contractor replacement prices arecomparators only."
     },
     "installedHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 10,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Concrete driveway cost",
+      "sourceId": "concrete-hg-concrete",
+      "sourceIds": [
+        "concrete-hg-concrete",
+        "concrete-cn-concrete",
+        "concrete-angi-concrete",
+        "concrete-lcc-concrete",
+        "concrete-olathe-concrete",
+        "concrete-zbl-concrete"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select HomeGuide standardgray/broom installed benchmark verbatim, not average. Threeindependent guides andthreecontractor pages checked;local contractor replacement prices arecomparators only."
     },
     "lifespanLow": {
-      "value": null,
+      "value": 30,
       "unit": "years",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "source": "HomeGuide — Concrete driveway cost",
+      "sourceId": "concrete-hg-concrete",
+      "sourceIds": [
+        "concrete-hg-concrete",
+        "concrete-cn-lifespan",
+        "concrete-angi-lifespan"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select finiteHomeGuide comparisonrange verbatim, conditionalproperinstallation/maintenance, not guarantee."
     },
     "lifespanHigh": {
-      "value": null,
+      "value": 40,
       "unit": "years",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "source": "HomeGuide — Concrete driveway cost",
+      "sourceId": "concrete-hg-concrete",
+      "sourceIds": [
+        "concrete-hg-concrete",
+        "concrete-cn-lifespan",
+        "concrete-angi-lifespan"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select finiteHomeGuide comparisonrange verbatim, conditionalproperinstallation/maintenance, not guarantee."
     },
     "upkeep": {
       "value": null,
@@ -151,7 +251,7 @@
     },
     "minimumOrder": {
       "value": null,
-      "unit": "yd\u00b3",
+      "unit": "yd³",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -171,29 +271,43 @@
       "verified": false
     },
     "removalLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 2,
+      "unit": "USD/ft²",
+      "source": "Angi — Concrete removal cost",
+      "sourceId": "concrete-angi-removal",
+      "sourceIds": [
+        "concrete-angi-removal",
+        "concrete-fixr-removal",
+        "concrete-hg-removal"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select Angi3–6inch demolition+dumping benchmark verbatim corroboratedFixr;HGhighercomparison."
     },
     "removalHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 6,
+      "unit": "USD/ft²",
+      "source": "Angi — Concrete removal cost",
+      "sourceId": "concrete-angi-removal",
+      "sourceIds": [
+        "concrete-angi-removal",
+        "concrete-fixr-removal",
+        "concrete-hg-removal"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select Angi3–6inch demolition+dumping benchmark verbatim corroboratedFixr;HGhighercomparison."
     },
     "baseLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -201,18 +315,36 @@
   },
   "stamped-concrete": {
     "installedLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 10,
+      "unit": "USD/ft²",
+      "source": "Concrete Network — Stamped concrete cost",
+      "sourceId": "concrete-cn-stamped",
+      "sourceIds": [
+        "concrete-cn-stamped",
+        "concrete-hg-concrete",
+        "concrete-angi-concrete",
+        "concrete-lcc-concrete",
+        "concrete-olathe-cost"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select CN onepattern/onecolor class verbatim."
     },
     "installedHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 14,
+      "unit": "USD/ft²",
+      "source": "Concrete Network — Stamped concrete cost",
+      "sourceId": "concrete-cn-stamped",
+      "sourceIds": [
+        "concrete-cn-stamped",
+        "concrete-hg-concrete",
+        "concrete-angi-concrete",
+        "concrete-lcc-concrete",
+        "concrete-olathe-cost"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select CN onepattern/onecolor class verbatim."
     },
     "lifespanLow": {
       "value": null,
@@ -251,7 +383,7 @@
     },
     "minimumOrder": {
       "value": null,
-      "unit": "yd\u00b3",
+      "unit": "yd³",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -271,29 +403,43 @@
       "verified": false
     },
     "removalLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 2,
+      "unit": "USD/ft²",
+      "source": "Angi — Concrete removal cost",
+      "sourceId": "concrete-angi-removal",
+      "sourceIds": [
+        "concrete-angi-removal",
+        "concrete-fixr-removal",
+        "concrete-hg-removal"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select Angi3–6inch demolition+dumping benchmark verbatim corroboratedFixr;HGhighercomparison."
     },
     "removalHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 6,
+      "unit": "USD/ft²",
+      "source": "Angi — Concrete removal cost",
+      "sourceId": "concrete-angi-removal",
+      "sourceIds": [
+        "concrete-angi-removal",
+        "concrete-fixr-removal",
+        "concrete-hg-removal"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select Angi3–6inch demolition+dumping benchmark verbatim corroboratedFixr;HGhighercomparison."
     },
     "baseLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -301,18 +447,32 @@
   },
   "gravel": {
     "installedLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 4,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Gravel driveway cost",
+      "sourceId": "surfaces-homeguide-gravel",
+      "sourceIds": [
+        "surfaces-homeguide-gravel",
+        "surfaces-lawnstarter-gravel",
+        "surfaces-spruce-driveway"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select HomeGuide materials-and-installation benchmark for full new-driveway planning. No averaging or merging. Display named selection and alternative guide ranges."
     },
     "installedHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 10,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Gravel driveway cost",
+      "sourceId": "surfaces-homeguide-gravel",
+      "sourceIds": [
+        "surfaces-homeguide-gravel",
+        "surfaces-lawnstarter-gravel",
+        "surfaces-spruce-driveway"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select HomeGuide materials-and-installation benchmark for full new-driveway planning. No averaging or merging. Display named selection and alternative guide ranges."
     },
     "lifespanLow": {
       "value": null,
@@ -351,7 +511,7 @@
     },
     "minimumOrder": {
       "value": null,
-      "unit": "yd\u00b3",
+      "unit": "yd³",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -372,28 +532,28 @@
     },
     "removalLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "removalHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -401,32 +561,62 @@
   },
   "pavers": {
     "installedLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 10,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Driveway pavers cost",
+      "sourceId": "surfaces-homeguide-pavers",
+      "sourceIds": [
+        "surfaces-homeguide-pavers",
+        "surfaces-angi-pavers",
+        "surfaces-homeblue-pavers",
+        "surfaces-bobvila-pavers"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Generic paver comparison benchmark from HomeGuide; use material-specific Angi ranges within guide. Includes base/materials/labor; excludes removal."
     },
     "installedHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 30,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Driveway pavers cost",
+      "sourceId": "surfaces-homeguide-pavers",
+      "sourceIds": [
+        "surfaces-homeguide-pavers",
+        "surfaces-angi-pavers",
+        "surfaces-homeblue-pavers",
+        "surfaces-bobvila-pavers"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Generic paver comparison benchmark from HomeGuide; use material-specific Angi ranges within guide. Includes base/materials/labor; excludes removal."
     },
     "lifespanLow": {
-      "value": null,
+      "value": 25,
       "unit": "years",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "source": "The Spruce — Concrete pavers pros and cons",
+      "sourceId": "surfaces-spruce-pavers",
+      "sourceIds": [
+        "surfaces-spruce-pavers",
+        "surfaces-tomasso-life",
+        "surfaces-homeguide-pavers"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select concrete-paver range25-50 with contractor corroboration. Generic paver comparison defaults to concrete paver construction; qualify maintained installed system. Do not reuse automatically for every natural stone product."
     },
     "lifespanHigh": {
-      "value": null,
+      "value": 50,
       "unit": "years",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "source": "The Spruce — Concrete pavers pros and cons",
+      "sourceId": "surfaces-spruce-pavers",
+      "sourceIds": [
+        "surfaces-spruce-pavers",
+        "surfaces-tomasso-life",
+        "surfaces-homeguide-pavers"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select concrete-paver range25-50 with contractor corroboration. Generic paver comparison defaults to concrete paver construction; qualify maintained installed system. Do not reuse automatically for every natural stone product."
     },
     "upkeep": {
       "value": null,
@@ -451,7 +641,7 @@
     },
     "minimumOrder": {
       "value": null,
-      "unit": "yd\u00b3",
+      "unit": "yd³",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -472,28 +662,28 @@
     },
     "removalLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "removalHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -501,32 +691,62 @@
   },
   "tar-and-chip": {
     "installedLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 2,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Tar and chip driveway cost",
+      "sourceId": "surfaces-homeguide-tarchip",
+      "sourceIds": [
+        "surfaces-homeguide-tarchip",
+        "surfaces-angi-tarchip",
+        "surfaces-spruce-driveway"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select HomeGuide driveway installation scope; corroborate Angi single/double seal2-3 and3-5. Do not blend resurfacing."
     },
     "installedHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 5,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Tar and chip driveway cost",
+      "sourceId": "surfaces-homeguide-tarchip",
+      "sourceIds": [
+        "surfaces-homeguide-tarchip",
+        "surfaces-angi-tarchip",
+        "surfaces-spruce-driveway"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select HomeGuide driveway installation scope; corroborate Angi single/double seal2-3 and3-5. Do not blend resurfacing."
     },
     "lifespanLow": {
-      "value": null,
+      "value": 7,
       "unit": "years",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "source": "HomeGuide — Tar and chip driveway cost",
+      "sourceId": "surfaces-homeguide-tarchip",
+      "sourceIds": [
+        "surfaces-homeguide-tarchip",
+        "surfaces-uniform-tarchip",
+        "surfaces-jr-tarchip",
+        "surfaces-angi-tarchip"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Same7-10 driveway range across national guide and two independent US contractors. Treat as interval to substantial surface renewal, not permanent base replacement."
     },
     "lifespanHigh": {
-      "value": null,
+      "value": 10,
       "unit": "years",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "source": "HomeGuide — Tar and chip driveway cost",
+      "sourceId": "surfaces-homeguide-tarchip",
+      "sourceIds": [
+        "surfaces-homeguide-tarchip",
+        "surfaces-uniform-tarchip",
+        "surfaces-jr-tarchip",
+        "surfaces-angi-tarchip"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Same7-10 driveway range across national guide and two independent US contractors. Treat as interval to substantial surface renewal, not permanent base replacement."
     },
     "upkeep": {
       "value": null,
@@ -551,7 +771,7 @@
     },
     "minimumOrder": {
       "value": null,
-      "unit": "yd\u00b3",
+      "unit": "yd³",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -572,28 +792,28 @@
     },
     "removalLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "removalHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -601,18 +821,32 @@
   },
   "slab": {
     "installedLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 6,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Concrete slab cost",
+      "sourceId": "concrete-hg-slab",
+      "sourceIds": [
+        "concrete-hg-slab",
+        "concrete-angi-slab",
+        "concrete-cn-prices"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select HomeGuide range verbatim for genericflat slab planning; no arbitrary thickness/finish multipliers."
     },
     "installedHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 12,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Concrete slab cost",
+      "sourceId": "concrete-hg-slab",
+      "sourceIds": [
+        "concrete-hg-slab",
+        "concrete-angi-slab",
+        "concrete-cn-prices"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select HomeGuide range verbatim for genericflat slab planning; no arbitrary thickness/finish multipliers."
     },
     "lifespanLow": {
       "value": null,
@@ -651,7 +885,7 @@
     },
     "minimumOrder": {
       "value": null,
-      "unit": "yd\u00b3",
+      "unit": "yd³",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -671,29 +905,43 @@
       "verified": false
     },
     "removalLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 2,
+      "unit": "USD/ft²",
+      "source": "Angi — Concrete removal cost",
+      "sourceId": "concrete-angi-removal",
+      "sourceIds": [
+        "concrete-angi-removal",
+        "concrete-fixr-removal",
+        "concrete-hg-removal"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select Angi3–6inch demolition+dumping benchmark verbatim corroboratedFixr;HGhighercomparison."
     },
     "removalHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 6,
+      "unit": "USD/ft²",
+      "source": "Angi — Concrete removal cost",
+      "sourceId": "concrete-angi-removal",
+      "sourceIds": [
+        "concrete-angi-removal",
+        "concrete-fixr-removal",
+        "concrete-hg-removal"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select Angi3–6inch demolition+dumping benchmark verbatim corroboratedFixr;HGhighercomparison."
     },
     "baseLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -701,18 +949,34 @@
   },
   "millings": {
     "installedLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 2,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Recycled asphalt millings cost",
+      "sourceId": "asphalt-hg-millings",
+      "sourceIds": [
+        "asphalt-hg-millings",
+        "asphalt-angi-millings",
+        "asphalt-diamond-millings",
+        "asphalt-fragale-millings"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use HomeGuide’s $2–$5/ft² as a named planning benchmark, corroborated by Black Diamond Paving. Angi reports $3–$8 and Fragale reports $1–$3. Preserve differences."
     },
     "installedHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 5,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Recycled asphalt millings cost",
+      "sourceId": "asphalt-hg-millings",
+      "sourceIds": [
+        "asphalt-hg-millings",
+        "asphalt-angi-millings",
+        "asphalt-diamond-millings",
+        "asphalt-fragale-millings"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use HomeGuide’s $2–$5/ft² as a named planning benchmark, corroborated by Black Diamond Paving. Angi reports $3–$8 and Fragale reports $1–$3. Preserve differences."
     },
     "lifespanLow": {
       "value": null,
@@ -751,7 +1015,7 @@
     },
     "minimumOrder": {
       "value": null,
-      "unit": "yd\u00b3",
+      "unit": "yd³",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -772,28 +1036,28 @@
     },
     "removalLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "removalHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -801,18 +1065,32 @@
   },
   "sealcoating": {
     "installedLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 1.25,
+      "unit": "USD/ft²",
+      "source": "Angi — Asphalt driveway sealing cost",
+      "sourceId": "asphalt-angi-sealing",
+      "sourceIds": [
+        "asphalt-angi-sealing",
+        "asphalt-hg-sealing",
+        "asphalt-fixr-sealing"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use Angi’s 2026 $1.25–$1.50/ft² materials-and-labor range. Repairs, extra cleaning, and service fees remain separate unless a quote includes them. Other guides appear in the comparison register."
     },
     "installedHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 1.5,
+      "unit": "USD/ft²",
+      "source": "Angi — Asphalt driveway sealing cost",
+      "sourceId": "asphalt-angi-sealing",
+      "sourceIds": [
+        "asphalt-angi-sealing",
+        "asphalt-hg-sealing",
+        "asphalt-fixr-sealing"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use Angi’s 2026 $1.25–$1.50/ft² materials-and-labor range. Repairs, extra cleaning, and service fees remain separate unless a quote includes them. Other guides appear in the comparison register."
     },
     "lifespanLow": {
       "value": null,
@@ -851,7 +1129,7 @@
     },
     "minimumOrder": {
       "value": null,
-      "unit": "yd\u00b3",
+      "unit": "yd³",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -872,28 +1150,28 @@
     },
     "removalLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "removalHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -901,18 +1179,32 @@
   },
   "repair": {
     "installedLow": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 2,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Asphalt repair costs",
+      "sourceId": "asphalt-hg-repair",
+      "sourceIds": [
+        "asphalt-hg-repair",
+        "asphalt-angi-repair",
+        "asphalt-fixr-repair"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use HomeGuide’s method-specific hot-patch range of $2–$5/ft². Angi and Fixr report the same range for general asphalt repairs; preserve that scope distinction."
     },
     "installedHigh": {
-      "value": null,
-      "unit": "USD/ft\u00b2",
-      "source": null,
-      "retrievedOn": null,
-      "verified": false
+      "value": 5,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Asphalt repair costs",
+      "sourceId": "asphalt-hg-repair",
+      "sourceIds": [
+        "asphalt-hg-repair",
+        "asphalt-angi-repair",
+        "asphalt-fixr-repair"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use HomeGuide’s method-specific hot-patch range of $2–$5/ft². Angi and Fixr report the same range for general asphalt repairs; preserve that scope distinction."
     },
     "lifespanLow": {
       "value": null,
@@ -951,7 +1243,7 @@
     },
     "minimumOrder": {
       "value": null,
-      "unit": "yd\u00b3",
+      "unit": "yd³",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -972,28 +1264,28 @@
     },
     "removalLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "removalHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -1002,14 +1294,14 @@
   "replacement": {
     "installedLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "installedHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -1051,7 +1343,7 @@
     },
     "minimumOrder": {
       "value": null,
-      "unit": "yd\u00b3",
+      "unit": "yd³",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -1072,28 +1364,28 @@
     },
     "removalLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "removalHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseLow": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
     },
     "baseHigh": {
       "value": null,
-      "unit": "USD/ft\u00b2",
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false
@@ -1117,6 +1409,466 @@
     "high": {
       "value": null,
       "unit": "multiplier",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "overlay": {
+    "installedLow": {
+      "value": 3,
+      "unit": "USD/ft²",
+      "source": "Angi — Asphalt driveway cost",
+      "sourceId": "asphalt-angi-asphalt",
+      "sourceIds": [
+        "asphalt-angi-asphalt",
+        "asphalt-hg-overlay",
+        "asphalt-fixr-sealing"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use Angi’s overlay-only $3–$7/ft² range. HomeGuide reports $1–$3. Fixr’s $4–$8 resurfacing scope includes top-layer removal; it is a different service."
+    },
+    "installedHigh": {
+      "value": 7,
+      "unit": "USD/ft²",
+      "source": "Angi — Asphalt driveway cost",
+      "sourceId": "asphalt-angi-asphalt",
+      "sourceIds": [
+        "asphalt-angi-asphalt",
+        "asphalt-hg-overlay",
+        "asphalt-fixr-sealing"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use Angi’s overlay-only $3–$7/ft² range. HomeGuide reports $1–$3. Fixr’s $4–$8 resurfacing scope includes top-layer removal; it is a different service."
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd³",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "asphalt-replacement": {
+    "installedLow": {
+      "value": 8,
+      "unit": "USD/ft²",
+      "source": "Angi — Asphalt driveway cost",
+      "sourceId": "asphalt-angi-asphalt",
+      "sourceIds": [
+        "asphalt-angi-asphalt",
+        "asphalt-inch-asphalt",
+        "asphalt-erickson-asphalt"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use Angi’s $8–$15/ft² replacement range including removal. Do not add a removal charge again."
+    },
+    "installedHigh": {
+      "value": 15,
+      "unit": "USD/ft²",
+      "source": "Angi — Asphalt driveway cost",
+      "sourceId": "asphalt-angi-asphalt",
+      "sourceIds": [
+        "asphalt-angi-asphalt",
+        "asphalt-inch-asphalt",
+        "asphalt-erickson-asphalt"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Use Angi’s $8–$15/ft² replacement range including removal. Do not add a removal charge again."
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd³",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "concrete-replacement": {
+    "installedLow": {
+      "value": 8,
+      "unit": "USD/ft²",
+      "source": "Derived from HomeGuide standard concrete + Angi demolition",
+      "sourceId": "concrete-hg-concrete",
+      "sourceIds": [
+        "concrete-hg-concrete",
+        "concrete-angi-removal",
+        "concrete-angi-concrete",
+        "concrete-fixr-repair",
+        "concrete-zbl-concrete"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Component sum: $6–$10 new plain concrete plus $2–$6 demolition = $8–$16/ft². Not an observed replacement quote; removal already included."
+    },
+    "installedHigh": {
+      "value": 16,
+      "unit": "USD/ft²",
+      "source": "Derived from HomeGuide standard concrete + Angi demolition",
+      "sourceId": "concrete-hg-concrete",
+      "sourceIds": [
+        "concrete-hg-concrete",
+        "concrete-angi-removal",
+        "concrete-angi-concrete",
+        "concrete-fixr-repair",
+        "concrete-zbl-concrete"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Component sum: $6–$10 new plain concrete plus $2–$6 demolition = $8–$16/ft². Not an observed replacement quote; removal already included."
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd³",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    }
+  },
+  "concrete-repair": {
+    "installedLow": {
+      "value": 3,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Driveway repair cost",
+      "sourceId": "concrete-hg-repair",
+      "sourceIds": [
+        "concrete-hg-repair",
+        "concrete-angi-repair",
+        "concrete-fixr-repair"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select HG explanatoryparagraph3–7verbatim; broaderthanitsown3–5table."
+    },
+    "installedHigh": {
+      "value": 7,
+      "unit": "USD/ft²",
+      "source": "HomeGuide — Driveway repair cost",
+      "sourceId": "concrete-hg-repair",
+      "sourceIds": [
+        "concrete-hg-repair",
+        "concrete-angi-repair",
+        "concrete-fixr-repair"
+      ],
+      "retrievedOn": "2026-10-12",
+      "verified": true,
+      "scope": "Select HG explanatoryparagraph3–7verbatim; broaderthanitsown3–5table."
+    },
+    "lifespanLow": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "lifespanHigh": {
+      "value": null,
+      "unit": "years",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "upkeep": {
+      "value": null,
+      "unit": "USD/year",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "delivery": {
+      "value": null,
+      "unit": "USD/load",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "shortLoadFee": {
+      "value": null,
+      "unit": "USD",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "minimumOrder": {
+      "value": null,
+      "unit": "yd³",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialLow": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "materialHigh": {
+      "value": null,
+      "unit": "USD/short ton",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalLow": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "removalHigh": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseLow": {
+      "value": null,
+      "unit": "USD/ft²",
+      "source": null,
+      "retrievedOn": null,
+      "verified": false
+    },
+    "baseHigh": {
+      "value": null,
+      "unit": "USD/ft²",
       "source": null,
       "retrievedOn": null,
       "verified": false

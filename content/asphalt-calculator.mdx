@@ -3,20 +3,54 @@ title: "Asphalt Calculator: Tons Needed for a Driveway or Lot"
 description: "Calculate tons of asphalt from length, width and thickness. Editable density and waste allowance. Free, no sign-up."
 slug: "/asphalt-calculator/"
 type: "Quantity tool"
-updated: "2026-10-11"
+updated: "2026-10-12"
 author: "Farrukh Abdullah"
 primaryKeyword: "asphalt calculator"
 keywords: ["figuring asphalt", "asphalt tonnage calculator", "asphalt calculator online", "asphalt driveway calculator", "how to calculate asphalt tonnage", "how to figure asphalt tonnage", "how do you calculate asphalt tonnage", "how to figure out asphalt tonnage", "how to calculate tons of asphalt", "how to figure tons of asphalt", "bitumen calculator"]
-related: [{"slug": "/asphalt-driveway-cost-calculator/", "annotation": "explains the related asphalt driveway cost calculator inputs or next step"}, {"slug": "/asphalt-driveway-thickness/", "annotation": "explains the related asphalt driveway thickness inputs or next step"}, {"slug": "/material-weights/", "annotation": "explains the related material weights inputs or next step"}]
+related: [{"slug": "/asphalt-driveway-cost-calculator/", "annotation": "Calculates installed cost from the same measured area and selected work scope."}, {"slug": "/asphalt-driveway-thickness/", "annotation": "Explains asphalt driveway thickness and connects it to this page’s inputs or next decision."}, {"slug": "/material-weights/", "annotation": "Explains material weight chart and connects it to this page’s inputs or next decision."}]
 status: "draft"
+contentReady: true
 seq: 2
+answer: "The asphalt calculator converts square feet, compacted thickness in inches and density in lb per cubic foot into US short tons of hot mix asphalt."
+sourceNames: ["Asphalt Institute — Engineering FAQs", "Craig Paving — Asphalt Tonnage Calculator", "Minnesota Asphalt Pavement Association — Asphalt Calculator", "Colorado Asphalt Pavement Association — Asphalt Driveways Technical Brief"]
+sourceIds: ["defaults-ai-faq", "defaults-craig-asphalt", "defaults-mapa-asphalt", "defaults-capa-driveway"]
+unresolvedData: []
+keywordVariants: [{"keyword": "how to calculate asphalt tonnage", "variant": "How do you calculate asphalt tonnage?"}, {"keyword": "how to figure asphalt tonnage", "variant": "How do you figure asphalt tonnage for a tapered driveway?"}, {"keyword": "how to calculate tons of asphalt", "variant": "How do you calculate tons of asphalt to order?"}]
 dataRequired: []
 defaultsUsed: []
 modules: ["AnswerBlock", "CalculatorShell", "ResultCard", "FormulaBox", "QASection", "RelatedLink", "SourceNote", "LastUpdated", "Disclosure"]
 ---
 
-## What information is needed?
+## How to calculate asphalt tonnage?
 
-**Verified source data completes this page.**
+**Multiply area by thickness divided by 12 and by density, then divide by 2,000.**
 
-{{DATA: sourced figures, named sources, retrieval dates, and editorial review for Asphalt Calculator}}
+The complete formula is tons = area × (thickness / 12) × density / 2,000. A short ton (2,000 lb) is the US mass unit used here. An asphalt tonnage calculator handles these unit changes without treating inches as feet. Calculate the asphalt surface and each asphalt base course separately when their depths or mix densities differ.
+
+## How do you choose asphalt density and thickness?
+
+**Use the supplier’s in-place density and the finished compacted thickness.**
+
+The Asphalt Institute publishes an in-place density range of 142–148 lb per cubic foot and uses 148 for quantity estimates. Craig Paving uses 148; the Minnesota Asphalt Pavement Association uses a compacted spread factor of 110 lb per square yard per inch. These named assumptions differ. The editable starting density follows the Asphalt Institute rather than averaging the sources. Colorado Asphalt Pavement Association guidance uses 3 inches of asphalt over an aggregate base for its residential design. Its full-depth asphalt sections are separate designs, so this asphalt driveway calculator does not choose an engineered pavement section for your site.
+
+## How to figure asphalt tonnage for a tapered driveway?
+
+**Use the average of the start and end widths to calculate the footprint.**
+
+Figuring asphalt for a taper uses area = length × (start width + end width) / 2. Measure along the paved slope or enter a flat distance with grade; avoid adjusting a slope measurement a second time. For curves and irregular aprons, divide the footprint into measured sections and add their results. The how-to-measure steps explain how to figure out asphalt tonnage from those separate areas.
+
+## How to calculate tons of asphalt to order?
+
+**Apply your entered waste allowance to the calculated quantity, then round up to the purchase increment.**
+
+Compaction is already represented by compacted thickness and in-place density. Adding another automatic compaction multiplier counts that change twice. Zero waste allowance excludes extra material; it does not recommend an exact order. Ask the plant to confirm the order increment, truck payload and access. Delivery load rounding is separate from the amount of material in the pavement. The unrounded figure explains how to figure tons of asphalt; the rounded figure is the purchasing quantity.
+
+## Does this asphalt calculator online calculate bitumen alone?
+
+**This tool estimates the whole asphalt mixture, including aggregate and binder.**
+
+A bitumen calculator for binder-only quantities requires the specified binder proportion; that is a different input from total hot mix weight. Use the [Asphalt Driveway Cost Calculator](/asphalt-driveway-cost-calculator/) to price the driveway area, and the [Asphalt Driveway Thickness](/asphalt-driveway-thickness/) to understand the layer that drives tonnage. The [Material Weight Chart](/material-weights/) documents the selected density.
+
+<MaterialReferences material="asphalt" />
+
+The formula answers “how do you calculate asphalt tonnage?” using measured area, thickness, density, and the entered allowance. The same inputs remain in the share link and printed result.

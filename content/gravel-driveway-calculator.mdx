@@ -3,20 +3,46 @@ title: "Gravel Driveway Calculator: Tons and Yards Needed"
 description: "Calculate tons and cubic yards of gravel for a driveway from length, width and depth, with base and surface layers."
 slug: "/gravel-driveway-calculator/"
 type: "Quantity tool"
-updated: "2026-10-11"
+updated: "2026-10-12"
 author: "Farrukh Abdullah"
 primaryKeyword: "gravel driveway calculator"
 keywords: ["how much gravel do i need for a driveway"]
-related: [{"slug": "/gravel-driveway-cost/", "annotation": "explains the related gravel driveway cost inputs or next step"}, {"slug": "/cubic-yards-to-tons/", "annotation": "explains the related cubic yards to tons inputs or next step"}]
+related: [{"slug": "/gravel-driveway-cost/", "annotation": "Explains the gravel driveway cost in 2026 scope to compare with the measurements and work described here."}, {"slug": "/cubic-yards-to-tons/", "annotation": "Calculates the quantities used in this project’s material order."}]
 status: "draft"
+contentReady: true
 seq: 8
+answer: "The gravel driveway calculator returns cubic yards and tons for each entered base layer and surface layer, with their own depth and density."
+sourceNames: ["Sutherland Landscape Supplies — Gravel-Sand", "Two Rivers Sand & Gravel — Our Products"]
+sourceIds: ["defaults-sutherland", "defaults-tworivers"]
+unresolvedData: []
+keywordVariants: []
 dataRequired: []
 defaultsUsed: []
 modules: ["AnswerBlock", "CalculatorShell", "ResultCard", "FormulaBox", "QASection", "RelatedLink", "SourceNote", "LastUpdated", "Disclosure"]
 ---
 
-## What information is needed?
+## How much gravel do I need for a driveway?
 
-**Verified source data completes this page.**
+**Calculate every layer from its measured area and finished depth.**
 
-{{DATA: sourced figures, named sources, retrieval dates, and editorial review for Gravel Driveway Calculator}}
+Volume in cubic yards = area × (depth in inches / 12) / 27. Tons = cubic yards × tons per cubic yard. A driveway base layer and surface layer have different jobs and material specifications. Enter each depth separately and use the matching density rather than applying the surface-rock factor to the entire excavation.
+
+## Which density belongs to each driveway layer?
+
+**Match the density to the supplier’s material and the condition of the measured volume.**
+
+Sutherland lists its AB-minus road base at 2,860 lb per cubic yard, equivalent to 1.43 US short tons. Two Rivers lists its 5/8-inch crushed top course at about 2,800 lb per cubic yard, equivalent to 1.4 tons. These are named supplier references; neither is a guaranteed figure for every quarry. Moisture, grading and packing affect delivered weight. The selectable source remains visible and editable.
+
+## How does compaction affect a gravel order?
+
+**Compaction changes the relationship between loose delivered volume and finished layer volume.**
+
+Ask the supplier for the loose volume needed for your specified compacted depth. Enter that documented allowance once. Zero compaction allowance leaves the geometry unadjusted and makes no recommendation about construction. Keep a separate waste allowance for actual loss or measurement contingency; avoid adding two allowances for the same volume change.
+
+## How do tapered driveways and delivery loads work?
+
+**A taper uses average width, while delivery load rounding uses the supplier’s actual truck capacity.**
+
+Measure width at each end. For an irregular turnaround, calculate smaller measured shapes and combine them. A delivery load is the rounded-up order quantity divided by truck capacity, rounded up again to whole loads. A partial final load does not mean every truck is filled to capacity. Confirm access, drop location and whether the supplier quotes by ton or loose cubic yard. The [Gravel Driveway Cost in 2026](/gravel-driveway-cost/) explains installation scope; the [Cubic Yards to Tons](/cubic-yards-to-tons/) checks a quoted volume against the same density.
+
+<MaterialReferences material="layers" />

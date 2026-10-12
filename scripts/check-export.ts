@@ -2,8 +2,8 @@ import fs from 'node:fs';
 import { pages, trustPages } from '../lib/content';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { createElement } from 'react';
-import { renderExample } from '../lib/calc';
-import { toolFor } from '../lib/calc/ui';
+import { toolExample } from '../lib/calc/examples';
+import { toolFor, surfaceFor } from '../lib/calc/ui';
 const errors: string[] = [];
 const urls = [...pages.map((p) => p.url), ...trustPages.map((p) => p.url)];
 for (const url of urls) {
@@ -48,16 +48,28 @@ for (const url of urls) {
     );
     if (!html.includes(meta)) errors.push('Incorrect exported description ' + url);
     const kind = toolFor(page.seq);
-    const example =
-      kind === 'asphalt'
-        ? 'asphalt'
-        : kind === 'gravel' || kind === 'layers'
-          ? 'gravel'
-          : kind === 'concrete'
-            ? 'concrete'
-            : null;
-    if (example && !html.includes(renderExample(example)))
-      errors.push('Worked example disagrees with engine ' + url);
+    const material =
+      page.seq === 22
+        ? 'asphalt millings'
+        : [25, 27, 29, 30].includes(page.seq)
+          ? page.h1.replace(' Calculator', '').toLowerCase()
+          : kind === 'asphalt'
+            ? 'asphalt'
+            : 'gravel';
+    if (kind) {
+      const result = toolExample(kind, material, surfaceFor(page.seq)).result;
+      const expectedFormula = renderToStaticMarkup(createElement('code', null, result.formula));
+      if (!html.includes(expectedFormula))
+        errors.push('Worked example formula disagrees with engine ' + url);
+      for (const metric of result.metrics) {
+        const expectedMetric = renderToStaticMarkup(
+          createElement('p', null, `${metric.label}: ${metric.value} ${metric.unit ?? ''}`),
+        );
+        const normalized = html.replace(/<!--.*?-->/g, '');
+        if (!normalized.includes(expectedMetric))
+          errors.push('Worked example metric disagrees with engine ' + url + ' ' + metric.label);
+      }
+    }
   }
 }
 if (errors.length) {

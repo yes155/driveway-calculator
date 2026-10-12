@@ -1,0 +1,2833 @@
+{
+  "1": {
+    "answer": "Driveway Calculators uses measured sections, exact US conversions, editable material references, and individually attributed published cost ranges.",
+    "sections": [
+      {
+        "question": "How is a quantity calculated?",
+        "answer": "Area, depth, density, and explicitly entered allowances determine the quantity.",
+        "text": "All visible worked examples call the same engine as the interactive tools. Volume in cubic yards follows measured square feet multiplied by depth in inches, divided by 12 and 27. A US short ton is 2,000 lb. Purchase rounding is separate from the calculated material quantity. Bag yield and sealcoat coverage follow a named product label."
+      },
+      {
+        "question": "How are prices selected?",
+        "answer": "Each selected benchmark retains one publisher’s original range and scope.",
+        "text": "Cost guides and independent contractor pages are compared rather than averaged. Asphalt, concrete, gravel, and paver installation scopes differ. Local supplier lists retain location, pickup or delivered terms, mix specification, and publication date. A regional example does not become a national freight charge. Sources are named in text; their external URLs are collected here."
+      },
+      {
+        "question": "What does verification mean?",
+        "answer": "A verified record is a retrieved value checked against its stated source and unit.",
+        "text": "It is not a site inspection, a local bid, an engineering approval, or a product guarantee. Missing figures remain unavailable. Draft pages retain indexing restrictions until human editorial review and the launch checklist are complete. The researcher and writer is Farrukh Abdullah; no reviewer credential is invented."
+      }
+    ],
+    "sourceIds": [
+      "asphalt-angi-asphalt",
+      "concrete-nrmca-cip31",
+      "defaults-ai-faq",
+      "general-root-fhwa-hma"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": []
+  },
+  "2": {
+    "answer": "The asphalt calculator converts square feet, compacted thickness in inches and density in lb per cubic foot into US short tons of hot mix asphalt.",
+    "sections": [
+      {
+        "question": "How do you calculate asphalt tonnage?",
+        "answer": "Multiply area by thickness divided by 12 and by density, then divide by 2,000.",
+        "text": "The complete formula is tons = area × (thickness / 12) × density / 2,000. A short ton (2,000 lb) is the US mass unit used here. An asphalt tonnage calculator handles these unit changes without treating inches as feet. Calculate the asphalt surface and each asphalt base course separately when their depths or mix densities differ.",
+        "sourceIds": []
+      },
+      {
+        "question": "How do you choose asphalt density and thickness?",
+        "answer": "Use the supplier’s in-place density and the finished compacted thickness.",
+        "text": "The Asphalt Institute publishes an in-place density range of 142–148 lb per cubic foot and uses 148 for quantity estimates. Craig Paving uses 148; the Minnesota Asphalt Pavement Association uses a compacted spread factor of 110 lb per square yard per inch. These named assumptions differ. The editable starting density follows the Asphalt Institute rather than averaging the sources. Colorado Asphalt Pavement Association guidance uses 3 inches of asphalt over an aggregate base for its residential design. Its full-depth asphalt sections are separate designs, so this asphalt driveway calculator does not choose an engineered pavement section for your site.",
+        "sourceIds": [
+          "ai-faq",
+          "craig-asphalt",
+          "mapa-asphalt",
+          "capa-driveway"
+        ]
+      },
+      {
+        "question": "How do you figure asphalt tonnage for a tapered driveway?",
+        "answer": "Use the average of the start and end widths to calculate the footprint.",
+        "text": "Figuring asphalt for a taper uses area = length × (start width + end width) / 2. Measure along the paved slope or enter a flat distance with grade; avoid adjusting a slope measurement a second time. For curves and irregular aprons, divide the footprint into measured sections and add their results. The how-to-measure steps explain how to figure out asphalt tonnage from those separate areas.",
+        "sourceIds": []
+      },
+      {
+        "question": "How do you calculate tons of asphalt to order?",
+        "answer": "Apply your entered waste allowance to the calculated quantity, then round up to the purchase increment.",
+        "text": "Compaction is already represented by compacted thickness and in-place density. Adding another automatic compaction multiplier counts that change twice. Zero waste allowance excludes extra material; it does not recommend an exact order. Ask the plant to confirm the order increment, truck payload and access. Delivery load rounding is separate from the amount of material in the pavement. The unrounded figure explains how to figure tons of asphalt; the rounded figure is the purchasing quantity.",
+        "sourceIds": []
+      },
+      {
+        "question": "Does this asphalt calculator online calculate bitumen alone?",
+        "answer": "This tool estimates the whole asphalt mixture, including aggregate and binder.",
+        "text": "A bitumen calculator for binder-only quantities requires the specified binder proportion; that is a different input from total hot mix weight. Use the [asphalt cost estimator](/asphalt-driveway-cost-calculator/) to price the driveway area, and the [thickness guide](/asphalt-driveway-thickness/) to understand the layer that drives tonnage. The [material weight chart](/material-weights/) documents the selected density.",
+        "sourceIds": []
+      }
+    ],
+    "sourceIds": [
+      "defaults-ai-faq",
+      "defaults-craig-asphalt",
+      "defaults-mapa-asphalt",
+      "defaults-capa-driveway"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "how to calculate asphalt tonnage",
+        "variant": "How do you calculate asphalt tonnage?"
+      },
+      {
+        "keyword": "how to figure asphalt tonnage",
+        "variant": "How do you figure asphalt tonnage for a tapered driveway?"
+      },
+      {
+        "keyword": "how to calculate tons of asphalt",
+        "variant": "How do you calculate tons of asphalt to order?"
+      }
+    ],
+    "unresolvedData": [],
+    "requiredEntities": [
+      "hot mix asphalt",
+      "short ton (2,000 lb)",
+      "density in lb per cubic foot",
+      "thickness in inches",
+      "waste allowance",
+      "compaction",
+      "square feet",
+      "base course"
+    ]
+  },
+  "3": {
+    "answer": "Asphalt driveway cost is $7–$13 per square foot installed in Angi’s new-driveway benchmark; major grading and separately quoted work require additional scope checks.",
+    "sections": [
+      {
+        "question": "How much does an asphalt driveway cost?",
+        "answer": "The cost of asphalt driveway installation starts with measured square feet and an installed unit range.",
+        "text": "Angi reports $7–$13 per square foot for new installation. HomeGuide and LawnStarter publish different ranges and scope assumptions, so Driveway Calculators does not average them. Blacktop driveway cost and asphalt driveway cost per square foot describe the same paved surface. Confirm thickness, compaction, gravel base, and labor in the quote."
+      },
+      {
+        "question": "How much does it cost to pave a driveway?",
+        "answer": "A full installed quote covers more work than buying asphalt from a plant.",
+        "text": "How much does it cost to asphalt a driveway? Separate the installed scope from supplier material purchases. Cost of asphalt per ton and hot mix asphalt cost per ton depend on mix, plant, order size, and delivery. Tucci’s published plant rate is a pickup example; it is not a nationwide delivered price. Request a written freight charge rather than adding an invented hauling allowance."
+      },
+      {
+        "question": "What determines a 20x20 asphalt driveway cost?",
+        "answer": "The calculator applies the measured area to the selected range and separately included extras.",
+        "text": "The engine-generated example shows a 20 × 20 ft measured section. Add another area for extensions or aprons. Excavation, drainage correction, base preparation, removal, access, and finishing scope determine whether the published installation benchmark matches your project."
+      },
+      {
+        "question": "How do DIY and hired installation differ?",
+        "answer": "Material quantities describe an order; installed ranges also price equipment and labor.",
+        "text": "Use the asphalt quantity tool to calculate short tons. Paving requires preparation, controlled placement, and compaction; a bagged repair product is a different material from hot mix asphalt for a new driveway. The estimator provides editable assumptions and a low-to-high result, not a contractor quote."
+      }
+    ],
+    "sourceIds": [
+      "asphalt-angi-asphalt",
+      "asphalt-hg-asphalt",
+      "asphalt-ls-asphalt",
+      "asphalt-tucci-hma",
+      "asphalt-erickson-asphalt"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [
+      "National delivered asphalt rates and driveway-specific regional multipliers remain unavailable."
+    ]
+  },
+  "4": {
+    "answer": "The asphalt driveway cost calculator estimates installed work from measured square feet and Angi’s $7–$13 per-square-foot new-installation benchmark.",
+    "sections": [
+      {
+        "question": "How does the asphalt driveway cost calculator use measurements?",
+        "answer": "The estimate multiplies measured area by the selected low and high installed rates.",
+        "text": "Enter each driveway section in feet. Tapered widths and flat-distance slope measurements change the measured area. The driveway paving cost calculator uses the same area engine as the asphalt quantity tool, keeping the measurements consistent. Planned thickness and producer density calculate tonnage separately; they do not create an unsupported price coefficient."
+      },
+      {
+        "question": "Which editable assumptions change the estimate?",
+        "answer": "Selected extras change the range only when the entered charge applies outside the installation scope.",
+        "text": "The cost tier selector defaults to a baseline with no regional adjustment. Published low-cost and high-cost regional driveway multipliers were not established, so those choices remain unavailable. Use separately quoted removal, base preparation, and delivery charges. Installation ranges already including those items stay unchanged. Your quoted low and high unit rates replace the published benchmark when selected."
+      },
+      {
+        "question": "What does the low and high range include?",
+        "answer": "Angi’s selected new-asphalt range includes installation and excludes major leveling or grading.",
+        "text": "Other guides publish different scopes and ranges; their observations remain separate in Methodology. The source name and retrieval date accompany the result. A supplier material price per short ton is not an installed project price. Measure the driveway, check thickness and traffic requirements with the paving provider, and compare written work inclusions before ordering."
+      }
+    ],
+    "sourceIds": [
+      "asphalt-angi-asphalt",
+      "asphalt-hg-asphalt",
+      "asphalt-ls-asphalt"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [
+      "Published driveway-specific regional multipliers and nationwide hauling fees remain unavailable."
+    ]
+  },
+  "5": {
+    "answer": "Concrete driveway cost is **$6–$10 per square foot installed** for standard gray concrete in HomeGuide’s benchmark; demolition and additional site work are separate quote items.",
+    "sections": [
+      {
+        "question": "How much does a concrete driveway cost?",
+        "answer": "**The cost of concrete driveway installation starts with area multiplied by an installed square-foot range**, rather than the delivered concrete price alone.",
+        "text": "HomeGuide’s standard range is $6–$10 per square foot. Concrete Network lists plain gray concrete at $5–$8, while Angi separates plain finishes at $6–$8 from broom finishes at $8–$12. These scopes differ; Driveway Calculators uses HomeGuide’s named standard benchmark without averaging them. Compare the concrete slab, slab thickness, reinforcement, formwork, finish, control joints, and subbase described in each proposal."
+      },
+      {
+        "question": "How much is a concrete driveway per square foot?",
+        "answer": "**The price per square foot includes installation work**, whereas a price per cubic yard describes the ready-mix material.",
+        "text": "Slab thickness changes cubic yards. Rebar and wire mesh describe reinforcement; the quote identifies the reinforcement specified for the job. Ask whether formwork, subbase preparation, curing, sealing, and hauling are included. Our [concrete driveway cost calculator](/concrete-driveway-cost-calculator/) applies measurements to the selected price range and reports quantity separately."
+      },
+      {
+        "question": "How much does it cost to cement a driveway?",
+        "answer": "**A cement driveway uses concrete; cement is an ingredient of the finished material.**",
+        "text": "The questions “How much to cement a driveway?” and “How much does a cement driveway cost?” refer to this same installation scope. How much does it cost to pour a concrete driveway? The installed benchmark includes the pour and finishing, rather than just the truck’s concrete. The [stamped concrete driveway cost guide](/stamped-concrete-driveway-cost/) prices pattern and color separately from a plain finish."
+      },
+      {
+        "question": "How much does it cost to replace a concrete driveway?",
+        "answer": "**Replacement combines removal with a new slab**, unless the contractor’s installed quote already includes demolition.",
+        "text": "The [concrete replacement cost guide](/replace-concrete-driveway-cost/) explains demolition, disposal, and the new pour. The [concrete versus asphalt comparison](/concrete-vs-asphalt-driveway/) compares the surface options under stated maintenance and lifespan assumptions."
+      },
+      {
+        "question": "Can I pour my own concrete driveway?",
+        "answer": "**A driveway pour requires measurement, prepared support, placement, finishing, and curing.**",
+        "text": "Confirm the concrete specification and crew before ordering. Verify the subbase, reinforcement, control joints, and delivery access with the installer. Use the engine-generated worked example below to inspect area, cubic yards, and the estimate range."
+      }
+    ],
+    "sourceIds": [
+      "concrete-hg-concrete",
+      "concrete-cn-concrete",
+      "concrete-angi-concrete",
+      "concrete-quikrete-mix",
+      "concrete-nrmca-cip31"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "concrete driveway",
+        "placement": "answer and quantity section"
+      },
+      {
+        "keyword": "cost of concrete driveway",
+        "placement": "first section"
+      },
+      {
+        "keyword": "how much does a concrete driveway cost",
+        "placement": "first heading"
+      },
+      {
+        "keyword": "how much does it cost to concrete a driveway",
+        "variant": "How much does a concrete driveway cost?",
+        "reason": "Uses a natural noun phrase instead of concrete as an awkward verb."
+      },
+      {
+        "keyword": "how much does concrete driveway cost",
+        "variant": "How much does a concrete driveway cost?",
+        "reason": "Adds the missing article."
+      },
+      {
+        "keyword": "how much does it cost for a concrete driveway",
+        "variant": "How much does a concrete driveway cost?",
+        "reason": "Combines equivalent questions without repetitive headings."
+      },
+      {
+        "keyword": "how much does it cost to pour a concrete driveway",
+        "placement": "cement section"
+      },
+      {
+        "keyword": "how much is a concrete driveway",
+        "placement": "square-foot heading includes the phrase"
+      },
+      {
+        "keyword": "how much to cement a driveway",
+        "placement": "cement section"
+      },
+      {
+        "keyword": "how much does it cost to cement a driveway",
+        "placement": "cement heading"
+      },
+      {
+        "keyword": "how much to concrete a driveway",
+        "variant": "How much does a concrete driveway cost?",
+        "reason": "Natural construction."
+      },
+      {
+        "keyword": "how much does a cement driveway cost",
+        "placement": "cement section"
+      },
+      {
+        "keyword": "how much to concrete driveway",
+        "variant": "How much does a concrete driveway cost?",
+        "reason": "Missing article and awkward verb."
+      },
+      {
+        "keyword": "how much is a concrete driveway per square foot",
+        "placement": "square-foot heading"
+      }
+    ],
+    "unresolvedData": [
+      "Local installation quote, permits, drainage work, and engineered reinforcement remain project-specific; no invented prices. Engine-generated worked example supplies totals."
+    ]
+  },
+  "6": {
+    "answer": "The concrete driveway cost calculator reports **an installed price range and cubic yards** from your measurements, thickness, and stated ordering assumptions.",
+    "sections": [
+      {
+        "question": "What does the concrete driveway cost calculator estimate?",
+        "answer": "**The concrete driveway calculator separates installed cost from concrete volume.**",
+        "text": "The installed benchmark is HomeGuide’s $6–$10 per square foot for standard gray concrete. A price per cubic yard is a supplier’s material price, not the completed driveway price. Our driveway concrete calculator keeps those units separate. Enter the dimensions, thickness, and waste allowance; read the result’s source and scope before comparing it with a contractor proposal."
+      },
+      {
+        "question": "How much concrete do I need for a driveway?",
+        "answer": "**Concrete quantity comes from the measured area and thickness**, followed by the selected waste allowance.",
+        "text": "The quantity calculation produces cubic yards before and after overage. NRMCA’s ordering guidance uses a contingency of 4%–10%; Sakrete’s slab guide and Ozinga’s ordering guide use 10%. The editable 10% starting allowance is a planning choice, rather than a code requirement. Measure separate sections individually. Enter the start and end width for a taper, and specify whether length was measured along the slope."
+      },
+      {
+        "question": "How do finish and reinforcement affect the estimate?",
+        "answer": "**Finish and reinforcement change the quoted installation scope.**",
+        "text": "A standard gray benchmark does not price every stamp pattern, color, sealer, or reinforcement arrangement. The [concrete driveway cost guide](/concrete-driveway-cost/) explains the quote items behind the price per square foot. Confirm whether rebar or wire mesh, subbase work, formwork, control joints, and curing are included. Keep the installer’s requirements separate from the calculator’s quantity math."
+      },
+      {
+        "question": "How do delivery and short-load charges work?",
+        "answer": "**Delivery and short-load charges follow the selected supplier’s terms.**",
+        "text": "American Concrete, Townsend Concrete, and Gehring publish different local billing rules. A minimum purchase is not the same as a minimum delivery quantity or a flat short-load fee. Enter a current supplier quote; avoid adding another delivery charge to an all-in installed price. The [concrete calculator](/concrete-calculator/) calculates volume and named-product bag counts without installation pricing. Before ordering, confirm the mix, order quantity, truck access, and each fee with the supplier."
+      }
+    ],
+    "sourceIds": [
+      "concrete-hg-concrete",
+      "concrete-nrmca-cip31",
+      "concrete-sakrete-slab",
+      "concrete-ozinga-ordering",
+      "concrete-american-concrete",
+      "concrete-townsend-concrete",
+      "concrete-gehring-concrete"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "concrete driveway calculator",
+        "placement": "first heading and answer"
+      },
+      {
+        "keyword": "driveway concrete calculator",
+        "placement": "first section"
+      },
+      {
+        "keyword": "how much concrete do i need for a driveway",
+        "placement": "quantity heading"
+      }
+    ],
+    "unresolvedData": [
+      "Supplier quote and delivery terms; universal delivery fee and supplier minimum remain NOT FOUND.",
+      "Generate worked-example outputs with the calculator function."
+    ]
+  },
+  "7": {
+    "answer": "Gravel driveway cost is $4–$10 per square foot for materials and installation in HomeGuide’s published guide. This is a selected planning benchmark for a new driveway, with grading, depth and stone choice checked against the actual work scope.",
+    "sections": [
+      {
+        "question": "What changes gravel driveway cost?",
+        "answer": "Layer depth, site preparation and haul distance change the amount of material and labor.",
+        "text": "The cost to put in gravel driveway sections on an existing sound base differs from a new build on bare ground. Ask whether the cost to install gravel driveway surfacing includes excavation, grading, compaction and cleanup. LawnStarter reports $1–$3 per square foot, while The Spruce reports $1–$5; those guide ranges remain separate rather than becoming an average.",
+        "sourceIds": [
+          "surfaces:homeguide-gravel",
+          "surfaces:lawnstarter-gravel",
+          "surfaces:spruce-driveway",
+          "surfaces:jmj-price-list",
+          "surfaces:mourne-price-list"
+        ]
+      },
+      {
+        "question": "How do driveway gravel prices differ by product?",
+        "answer": "Supplier prices identify the stone product and delivery terms.",
+        "text": "Crusher run and road base serve structural applications; the surface layer has its own material specification. Pea gravel is rounded and moves differently from angular crushed stone. JMJ’s Lynchburg list prices #57 crushed limestone at $46.75 per ton and crusher run at $39.50 per ton, with delivery extra. These are local examples, not nationwide delivered prices.",
+        "sourceIds": [
+          "surfaces:homeguide-gravel",
+          "surfaces:lawnstarter-gravel",
+          "surfaces:spruce-driveway",
+          "surfaces:jmj-price-list",
+          "surfaces:mourne-price-list"
+        ]
+      },
+      {
+        "question": "What does gravel delivery cost include?",
+        "answer": "Freight charges depend on the supplier’s delivery area, load and minimum order.",
+        "text": "Mourne lists $181 per trip within 15 miles of Pataskala, Ohio, and $203 beyond that distance, with possible additional charges. JMJ lists $75 local delivery within 10 miles of Lynchburg, Virginia. Compare material tons, delivery fee and tax separately; do not treat either supplier fee as a US default.",
+        "sourceIds": [
+          "surfaces:homeguide-gravel",
+          "surfaces:lawnstarter-gravel",
+          "surfaces:spruce-driveway",
+          "surfaces:jmj-price-list",
+          "surfaces:mourne-price-list"
+        ]
+      },
+      {
+        "question": "How does a gravel driveway cost calculator help before ordering?",
+        "answer": "The quantity calculator converts measured sections into cubic yards and tons.",
+        "text": "Calculate the base layer and surface layer separately using the supplier’s density. The gravel driveway calculator supplies the quantity to attach to a quote request; it does not replace installation inspection. Confirm geotextile fabric, edging, drainage and the finished compacted depth before accepting the driveway gravel cost.",
+        "sourceIds": [
+          "surfaces:homeguide-gravel",
+          "surfaces:lawnstarter-gravel",
+          "surfaces:spruce-driveway",
+          "surfaces:jmj-price-list",
+          "surfaces:mourne-price-list"
+        ]
+      }
+    ],
+    "sourceIds": [
+      "surfaces-homeguide-gravel",
+      "surfaces-lawnstarter-gravel",
+      "surfaces-spruce-driveway",
+      "surfaces-jmj-price-list",
+      "surfaces-mourne-price-list"
+    ],
+    "keywordVariants": [
+      "gravel driveway cost",
+      "gravel delivery cost",
+      "cost to put in gravel driveway",
+      "cost to install gravel driveway",
+      "driveway gravel cost",
+      "gravel driveway cost calculator",
+      "driveway gravel prices"
+    ],
+    "unresolvedData": [
+      "National delivered material price",
+      "National freight default",
+      "Annual upkeep cost",
+      "Finite gravel lifespan"
+    ]
+  },
+  "8": {
+    "answer": "The gravel driveway calculator returns cubic yards and tons for each entered base layer and surface layer, with their own depth and density.",
+    "sections": [
+      {
+        "question": "How much gravel do I need for a driveway?",
+        "answer": "Calculate every layer from its measured area and finished depth.",
+        "text": "Volume in cubic yards = area × (depth in inches / 12) / 27. Tons = cubic yards × tons per cubic yard. A driveway base layer and surface layer have different jobs and material specifications. Enter each depth separately and use the matching density rather than applying the surface-rock factor to the entire excavation.",
+        "sourceIds": []
+      },
+      {
+        "question": "Which density belongs to each driveway layer?",
+        "answer": "Match the density to the supplier’s material and the condition of the measured volume.",
+        "text": "Sutherland lists its AB-minus road base at 2,860 lb per cubic yard, equivalent to 1.43 US short tons. Two Rivers lists its 5/8-inch crushed top course at about 2,800 lb per cubic yard, equivalent to 1.4 tons. These are named supplier references; neither is a guaranteed figure for every quarry. Moisture, grading and packing affect delivered weight. The selectable source remains visible and editable.",
+        "sourceIds": [
+          "sutherland",
+          "tworivers"
+        ]
+      },
+      {
+        "question": "How does compaction affect a gravel order?",
+        "answer": "Compaction changes the relationship between loose delivered volume and finished layer volume.",
+        "text": "Ask the supplier for the loose volume needed for your specified compacted depth. Enter that documented allowance once. Zero compaction allowance leaves the geometry unadjusted and makes no recommendation about construction. Keep a separate waste allowance for actual loss or measurement contingency; avoid adding two allowances for the same volume change.",
+        "sourceIds": []
+      },
+      {
+        "question": "How do tapered driveways and delivery loads work?",
+        "answer": "A taper uses average width, while delivery load rounding uses the supplier’s actual truck capacity.",
+        "text": "Measure width at each end. For an irregular turnaround, calculate smaller measured shapes and combine them. A delivery load is the rounded-up order quantity divided by truck capacity, rounded up again to whole loads. A partial final load does not mean every truck is filled to capacity. Confirm access, drop location and whether the supplier quotes by ton or loose cubic yard. The [gravel cost guide](/gravel-driveway-cost/) explains installation scope; the [yard-to-ton converter](/cubic-yards-to-tons/) checks a quoted volume against the same density.",
+        "sourceIds": []
+      }
+    ],
+    "sourceIds": [
+      "defaults-sutherland",
+      "defaults-tworivers"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [],
+    "requiredEntities": [
+      "base layer",
+      "surface layer",
+      "depth",
+      "compaction",
+      "tons per cubic yard",
+      "delivery load rounding"
+    ]
+  },
+  "9": {
+    "answer": "The gravel calculator turns area and depth into cubic yards, then uses a named editable material density to calculate tons.",
+    "sections": [
+      {
+        "question": "How do you calculate how much gravel you need?",
+        "answer": "Multiply measured area by depth in feet, then divide by 27 for cubic yards.",
+        "text": "To calculate gravel needed from inches, divide depth by 12 before multiplying. Figuring gravel starts with the finished layer you are measuring, not the full excavation that also contains other materials. The result keeps geometric volume, your entered allowances and purchase rounding separate.",
+        "sourceIds": []
+      },
+      {
+        "question": "How many yards of gravel do I need?",
+        "answer": "The required cubic yards depend on the footprint and the depth of that layer.",
+        "text": "A gravel calculator in yards answers the volume question before applying a density. To calculate yards of gravel for an irregular bed, divide the footprint into rectangles or triangles and add the volumes. Measure depth at several points when the existing surface is uneven. The answer to “how much gravel do I need?” changes with the layer thickness even when length and width stay the same.",
+        "sourceIds": []
+      },
+      {
+        "question": "How does a stone calculator convert volume into tons?",
+        "answer": "A stone calculator in tons multiplies cubic yards by the chosen supplier’s bulk density.",
+        "text": "Two Rivers lists 5/8-inch crushed rock at about 1.4 US short tons per cubic yard and 3/4-inch washed round rock at about 1.3. Three Z gives approximately 1.4 for washed river gravel. A crushed stone calculator and river stone calculator therefore need a matching product, even when the geometry is identical. For a #57 stone calculator, enter the actual #57 supplier density; do not silently reuse a different size or a generic stone-solid density. Moisture and grading explain part of the cross-supplier difference.",
+        "sourceIds": [
+          "tworivers",
+          "threez-river"
+        ]
+      },
+      {
+        "question": "How do you turn the gravel result into an order?",
+        "answer": "Round the material quantity up to the supplier’s purchase increment after applying only your selected allowances.",
+        "text": "A zero allowance excludes extra quantity; it does not state that waste or compaction is absent. Enter truck capacity to calculate whole delivery loads. Keep each delivery load distinct from the quantity of stone placed. Confirm whether the quote uses tons or loose cubic yards before comparing prices. The [driveway gravel calculator](/gravel-driveway-calculator/) separates the base and surface layers, while the [material weight chart](/material-weights/) records the density sources.",
+        "sourceIds": []
+      },
+      {
+        "question": "What does this tool need to answer a material question?",
+        "answer": "It needs measurements, layer depth and the correct material conversion.",
+        "text": "Use this tool as a “how much stone do I need?” calculator for a measured area rather than guessing from a photograph. The same process answers “how much gravel do I need?” for a bed, path or single layer. Structural depth, drainage and material selection come from the project specification; a quantity result does not certify those decisions.",
+        "sourceIds": []
+      }
+    ],
+    "sourceIds": [
+      "defaults-tworivers",
+      "defaults-threez-river"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "gravel calculator yards",
+        "variant": "gravel calculator in yards"
+      },
+      {
+        "keyword": "how much gravel do i need calculator",
+        "variant": "“how much gravel do I need?” calculator"
+      },
+      {
+        "keyword": "stone calculator tons",
+        "variant": "stone calculator in tons"
+      },
+      {
+        "keyword": "57 stone calculator",
+        "variant": "#57 stone calculator"
+      },
+      {
+        "keyword": "how much stone do i need calculator",
+        "variant": "“how much stone do I need?” calculator"
+      },
+      {
+        "keyword": "how to calculate how much gravel i need",
+        "variant": "How do you calculate how much gravel you need?"
+      },
+      {
+        "keyword": "how to calculate how much gravel you need",
+        "variant": "How do you calculate how much gravel you need?"
+      },
+      {
+        "keyword": "how to calculate yards of gravel",
+        "variant": "calculate yards of gravel"
+      },
+      {
+        "keyword": "how to calculate gravel needed",
+        "variant": "calculate gravel needed"
+      }
+    ],
+    "unresolvedData": [],
+    "requiredEntities": [
+      "gravel",
+      "crushed stone",
+      "cubic yards",
+      "tons",
+      "density",
+      "depth",
+      "delivery load"
+    ]
+  },
+  "10": {
+    "answer": "Driveway Calculators groups material quantities, installed cost estimates, and surface-specific guides for US driveway projects.",
+    "sections": [],
+    "sourceIds": [],
+    "keywordVariants": [],
+    "unresolvedData": []
+  },
+  "42": {
+    "answer": "The driveway cost calculator compares installed surface benchmarks using one measured area, matching selected extras, and no regional adjustment.",
+    "sections": [
+      {
+        "question": "How does the driveway cost calculator compare surfaces?",
+        "answer": "One set of measurements produces a separate installed range for each selected surface.",
+        "text": "The driveway calculator supports asphalt, standard concrete, basic stamped concrete, gravel, pavers, and tar and chip. It preserves the named publisher’s work scope. The driveway cost estimator uses the same area for every row, then sorts by upfront cost or upfront cost per year of the recorded service-life range."
+      },
+      {
+        "question": "What does cost per year of life mean?",
+        "answer": "This figure divides upfront cost by the stated service-life range; it excludes maintenance and financing.",
+        "text": "The low annualized value uses low cost divided by the high lifespan; the high value uses high cost divided by the low lifespan. A missing lifespan hides this value without hiding a known upfront estimate. Gravel has no comparable finite renewal-life range, and basic stamped concrete lacks a separately verified range. Annual upkeep totals remain unavailable; inspection, cleaning, repair, and surface renewal are separate tasks."
+      },
+      {
+        "question": "Which costs belong outside the surface range?",
+        "answer": "Only separately quoted work excluded from installation belongs in the extras.",
+        "text": "Avoid counting removal, ordinary base preparation, and delivery twice. Compare equivalent excavation, disposal, reinforcement, stone base, finish, and access conditions. Supplier hauling and short-load charges depend on the actual order. Low, average, and high regional multipliers stay unavailable; baseline means no index adjustment."
+      },
+      {
+        "question": "How do I keep a comparison for my project?",
+        "answer": "Copy, print, and share controls retain the displayed result and its input assumptions.",
+        "text": "Select the surface of interest before saving a comparison. Reset restores the initial reference state. A quote request remains disabled until the approved lead-network configuration exists. The comparison is an estimate, not a contractor quote or a promise of service life."
+      }
+    ],
+    "sourceIds": [
+      "asphalt-angi-asphalt",
+      "asphalt-hg-asphalt",
+      "concrete-hg-concrete",
+      "concrete-cn-stamped",
+      "surfaces-homeguide-gravel",
+      "surfaces-homeguide-pavers",
+      "surfaces-homeguide-tarchip"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [
+      "Annual upkeep totals, unverified regional multipliers, and supplier-specific charges stay unavailable."
+    ]
+  },
+  "50": {
+    "answer": "The concrete slab cost calculator reports **a flat-slab installed estimate and cubic yards** from area, thickness, waste, and separately stated quote assumptions.",
+    "sections": [
+      {
+        "question": "What does the concrete slab cost calculator include?",
+        "answer": "**The concrete slab cost calculator separates quantity from installation cost.**",
+        "text": "HomeGuide’s selected $6–$12 per square foot range is an installed flat-slab benchmark. A supplier’s ready-mix price is per cubic yard and does not include the completed installation. Calculating concrete slab cost requires identifying which scope each price covers before combining it with another item. The result is an estimate, not a contractor quote."
+      },
+      {
+        "question": "Does the concrete pad cost calculator price a patio?",
+        "answer": "**The concrete pad cost calculator estimates a flat pad or patio under the displayed assumptions.**",
+        "text": "The concrete patio cost calculator uses the same measured area and thickness calculation. A patio finish, garage floor specification, equipment load, or vehicle-use slab changes the installer’s quote. The concrete slab installation cost calculator does not select structural thickness or reinforcement. A concrete slab foundation cost calculator search does not make this tool a foundation-design system."
+      },
+      {
+        "question": "Which inputs determine concrete slab calculator cost?",
+        "answer": "**Enter square feet or measured sections, thickness, and the ordering waste allowance before reviewing the price inputs.**",
+        "text": "Quantity becomes cubic yards using the measured geometry. The editable overage is 10%, supported by NRMCA, Sakrete, and Ozinga ordering guidance; keep the final order consistent with site measurements. A stone base is a separate layer, not extra concrete. Removal of the old slab belongs in the estimate only when the installed quote excludes it."
+      },
+      {
+        "question": "What delivery and short-load fee do I enter?",
+        "answer": "**Enter the supplier’s local delivery and short-load fee terms.**",
+        "text": "The concrete pad installation cost calculator does not invent a national supplier minimum. A minimum invoice, minimum billable volume, and short-load surcharge are different charges. Confirm each before ordering and avoid duplicate charges in an all-in installation quote. The [concrete slab cost guide](/concrete-slab-cost/) explains the flatwork benchmark. The [concrete calculator](/concrete-calculator/) calculates volume without installation pricing, and the [driveway concrete cost calculator](/concrete-driveway-cost-calculator/) adds driveway context. Review the generated worked example, then confirm dimensions, slab specification, base and removal scope, and supplier fees. That makes the concrete pad calculator cost result traceable to the inputs."
+      }
+    ],
+    "sourceIds": [
+      "concrete-hg-slab",
+      "concrete-nrmca-cip31",
+      "concrete-sakrete-slab",
+      "concrete-ozinga-ordering",
+      "concrete-american-concrete",
+      "concrete-townsend-concrete",
+      "concrete-gehring-concrete"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "concrete pad cost calculator",
+        "placement": "second heading"
+      },
+      {
+        "keyword": "concrete patio cost calculator",
+        "placement": "second section"
+      },
+      {
+        "keyword": "calculating concrete slab cost",
+        "placement": "first section"
+      },
+      {
+        "keyword": "concrete slab calculator cost",
+        "placement": "third heading"
+      },
+      {
+        "keyword": "concrete slab installation cost calculator",
+        "placement": "second section"
+      },
+      {
+        "keyword": "concrete slab foundation cost calculator",
+        "placement": "second section"
+      },
+      {
+        "keyword": "concrete pad installation cost calculator",
+        "placement": "last section"
+      },
+      {
+        "keyword": "concrete pad calculator cost",
+        "placement": "last section"
+      }
+    ],
+    "unresolvedData": [
+      "Universal delivery fees, minimums, and base-work cost remain NOT FOUND; current quote inputs control these items.",
+      "Worked examples generated from the same calculator function."
+    ]
+  },
+  "49": {
+    "answer": "Concrete slab cost is **$6–$12 per square foot installed** in HomeGuide’s flat-slab benchmark; the quoted thickness, reinforcement, subbase, and finish define the project scope.",
+    "sections": [
+      {
+        "question": "How much does a concrete slab cost?",
+        "answer": "**Concrete slab cost per square foot multiplies the measured slab area by the selected installed range.**",
+        "text": "HomeGuide lists $6–$12 per square foot for installation. Angi lists ordinary slabs at $4–$8, and Concrete Network lists plain slab work at $6.50–$10.50. Driveway Calculators selects HomeGuide’s range without averaging the sources. The cost of concrete slab installation is distinct from a supplier’s price for ready-mix material."
+      },
+      {
+        "question": "How much does a concrete pad cost?",
+        "answer": "**Concrete pad cost uses the same area calculation, with the pad’s intended use stated in the quote.**",
+        "text": "The cost to lay a concrete pad and the cost to install a concrete pad depend on slab thickness, reinforcement, support, and finish. A patio, equipment pad, driveway slab, and garage floor are different applications. Garage slab cost is not a universal substitute for a structural house foundation. Confirm the specified loads, local requirements, subbase, control joints, and drainage with the installer."
+      },
+      {
+        "question": "What is the cost to pour a concrete slab?",
+        "answer": "**The cost to pour a concrete slab includes more than the wet concrete.**",
+        "text": "The cost to install concrete slab work includes the quote’s identified formwork, placement, finishing, and curing scope. Additional removal or base work belongs in separately stated items unless included. The cost to pour concrete pad work follows the same scope rule. Thickness changes material volume; it does not justify multiplying every labor and setup cost by the thickness ratio."
+      },
+      {
+        "question": "How much does a slab cost at a specific size?",
+        "answer": "**The size table below uses calculator-generated values for each entered area.**",
+        "text": "Use the generated table for a 12×12 concrete slab, a 20×40 concrete pad, or a 30×50 slab instead of borrowing another project’s total. The [concrete slab cost calculator](/concrete-slab-cost-calculator/) prices the entered size and records the assumptions. The [concrete calculator](/concrete-calculator/) calculates cubic yards and bag quantities. The [concrete driveway cost guide](/concrete-driveway-cost/) adds the vehicle-use context to a flat slab. Before ordering, verify slab dimensions, thickness, base condition, reinforcement and finish, and included delivery or removal fees."
+      }
+    ],
+    "sourceIds": [
+      "concrete-hg-slab",
+      "concrete-angi-slab",
+      "concrete-cn-prices"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "concrete pad cost",
+        "placement": "pad answer"
+      },
+      {
+        "keyword": "concrete slab cost per square foot",
+        "placement": "first answer"
+      },
+      {
+        "keyword": "garage slab cost",
+        "placement": "pad section"
+      },
+      {
+        "keyword": "cost to pour concrete slab",
+        "variant": "cost to pour a concrete slab",
+        "reason": "Adds missing article."
+      },
+      {
+        "keyword": "cost of concrete slab",
+        "placement": "first section"
+      },
+      {
+        "keyword": "cost to install concrete slab",
+        "placement": "pour section"
+      },
+      {
+        "keyword": "cost to lay a concrete pad",
+        "placement": "pad section"
+      },
+      {
+        "keyword": "cost to pour concrete pad",
+        "placement": "pour section"
+      },
+      {
+        "keyword": "cost to install a concrete pad",
+        "placement": "pad section"
+      }
+    ],
+    "unresolvedData": [
+      "Size-table totals generated by engine; size choices12×12/20×40/30×50 come from source-document keyword requirements.",
+      "Local structural or garage slab specifications, base remediation, and permits."
+    ]
+  },
+  "43": {
+    "answer": "A gravel driveway is a layered, compacted aggregate surface supported by prepared ground and managed drainage. A successful build specifies the base layer and surface layer separately. Stone choice, grading and maintenance matter more than spreading one undifferentiated pile over soil.",
+    "sections": [
+      {
+        "question": "How to build a gravel driveway with distinct layers?",
+        "answer": "Prepare the route and specify each layer before ordering driveway gravel.",
+        "text": "Confirm access, underground utilities, drainage and the required finished elevation. The gravel driveway calculator converts the specified section dimensions into material quantities; it does not design the layer thickness. Angular crushed stone and graded base material serve different functions from rounded decorative stone. Obtain the supplier’s product description for the gravel for driveway loading.",
+        "sourceIds": [
+          "surfaces:spruce-gravel",
+          "surfaces:lawnstarter-gravel",
+          "surfaces:fhwa-unpaved",
+          "defaults:tworivers",
+          "defaults:rocknyard"
+        ]
+      },
+      {
+        "question": "How do you lay a gravel driveway after preparation?",
+        "answer": "Place and compact the specified materials over prepared support, with drainage established first.",
+        "text": "Geotextile fabric, edging and a graded base belong in the installation plan when the design calls for them. The final surface layer needs a material suitable for vehicle traffic. Do not adopt a public-road crown recommendation as a universal residential specification. Keep runoff away from vulnerable support and building entrances.",
+        "sourceIds": [
+          "surfaces:spruce-gravel",
+          "surfaces:lawnstarter-gravel",
+          "surfaces:fhwa-unpaved",
+          "defaults:tworivers",
+          "defaults:rocknyard"
+        ]
+      },
+      {
+        "question": "How to gravel driveway sections with different depths?",
+        "answer": "Measure and calculate each section and layer separately.",
+        "text": "A turnaround and approach have distinct boundaries; overlapping measurements count material twice. If the route tapers, use the start and end widths in the calculator. For a how to make a gravel driveway plan on sloped ground, confirm whether length was measured along the slope or as a flat horizontal distance.",
+        "sourceIds": [
+          "surfaces:spruce-gravel",
+          "surfaces:lawnstarter-gravel",
+          "surfaces:fhwa-unpaved",
+          "defaults:tworivers",
+          "defaults:rocknyard"
+        ]
+      },
+      {
+        "question": "How do I lay a gravel driveway without confusing bulk and compacted quantities?",
+        "answer": "Use the supplier’s material density and the specified depth basis.",
+        "text": "Bulk cubic yards include voids, while the completed layer is compacted. Record any project-specific allowance instead of adding an assumed universal percentage. Verify the order in tons or cubic yards against the supplier’s terms.",
+        "sourceIds": [
+          "surfaces:spruce-gravel",
+          "surfaces:lawnstarter-gravel",
+          "surfaces:fhwa-unpaved",
+          "defaults:tworivers",
+          "defaults:rocknyard"
+        ]
+      },
+      {
+        "question": "What does gravel driveway maintenance involve?",
+        "answer": "Inspect drainage, refill potholes, redistribute displaced stone and arrange regrading when needed.",
+        "text": "Renewable gravel surfaces do not have a defensible finite national replacement lifespan in this research. Routine renewal differs from replacing a bound pavement. The gravel cost guide prices the specified work and delivery; this guide explains the construction and maintenance sequence.",
+        "sourceIds": [
+          "surfaces:spruce-gravel",
+          "surfaces:lawnstarter-gravel",
+          "surfaces:fhwa-unpaved",
+          "defaults:tworivers",
+          "defaults:rocknyard"
+        ]
+      }
+    ],
+    "sourceIds": [
+      "surfaces-spruce-gravel",
+      "surfaces-lawnstarter-gravel",
+      "surfaces-fhwa-unpaved",
+      "defaults-tworivers",
+      "defaults-rocknyard"
+    ],
+    "keywordVariants": [
+      "gravel driveway",
+      "driveway gravel",
+      "gravel for driveway",
+      "how to build a gravel driveway",
+      "how do you lay a gravel driveway",
+      "how to gravel driveway",
+      "how to make a gravel driveway",
+      "how do i lay a gravel driveway",
+      "gravel driveway maintenance"
+    ],
+    "unresolvedData": [
+      "Project-specific layer depth",
+      "Project-specific compaction allowance"
+    ]
+  },
+  "12": {
+    "answer": "Angi’s professional driveway sealcoating cost range is $1.25–$1.50 per square foot for materials and labor.",
+    "sections": [
+      {
+        "question": "How much does it cost to seal a driveway?",
+        "answer": "Area sets the starting budget, while repair, cleaning, and minimum fees determine the final quote.",
+        "text": "HomeGuide reports $1–$2 per square foot and Fixr reports $0.88–$2.10. Keep these named ranges separate. The answer to how much to seal a driveway depends on the same service scope: product, preparation, coats, and contractor minimum. A small driveway does not necessarily receive a proportionally small bill. Confirm whether crack filling is included."
+      },
+      {
+        "question": "How does coverage per gallon change the material order?",
+        "answer": "Coverage comes from the named sealer label and the surface condition.",
+        "text": "Latex-ite Ultra Shield lists 400–500 square feet per 4.75-gallon pail per coat on smooth or previously sealed asphalt, and 300–400 on rough or porous asphalt. These are product-specific values. The sealcoat calculator converts measured area and the selected product coverage into an order. It does not substitute professional sealcoating cost per square foot for a material coverage rate."
+      },
+      {
+        "question": "How many coats and how much cure time are required?",
+        "answer": "The exact product instructions govern coats and cure time.",
+        "text": "Henry HE200’s linked technical sheet specifies one coat; Latex-ite Ultra Shield specifies two thin coats. Use the matching label rather than a universal rule for driveway sealing. Keep pedestrians and vehicles off until the chosen product’s traffic instructions are satisfied. Wet appearance alone does not establish readiness, and cool or humid conditions change drying."
+      },
+      {
+        "question": "How often is sealing necessary?",
+        "answer": "Sealing frequency depends on the product, wear, and pavement condition.",
+        "text": "Published guide intervals conflict, so no universal interval is prefilled. Inspect the surface and confirm its suitability before buying sealer. Sealcoating does not correct a failed base or a pothole. Compare three factors in the written quote: preparation, product application, and excluded repairs. The repair guide prices damaged areas; the sealer guide explains material selection without ranking untested products."
+      }
+    ],
+    "sourceIds": [
+      "asphalt-angi-sealing",
+      "asphalt-hg-sealing",
+      "asphalt-fixr-sealing",
+      "defaults-latex-ultra",
+      "defaults-latex-ultra-page",
+      "defaults-henry-he200"
+    ],
+    "keywordVariants": [
+      "driveway sealcoating cost",
+      "sealcoating cost per square foot",
+      "driveway sealing",
+      "how much to seal a driveway",
+      "how much does it cost to seal a driveway"
+    ],
+    "unresolvedData": [
+      "Universal sealing interval; local minimum fee; current Henry label/TDS conflict"
+    ]
+  },
+  "11": {
+    "answer": "Angi lists asphalt overlay cost at $3–$7 per square foot and full replacement at $8–$15 per square foot, including removal.",
+    "sections": [
+      {
+        "question": "What is the difference between resurfacing and replacement?",
+        "answer": "An overlay adds asphalt over a stable existing pavement; replacement removes the failed surface.",
+        "text": "Ask the contractor to distinguish an overlay from milling and resurfacing in the quote. An overlay leaves the original foundation in service. Tear-out exposes that foundation for inspection and correction. Blacktop Concepts explains that persistent drainage problems, sinking, and structural cracking require evaluation beneath the surface rather than another covering layer."
+      },
+      {
+        "question": "How much does it cost to repave a driveway?",
+        "answer": "The cost to replace an asphalt driveway covers more work than an overlay-only price.",
+        "text": "Angi’s replacement benchmark includes existing-surface removal. Adding another removal charge to that same scope counts the work twice. HomeGuide publishes a separate overlay-only range of $1–$3 per square foot. These figures come from different guides and scopes; they are not averaged into a new national price. Request a written allowance for base repair and drainage work."
+      },
+      {
+        "question": "What changes asphalt resurfacing driveway cost?",
+        "answer": "Existing pavement condition, preparation scope, and access determine the work being priced.",
+        "text": "Use three quote checks: identify the failing areas, specify the preparation method, and list excluded work. Milling at garage and street transitions is different from removing the entire driveway. Check final elevations and the drainage route before accepting an overlay. Measure the actual repaving area rather than multiplying the entire property frontage."
+      },
+      {
+        "question": "When does repair make more sense than repaving?",
+        "answer": "Localized damage requires a repair assessment before a whole-driveway replacement budget.",
+        "text": "The asphalt driveway repair cost guide separates cracks, potholes, and patches by their pricing units. The cost calculator applies the selected surface benchmark to your measurements. Sealcoating is a maintenance service, not a substitute for base correction. HomeGuide’s overlay lifespan observation is conditional on a strong foundation; it does not establish a universal service-life guarantee. Compare written bids with matching thickness, preparation, and disposal terms."
+      }
+    ],
+    "sourceIds": [
+      "asphalt-angi-asphalt",
+      "asphalt-hg-overlay",
+      "asphalt-blacktop-asphalt"
+    ],
+    "keywordVariants": [
+      "cost to replace asphalt driveway",
+      "how much does it cost to repave a driveway",
+      "asphalt overlay cost"
+    ],
+    "unresolvedData": [
+      "Universal overlay lifespan; project-specific base repair and drainage allowance"
+    ]
+  },
+  "13": {
+    "answer": "Angi reports crack filling at $1–$3 per linear foot, while HomeGuide lists hot-patch asphalt driveway repair at $2–$5 per square foot.",
+    "sections": [
+      {
+        "question": "How are cracks, patches, and potholes priced?",
+        "answer": "Crack length and patch area use different units.",
+        "text": "Measure each damaged area before requesting a quote. HomeGuide reports $100–$400 per pothole, while Angi groups method-dependent patches at $100–$500. Those project figures do not convert directly into a square-foot rate without a defined area and depth. Ask whether the quoted total includes the crew’s service minimum and whether multiple repairs share that mobilization charge."
+      },
+      {
+        "question": "What is the difference between cold patch and hot patch?",
+        "answer": "Cold patch uses a packaged repair mix; hot patch uses hot asphalt placed and compacted by a paving crew.",
+        "text": "Product instructions govern the repair depth, lift thickness, and compaction method for a packaged mix. A cold patch figure covers that repair method, not new driveway installation. HomeGuide’s hot-patch benchmark is a method-specific area price. Keep the material bag price, patching labor, and complete job quote separate when comparing bids."
+      },
+      {
+        "question": "Does crack filler repair alligator cracking?",
+        "answer": "A crack filler seals a crack; it does not replace a failed pavement foundation.",
+        "text": "Blacktop Concepts identifies interconnected cracking, sinking, and repeated potholes as reasons to inspect the base and drainage. Alligator cracking describes a connected pattern rather than a single measured line. Record its affected area and take photographs for the contractor. Adding sealer over that pattern does not establish a structural repair specification."
+      },
+      {
+        "question": "When does replacement enter the comparison?",
+        "answer": "Replacement enters the comparison when damage extends beyond isolated repair areas.",
+        "text": "Compare three scope items: removal of failed material, correction beneath the surface, and replacement pavement thickness. A repair estimate needs the same clarity as a repaving estimate. The crack filler guide covers compatible materials, and the asphalt cold patch guide explains product limits. The repaving guide distinguishes overlay from tear-out. Choose the comparison that matches the actual failure instead of applying one repair price to the whole driveway."
+      }
+    ],
+    "sourceIds": [
+      "asphalt-angi-repair",
+      "asphalt-hg-repair",
+      "asphalt-blacktop-asphalt",
+      "defaults-quikrete-patch"
+    ],
+    "keywordVariants": [
+      "asphalt driveway repair"
+    ],
+    "unresolvedData": [
+      "Exact patch area/depth and service minimum; structural condition"
+    ]
+  },
+  "14": {
+    "answer": "Concrete vs asphalt driveway decisions depend on the specified work, maintenance and appearance. Selected installed benchmarks are $6–$10 per square foot for plain concrete from HomeGuide and $7–$13 for new asphalt from Angi; they are separate guide estimates, not matched local bids.",
+    "sections": [
+      {
+        "question": "What changes concrete vs asphalt driveway cost?",
+        "answer": "Removal, base condition and finish change the comparison.",
+        "text": "Compare quotes for the same measured area and included operations. New construction, an asphalt overlay and full replacement are different scopes. Plain broom-finished concrete differs from stamped concrete; asphalt thickness and base preparation also change the work. A low upfront cost does not establish the lower total ownership cost.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "asphalt:hg-asphalt",
+          "concrete:hg-concrete",
+          "concrete:cn-lifespan",
+          "concrete:angi-lifespan"
+        ]
+      },
+      {
+        "question": "How long does an asphalt driveway last?",
+        "answer": "HomeGuide gives an asphalt driveway lifespan of 15–30 years with proper installation and maintenance.",
+        "text": "The interval is a planning range, not a warranty. Drainage, traffic and surface condition affect service life. Asphalt maintenance includes cleaning, inspecting cracks, addressing damaged edges and selecting sealcoating according to the product and site condition. The research does not establish one complete annual upkeep budget.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "asphalt:hg-asphalt",
+          "concrete:hg-concrete",
+          "concrete:cn-lifespan",
+          "concrete:angi-lifespan"
+        ]
+      },
+      {
+        "question": "How long does a concrete driveway last?",
+        "answer": "HomeGuide’s selected concrete driveway lifespan range is 30–40 years under proper installation and maintenance.",
+        "text": "Concrete Network discusses longer examples, and other sources use different bounds; the site retains those differences. Concrete repair depends on whether damage is a shallow surface defect, a moving crack or settling beneath the slab. Filling a crack does not correct failed support.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "asphalt:hg-asphalt",
+          "concrete:hg-concrete",
+          "concrete:cn-lifespan",
+          "concrete:angi-lifespan"
+        ]
+      },
+      {
+        "question": "How do climate and appearance affect the choice?",
+        "answer": "Drainage and the designed pavement layers matter alongside surface color and texture.",
+        "text": "Freeze-thaw exposure, heat and heavy vehicle use belong in the contractor’s design discussion. Neither surface is a universal climate winner. Use the asphalt and concrete cost guides to inspect each scope, then compare all materials in the driveway cost estimator. Keep maintenance expenses separate from upfront cost divided by lifespan; that calculation is not a complete lifetime-cost forecast.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "asphalt:hg-asphalt",
+          "concrete:hg-concrete",
+          "concrete:cn-lifespan",
+          "concrete:angi-lifespan"
+        ]
+      }
+    ],
+    "sourceIds": [
+      "asphalt-angi-asphalt",
+      "asphalt-hg-asphalt",
+      "concrete-hg-concrete",
+      "concrete-cn-lifespan",
+      "concrete-angi-lifespan"
+    ],
+    "keywordVariants": [
+      "concrete vs asphalt driveway",
+      "concrete vs asphalt driveway cost",
+      "how long does an asphalt driveway last",
+      "how long does a concrete driveway last",
+      "asphalt driveway lifespan",
+      "concrete driveway lifespan"
+    ],
+    "unresolvedData": [
+      "Complete annual maintenance budgets",
+      "Location-specific matched quotes"
+    ]
+  },
+  "15": {
+    "answer": "The cost to replace a concrete driveway combines **demolition, disposal, and a new pour**; the selected removal and plain-installation benchmarks produce a derived planning range of $8–$16 per square foot.",
+    "sections": [
+      {
+        "question": "What is the cost to replace a concrete driveway?",
+        "answer": "**The replacement range is a calculated sum of 2 separately sourced scopes.**",
+        "text": "HomeGuide lists standard gray concrete installation at $6–$10 per square foot. Angi lists concrete demolition with dumping fees at $2–$6 per square foot. Adding those ranges produces $8–$16 per square foot before additional work. This is a transparent derived benchmark, not a surveyed national replacement range. The worked example uses the calculator function to generate the total for the entered area."
+      },
+      {
+        "question": "What does demolition include?",
+        "answer": "**The selected demolition benchmark includes breaking up the slab and disposal.**",
+        "text": "Angi’s range covers its stated slab scope; depth, reinforcement, equipment access, hauling distance, and disposal terms affect a local bid. Confirm whether hauling and disposal are bundled with demolition. HomeGuide’s broader removal range is $3–$8 per square foot; Fixr lists $2–$6. These differences remain visible in the source comparison instead of being averaged."
+      },
+      {
+        "question": "What does the new pour include?",
+        "answer": "**The new pour replaces the slab after the existing surface is removed and the support is assessed.**",
+        "text": "Ask the contractor to identify subbase work, slab thickness, reinforcement, finish, formwork, control joints, and curing. The [concrete driveway cost guide](/concrete-driveway-cost/) explains the new installation benchmark. Failed support or drainage needs a separate site assessment; the research does not establish a universal base-work surcharge."
+      },
+      {
+        "question": "How do I avoid paying for removal twice?",
+        "answer": "**Leave demolition out of the added extras when the replacement quote already includes it.**",
+        "text": "ZBL Concrete’s Lockport-area $13–$16 per square foot includes tear-out, hauling, grading, rebar, and sealer. That local package is a comparison example, not a national default. Enter either separate removal and installation rates or an all-in replacement quote. The [concrete driveway cost calculator](/concrete-driveway-cost-calculator/) calculates measurements and quantities so the quote uses the same area. Before ordering, confirm the demolition area, disposal scope, subbase repair, new slab specification, and delivery access."
+      }
+    ],
+    "sourceIds": [
+      "concrete-hg-concrete",
+      "concrete-angi-removal",
+      "concrete-hg-removal",
+      "concrete-fixr-removal",
+      "concrete-zbl-concrete"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [
+      "Local failed-subbase repair, drainage, permits, and engineered specifications; no unsupported fixed extras.",
+      "Replacement total must be generated by adding selected benchmark scopes in the engine."
+    ]
+  },
+  "16": {
+    "answer": "Stamped concrete driveway cost is **$10–$14 per square foot for a basic pattern and color**, or $14–$20 for a more detailed design, in Concrete Network’s published finish classes.",
+    "sections": [
+      {
+        "question": "What is stamped concrete driveway cost by finish?",
+        "answer": "**The basic and midrange classes price different decorative work.**",
+        "text": "Concrete Network’s basic $10–$14 per square foot covers a single stamp pattern and color. Its $14–$20 midrange covers borders, contrasting patterns, and multiple colors. High-end work starts at $20 per square foot with no published upper bound in that source. Driveway Calculators keeps that class quote-only rather than inventing a capped price range."
+      },
+      {
+        "question": "What does the finish specification include?",
+        "answer": "**The finish specification identifies the stamp pattern, color treatment, release agent, and sealer.**",
+        "text": "Ask whether color hardener or integral color is used, how the pattern is applied, and whether the initial sealer is included. Decorative finishes belong in the installed quote, rather than being priced as ready-mix material alone. The [plain concrete driveway cost guide](/concrete-driveway-cost/) explains the base slab installation scope that stamping changes."
+      },
+      {
+        "question": "Why do published stamped prices differ?",
+        "answer": "**Published prices differ because their finish and local job scopes differ.**",
+        "text": "HomeGuide lists a broad $8–$26 per square foot range for a stamped driveway including the slab. Angi’s concrete finish table lists stamped work at $12–$18. Local Concrete Contractor publishes $15–$17 for its North Carolina stamped work, including sealer. Those ranges are comparisons, not interchangeable finish tiers. Select a named benchmark and compare its inclusions with the written project quote."
+      },
+      {
+        "question": "What maintenance does stamped concrete need?",
+        "answer": "**Stamped concrete needs cleaning, crack inspection, and resealing according to the sealer and installer instructions.**",
+        "text": "Concrete Network describes resealing as a recurring maintenance task that protects decorative appearance. The research does not establish universal annual upkeep dollars or a finite stamped-only lifespan range. Keep those outputs hidden until a compatible source or project assumption is provided. Before accepting a quote, confirm the pattern and colors, slab and base specification, removal scope, included sealer, and maintenance instructions. The calculator-generated example below applies the selected finish class to the entered area."
+      }
+    ],
+    "sourceIds": [
+      "concrete-cn-stamped",
+      "concrete-hg-concrete",
+      "concrete-angi-concrete",
+      "concrete-lcc-concrete",
+      "concrete-cn-lifespan"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [
+      "Finite upper price for high-end stamped work; universal stamped annual upkeep; finite stamped-only lifespan range.",
+      "Worked-example totals generated by the cost engine."
+    ]
+  },
+  "17": {
+    "answer": "Paver driveway cost depends on material and installation scope. Angi’s driveway guide lists concrete pavers at $10–$18, brick pavers at $12–$22 and natural stone at $20–$35 per square foot installed. These are selected named benchmarks; local quotes determine the project price.",
+    "sections": [
+      {
+        "question": "What changes paver driveway cost by material?",
+        "answer": "The selected paver product and laying pattern change material and installation work.",
+        "text": "HomeGuide reports concrete pavers at $10–$20, brick at $10–$25 and stone at $10–$30 per square foot installed. NT Pavers publishes a premium natural stone driveway range of $25–$70, including custom-order materials. These different scopes are shown separately. The selected estimate does not average guides or combine their endpoints.",
+        "sourceIds": [
+          "surfaces:angi-pavers",
+          "surfaces:homeguide-pavers",
+          "surfaces:ntpavers-driveway",
+          "surfaces:cmha-base",
+          "surfaces:unilock-build",
+          "surfaces:spruce-pavers",
+          "surfaces:tomasso-life"
+        ]
+      },
+      {
+        "question": "What belongs beneath the pavers?",
+        "answer": "A stable structural base supports the bedding layer and paving units.",
+        "text": "CMHA identifies a 6-inch minimum compacted aggregate base for residential driveways under ideal conditions. Weak soil, poor drainage and freezing conditions require a different structural design. Base depth is a specification to confirm, not an automatic nationwide requirement. Unilock describes a 1-inch bedding course unless an engineer specifies otherwise; suitable bedding sand depends on the chosen system.",
+        "sourceIds": [
+          "surfaces:angi-pavers",
+          "surfaces:homeguide-pavers",
+          "surfaces:ntpavers-driveway",
+          "surfaces:cmha-base",
+          "surfaces:unilock-build",
+          "surfaces:spruce-pavers",
+          "surfaces:tomasso-life"
+        ]
+      },
+      {
+        "question": "Which details belong in the installation quote?",
+        "answer": "The quote identifies excavation, base work, edge restraint, joint sand and cleanup.",
+        "text": "Ask whether ordinary base preparation and material delivery are already included in the installed rate. Add only separate work actually needed; removal, drainage correction and elaborate cutting require their own descriptions. Specify vehicle-rated pavers instead of assuming a patio product supports driveway traffic.",
+        "sourceIds": [
+          "surfaces:angi-pavers",
+          "surfaces:homeguide-pavers",
+          "surfaces:ntpavers-driveway",
+          "surfaces:cmha-base",
+          "surfaces:unilock-build",
+          "surfaces:spruce-pavers",
+          "surfaces:tomasso-life"
+        ]
+      },
+      {
+        "question": "How do maintenance and ordering affect the budget?",
+        "answer": "Pavers require cleaning, joint inspection and repairs to affected units or support layers.",
+        "text": "Selected concrete paver guidance gives 25–50 years with proper installation and maintenance, not a guarantee for every stone product. Sealers and joint materials follow manufacturer instructions. Use the paver calculator to separate unit count, base material and bedding sand before ordering. The driveway comparison tool compares upfront surface costs; an unsourced annual upkeep dollar figure stays absent.",
+        "sourceIds": [
+          "surfaces:angi-pavers",
+          "surfaces:homeguide-pavers",
+          "surfaces:ntpavers-driveway",
+          "surfaces:cmha-base",
+          "surfaces:unilock-build",
+          "surfaces:spruce-pavers",
+          "surfaces:tomasso-life"
+        ]
+      }
+    ],
+    "sourceIds": [
+      "surfaces-angi-pavers",
+      "surfaces-homeguide-pavers",
+      "surfaces-ntpavers-driveway",
+      "surfaces-cmha-base",
+      "surfaces-unilock-build",
+      "surfaces-spruce-pavers",
+      "surfaces-tomasso-life"
+    ],
+    "keywordVariants": [
+      "paver driveway cost"
+    ],
+    "unresolvedData": [
+      "Annual upkeep dollar budget",
+      "Natural stone product-specific service life"
+    ]
+  },
+  "18": {
+    "answer": "Tar and chip driveway cost is $2–$5 per square foot installed in HomeGuide’s guide. A chip seal driveway uses bituminous binder and aggregate chips placed and compacted at the site. This surface differs from premixed hot mix asphalt and from liquid sealcoating applied to an existing driveway.",
+    "sections": [
+      {
+        "question": "What changes tar and chip driveway cost?",
+        "answer": "The existing base, aggregate selection and number of chip-seal applications affect the work.",
+        "text": "Angi reports a wider overall range of $1–$5 per square foot. The Spruce reports $4–$8.35 for a new chip-seal driveway in its 2024 guide. Those conflicting benchmarks remain visible rather than becoming an average. HomeGuide’s $1–$3 resurfacing range is a different operation and is not used as the new-installation default.",
+        "sourceIds": [
+          "surfaces:homeguide-tarchip",
+          "surfaces:angi-tarchip",
+          "surfaces:spruce-driveway",
+          "surfaces:uniform-tarchip",
+          "surfaces:jr-tarchip"
+        ]
+      },
+      {
+        "question": "How is the surface installed?",
+        "answer": "The crew places binder and stone in a coordinated sequence, then uses rolling to seat the chips.",
+        "text": "The support beneath the surface needs assessment before application. A defective base or unresolved drainage problem remains a problem beneath a new wearing layer. Ask the installer to identify the preparation, selected aggregate chips, number of layers and traffic-opening instructions in writing.",
+        "sourceIds": [
+          "surfaces:homeguide-tarchip",
+          "surfaces:angi-tarchip",
+          "surfaces:spruce-driveway",
+          "surfaces:uniform-tarchip",
+          "surfaces:jr-tarchip"
+        ]
+      },
+      {
+        "question": "What lifespan does the research support?",
+        "answer": "HomeGuide, Uniform Paving and JR Paving report a 7–10-year driveway lifespan range.",
+        "text": "The contractor examples cover Georgia and Western Pennsylvania, with maintenance and traffic conditions attached. Treat the range as a planning interval to substantial surface renewal, not the permanent life of the underlying base. Angi reports a 10-year average; that single value does not replace the selected range.",
+        "sourceIds": [
+          "surfaces:homeguide-tarchip",
+          "surfaces:angi-tarchip",
+          "surfaces:spruce-driveway",
+          "surfaces:uniform-tarchip",
+          "surfaces:jr-tarchip"
+        ]
+      },
+      {
+        "question": "What maintenance and quote checks matter?",
+        "answer": "Remove loose chips and debris, maintain drainage, and ask the installer how local damage is treated.",
+        "text": "The research does not establish a complete national annual upkeep cost. Confirm removal, base corrections and hauling rather than assuming they are included. Compare this scope with the asphalt driveway cost guide to understand the difference between site-applied chip seal and hot mix paving. Surface texture, vehicle use and site access belong in that comparison, alongside the estimate.",
+        "sourceIds": [
+          "surfaces:homeguide-tarchip",
+          "surfaces:angi-tarchip",
+          "surfaces:spruce-driveway",
+          "surfaces:uniform-tarchip",
+          "surfaces:jr-tarchip"
+        ]
+      }
+    ],
+    "sourceIds": [
+      "surfaces-homeguide-tarchip",
+      "surfaces-angi-tarchip",
+      "surfaces-spruce-driveway",
+      "surfaces-uniform-tarchip",
+      "surfaces-jr-tarchip"
+    ],
+    "keywordVariants": [
+      "tar and chip driveway cost",
+      "chip seal driveway"
+    ],
+    "unresolvedData": [
+      "Complete annual upkeep dollars"
+    ]
+  },
+  "19": {
+    "answer": "HomeGuide lists asphalt millings installation at $2–$5 per square foot; supplier pickup rates remain separate from delivery and installation.",
+    "sections": [
+      {
+        "question": "What are you buying when you order millings?",
+        "answer": "Asphalt millings are reclaimed asphalt pavement used as a granular material.",
+        "text": "The material comes from processed existing pavement rather than a fresh hot-mix production run. Product size, screening, and condition affect the order. Ask the supplier to identify the grade and whether its ton means a US short ton. A material quote does not automatically include spreading, base preparation, roller compaction, or delivery to your driveway."
+      },
+      {
+        "question": "How do supplier prices compare?",
+        "answer": "Each published supplier price describes a local product and pickup arrangement.",
+        "text": "UCS in Milltown, Wisconsin, lists recycled asphalt at $15 per ton FOB, excluding tax. Sargent’s Hermon, Maine, list has reclaim/recycled HMA at $20 per ton FOB. Yarberry in Anderson, Indiana, lists millings at $23 per ton without stated delivery inclusion. These examples are not combined into a national delivered price, and availability requires supplier confirmation."
+      },
+      {
+        "question": "What changes the installed driveway price?",
+        "answer": "Preparation, hauling, and compaction distinguish an installed quote from a material purchase.",
+        "text": "HomeGuide’s $2–$5 benchmark differs from Angi’s $3–$8 and Fragale’s Connecticut $1–$3 example. Compare three inclusions: the prepared base, delivery to the site, and finished compaction. Ask how transitions and runoff are handled. A cheap stockpile is not a finished driveway, and a thick loose layer is not the same measurement as final compacted depth."
+      },
+      {
+        "question": "How much material does your driveway need?",
+        "answer": "Use the millings calculator with the measured area, depth, and an identified bulk density.",
+        "text": "The Anchorage supplier preset is a named ordering assumption, not a universal density. Keep any supplier compaction allowance explicit so it is not added twice. The gravel driveway cost guide provides the adjacent loose-surface comparison. Upkeep includes watching for rutting and drainage problems; no complete annual maintenance price is established by the reviewed sources. Obtain a site-specific quote before treating any guide range as a contract price."
+      }
+    ],
+    "sourceIds": [
+      "asphalt-hg-millings",
+      "asphalt-angi-millings",
+      "asphalt-fragale-millings",
+      "asphalt-ucs-millings",
+      "asphalt-sargent-hma",
+      "asphalt-yarberry-millings",
+      "defaults-fhwa-rap",
+      "defaults-anch-rap"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [
+      "Delivered material quote; annual upkeep total; project compaction allowance"
+    ]
+  },
+  "20": {
+    "answer": "The Colorado Asphalt Pavement Association’s base-supported residential example specifies 3 inches of asphalt over an aggregate base.",
+    "sections": [
+      {
+        "question": "Is every driveway built to the same thickness?",
+        "answer": "Asphalt driveway thickness depends on the design, traffic load, and supporting ground.",
+        "text": "CAPA’s technical brief distinguishes asphalt over an aggregate base from full-depth asphalt construction. Harrison Paving and Nathan’s Paving describe regional passenger-car designs using 2–3 inches of compacted asphalt over a granular base. These are named design examples, not one nationwide requirement. Confirm the planned section with the contractor before estimating tons."
+      },
+      {
+        "question": "How does base thickness differ from asphalt thickness?",
+        "answer": "Base course and asphalt layers are separate parts of the pavement section.",
+        "text": "CAPA’s example uses a 4-inch aggregate base for fair or good subgrade and a 6-inch base for poor subgrade. Do not enter the combined pavement depth as the asphalt thickness. Record the base material separately from the asphalt mix. The subgrade is the supporting ground beneath those layers; weak areas and drainage concerns require attention in the project specification."
+      },
+      {
+        "question": "Does the calculator use loose or compacted depth?",
+        "answer": "Use final compacted asphalt depth with the calculator’s in-place density assumption.",
+        "text": "The Asphalt Institute publishes an estimated mixture density range of 142–148 pounds per cubic foot. Its named 148-pound value is editable. Combining final volume with in-place density already describes compacted material; another automatic compaction multiplier counts that adjustment twice. A supplier’s order allowance is a separate explicit input, not a substitute for specifying the pavement section."
+      },
+      {
+        "question": "What belongs in a paving quote?",
+        "answer": "The quote needs the asphalt section, base section, and preparation scope.",
+        "text": "Check three details: the thickness after compaction, the material and depth beneath it, and the treatment of soft or poorly drained areas. A paving price without those details is difficult to compare. The asphalt calculator turns specified thickness and measurements into tons. The asphalt driveway cost guide separates that material quantity from installed pricing. Keep project drawings and contractor recommendations with the saved estimate so the assumptions remain visible."
+      }
+    ],
+    "sourceIds": [
+      "defaults-capa-driveway",
+      "defaults-harrison-depth",
+      "defaults-nathan-depth",
+      "defaults-ai-faq",
+      "defaults-mapa-asphalt"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [
+      "Project pavement design and loading; no national thickness mandate"
+    ]
+  },
+  "37": {
+    "answer": "Concrete driveway repair cost depends on the repair unit: **minor crack filling is $0.50–$3 per linear foot**, while HomeGuide’s concrete resurfacing benchmark is $3–$7 per square foot.",
+    "sections": [
+      {
+        "question": "What is concrete driveway repair cost by repair?",
+        "answer": "**Concrete driveway repair uses crack length for filling and affected area for resurfacing or slab work.**",
+        "text": "HomeGuide and Angi list concrete driveway crack repair at $0.50–$3 per linear foot. HomeGuide identifies minimum service fees of $100–$250; that is its named planning benchmark, not a fee every contractor charges. HomeGuide’s explanatory resurfacing range is $3–$7 per square foot. Compare the measured damage and scope before choosing a repair line."
+      },
+      {
+        "question": "Why do driveway concrete repair costs differ?",
+        "answer": "**Driveway concrete repair costs differ when the work addresses different defects.**",
+        "text": "Crack filling seals a measured crack; resurfacing covers an existing slab surface. Slab leveling and mudjacking address displacement and support rather than cosmetic surface texture. The presence of control joints, active movement, settlement, and drainage problems changes the repair decision. Fixr prices cracked-area filler and sealant at $2–$2.50 per square foot, a different unit and treatment from a linear crack-filling rate."
+      },
+      {
+        "question": "When is resurfacing the right scope?",
+        "answer": "**Resurfacing addresses the surface of a slab that remains structurally sound.**",
+        "text": "Angi lists resurfacing at $3–$5 per square foot, while Fixr lists $2.50–$4. Driveway Calculators selects HomeGuide’s named $3–$7 explanatory range and preserves those comparisons instead of averaging them. An overlay does not replace a damaged support system. Obtain an assessment of moving cracks and displaced slabs before selecting surface work."
+      },
+      {
+        "question": "When does slab replacement become the relevant comparison?",
+        "answer": "**Slab replacement becomes the comparison when the proposed repair does not address the slab or support failure.**",
+        "text": "The [concrete replacement cost guide](/replace-concrete-driveway-cost/) separates demolition from the new pour and explains bundled quotes. The [concrete driveway cost guide](/concrete-driveway-cost/) gives the new installation scope. Before requesting bids, measure crack length and affected area, photograph displacement and control joints, identify drainage symptoms, and confirm each quote’s minimum fee and repair method."
+      }
+    ],
+    "sourceIds": [
+      "concrete-hg-repair",
+      "concrete-angi-repair",
+      "concrete-fixr-repair",
+      "concrete-cn-lifespan"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "concrete driveway repair",
+        "placement": "first section"
+      },
+      {
+        "keyword": "concrete driveway crack repair",
+        "placement": "first section"
+      },
+      {
+        "keyword": "driveway concrete repair cost",
+        "placement": "second heading and answer use plural costs",
+        "variant": "driveway concrete repair costs",
+        "reason": "Uses the grammatical plural for a heading about multiple repair scopes."
+      }
+    ],
+    "unresolvedData": [
+      "Three equivalent linear-foot guides were not found: Fixr supplies a different cracked-area unit. Keep the comparison clear.",
+      "Local diagnosis and slab-leveling quote remain project-specific."
+    ]
+  },
+  "38": {
+    "answer": "Driveway repair cost depends on the defect, surface and work method. Small isolated damage, a worn surface and failed support need different repairs. Price the actual crack, pothole or affected section before choosing patching, resurfacing or driveway replacement.",
+    "sections": [
+      {
+        "question": "Which driveway repair prices match the defect?",
+        "answer": "Match the unit price to the measured repair and its method.",
+        "text": "Angi lists asphalt crack filling at $1–$3 per linear foot; HomeGuide lists hot patching at $2–$5 per square foot and pothole repair at $100–$400 per pothole. These prices describe different operations. A per-pothole price is not converted into a per-area rate without a defined repair size.",
+        "sourceIds": [
+          "asphalt:angi-repair",
+          "asphalt:hg-repair",
+          "asphalt:angi-asphalt",
+          "concrete:hg-repair",
+          "concrete:angi-repair",
+          "surfaces:spruce-gravel"
+        ]
+      },
+      {
+        "question": "What changes concrete repair costs?",
+        "answer": "Crack treatment, slab movement and support problems require separate scopes.",
+        "text": "The selected minor concrete crack-repair benchmark is $0.50–$3 per linear foot from HomeGuide and Angi. A wider structural crack or settling slab is not the same service. Describe movement, uneven edges and water collection to the contractor. Product label limits determine whether a filler suits the measured crack; a surface filler does not stabilize moving soil.",
+        "sourceIds": [
+          "asphalt:angi-repair",
+          "asphalt:hg-repair",
+          "asphalt:angi-asphalt",
+          "concrete:hg-repair",
+          "concrete:angi-repair",
+          "surfaces:spruce-gravel"
+        ]
+      },
+      {
+        "question": "When does resurfacing differ from patching?",
+        "answer": "Resurfacing treats a broader wearing surface over suitable support.",
+        "text": "The asphalt overlay guide uses Angi’s $3–$7 per square foot range, while methods involving removal of the old top layer have separate prices. Confirm the preparation and finished thickness. A new surface does not remove the cause of reappearing cracks or persistent drainage damage.",
+        "sourceIds": [
+          "asphalt:angi-repair",
+          "asphalt:hg-repair",
+          "asphalt:angi-asphalt",
+          "concrete:hg-repair",
+          "concrete:angi-repair",
+          "surfaces:spruce-gravel"
+        ]
+      },
+      {
+        "question": "How are gravel problems repaired?",
+        "answer": "Regrading and replenishing material restore the shape and surface where those operations address the defect.",
+        "text": "Document potholes, rutting, displaced stone and the runoff path. Clear obstructed drainage before covering the area with fresh gravel. No universal gravel repair depth or annual budget is assumed. Use the material calculator for each specified layer, then obtain separate quotes for hauling, material and equipment.",
+        "sourceIds": [
+          "asphalt:angi-repair",
+          "asphalt:hg-repair",
+          "asphalt:angi-asphalt",
+          "concrete:hg-repair",
+          "concrete:angi-repair",
+          "surfaces:spruce-gravel"
+        ]
+      },
+      {
+        "question": "When is replacement the next comparison?",
+        "answer": "Replacement belongs in the discussion when the damaged surface or support needs removal and rebuilding.",
+        "text": "Use the asphalt and concrete repair guides for method-specific detail. The replacement guide compares demolition, disposal, subbase assessment and the new surface. The contractor’s inspection establishes the repair scope; a price table alone does not diagnose pavement failure.",
+        "sourceIds": [
+          "asphalt:angi-repair",
+          "asphalt:hg-repair",
+          "asphalt:angi-asphalt",
+          "concrete:hg-repair",
+          "concrete:angi-repair",
+          "surfaces:spruce-gravel"
+        ]
+      }
+    ],
+    "sourceIds": [
+      "asphalt-angi-repair",
+      "asphalt-hg-repair",
+      "asphalt-angi-asphalt",
+      "concrete-hg-repair",
+      "concrete-angi-repair",
+      "surfaces-spruce-gravel"
+    ],
+    "keywordVariants": [
+      "driveway repair"
+    ],
+    "unresolvedData": [
+      "Universal gravel repair unit rate",
+      "Structural repair inspection"
+    ]
+  },
+  "39": {
+    "answer": "Driveway replacement cost includes the old surface and the new construction scope. Angi lists asphalt replacement at $8–$15 per square foot including removal. Plain concrete, gravel and paver installation benchmarks describe different work and need a separate removal check.",
+    "sections": [
+      {
+        "question": "How much is it to replace a driveway?",
+        "answer": "A defensible estimate uses measured area and prices for the selected surface and included operations.",
+        "text": "For concrete, the researched plain-installation benchmark is $6–$10 per square foot and the selected demolition range is $2–$6 per square foot. The calculator adds these components when demolition is required; a combined figure is identified as a calculation, not a separately observed national quote. No hand-entered example total replaces the calculator output.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "concrete:hg-concrete",
+          "concrete:hg-removal",
+          "surfaces:homeguide-gravel",
+          "surfaces:homeguide-pavers"
+        ]
+      },
+      {
+        "question": "How much does it cost to replace a driveway with another surface?",
+        "answer": "Switching materials changes demolition, subbase work and the new surface specification.",
+        "text": "Selected installed benchmarks are $4–$10 per square foot for a new gravel driveway and $10–$30 for a generic paver driveway. Those rates do not establish the cost of every material change. An old asphalt surface, reinforced concrete slab and failed paver base have different removal and disposal requirements.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "concrete:hg-concrete",
+          "concrete:hg-removal",
+          "surfaces:homeguide-gravel",
+          "surfaces:homeguide-pavers"
+        ]
+      },
+      {
+        "question": "What belongs in demolition and hauling?",
+        "answer": "The quote describes breaking up the old surface, loading, hauling and disposal.",
+        "text": "Identify the pavement material, thickness, reinforcement and access restrictions. Ask whether disposal fees and protection of nearby utilities are included. Do not add demolition again to an asphalt replacement quote that already covers it. Separately priced drainage corrections or substantial excavation need an explicit scope.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "concrete:hg-concrete",
+          "concrete:hg-removal",
+          "surfaces:homeguide-gravel",
+          "surfaces:homeguide-pavers"
+        ]
+      },
+      {
+        "question": "How does subbase condition change driveway replacement cost?",
+        "answer": "Rebuilding failed support is separate from merely changing the wearing surface.",
+        "text": "The installer checks support, compaction, drainage and required finished elevation. An asphalt overlay on a sound existing driveway differs from replacement after removal. Use the repaving and concrete replacement guides to compare those operations, then enter the measured sections in the surface comparison calculator. Obtain a local written quote for the work the national benchmark does not specify. An estimate identifies assumptions; it does not promise the contractor’s final price.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "concrete:hg-concrete",
+          "concrete:hg-removal",
+          "surfaces:homeguide-gravel",
+          "surfaces:homeguide-pavers"
+        ]
+      }
+    ],
+    "sourceIds": [
+      "asphalt-angi-asphalt",
+      "concrete-hg-concrete",
+      "concrete-hg-removal",
+      "surfaces-homeguide-gravel",
+      "surfaces-homeguide-pavers"
+    ],
+    "keywordVariants": [
+      "driveway replacement",
+      "how much is it to replace a driveway",
+      "how much does it cost to replace a driveway"
+    ],
+    "unresolvedData": [
+      "Complete national cross-surface replacement range",
+      "Local subbase remediation quote"
+    ]
+  },
+  "46": {
+    "answer": "Standard driveway width is a planning question governed by vehicle access, parking arrangement and local rules. There is no single nationwide required width for all one-car, two-car and three-car driveways. Measure the usable width and length, then verify the approach and parking requirements with the relevant authority.",
+    "sections": [
+      {
+        "question": "What sets standard driveway width?",
+        "answer": "The local access rules and the vehicles using the driveway establish the required arrangement.",
+        "text": "Portland’s residential rule allows 9–12 feet for a single-width driveway serving specified small residential structures. It also allows a double-width driveway up to 20 feet for that category. Those are Portland-specific provisions, not national design standards. Los Angeles regulates the driveway apron by zoning and curb-line measurement; an apron dimension is not interchangeable with interior parking width.",
+        "sourceIds": [
+          "surfaces:portland-width",
+          "surfaces:la-width"
+        ]
+      },
+      {
+        "question": "How does standard driveway size differ from usable parking space?",
+        "answer": "Usable parking needs room for the vehicle and the intended movement around it.",
+        "text": "A boundary measurement does not establish door clearance or turning room. Record fixed edges, garage openings, landscaping and obstacles. Distinguish the one-car access lane from a two-car parking pad. A three-car arrangement needs a layout check instead of automatically multiplying a narrow lane width.",
+        "sourceIds": [
+          "surfaces:portland-width",
+          "surfaces:la-width"
+        ]
+      },
+      {
+        "question": "Where does a turnaround fit in the measurement?",
+        "answer": "Include a turnaround as a distinct measured section when it lies outside the main driveway rectangle.",
+        "text": "Mark the perimeter and avoid counting overlapping areas twice. For a taper, record the width at each end. Use the driveway cost calculator to convert the measured sections into square feet and cost assumptions. The asphalt calculator uses the same area with specified thickness and density to calculate material quantity.",
+        "sourceIds": [
+          "surfaces:portland-width",
+          "surfaces:la-width"
+        ]
+      },
+      {
+        "question": "What belongs in the before-order checklist?",
+        "answer": "Confirm measured boundaries, intended vehicles, drainage and local access requirements.",
+        "text": "Check whether the contractor’s dimensions describe the interior surface, curb opening or flared approach. Preserve pedestrian access and required clearances according to local rules. Ask the installer to explain the proposed grade and where runoff exits. Source-linked local examples illustrate the differences between jurisdictions; they do not authorize construction elsewhere. Cost and quantity examples are generated by the calculator from the entered dimensions, with no hand-entered area totals.",
+        "sourceIds": [
+          "surfaces:portland-width",
+          "surfaces:la-width"
+        ]
+      }
+    ],
+    "sourceIds": [
+      "surfaces-portland-width",
+      "surfaces-la-width"
+    ],
+    "keywordVariants": [
+      "standard driveway width",
+      "standard driveway size"
+    ],
+    "unresolvedData": [
+      "Nationwide width standard",
+      "Local parking and turning requirements"
+    ]
+  },
+  "35": {
+    "answer": "The concrete calculator converts slab area and thickness into cubic yards and uses the selected bag’s finished yield to calculate full bags.",
+    "sections": [
+      {
+        "question": "How do you calculate concrete yards?",
+        "answer": "Multiply area by thickness in feet and divide by 27.",
+        "text": "The concrete slab calculator uses the flat slab footprint and its finished thickness. A concrete pad calculator follows the same geometry; thicker edges or separate footings need their own measured quantities. To calculate yards of concrete for an irregular outline, calculate its sections and add their volumes. The answer to “how do I calculate yards of concrete?” comes from those dimensions, not the dry weight printed on a bag.",
+        "sourceIds": []
+      },
+      {
+        "question": "How do you calculate how much concrete you need?",
+        "answer": "Use the measured volume plus the selected ordering allowance.",
+        "text": "Waste allowance accounts for your chosen contingency, while thickness remains the project specification. NRMCA discusses ordering additional material; the selected source guidance stays visible. A zero allowance excludes extra volume rather than recommending an exact-volume purchase. This material calculator for a concrete slab does not select reinforcement, strength, joint layout or a structural design.",
+        "sourceIds": [
+          "nrmca-cip31",
+          "sakrete-slab",
+          "ozinga-ordering"
+        ]
+      },
+      {
+        "question": "How many bags of concrete do I need?",
+        "answer": "Divide the required cubic feet by the exact product yield and round up to whole bags.",
+        "text": "The concrete bag calculator uses finished mixed yield, not bag mass divided by a generic concrete density. QUIKRETE Concrete Mix 1101 lists about 0.60 cubic foot for its 80 lb bag. Sakrete’s matching product information provides a cross-check, while other product sizes retain their own label yields. A bag-concrete calculator needs the product name as well as nominal bag weight. The rounded bag count is separate from the unrounded volume.",
+        "sourceIds": [
+          "quikrete-mix",
+          "sakrete-mix",
+          "cts-mix"
+        ]
+      },
+      {
+        "question": "How does this concrete calculator for a slab handle delivery?",
+        "answer": "Ready-mix uses a cubic-yard order and bagged concrete uses a full-bag count.",
+        "text": "A concrete yards calculator does not turn a supplier’s short-load billing minimum into physical concrete required. Enter the actual minimum and fee where relevant, and confirm pour access and unloading arrangements with the supplier. A concrete calculator with bags is useful for comparing packaged material with ready-mix volume, but those purchase units have different logistics.",
+        "sourceIds": []
+      },
+      {
+        "question": "What needs checking before a concrete order?",
+        "answer": "Confirm the slab dimensions, finished depth, selected mix and purchase rounding.",
+        "text": "For a concrete calculator used for a slab, keep each thicker section distinct from the flat field. The [concrete cost estimator](/concrete-driveway-cost-calculator/) prices driveway scope, while the [concrete cost guide](/concrete-driveway-cost/) explains labor and preparation around the measured volume. A bags-of-concrete calculation alone excludes those installation charges.",
+        "sourceIds": []
+      }
+    ],
+    "sourceIds": [
+      "concrete-quikrete-mix",
+      "concrete-sakrete-mix",
+      "concrete-cts-mix",
+      "concrete-nrmca-cip31",
+      "concrete-sakrete-slab",
+      "concrete-ozinga-ordering"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "calculator concrete yards",
+        "variant": "concrete yards calculator"
+      },
+      {
+        "keyword": "how to calculate concrete",
+        "variant": "How do you calculate concrete yards?"
+      },
+      {
+        "keyword": "how to calculate concrete yards",
+        "variant": "How do you calculate concrete yards?"
+      },
+      {
+        "keyword": "how to calculate yards of concrete",
+        "variant": "calculate yards of concrete"
+      },
+      {
+        "keyword": "how do you calculate how much concrete you need",
+        "variant": "How do you calculate how much concrete you need?"
+      },
+      {
+        "keyword": "concrete calculator bags",
+        "variant": "concrete calculator with bags"
+      },
+      {
+        "keyword": "bag concrete calculator",
+        "variant": "bag-concrete calculator"
+      },
+      {
+        "keyword": "bags of concrete calculator",
+        "variant": "bags-of-concrete calculation"
+      },
+      {
+        "keyword": "concrete bags calculator",
+        "variant": "concrete bag calculator"
+      },
+      {
+        "keyword": "concrete calculator slab",
+        "variant": "concrete calculator for a slab"
+      },
+      {
+        "keyword": "concrete calculator for slab",
+        "variant": "concrete calculator for a slab"
+      },
+      {
+        "keyword": "material calculator for concrete slab",
+        "variant": "material calculator for a concrete slab"
+      }
+    ],
+    "unresolvedData": [],
+    "requiredEntities": [
+      "cubic yards",
+      "bags",
+      "thickness",
+      "slab",
+      "waste"
+    ]
+  },
+  "36": {
+    "answer": "The paver calculator separates paver counts, base volume and bedding sand volume from the measured area and the dimensions you enter.",
+    "sections": [
+      {
+        "question": "How do you calculate pavers for an area?",
+        "answer": "Divide square feet by one paver’s covered area, then apply the entered waste allowance and round up.",
+        "text": "Enter the paver dimensions and use the layout’s actual coverage where the product specifies it. Cuts, borders and pattern modules affect the purchase quantity. A zero allowance excludes extra pavers; it is not a recommendation for a cut-intensive layout.",
+        "sourceIds": []
+      },
+      {
+        "question": "What does the paver base calculator measure?",
+        "answer": "It measures only the base layer from its footprint and depth.",
+        "text": "Calculate the base separately from the blocks and bedding sand. A base that extends beyond the paved face needs its own measured footprint. The Concrete Masonry and Hardscapes Association connects base design to loading, soil and drainage conditions, so the quantity tool does not prescribe one depth for every driveway or patio.",
+        "sourceIds": [
+          "cmha-base"
+        ]
+      },
+      {
+        "question": "How do you calculate paver sand?",
+        "answer": "Multiply the sand footprint by the bedding depth in feet and divide by 27 for cubic yards.",
+        "text": "The paver sand calculator estimates bedding sand volume rather than jointing sand coverage. Jointing material requires the exact manufacturer’s coverage for the paver geometry and joint width. Keep its label separate from the bulk bedding layer. Calculate paver sand after deciding which layer the measurement represents.",
+        "sourceIds": []
+      },
+      {
+        "question": "Does a cost calculator for a paver patio price a driveway?",
+        "answer": "A material quantity and supplier price do not equal a full installed driveway quote.",
+        "text": "Driveway loading and base requirements differ from a pedestrian patio. The [paver driveway cost guide](/paver-driveway-cost/) keeps installation scope and material-specific price ranges separate from this quantity takeoff. Include delivery and any actual incremental work without adding ordinary base preparation twice to an installed benchmark.",
+        "sourceIds": []
+      },
+      {
+        "question": "What needs checking before buying pavers?",
+        "answer": "Confirm the product dimensions, pattern, base specification, sand layer and full-unit rounding.",
+        "text": "Ask the supplier for pallet or pack size and delivery access. Calculate unusual borders and separately measured shapes as their own sections. Record the selected allowance and keep pavers, base and bedding sand distinct so one result does not hide the other order quantities.",
+        "sourceIds": []
+      }
+    ],
+    "sourceIds": [
+      "surfaces-cmha-base"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "cost calculator for paver patio",
+        "variant": "cost calculator for a paver patio"
+      }
+    ],
+    "unresolvedData": [
+      "Product-specific paver dimensions, pack size and jointing-sand coverage remain user inputs."
+    ],
+    "requiredEntities": [
+      "pavers",
+      "square feet",
+      "base",
+      "bedding sand",
+      "waste"
+    ]
+  },
+  "40": {
+    "answer": "Laying an asphalt driveway consists of preparing the subgrade and base, placing hot mix asphalt, and rolling it to the specified compacted section.",
+    "sections": [
+      {
+        "question": "What gets prepared before the paving crew arrives?",
+        "answer": "The supporting ground, base course, and drainage need a defined preparation scope.",
+        "text": "Blacktop Concepts describes removal of unsuitable material, correction of soft areas, and compaction before paving. Identify the final levels at the garage, street connection, and edges. Record whether excavation and disposal belong to the paving quote or a separate preparatory contract. Existing water problems belong in that scope before another surface is placed."
+      },
+      {
+        "question": "How are thickness and tons established?",
+        "answer": "The project section establishes asphalt depth; measured dimensions establish the area.",
+        "text": "CAPA’s residential example has 3 inches of asphalt over an aggregate base, while other construction sections differ. Measure the driveway’s shape and identify tapered or irregular sections. The asphalt calculator converts the specified compacted section into tons using an editable named density. A saved quantity estimate does not replace a pavement design or a supplier’s mix recommendation."
+      },
+      {
+        "question": "Why are temperature and rolling important?",
+        "answer": "Hot mix needs placement and compaction while it remains workable.",
+        "text": "FHWA describes traditional hot-mix production temperatures of 300–350°F; this is plant mixing information, not a universal field paving target. The producer’s mix instructions and the crew’s construction plan govern placement and rolling. Separate the paving temperature from weather limits on later sealing. Cooling, curing, and vehicle access are different subjects, so obtain the crew’s written opening instructions."
+      },
+      {
+        "question": "What belongs in the DIY versus hire comparison?",
+        "answer": "Compare the complete job scope rather than material cost alone.",
+        "text": "Angi’s new-asphalt benchmark is $7–$13 per square foot including installation without major grading. A DIY purchase of material excludes transport, placing equipment, rolling, and corrective work. No verified universal DIY total is supplied here. Compare three responsibilities: preparation, material delivery and placement, and finished compaction. The cost guide explains pricing assumptions; the thickness guide distinguishes layers. Keep paving equipment operation with the planned qualified crew and confirm access before delivery."
+      }
+    ],
+    "sourceIds": [
+      "asphalt-blacktop-asphalt",
+      "asphalt-angi-asphalt",
+      "defaults-capa-driveway",
+      "general-root-fhwa-hma",
+      "general-root-napa-mixtures"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [
+      "Supplier field temperature specification; crew opening instructions; complete DIY price"
+    ]
+  },
+  "41": {
+    "answer": "Hot mix asphalt combines mineral aggregate with asphalt binder at a plant and is placed and compacted while workable.",
+    "sections": [
+      {
+        "question": "What goes into the mixture?",
+        "answer": "The aggregate provides the mineral structure and the asphalt binder holds the mixture together.",
+        "text": "FHWA describes asphalt pavement mixture as approximately 90–95% aggregate by weight. That is a composition description rather than a recipe for a homeowner to reproduce. The National Asphalt Pavement Association distinguishes mixture types and production methods. Specify the producer’s named mix for the driveway instead of treating every asphalt product as interchangeable."
+      },
+      {
+        "question": "What does hot mix mean?",
+        "answer": "The term describes a heated production and construction process.",
+        "text": "FHWA’s discussion places traditional HMA mixing temperature at 300–350°F. The producer’s mix instructions govern its actual production and field requirements. Warm mix uses a different temperature process, and packaged cold patch has different application instructions. Plant mixing temperature is not a driveway surface temperature or a weather threshold for applying sealer."
+      },
+      {
+        "question": "Which density belongs in a tonnage estimate?",
+        "answer": "Use a named mixture estimating density or the producer’s project-specific value.",
+        "text": "The Asphalt Institute gives an in-place range of 142–148 pounds per cubic foot and uses 148 in its example. That value is an editable planning assumption. Bulk aggregate, reclaimed millings, and a compacted asphalt mixture describe different material conditions. Substituting one for another changes an order estimate without changing the driveway’s measured dimensions."
+      },
+      {
+        "question": "How does the mixture become a driveway?",
+        "answer": "The crew places the workable mix over the specified support and compacts it to the planned section.",
+        "text": "Thickness, supporting layers, and drainage form part of that construction scope. Use the asphalt calculator for geometric volume and tonnage after selecting the compacted section. The material weights page compares named density assumptions. Do not add an automatic compaction percentage when final compacted depth and in-place density are already used. Keep supplier product, temperature instructions, and order quantity with the quote so the same assumptions are available to the paving crew."
+      }
+    ],
+    "sourceIds": [
+      "general-root-fhwa-hma",
+      "general-root-napa-mixtures",
+      "general-root-txapa-guide",
+      "defaults-ai-faq",
+      "defaults-mapa-asphalt"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [
+      "Actual producer mix design, density, field temperature, and project section"
+    ]
+  },
+  "44": {
+    "answer": "Asphalt driveway maintenance consists of inspections, crack filling, cleaning, drainage checks, and condition-based patching or sealcoating.",
+    "sections": [
+      {
+        "question": "What belongs in a routine inspection?",
+        "answer": "Look for new cracks, loose edges, surface failures, and blocked drainage.",
+        "text": "Blacktop Concepts recommends attending to cracking, standing water, spills, and localized deterioration. Photograph changes so repeat problems are easier to identify. Edging keeps the boundary visible for inspection; it does not repair a weak base. Check where runoff leaves the driveway and record recurring puddles for the contractor rather than covering them with sealer."
+      },
+      {
+        "question": "When does crack filling enter the schedule?",
+        "answer": "Assess cracks when they appear instead of waiting for a whole-driveway maintenance appointment.",
+        "text": "Measure length and width, and distinguish an isolated line from interconnected alligator cracking. Angi’s crack-filling benchmark is $1–$3 per linear foot, with minimum charges affecting small jobs. The crack filler guide explains label compatibility. The repair guide distinguishes that linear measurement from patch area and pothole project totals, so every maintenance item retains its own pricing unit."
+      },
+      {
+        "question": "How is a sealing schedule chosen?",
+        "answer": "Sealing follows the selected product instructions and the driveway’s wear and condition.",
+        "text": "Published guide intervals conflict; no universal schedule is asserted. Henry HE200’s linked technical sheet requires at least 6 months before coating new asphalt, but that is a named product requirement. Confirm the current label before buying. The sealcoating cost guide covers professional application, and the sealer guide explains products without turning a warranty label into proof of service life."
+      },
+      {
+        "question": "What is the annual upkeep cost?",
+        "answer": "The reviewed sources do not establish a complete annual maintenance cost.",
+        "text": "A sealing application price covers one service, not every year’s inspection, cleaning, crack filling, patching, or drainage work. Do not divide a guide price by an arbitrary interval and present it as sourced annual upkeep. Keep a maintenance record with three details: the material used, the treatment date, and the repaired area. A recurrence in the same location is useful information for the next contractor assessment. Compare matched scopes when planning maintenance expenditure."
+      }
+    ],
+    "sourceIds": [
+      "asphalt-blacktop-asphalt",
+      "asphalt-angi-repair",
+      "defaults-henry-he200"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [
+      "Annual upkeep cost; current named-product sealing schedule"
+    ]
+  },
+  "45": {
+    "answer": "Driveway drainage needs a defined path for runoff from the surface to a suitable outlet. Grading, surface slope and the drainage system work together. A drain without an effective outlet does not solve standing water or protect the pavement support.",
+    "sections": [
+      {
+        "question": "What determines driveway drainage and the required slope?",
+        "answer": "The finished elevations, runoff route and local requirements determine the design.",
+        "text": "Do not use one national slope number for every driveway. A cross-slope or crown moves water across the surface; a longitudinal grade describes the driveway’s rise along its length. FHWA’s 4–5 percent crown guidance applies to unpaved roads, not a universal residential driveway rule. The driveway calculator’s slope input adjusts measured geometry; it does not approve a drainage design.",
+        "sourceIds": [
+          "general:root-nds-drainage",
+          "general:root-homeguide-drainage",
+          "general:root-angi-drainage",
+          "general:root-wsc-drainage",
+          "surfaces:fhwa-unpaved"
+        ]
+      },
+      {
+        "question": "When does a trench drain suit the problem?",
+        "answer": "A surface channel intercepts runoff where water flows across its inlet.",
+        "text": "NDS describes capturing driveway surface water and conveying it to a suitable discharge point. Position, inlet capacity, outlet level and maintenance access belong in the design. A French drain addresses a different subsurface drainage problem; selecting one does not replace the need to understand where surface runoff goes.",
+        "sourceIds": [
+          "general:root-nds-drainage",
+          "general:root-homeguide-drainage",
+          "general:root-angi-drainage",
+          "general:root-wsc-drainage",
+          "surfaces:fhwa-unpaved"
+        ]
+      },
+      {
+        "question": "How does a culvert relate to the driveway?",
+        "answer": "A culvert carries drainage through an approved crossing when that configuration is needed.",
+        "text": "The route, outlet and road authority requirements control the crossing. Obtain the site-specific pipe specification and permit requirements rather than adopting a nationwide diameter. Protect nearby properties and building entrances when changing the runoff path.",
+        "sourceIds": [
+          "general:root-nds-drainage",
+          "general:root-homeguide-drainage",
+          "general:root-angi-drainage",
+          "general:root-wsc-drainage",
+          "surfaces:fhwa-unpaved"
+        ]
+      },
+      {
+        "question": "What does channel installation cost?",
+        "answer": "HomeGuide’s driveway-specific range is $400–$2,400 per project.",
+        "text": "Other researched scopes differ: Angi reports $3,000–$9,000 and WSC reports $400–$2,500. The guide retains these differences instead of averaging them. An installed project price is not the price of a manufacturer’s kit alone; confirm excavation, outlet connection, restoration and cleanup.",
+        "sourceIds": [
+          "general:root-nds-drainage",
+          "general:root-homeguide-drainage",
+          "general:root-angi-drainage",
+          "general:root-wsc-drainage",
+          "surfaces:fhwa-unpaved"
+        ]
+      },
+      {
+        "question": "Which pavement defects need drainage checked first?",
+        "answer": "Persistent pooling, eroding edges and repeated soft areas require the water route to be assessed.",
+        "text": "Standing runoff softens support and contributes to potholes or settling. Clear blocked inlets and document where water collects before ordering surface repairs. The driveway repair guide separates surface treatments from support problems; the gravel construction guide explains why grading and renewal belong together.",
+        "sourceIds": [
+          "general:root-nds-drainage",
+          "general:root-homeguide-drainage",
+          "general:root-angi-drainage",
+          "general:root-wsc-drainage",
+          "surfaces:fhwa-unpaved"
+        ]
+      }
+    ],
+    "sourceIds": [
+      "general-root-nds-drainage",
+      "general-root-homeguide-drainage",
+      "general-root-angi-drainage",
+      "general-root-wsc-drainage",
+      "surfaces-fhwa-unpaved"
+    ],
+    "keywordVariants": [
+      "driveway drainage",
+      "driveway slope"
+    ],
+    "unresolvedData": [
+      "Site-specific drainage grade",
+      "Culvert size and local approval"
+    ]
+  },
+  "47": {
+    "answer": "To repair cracks in a concrete driveway, **measure the crack, prepare sound clean concrete, and apply a filler matched to the product’s stated width, depth, and exposure limits**.",
+    "sections": [
+      {
+        "question": "How do I repair cracks in a concrete driveway?",
+        "answer": "**Repair driveway cracks with a product selected for the measured crack and surface orientation.**",
+        "text": "Measure crack width and depth before buying filler. Remove loose material and contaminants as directed by the product label. A flexible filler seals a crack; a patch compound repairs a different missing-material scope. Slab replacement addresses failed slabs rather than merely covering the opening. The [concrete driveway repair cost guide](/concrete-driveway-repair-cost/) separates crack filling, resurfacing, and replacement costs. The selected product’s instructions explain how to repair driveway cracks within its stated application limits."
+      },
+      {
+        "question": "How do I repair large cracks in a concrete driveway?",
+        "answer": "**Large or moving cracks require assessment before cosmetic filling.**",
+        "text": "Measure any displacement and inspect the adjacent slab and drainage. Select a product only after confirming the substrate remains suitable for that repair. A backer rod controls the sealant depth where the product instructions require it. The [driveway crack filler guide](/driveway-crack-filler/) compares filler applications rather than treating every crack material as interchangeable."
+      },
+      {
+        "question": "Which filler dimensions apply?",
+        "answer": "**Each manufacturer sets the dimensions for its own concrete crack product.**",
+        "text": "Sakrete Concrete Crack Filler lists cracks up to 1/2 inch wide and 1/4 inch deep. QUIKRETE’s retrieved Concrete Crack Seal sheet lists a 1/2-inch maximum width and calls for backer material to limit application depth; other Quikrete project guidance gives a narrower width, so use the current package instructions. Sika’s Sikaflex+ Crack Flex is self-leveling and intended for horizontal applications; its instructions prohibit use on slopes. Do not carry a product’s width limit into a general structural diagnosis."
+      },
+      {
+        "question": "How do I finish concrete driveway crack repair?",
+        "answer": "**Finish the repair by observing the selected product’s curing and weather restrictions.**",
+        "text": "Sika lists final cure at 3–5 days and application temperatures of 40–100°F. Quikrete’s retrieved Crack Seal sheet requires no expected rain within 24 hours and allows a second coat after 24 hours. These are product-specific instructions. Sakrete’s page contains conflicting traffic wording; use its current technical sheet rather than the promotional phrase. Confirm the crack geometry, orientation, substrate condition, and current label before starting. Those checks explain how to repair concrete driveway cracks without confusing sealing with slab repair."
+      }
+    ],
+    "sourceIds": [
+      "concrete-quikrete-crack",
+      "concrete-sakrete-crack",
+      "concrete-sika-crack",
+      "concrete-hg-repair",
+      "concrete-fixr-repair"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "how to repair cracks in concrete driveway",
+        "variant": "How do I repair cracks in a concrete driveway?",
+        "reason": "Adds missing article and forms a short question."
+      },
+      {
+        "keyword": "how to repair driveway cracks",
+        "placement": "first section"
+      },
+      {
+        "keyword": "how to repair concrete driveway",
+        "variant": "How do I repair cracks in a concrete driveway?",
+        "reason": "Clarifies crack-repair scope; avoids implying all structural repairs are DIY."
+      },
+      {
+        "keyword": "how to repair large cracks in concrete driveway",
+        "variant": "How do I repair large cracks in a concrete driveway?",
+        "reason": "Adds missing article."
+      },
+      {
+        "keyword": "how to repair concrete driveway cracks",
+        "placement": "closing section"
+      }
+    ],
+    "unresolvedData": [
+      "Current Quikrete width-label discrepancy and Sakrete traffic-time discrepancy; current package/TDS controls.",
+      "No universal structural-crack width threshold or return-to-vehicle-traffic time."
+    ]
+  },
+  "48": {
+    "answer": "Repair isolated asphalt cracks with a compatible labeled filler after cleaning; potholes and connected pavement failures need a different repair assessment.",
+    "sections": [
+      {
+        "question": "How do you identify the repair first?",
+        "answer": "Measure the crack and inspect the surrounding pavement before selecting a product.",
+        "text": "A narrow isolated crack differs from a pothole, sinking, or connected alligator cracking. Photograph the affected area and record whether water remains nearby. Blacktop Concepts explains that structural problems and drainage failures require attention beneath the surface. Instructions on how to repair asphalt driveway damage therefore start with identifying its condition, not with purchasing one filler for every defect."
+      },
+      {
+        "question": "Which filler fits a narrow crack?",
+        "answer": "Choose the labeled product for the pavement type and measured width.",
+        "text": "Latex-ite 2X is a cold-applied asphalt crack filler for cracks up to 1/2 inch wide. Its manufacturer instructs clearing debris, shaking the bottle, and dispensing through the spout. The measured width identifies whether that example fits; it is not a claim that the product is best. Keep the product’s cure time and weather instructions with your repair plan."
+      },
+      {
+        "question": "What changes when the damage is a pothole?",
+        "answer": "A pothole requires patch material and compaction rather than a narrow-crack dispensing method.",
+        "text": "QUIKRETE Permanent Blacktop Repair has its own thickness and repair-size limits. Sakrete Blacktop Patch has different placement limits, so instructions from the products are not interchangeable. The asphalt cold patch guide explains those differences. Follow the selected bag’s layer instructions and compact each layer before adding material; the repair remains a product-specific procedure."
+      },
+      {
+        "question": "When does professional assessment take priority?",
+        "answer": "Assessment takes priority when cracks connect, the surface sinks, or patching repeatedly fails.",
+        "text": "A filler does not establish a correction for weak support. The question of how to repair cracks in an asphalt driveway needs the same separation between surface treatment and foundation repair. Angi reports professional crack filling at $1–$3 per linear foot; the repair cost guide adds scope and minimum-fee context. Finish repairs and respect their product instructions before sealing. Compare three details in a repair quote: preparation, material, and treatment depth."
+      }
+    ],
+    "sourceIds": [
+      "asphalt-blacktop-asphalt",
+      "asphalt-angi-repair",
+      "defaults-dalton-2x",
+      "defaults-quikrete-patch",
+      "defaults-sakrete-patch"
+    ],
+    "keywordVariants": [
+      "how to repair cracks in asphalt driveway"
+    ],
+    "unresolvedData": [
+      "Product-specific cure/weather directions; structural assessment"
+    ]
+  },
+  "21": {
+    "answer": "The sealcoat calculator divides driveway area multiplied by the selected number of coats by the product’s coverage per gallon, then rounds up to full containers.",
+    "sections": [
+      {
+        "question": "How much sealer do I need?",
+        "answer": "Use area × coats / coverage per gallon to calculate gallons.",
+        "text": "Container count equals gallons divided by container size, rounded up. Keep the exact gallon quantity visible beside the full-container order. A driveway sealer calculator needs the product label because different sealers cover different areas and some require only one coat.",
+        "sourceIds": []
+      },
+      {
+        "question": "Which product coverage does this asphalt sealer calculator use?",
+        "answer": "Coverage comes from the named product and the existing surface condition.",
+        "text": "Latex-ite Ultra Shield lists 400–500 square feet per 4.75-gallon pail per coat for smooth or previously sealed asphalt, and 300–400 for rough, porous or never-sealed asphalt. The product options use the lower coverage bound for planning and retain both endpoints in the reference. A 4.75-gallon pail is not a 5-gallon container. Henry 200’s linked technical sheet gives 250–400 square feet per 5-gallon pail, while its webpage gives 250–500; that conflict stays visible. SealMaster Ultra gives 70–82 square feet per gallon per coat for its factory blend.",
+        "sourceIds": [
+          "latex-ultra",
+          "latex-ultra-page",
+          "henry-he200",
+          "henry-he200-page",
+          "master-ultra"
+        ]
+      },
+      {
+        "question": "How many coats belong in the calculation?",
+        "answer": "Use the coat count from the selected label rather than one universal setting.",
+        "text": "Latex-ite recommends two thin coats with 24 hours before recoating. Henry 200’s linked sheet says one coat only. SealMaster Ultra calls for at least two coats, with each coat dry before the next. A concentrate coverage figure is not interchangeable with a gallon of mixed material. Select custom coverage when your product or application differs.",
+        "sourceIds": [
+          "latex-ultra",
+          "henry-he200",
+          "master-ultra"
+        ]
+      },
+      {
+        "question": "What needs checking before buying sealcoat?",
+        "answer": "Confirm the exact product, container volume, pavement texture and application conditions.",
+        "text": "A quantity result does not establish a drying deadline. Each label sets its own temperature, rain window and traffic time. Clean the surface and complete the label’s crack and patch preparation before sealing. Read the [sealcoating cost guide](/driveway-sealcoating-cost/) to compare material quantity with professional preparation and application charges.",
+        "sourceIds": []
+      }
+    ],
+    "sourceIds": [
+      "defaults-latex-ultra",
+      "defaults-latex-ultra-page",
+      "defaults-henry-he200",
+      "defaults-henry-he200-page",
+      "defaults-master-ultra"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [],
+    "requiredEntities": [
+      "sealer",
+      "gallons",
+      "coverage per gallon",
+      "coats",
+      "container size"
+    ]
+  },
+  "22": {
+    "answer": "The asphalt millings calculator converts driveway area and depth into cubic yards and uses an editable supplier bulk weight to calculate tons of reclaimed asphalt pavement.",
+    "sections": [
+      {
+        "question": "How do you calculate asphalt millings?",
+        "answer": "Volume equals area × depth in feet, and tons equal cubic yards × the selected tons-per-yard factor.",
+        "text": "Divide cubic feet by 27 for cubic yards. Keep the finished layer depth separate from the loose quantity delivered. Reclaimed asphalt pavement retains asphalt binder and aggregate, but its delivered stockpile weight is different from the in-place density of fresh hot mix.",
+        "sourceIds": []
+      },
+      {
+        "question": "Which density belongs to millings?",
+        "answer": "Use the supplier’s factor for the delivered material and its stated condition.",
+        "text": "Anchorage Sand & Gravel lists 1-inch-minus RAP at about 2,800 lb per cubic yard, or 1.4 US short tons. It identifies these as stockpile weights that vary with moisture, texture and gradation. Lasalle lists millings and screened millings at 2,500 lb per yard, equivalent to 1.25 tons. Hello Gravel uses 1.4 as its planning conversion. The calculator’s named reference is editable; the difference between suppliers stays visible.",
+        "sourceIds": [
+          "anch-rap",
+          "lasalle",
+          "hello-millings"
+        ]
+      },
+      {
+        "question": "How does compaction change the order?",
+        "answer": "Compaction changes the volume relationship, so use a documented allowance for the actual product.",
+        "text": "A stockpile conversion applied to a compacted finished volume needs the supplier’s loose-to-finished adjustment. Do not add the same allowance twice. Zero excludes an extra adjustment; it is not a recommendation for uncompacted construction. FHWA publishes separate processed-RAP and compacted-density observations. Those conditions do not form one interchangeable default.",
+        "sourceIds": [
+          "fhwa-rap"
+        ]
+      },
+      {
+        "question": "What needs checking before delivery?",
+        "answer": "Confirm gradation, depth condition, purchase increment, truck capacity and the drop location.",
+        "text": "Ask whether the supplier sells screened or unscreened material and whether its quote is per ton or per yard. Use the [millings cost guide](/asphalt-millings-cost/) for driveway installation scope. Use the [asphalt calculator](/asphalt-calculator/) for fresh hot mix, whose compacted density and quantity assumptions differ.",
+        "sourceIds": []
+      }
+    ],
+    "sourceIds": [
+      "defaults-anch-rap",
+      "defaults-lasalle",
+      "defaults-hello-millings",
+      "defaults-fhwa-rap"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [],
+    "requiredEntities": [
+      "reclaimed asphalt pavement",
+      "tons",
+      "depth",
+      "compaction"
+    ]
+  },
+  "23": {
+    "answer": "The material weight chart records named density references for asphalt, concrete and individual aggregate products, with pounds per cubic foot and tons per cubic yard.",
+    "sections": [
+      {
+        "question": "What does the material list represent?",
+        "answer": "Each row is a sourced product or material condition, not one weight for every material with the same name.",
+        "text": "Asphalt density refers to an in-place mixture. Aggregate supplier conversions refer to bulk material with voids and varying moisture. Normal-weight concrete references describe concrete material rather than a truckload of loose demolition debris. Match that condition before using the chart to calculate weight.",
+        "sourceIds": []
+      },
+      {
+        "question": "What is asphalt weight per cubic foot?",
+        "answer": "The Asphalt Institute gives 142–148 pounds per cubic foot for an in-place asphalt mixture and uses 148 for quantity estimates.",
+        "text": "The weight of asphalt depends on its aggregate, binder and achieved compaction. Craig Paving uses a 148 lb-per-cubic-foot estimating value; Minnesota’s association uses a compacted spread factor. These assumptions stay named and editable instead of being averaged into an unexplained default.",
+        "sourceIds": [
+          "ai-faq",
+          "craig-asphalt",
+          "mapa-asphalt"
+        ]
+      },
+      {
+        "question": "How much does a yard of asphalt weigh?",
+        "answer": "Multiply the selected in-place asphalt density by 27 cubic feet to obtain pounds per cubic yard.",
+        "text": "Divide that weight by 2,000 to convert to US short tons. The calculator-generated conversion table shows the arithmetic for the selected source. A loose truck volume is not automatically the same as the completed compacted volume.",
+        "sourceIds": []
+      },
+      {
+        "question": "Why do gravel and concrete weights differ?",
+        "answer": "Different material structures and moisture conditions give different bulk or in-place densities.",
+        "text": "Two Rivers lists separate weights for crushed rock, pea gravel and washed round rock. Sutherland, Lyngso and Rock N Yard describe different road-base products. The concrete reference uses the named normal-weight basis, with an editable density. A universal gravel number hides these distinctions. Use the [gravel weight reference](/gravel-weight-per-cubic-yard/) for supplier comparisons and the [yard-to-ton converter](/cubic-yards-to-tons/) for a known volume.",
+        "sourceIds": [
+          "tworivers",
+          "sutherland",
+          "lyngso",
+          "rocknyard",
+          "nrmca-cip36",
+          "aci-terminology",
+          "fhwa-normalweight"
+        ]
+      }
+    ],
+    "sourceIds": [
+      "defaults-ai-faq",
+      "defaults-craig-asphalt",
+      "defaults-mapa-asphalt",
+      "defaults-tworivers",
+      "defaults-sutherland",
+      "defaults-lyngso",
+      "defaults-rocknyard",
+      "concrete-nrmca-cip36",
+      "concrete-aci-terminology",
+      "concrete-fhwa-normalweight"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [],
+    "requiredEntities": [
+      "density",
+      "pounds per cubic foot",
+      "tons per cubic yard",
+      "material list"
+    ]
+  },
+  "24": {
+    "answer": "Convert cubic yards to tons by multiplying volume by the density for the selected material type; convert tons back to yards by dividing by that same density.",
+    "sections": [
+      {
+        "question": "How do you convert cubic yards to tons?",
+        "answer": "Tons = cubic yards × US short tons per cubic yard.",
+        "text": "A cubic yard is volume and a short ton is mass, so density connects the units. When a supplier gives pounds per cubic yard, divide its figure by 2,000 before using a tons-per-yard input. A metric tonne is a different mass unit; this converter uses US short tons.",
+        "sourceIds": []
+      },
+      {
+        "question": "How many tons are in a cubic yard of gravel?",
+        "answer": "The number equals the actual product’s bulk density in tons per cubic yard.",
+        "text": "Two Rivers lists its 5/8-inch crushed rock at about 1.4 and its 1/2-inch washed pea gravel at about 1.3. Sutherland’s AB-minus road base is 1.43. These named references describe different materials. Use the supplier’s product conversion when it is available, and retain moisture or compaction conditions on the estimate.",
+        "sourceIds": [
+          "tworivers",
+          "sutherland"
+        ]
+      },
+      {
+        "question": "How many yards are in a ton of gravel?",
+        "answer": "Divide one US short ton by the selected tons-per-cubic-yard figure.",
+        "text": "This inverse formula answers a known-tonnage question without assuming that every ton fills one yard. The generated result displays the volume for the exact density entered. Use the same material type and condition in both directions; switching density mid-conversion changes the answer.",
+        "sourceIds": []
+      },
+      {
+        "question": "Does the converter include compaction and delivery?",
+        "answer": "The conversion alone changes units and does not choose a finished depth or delivery allowance.",
+        "text": "Use the [gravel calculator](/gravel-calculator/) to turn dimensions and depth into a material order. Use the [material weight chart](/material-weights/) to compare named density references. Confirm the supplier’s sale unit, scale weight and bulk-volume condition before comparing quotes. A converter result does not establish a truck’s permitted payload or a project’s structural specification.",
+        "sourceIds": []
+      }
+    ],
+    "sourceIds": [
+      "defaults-tworivers",
+      "defaults-sutherland"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "how many yards in a ton of gravel",
+        "variant": "How many yards are in a ton of gravel?"
+      },
+      {
+        "keyword": "how many tons in a cubic yard of gravel",
+        "variant": "How many tons are in a cubic yard of gravel?"
+      }
+    ],
+    "unresolvedData": [],
+    "requiredEntities": [
+      "cubic yards",
+      "tons",
+      "density",
+      "material type"
+    ]
+  },
+  "25": {
+    "answer": "The rock calculator converts the measured footprint and depth into cubic yards, then calculates tons using the supplier’s density for the selected landscape rock.",
+    "sections": [
+      {
+        "question": "How much rock do I need?",
+        "answer": "Calculate the volume of the layer you are filling, then apply the matching bulk weight.",
+        "text": "A “how much rock do I need?” calculator starts with square feet and depth, not the name of the rock alone. Cubic yards = area × (depth in inches / 12) / 27. Tons = cubic yards × tons per cubic yard. Split an irregular bed into measured sections and add them rather than guessing one width.",
+        "sourceIds": []
+      },
+      {
+        "question": "How does a river rock calculator differ from a crushed rock calculator?",
+        "answer": "The geometry is the same, but the product weight and intended use differ.",
+        "text": "Rounded river rock and angular crushed rock have different shapes and grading. Two Rivers lists 3/4-inch washed round rock at about 1.3 US short tons per yard and 5/8-inch crushed top course at about 1.4. Three Z gives about 1.4 for its washed river gravel family. These are named supplier references rather than a single weight for every river stone. A “how much river rock do I need?” calculator needs the rock size, coverage depth and the actual product factor.",
+        "sourceIds": [
+          "tworivers",
+          "threez-river"
+        ]
+      },
+      {
+        "question": "What affects a landscape rock calculator result?",
+        "answer": "Depth, grading, moisture and the entered allowance affect the result.",
+        "text": "The measured depth represents the rock layer rather than every material underneath it. Choose the supplier reference that matches the rock on your quote. Zero allowance leaves volume unadjusted; it does not state that installation has no settling or material loss. Large decorative pieces and boulders need a supplier-specific coverage method rather than an automatic small-gravel assumption.",
+        "sourceIds": []
+      },
+      {
+        "question": "What needs checking before ordering rock?",
+        "answer": "Confirm the selected product, its sale unit and the rounded order quantity.",
+        "text": "Ask whether the price is per ton, loose cubic yard, bag or container. Enter the supplier’s purchase increment and truck capacity when those apply. The [gravel calculator](/gravel-calculator/) handles another single material layer; the [gravel driveway calculator](/gravel-driveway-calculator/) separates base and surface quantities. River rock stays on this page as a named material option, with its own density reference.",
+        "sourceIds": []
+      }
+    ],
+    "sourceIds": [
+      "defaults-tworivers",
+      "defaults-threez-river"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "how much rock do i need calculator",
+        "variant": "“how much rock do I need?” calculator"
+      },
+      {
+        "keyword": "how much river rock do i need calculator",
+        "variant": "“how much river rock do I need?” calculator"
+      }
+    ],
+    "unresolvedData": [],
+    "requiredEntities": [
+      "landscape rock",
+      "cubic yards",
+      "depth",
+      "tons"
+    ]
+  },
+  "27": {
+    "answer": "Calculate pea gravel in cubic yards from area and depth, then convert that volume to tons using a named supplier density.",
+    "sections": [
+      {
+        "question": "How do you calculate pea gravel?",
+        "answer": "Multiply the measured footprint by depth in feet and divide by 27 for cubic yards.",
+        "text": "Calculating pea gravel uses the same volume formula as other aggregate, but its weight factor belongs to the actual small rounded product. A “how much pea gravel do I need?” calculator needs layer depth as well as length and width. Measure separate sections for curves or a widening bed.",
+        "sourceIds": []
+      },
+      {
+        "question": "Which density belongs to pea gravel?",
+        "answer": "Use the product’s listed bulk weight rather than a generic crushed-stone assumption.",
+        "text": "Two Rivers lists 1/2-inch washed pea gravel at about 2,600 lb per cubic yard, equivalent to 1.3 US short tons. Lasalle’s pea gravel factor is 1.35; Three Z’s #8 washed river gravel is about 1.4. The tool keeps the selected supplier visible and density editable. Moisture and grading change actual delivered weight.",
+        "sourceIds": [
+          "tworivers",
+          "lasalle",
+          "threez-river"
+        ]
+      },
+      {
+        "question": "How do you calculate quantities for paths and patios?",
+        "answer": "Calculate only the pea-gravel surface layer, with its own footprint and depth.",
+        "text": "Paths and patios contain different underlying layers, so the surface order excludes their base unless you calculate it separately. A quantity result does not establish a structural base design or certify pea gravel for vehicle loading. Enter an allowance only when your measurement contingency or supplier’s loose-to-finished adjustment is known. Zero excludes extra quantity; it is not a blanket construction recommendation.",
+        "sourceIds": []
+      },
+      {
+        "question": "Does this pea gravel cost calculator include installation?",
+        "answer": "Material quantity and an entered supplier price describe the rock purchase, not an installed driveway quote.",
+        "text": "Compare the rounded tons or cubic yards with the price unit on the supplier quote. Confirm delivery fees, minimum order and drop access separately. Use the [gravel cost guide](/gravel-driveway-cost/) for full driveway scope, and the [gravel calculator](/gravel-calculator/) to compare a different material without reusing the pea-gravel factor.",
+        "sourceIds": []
+      }
+    ],
+    "sourceIds": [
+      "defaults-tworivers",
+      "defaults-lasalle",
+      "defaults-threez-river"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "how much pea gravel do i need calculator",
+        "variant": "“how much pea gravel do I need?” calculator"
+      }
+    ],
+    "unresolvedData": [],
+    "requiredEntities": [
+      "pea gravel",
+      "depth",
+      "tons",
+      "cubic yards",
+      "paths and patios"
+    ]
+  },
+  "29": {
+    "answer": "The crusher run calculator returns cubic yards and tons for a measured base layer, with editable product density and a separate compaction allowance.",
+    "sections": [
+      {
+        "question": "How do you calculate crusher run for a base?",
+        "answer": "Calculate area × depth in feet, divide by 27, then multiply by the supplier’s tons-per-yard figure.",
+        "text": "Enter the depth of the crusher run base layer itself. Bedding sand, paving blocks and a clean surface topping belong to separate calculations. Measure a tapered or irregular footprint in smaller sections so the base quantity reflects the actual area.",
+        "sourceIds": []
+      },
+      {
+        "question": "What density does crusher run use?",
+        "answer": "The density belongs to the supplier’s grading, rock source and bulk condition.",
+        "text": "Triple R Dirt Works lists its 1.5-inch crusher run at 2,450 lb per cubic yard, equivalent to 1.225 US short tons. L&S describes a 2,500–3,000 lb range and a 1.4 planning conversion. American Rock Supply uses about 3,000 lb, or 1.5 tons per yard. The substantial difference stays visible. The editable preset names the Triple R product rather than claiming one universal crusher-run value.",
+        "sourceIds": [
+          "triple-r",
+          "ls-excavation",
+          "american-rock"
+        ]
+      },
+      {
+        "question": "How does compaction affect the base order?",
+        "answer": "A supplier-confirmed loose-to-finished allowance adjusts the volume before purchase rounding.",
+        "text": "The entered allowance needs to match the volume condition of the density. Do not apply a loose-volume increase to a conversion already specified for compacted material. Zero excludes the adjustment; it does not describe the compactability of crusher run. Waste and compaction represent different causes of extra material and need separate justification.",
+        "sourceIds": []
+      },
+      {
+        "question": "What needs checking before the truck arrives?",
+        "answer": "Confirm material grade, finished depth, purchase increment, truck payload and access.",
+        "text": "The calculator estimates tons; it does not prescribe base thickness from soil and loading conditions. Ask the supplier whether its conversion refers to stockpile or compacted material and whether moisture is included. The [driveway gravel calculator](/gravel-driveway-calculator/) combines this base layer with a separate surface layer. The [gravel cost guide](/gravel-driveway-cost/) explains the installed project scope around that material order.",
+        "sourceIds": []
+      }
+    ],
+    "sourceIds": [
+      "defaults-triple-r",
+      "defaults-ls-excavation",
+      "defaults-american-rock"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [],
+    "requiredEntities": [
+      "crusher run",
+      "base layer",
+      "compaction",
+      "tons"
+    ]
+  },
+  "30": {
+    "answer": "The road base calculator calculates cubic yards and tons for an entered base layer using its depth, product density and documented compaction allowance.",
+    "sections": [
+      {
+        "question": "How do you calculate a road base quantity?",
+        "answer": "Convert layer depth to feet, multiply by area and divide by 27 for cubic yards.",
+        "text": "Then multiply cubic yards by the selected US short tons per cubic yard. The base layer is one part of the pavement structure; do not include asphalt, concrete, pavers or bedding sand in its thickness. Divide irregular areas into measured sections before adding their quantities.",
+        "sourceIds": []
+      },
+      {
+        "question": "Which density belongs to road base?",
+        "answer": "Match the conversion to the supplier’s exact base product.",
+        "text": "Sutherland lists AB-minus crushed road base at 2,860 lb per cubic yard, equivalent to 1.43 US short tons. Lyngso lists virgin Class 2 base at 1.5 tons per yard. Rock N Yard lists its recycled 1.5-inch-minus base at about 1.3. These grades and sources differ. The calculator’s named Sutherland preset stays editable, with the alternatives visible in the reference table.",
+        "sourceIds": [
+          "sutherland",
+          "lyngso",
+          "rocknyard"
+        ]
+      },
+      {
+        "question": "What does the compaction input mean?",
+        "answer": "It records an entered adjustment between the measured finished layer and loose delivered volume.",
+        "text": "Confirm that relationship with the supplier for the material on the order. Moisture affects stockpile weight, and grading affects packing. The current Rock N Yard page gives no numerical universal shrinkage factor, so an older search snippet is not a valid default. Zero compaction allowance excludes an adjustment and makes no recommendation about base construction.",
+        "sourceIds": []
+      },
+      {
+        "question": "What needs checking before ordering road base?",
+        "answer": "Check the project’s material specification, depth condition and supplier sale unit.",
+        "text": "Confirm tons or cubic yards, delivery minimum, purchase increment and truck capacity. A material estimate does not establish structural depth or drainage design. The [driveway gravel calculator](/gravel-driveway-calculator/) keeps a road base and its surface topping separate. The [gravel cost guide](/gravel-driveway-cost/) connects the material quantities with excavation, grading and installation scope.",
+        "sourceIds": []
+      }
+    ],
+    "sourceIds": [
+      "defaults-sutherland",
+      "defaults-lyngso",
+      "defaults-rocknyard"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [],
+    "requiredEntities": [
+      "road base",
+      "base layer",
+      "compaction",
+      "tons"
+    ]
+  },
+  "53": {
+    "answer": "A yard of normal-weight concrete weighs **about 4,050 pounds at the selected 150-pound-per-cubic-foot density**; the value is a volume-to-weight calculation, not a bag-weight rule.",
+    "sections": [
+      {
+        "question": "How much does a yard of concrete weigh?",
+        "answer": "**Concrete weight per cubic yard equals density multiplied by the cubic feet in a yard.**",
+        "text": "ACI’s retrieved concrete terminology gives normal-weight concrete an approximate density of 150 pounds per cubic foot. Multiplying that reference by 27 cubic feet gives 4,050 pounds per cubic yard. NRMCA lists normal-weight concrete at 140–150 pounds per cubic foot; FHWA’s archived engineering classification spans 135–155. These are compatible reference scopes, not identical universal densities. Keep the density editable."
+      },
+      {
+        "question": "How much does a cubic yard of concrete weigh by mix?",
+        "answer": "**The mix density determines the weight**, rather than the volume label alone.",
+        "text": "NRMCA lists structural lightweight concrete at 90–120 pounds per cubic foot, distinct from the normal-weight reference. The calculator-generated conversion supplies pounds per cubic yard and short tons per cubic yard for the selected density. Ask the producer for the mix-specific density when material weight affects transport, equipment, or loading. Do not substitute the reference weight for a structural assessment."
+      },
+      {
+        "question": "How much does a yard of cured concrete weigh?",
+        "answer": "**A cured concrete weight requires a density stated for the material’s condition.**",
+        "text": "Moisture condition, mix composition, and aggregate type affect density. The research does not establish a single separate cured-concrete or dry-concrete density for every driveway mix. “How much does a yard of dry concrete weigh?” also describes bagged dry mix in some searches; dry bag mass is not the finished wet yield. The [concrete calculator](/concrete-calculator/) uses a named bag product’s stated yield for bag counts."
+      },
+      {
+        "question": "How much does a yard of crushed concrete weigh?",
+        "answer": "**Crushed concrete needs its supplier’s bulk density**, rather than the density of an intact slab.",
+        "text": "Loose crushed material contains void space and belongs to a different material condition. No compatible crushed-concrete density is selected in this concrete dataset. Enter the supplier’s weight per measured volume instead of carrying over 150 pounds per cubic foot. The [material weight chart](/material-weights/) identifies material and density assumptions, and the [cubic yards to tons converter](/cubic-yards-to-tons/) applies the selected value. Before using a weight result, confirm the mix or material, moisture condition, density units, and transport limits."
+      }
+    ],
+    "sourceIds": [
+      "concrete-aci-terminology",
+      "concrete-nrmca-cip36",
+      "concrete-fhwa-normalweight",
+      "concrete-quikrete-mix"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "how much does a cubic yard of concrete weigh",
+        "placement": "second heading"
+      },
+      {
+        "keyword": "concrete weight per cubic yard",
+        "placement": "first answer"
+      },
+      {
+        "keyword": "how much does a yard of crushed concrete weigh",
+        "placement": "fourth heading"
+      },
+      {
+        "keyword": "how much does a yard of cured concrete weigh",
+        "placement": "third heading"
+      },
+      {
+        "keyword": "how much does a yard of dry concrete weigh",
+        "placement": "third section"
+      }
+    ],
+    "unresolvedData": [
+      "Generic crushed-concrete, dry-concrete, and separately conditioned cured-concrete densities remain NOT FOUND in this dataset.",
+      "Generate short-ton and lightweight range conversions with the engine, never manual page totals."
+    ]
+  },
+  "54": {
+    "answer": "Gravel weight per cubic yard depends on the material grade, bulk density and moisture condition; use the named supplier product rather than one universal gravel factor.",
+    "sections": [
+      {
+        "question": "How much does a cubic yard of gravel weigh?",
+        "answer": "The weight equals the product’s bulk density multiplied by one cubic yard.",
+        "text": "For a cubic yard of gravel, weight differs between crushed stone, pea gravel and road base. Two Rivers lists 5/8-inch crushed rock at about 2,800 lb per yard. Sutherland lists its AB-minus base at 2,860 lb, while Lyngso lists its virgin Class 2 base at 1.5 US short tons per yard. Each value belongs to that product and source.",
+        "sourceIds": [
+          "tworivers",
+          "sutherland",
+          "lyngso"
+        ]
+      },
+      {
+        "question": "How much does a yard of pea gravel weigh?",
+        "answer": "Two Rivers lists its 1/2-inch washed pea gravel at about 2,600 lb per cubic yard.",
+        "text": "Lasalle lists pea gravel at 2,700 lb; Three Z gives approximately 1.4 tons per yard for washed river gravel that includes #8 pea gravel. The answer to “how much does a cubic yard of pea gravel weigh?” therefore needs a matching grade and supplier. The reference table preserves these observations instead of averaging them.",
+        "sourceIds": [
+          "tworivers",
+          "lasalle",
+          "threez-river"
+        ]
+      },
+      {
+        "question": "How much does a yard of 3/4-inch gravel weigh?",
+        "answer": "Use the supplier’s conversion for that exact 3/4-inch product.",
+        "text": "Rounded washed rock, clean crushed stone and minus material with fines are different products despite sharing a nominal size. Two Rivers lists its 3/4-inch round washed rock at about 2,600 lb per yard. Rock Pros lists 3/4-inch crush at 2,600 lb in its historical product chart, while Lasalle’s 3/4-inch crush-minus is also 2,600 lb. Matching values do not establish one specification or moisture condition.",
+        "sourceIds": [
+          "tworivers",
+          "rockpros",
+          "lasalle"
+        ]
+      },
+      {
+        "question": "How many cubic feet are in a ton of gravel?",
+        "answer": "Divide 27 by the selected US short tons per cubic yard.",
+        "text": "The formula converts a known mass back into its volume. Use the same density and material condition in both directions. The generated conversion output shows the exact value for the selected source. A wet stockpile factor is not automatically equivalent to a dry or compacted factor.",
+        "sourceIds": []
+      },
+      {
+        "question": "How much does a ton of gravel cover?",
+        "answer": "Coverage area equals the cubic feet in one ton divided by the layer depth in feet.",
+        "text": "Coverage depth controls how many square feet a ton of gravel covers. The generated depth table applies one named density consistently, with no hidden compaction or waste. A finished compacted layer needs the supplier’s loose-to-finished adjustment when the selected weight describes delivered bulk material. Zero adjustment excludes that extra quantity rather than certifying an exact order.",
+        "sourceIds": []
+      },
+      {
+        "question": "What explains a different scale weight?",
+        "answer": "Moisture, grading, rock source and packing change bulk density.",
+        "text": "Anchorage explicitly identifies stockpile aggregate weights as estimates affected by moisture and gradation. Request the actual product conversion and record its condition. Use the [gravel calculator](/gravel-calculator/) to combine that factor with measured dimensions, the [yard-to-ton converter](/cubic-yards-to-tons/) for known volumes, and the [material weight chart](/material-weights/) to compare other material families.",
+        "sourceIds": [
+          "anch-rap"
+        ]
+      }
+    ],
+    "sourceIds": [
+      "defaults-tworivers",
+      "defaults-sutherland",
+      "defaults-lyngso",
+      "defaults-lasalle",
+      "defaults-threez-river",
+      "defaults-rockpros",
+      "defaults-anch-rap"
+    ],
+    "keywordVariants": [
+      {
+        "keyword": "how much does a yard of 3 4 gravel weigh",
+        "variant": "How much does a yard of 3/4-inch gravel weigh?"
+      },
+      {
+        "keyword": "how many cubic feet in a ton of gravel",
+        "variant": "How many cubic feet are in a ton of gravel?"
+      },
+      {
+        "keyword": "how many square feet does a ton of gravel cover",
+        "variant": "how many square feet a ton of gravel covers"
+      }
+    ],
+    "unresolvedData": [],
+    "requiredEntities": [
+      "crushed stone",
+      "pea gravel",
+      "road base",
+      "density",
+      "moisture",
+      "coverage depth"
+    ]
+  },
+  "51": {
+    "answer": "Choose a driveway sealer by the pavement type, product label, surface condition, coverage, and application instructions.",
+    "sections": [
+      {
+        "question": "Are asphalt and concrete sealers interchangeable?",
+        "answer": "Use a product explicitly labeled for the driveway surface.",
+        "text": "Asphalt driveway sealer and a concrete acrylic sealer describe different product applications. Read the permitted substrates before buying, then check the preparation instructions and any primer requirement. This guide compares selection criteria, not tested winners. A higher price, a longer warranty name, or thicker appearance does not independently establish better performance on your driveway."
+      },
+      {
+        "question": "Which asphalt sealer types enter the comparison?",
+        "answer": "Asphalt emulsion, acrylic formulations, and coal tar sealer appear in the reviewed product and cost references.",
+        "text": "The label identifies the actual chemistry and application. Local restrictions require verification before purchasing coal tar products; no nationwide ban is asserted here. Compare compatibility and supplier availability rather than choosing from a generic type alone. The phrase asphalt sealer for driveways still requires a named product and readable instructions to become a usable specification."
+      },
+      {
+        "question": "How does label coverage affect the order?",
+        "answer": "Surface porosity and the product’s stated coverage determine the amount to buy.",
+        "text": "Latex-ite Ultra Shield has different ranges for smooth and rough asphalt. Henry 200’s current web page and linked technical sheet conflict on their upper coverage bound, so verify the current pail label. The sealcoat calculator converts area into gallons using a selected named product or custom coverage. An up-to coverage claim does not establish a guaranteed minimum."
+      },
+      {
+        "question": "Which application details matter before purchase?",
+        "answer": "Temperature, coats, cure time, and preparation need to fit the job.",
+        "text": "Henry HE200’s linked sheet specifies one coat; other products specify multiple coats. Cure-time instructions cover traffic access rather than just touch-dry appearance. Crack filling belongs before coating when the repair is required, and each repair product has its own waiting instructions. Compare three label details: compatible surface, coverage per gallon, and opening time. The sealcoating cost guide prices professional service; the crack filler guide explains repair materials. Keep the selected label with the saved material order."
+      }
+    ],
+    "sourceIds": [
+      "asphalt-hg-sealing",
+      "defaults-latex-ultra",
+      "defaults-latex-ultra-page",
+      "defaults-henry-he200",
+      "defaults-henry-he200-page",
+      "defaults-master-ultra"
+    ],
+    "keywordVariants": [
+      "asphalt driveway sealer",
+      "asphalt sealer for driveways"
+    ],
+    "unresolvedData": [
+      "Local coal tar rules; concrete-specific named products; current Henry label"
+    ]
+  },
+  "55": {
+    "answer": "Seal an asphalt driveway by choosing a compatible product, preparing and repairing the surface, applying its specified coats, and keeping traffic off for its labeled cure time.",
+    "sections": [
+      {
+        "question": "What gets checked before preparation?",
+        "answer": "Identify the exact product, pavement condition, and application weather.",
+        "text": "A search for how to seal coat a driveway brings products with different instructions. Latex-ite Ultra Shield requires two thin coats; Henry HE200’s linked sheet specifies one. Do not merge their directions. Confirm the current label and inspect the driveway for potholes, connected cracking, and persistent water. Sealing is not a correction for structural failure or poor drainage."
+      },
+      {
+        "question": "How is the surface prepared?",
+        "answer": "Remove debris and complete the repairs required by the selected label.",
+        "text": "Keep crack filling separate from applying a full-area sealer. Repair products have their own dimensional limits and drying instructions. Primer use depends on the named sealer and the stain or repair involved; no universal primer is prescribed. Gather the matching application tool, such as the labeled squeegee or roller, and keep the planned work area clear."
+      },
+      {
+        "question": "How are the coats and material quantity planned?",
+        "answer": "Use measured area and the named product’s coverage for each required coat.",
+        "text": "The sealcoat calculator uses those inputs to generate the order quantity. Latex-ite Ultra Shield lists a 4.75-gallon pail and different coverage for smooth versus rough asphalt. A second coat does not justify copying another brand’s recoat interval. Mix and apply according to the purchased product, and avoid treating ready-mixed sealer as a concentrate that requires a generic dilution."
+      },
+      {
+        "question": "When is the driveway ready for traffic?",
+        "answer": "The chosen product’s curing and weather instructions govern reopening.",
+        "text": "For example, Henry HE200’s linked sheet specifies at least 50°F and rising, avoids rain or frost for 48 hours, and allows vehicle use after 24–48 hours under normal conditions. Those values belong to that product alone. Anyone checking how to seal a driveway or how to seal driveway surfaces needs the current package directions. The sealer guide assists selection, the crack filler guide assists preparation, and the cost guide compares professional application with a material-only DIY purchase."
+      }
+    ],
+    "sourceIds": [
+      "defaults-latex-ultra",
+      "defaults-latex-ultra-page",
+      "defaults-henry-he200",
+      "defaults-master-conc"
+    ],
+    "keywordVariants": [
+      "how to seal coat a driveway",
+      "how to seal driveway"
+    ],
+    "unresolvedData": [
+      "Current product label; site weather; exact tools and primer instructions"
+    ]
+  },
+  "31": {
+    "answer": "Choose driveway crack filler by pavement compatibility, crack width and depth, product form, and labeled drying conditions.",
+    "sections": [
+      {
+        "question": "What is measured before choosing a filler?",
+        "answer": "Measure the crack’s length, width, and depth, and inspect its surroundings.",
+        "text": "A long narrow crack differs from a pothole or interconnected failure. Record the surface material and any old repair product present. A label for asphalt does not establish compatibility with concrete. The guide provides selection criteria; it does not claim a tested best product or a universally correct filler for all driveway damage."
+      },
+      {
+        "question": "How do cold pour and hot pour differ in the buying decision?",
+        "answer": "They describe different application systems with product-specific equipment and instructions.",
+        "text": "A cold pour example is Latex-ite 2X, labeled for asphalt cracks up to 1/2 inch wide. Hot pour selection requires the exact sealant’s heating and equipment instructions; no heating temperature is supplied without that documentation. Keep a contractor’s sealant specification separate from a homeowner’s ready-to-apply bottle. Neither application form fixes sinking or an unstable base."
+      },
+      {
+        "question": "How much coverage does one container provide?",
+        "answer": "Coverage depends on the product and the crack’s cross-section.",
+        "text": "SealMaster Acrylic Crack Filler lists approximately 75–150 linear feet per US gallon depending on width and depth, without a reference cross-section. Treat that as a product range rather than guaranteed yield. Latex-ite 2X’s reviewed page supplies no verified linear-foot yield. Do not replace missing gallon coverage with an area-depth figure from a powder patch product."
+      },
+      {
+        "question": "What matters during application and sealing afterward?",
+        "answer": "Cleaning, label weather limits, and cure time control the repair procedure.",
+        "text": "SealMaster Acrylic Crack Filler is used without dilution and opens to traffic after drying. The selected product label controls any delay before sealcoating. Compare three instructions: preparation, permitted crack dimensions, and traffic access. The repair cost guide prices professional crack filling by linear foot, while the sealcoating guide prices a full-area maintenance service. Connected cracking, recurring failures, and standing water require a broader assessment before another application of filler."
+      }
+    ],
+    "sourceIds": [
+      "defaults-dalton-2x",
+      "defaults-master-crack",
+      "defaults-rust-crack",
+      "asphalt-blacktop-asphalt"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [
+      "Hot-pour named product instructions; cross-section-specific yield; current cure conditions"
+    ]
+  },
+  "32": {
+    "answer": "Asphalt cold patch is packaged pavement repair material placed and compacted according to the selected product’s thickness and repair-size limits.",
+    "sections": [
+      {
+        "question": "Which product instructions control the repair?",
+        "answer": "Use the directions on the actual bag rather than a universal pothole recipe.",
+        "text": "QUIKRETE Permanent Blacktop Repair describes applications 1–3 inches thick in compacted 1-inch lifts, with repairs limited to about 3 × 3 feet. Sakrete Blacktop Patch’s linked sheet limits repairs to 2 × 2 feet and 4 inches deep. These different limits are not combined into a larger permitted repair."
+      },
+      {
+        "question": "How much material does a bag yield?",
+        "answer": "Bag yield describes the compacted repair volume, not the driveway area alone.",
+        "text": "QUIKRETE lists about 0.5 cubic foot from a 50-pound bag and about 0.6 cubic foot from a 60-pound bag. Measure the pothole area and depth before comparing package quantities. Loose material appearance does not establish compacted yield. No project bag count is calculated manually in this guide; a generated quantity example requires the matching engine and input specification."
+      },
+      {
+        "question": "What does compaction do in the procedure?",
+        "answer": "Compaction forms each placed layer into the specified repair.",
+        "text": "QUIKRETE’s instructions require adequately compacted lifts. Sakrete describes placing a 2-inch loose layer and compacting it to 1 inch before repeating. Those directions apply to the named products; do not transfer the loose-depth conversion to another material. Clear the damaged area and follow the selected preparation instructions, then respect the package’s opening-to-traffic requirements."
+      },
+      {
+        "question": "Is every cold patch only a temporary repair?",
+        "answer": "Repair performance depends on the product and the underlying defect.",
+        "text": "A generic temporary repair description does not erase a manufacturer’s named permanent-repair claim or prove its performance at every site. The reviewed sources establish no universal cold-patch lifespan. Recurrent potholes, alligator cracking, and sinking need attention to the support and drainage. The asphalt driveway repair cost guide distinguishes cold patch, hot patch, and full-depth repairs. Compare three details before buying: permitted dimensions, compacted yield, and application method. Keep the bag label and repair photographs with the maintenance record."
+      }
+    ],
+    "sourceIds": [
+      "defaults-quikrete-patch",
+      "defaults-sakrete-patch",
+      "asphalt-blacktop-asphalt"
+    ],
+    "keywordVariants": [],
+    "unresolvedData": [
+      "Universal repair lifespan; exact site bag count; current package directions"
+    ]
+  },
+  "33": {
+    "answer": "Driveway cost depends on the chosen material and the work included. Selected installed benchmarks are $7–$13 per square foot for asphalt, $6–$10 for plain concrete, $4–$10 for gravel, $10–$30 for generic pavers and $2–$5 for tar and chip. Each range comes from a named guide, not an average of sources.",
+    "sections": [
+      {
+        "question": "How much does a driveway cost?",
+        "answer": "Area and the selected installation scope determine the estimated upfront cost.",
+        "text": "Start with measured sections. New driveway cost differs from repair, resurfacing and replacement.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "concrete:hg-concrete",
+          "surfaces:homeguide-gravel",
+          "surfaces:homeguide-pavers",
+          "surfaces:homeguide-tarchip"
+        ]
+      },
+      {
+        "question": "What changes driveway cost per square foot?",
+        "answer": "Material, base condition, access and finish affect the installed rate.",
+        "text": "A driveway installation quote identifies excavation, compaction, drainage, delivery and cleanup. Ordinary included work is not added again as an extra.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "concrete:hg-concrete",
+          "surfaces:homeguide-gravel",
+          "surfaces:homeguide-pavers",
+          "surfaces:homeguide-tarchip"
+        ]
+      },
+      {
+        "question": "What changes driveway paving cost?",
+        "answer": "The surface specification and support beneath it change the work.",
+        "text": "The cost to pave a driveway uses the named material benchmark and measured area. Asphalt overlay rates are separate from new pavement rates.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "concrete:hg-concrete",
+          "surfaces:homeguide-gravel",
+          "surfaces:homeguide-pavers",
+          "surfaces:homeguide-tarchip"
+        ]
+      },
+      {
+        "question": "How much will a driveway cost?",
+        "answer": "The estimator returns a range using the entered area and selected assumptions.",
+        "text": "This question concerns project budgeting, not a contractor quote. Regional low/high multipliers remain unavailable until transferable driveway evidence is sourced.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "concrete:hg-concrete",
+          "surfaces:homeguide-gravel",
+          "surfaces:homeguide-pavers",
+          "surfaces:homeguide-tarchip"
+        ]
+      },
+      {
+        "question": "How much does it cost for a driveway?",
+        "answer": "An estimate covers only the operations listed beside its result.",
+        "text": "Check removal, disposal and substantial base corrections separately. Installed paver rates already include ordinary base and laying work.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "concrete:hg-concrete",
+          "surfaces:homeguide-gravel",
+          "surfaces:homeguide-pavers",
+          "surfaces:homeguide-tarchip"
+        ]
+      },
+      {
+        "question": "How much would a new driveway cost?",
+        "answer": "The cost of a new driveway starts with its material-specific installed range.",
+        "text": "Use the asphalt, concrete, gravel and paver guides for source comparisons and work-scope details.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "concrete:hg-concrete",
+          "surfaces:homeguide-gravel",
+          "surfaces:homeguide-pavers",
+          "surfaces:homeguide-tarchip"
+        ]
+      },
+      {
+        "question": "How much does it cost to build a driveway?",
+        "answer": "Building from bare ground includes preparation that a resurfacing job does not require.",
+        "text": "Measure the route, confirm finished elevations, and obtain a written description of the base and drainage.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "concrete:hg-concrete",
+          "surfaces:homeguide-gravel",
+          "surfaces:homeguide-pavers",
+          "surfaces:homeguide-tarchip"
+        ]
+      },
+      {
+        "question": "How much should a new driveway cost?",
+        "answer": "The appropriate comparison is a set of local quotes for the same specified work.",
+        "text": "The site’s source ranges support planning; they do not establish one correct local price. Compare lifespan and maintenance separately from upfront cost. Gravel renewal does not support a finite national replacement lifespan or an automatic cost-per-year figure.",
+        "sourceIds": [
+          "asphalt:angi-asphalt",
+          "concrete:hg-concrete",
+          "surfaces:homeguide-gravel",
+          "surfaces:homeguide-pavers",
+          "surfaces:homeguide-tarchip"
+        ]
+      }
+    ],
+    "sourceIds": [
+      "asphalt-angi-asphalt",
+      "concrete-hg-concrete",
+      "surfaces-homeguide-gravel",
+      "surfaces-homeguide-pavers",
+      "surfaces-homeguide-tarchip"
+    ],
+    "keywordVariants": [
+      "driveway cost",
+      "driveway installation",
+      "new driveway cost",
+      "driveway paving cost",
+      "how much does a driveway cost",
+      "cost to pave a driveway",
+      "how much will a driveway cost",
+      "how much does it cost for a driveway",
+      "how much would a new driveway cost",
+      "cost of a new driveway",
+      "driveway cost per square foot",
+      "how much does it cost to build a driveway",
+      "how much should a new driveway cost"
+    ],
+    "unresolvedData": [
+      "Regional driveway multipliers",
+      "Complete annual upkeep budgets"
+    ]
+  }
+}

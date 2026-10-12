@@ -1,0 +1,45 @@
+{
+  "keywordRepeatReview": [
+    {
+      "seq": 5,
+      "keyword": "concrete driveway",
+      "rawOccurrences": 10,
+      "reason": "Shorter phrase occurs inside required longer Section 11 phrases; human repetition review remains pending."
+    },
+    {
+      "seq": 9,
+      "keyword": "stone calculator",
+      "rawOccurrences": 5,
+      "reason": "Shorter phrase occurs inside required longer Section 11 phrases; human repetition review remains pending."
+    },
+    {
+      "seq": 43,
+      "keyword": "gravel driveway",
+      "rawOccurrences": 8,
+      "reason": "Shorter phrase occurs inside required longer Section 11 phrases; human repetition review remains pending."
+    },
+    {
+      "seq": 35,
+      "keyword": "concrete calculator",
+      "rawOccurrences": 5,
+      "reason": "Shorter phrase occurs inside required longer Section 11 phrases; human repetition review remains pending."
+    },
+    {
+      "seq": 33,
+      "keyword": "driveway cost",
+      "rawOccurrences": 7,
+      "reason": "Shorter phrase occurs inside required longer Section 11 phrases; human repetition review remains pending."
+    }
+  ],
+  "humanReviewComplete": false,
+  "questionKeywordExceptions": [
+    {
+      "seq": 33,
+      "keywords": [
+        "how much will a driveway cost",
+        "how much should a new driveway cost"
+      ],
+      "reason": "Section 11 requires these questions. Modal terms occur in question headings, not hedged factual statements; Section 10/11 precedence applies."
+    }
+  ]
+}
