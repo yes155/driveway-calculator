@@ -33,6 +33,12 @@ import {
   ReplacementReference,
 } from '@/components/ResearchModules';
 import { toolExample } from '@/lib/calc/examples';
+import {
+  PaverMaterialDecision,
+  SealerProductDecision,
+  CrackFillerDecision,
+  ColdPatchDecision,
+} from '@/components/DecisionTables';
 const guideEstimatorBySeq: Record<number, { href: string; label: string }> = {
   3: { href: '/asphalt-driveway-cost-calculator/', label: 'asphalt driveway' },
   5: { href: '/concrete-driveway-cost-calculator/', label: 'concrete driveway' },
@@ -248,6 +254,10 @@ export async function renderPage(url: string) {
                 ResearchRegister,
                 RepairReference,
                 ReplacementReference,
+                PaverMaterialDecision,
+                SealerProductDecision,
+                CrackFillerDecision,
+                ColdPatchDecision,
               }}
             />
           )}
