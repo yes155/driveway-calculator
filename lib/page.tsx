@@ -25,6 +25,7 @@ import sources from '@/data/sources.json';
 import reviewers from '@/data/reviewers.json';
 import {
   CostReference,
+  SlabSizeExamples,
   SurfaceComparison,
   MaterialReferences,
   WeightReference,
@@ -248,6 +249,7 @@ export async function renderPage(url: string) {
                 FormulaBox,
                 QASection,
                 CostReference,
+                SlabSizeExamples,
                 SurfaceComparison,
                 MaterialReferences,
                 WeightReference,
