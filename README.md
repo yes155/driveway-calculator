@@ -6,6 +6,8 @@ A researched draft build for **drivewaycalc.online**, using Next.js App Router, 
 
 Read [AGENTS.md](AGENTS.md), the preserved [instruction set](docs/source-guidance/instruction-set.txt), the [driveway source document](docs/source-guidance/driveway-calculator.txt), and [SEMANTIC-SEO-RULES.md](docs/SEMANTIC-SEO-RULES.md) before site work. [SEMANTIC-SEO-SOURCES.md](docs/SEMANTIC-SEO-SOURCES.md) records the other-project guidance actually recovered and its applicability.
 
+The owner-supplied [microsemantic writing workflow](docs/source-guidance/microsemantic-writing-workflow.txt) now supplies the complete 14 rules. Follow Step 0 → semantic draft → lock → readability → audit as separate stages; rulebook Section 9 includes all four audit sections and the output requirements. The earlier missing-list status is resolved.
+
 The semantic rules cover page ownership, site structure, writing, numerical consistency, contextual linking and evidence-based audits. An automated keyword/build pass does not establish editorial approval. The current 51 pages remain drafts and need individual editorial correction/review; adding the instructions does not complete that work.
 
 ## File tree

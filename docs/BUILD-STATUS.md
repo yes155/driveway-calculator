@@ -1,5 +1,13 @@
 # BUILD — Engineering build and sitewide corrections
 
+## Rulebook update — October 14, 2026
+
+Read the complete Pasted text.txt attachment and preserved an unchanged repository copy. The semantic rulebook now includes all 14 supplied rules, the input/EAV gate, separate draft/lock/readability/audit stages, 34 writing checklist rows, output summary requirements and explicit driveway application notes. AGENTS.md requires this workflow. The earlier missing-list status is resolved in the provenance record.
+
+This update changes instructions only. Existing articles have not been rewritten or audited under the new workflow; human review, browser checks and launch conditions remain outstanding.
+
+Verified the exact 14 numbered rules, 11 document-level rows, 4 bridge rows, 5 integrity rows, documentation links, authored Markdown whitespace, byte-identical preservation of the supplied workflow and the unchanged 51-page map (zero published). Calculator/runtime tests were not rerun for this documentation-only change.
+
 ## Current editorial status — October 13, 2026
 
 The owner rejected the repetitive cost-pillar draft. Earlier technical checks and the phrase “source-grounded content” do not establish useful writing, semantic compliance or publication readiness. All 51 pages remain drafts; their editorial review and correction are outstanding.
