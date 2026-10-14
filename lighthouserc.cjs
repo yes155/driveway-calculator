@@ -8,7 +8,8 @@ module.exports = {
         'http://localhost/',
       ],
       numberOfRuns: 1,
-      settings: { preset: 'mobile' },
+      // Lighthouse defaults to mobile emulation; 'mobile' is not a valid preset.
+      settings: { formFactor: 'mobile' },
     },
     assert: {
       assertions: {
