@@ -49,11 +49,13 @@ https://driveway-calculators-review.ekselllondon.chatgpt.site
 
 The review preview is separate from the planned GitHub → Cloudflare Pages production deployment. All 51 mapped pages remain drafts. Shared metadata, navigation, homepage cards, and calculator introductions have been corrected across the site.
 
-## Project One design adaptation
+## Homepage design and visual hierarchy
 
-The reference design at https://www.projectone.website/ is adapted to the driveway tools: off-white, charcoal, and lime colors; a dark pill navigation bar; a centered oversized hero with floating calculator mockups; mixed-color tool tiles; staggered process cards; curved dark sections; a lime FAQ panel; and a large footer wordmark. Code-native SVG driveway illustrations replace the reference's agency project imagery. Shared styles carry the same theme into all calculators, guides, and trust pages.
+The shared off-white, charcoal, lime palette and dark navigation remain. The homepage now uses a conventional two-column hero: a task-oriented H1, distinct material/cost calls to action, and a real length × width area check powered by the existing calculation engine. The floating illustrated hero cards and repeated checklist, feature ticker, dark formula promo and closing CTA were retired.
 
-See `docs/DESIGN-REVIEW.md` for the design mapping and verification limits.
+The first content blocks serve separate visitor needs: six featured material calculators, four cost-by-surface guides, a three-step formula explanation, then a supplementary library that excludes the featured tools. All 51 mapped routes retain their canonical addresses and draft/noindex status. Review the evidence and unverified browser items in [the October 14 homepage audit](docs/audits/2026-10-14/homepage-visual-semantics.md).
+
+See `docs/DESIGN-REVIEW.md` for the original reference adaptation; its floating hero description is superseded by this updated implementation.
 
 ## Sitewide screenshot corrections
 
