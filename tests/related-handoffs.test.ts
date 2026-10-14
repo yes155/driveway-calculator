@@ -17,7 +17,7 @@ describe('related-link editorial handoffs', () => {
         const copy = handoffs[related.slug];
         expect(copy.length, page.url + ' -> ' + related.slug).toBeGreaterThan(35);
         expect(copy).not.toMatch(/calculates the quantities used in this project|explains the related|connects it to this page.s inputs or next decision/i);
-        expect(copy).not.toMatch(/\\b(?:will|should|could|might|may|probably)\\b/i);
+        expect(copy).not.toMatch(/\b(?:will|should|could|might|may|probably)\b/i);
         total++;
       }
     }
