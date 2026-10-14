@@ -19,9 +19,7 @@ export default function Header() {
           </span>
           <span>Driveway Calculators</span>
         </Link>
-        <Navigation
-          groups={buildNavigationGroups(pages)}
-        />
+        <Navigation groups={buildNavigationGroups(pages)} />
         <Link href="/#workbench" className="header-tool">
           Choose a calculator <span aria-hidden="true">↗</span>
         </Link>
