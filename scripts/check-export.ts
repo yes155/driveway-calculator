@@ -4,7 +4,11 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { createElement } from 'react';
 import { toolExample } from '../lib/calc/examples';
 import { toolFor, surfaceFor } from '../lib/calc/ui';
+import { computeGuideEstimate } from '../lib/calc/guide';
+import { priceBook, verifiedValue } from '../lib/data';
+import { money } from '../lib/format';
 const errors: string[] = [];
+const quickGuideSeqs = new Set([3, 5, 49]);
 const urls = [...pages.map((p) => p.url), ...trustPages.map((p) => p.url)];
 for (const url of urls) {
   const file = 'out' + url + 'index.html';
@@ -56,7 +60,23 @@ for (const url of urls) {
           : kind === 'asphalt'
             ? 'asphalt'
             : 'gravel';
-    if (kind) {
+    if (quickGuideSeqs.has(page.seq)) {
+      const prices = priceBook[surfaceFor(page.seq)];
+      const low = verifiedValue(prices.installedLow);
+      const high = verifiedValue(prices.installedHigh);
+      if (low === null || high === null) {
+        errors.push('Guide lost verified installed price ' + url);
+      } else {
+        const preview = computeGuideEstimate(20, 20, low, high);
+        const rangeMarkup = renderToStaticMarkup(
+          createElement('strong', null, `${money(preview.low)}–${money(preview.high)}`),
+        );
+        if (!html.includes('class="guide-quick-estimate"') || !html.includes(rangeMarkup))
+          errors.push('Guide quick estimate disagrees with cost engine ' + url);
+      }
+      if (html.includes('class="calculator-shell"'))
+        errors.push('Guide unexpectedly duplicates the full estimator ' + url);
+    } else if (kind) {
       const result = toolExample(kind, material, surfaceFor(page.seq)).result;
       const expectedFormula = renderToStaticMarkup(createElement('code', null, result.formula));
       if (!html.includes(expectedFormula))
