@@ -16,6 +16,7 @@ import {
   Disclosure,
 } from '@/components/Modules';
 import { toolFor, surfaceFor } from '@/lib/calc/ui';
+import { splitAnswer, orderChecklist } from '@/lib/editorial';
 import defaults from '@/data/defaults.json';
 import sources from '@/data/sources.json';
 import reviewers from '@/data/reviewers.json';
@@ -39,7 +40,9 @@ export async function renderPage(url: string) {
     content = getContent(url),
     kind = toolFor(page.seq),
     draft = content.data.status !== 'published',
-    ready = content.data.contentReady === true;
+    ready = content.data.contentReady === true,
+    answer = typeof content.data.answer === 'string' ? splitAnswer(content.data.answer) : null,
+    checklist = kind ? orderChecklist(kind, surfaceFor(page.seq)) : [];
   const related = page.related.map((r) => ({ ...r, destination: getPage(r.slug) }));
   const material =
     page.seq === 22
@@ -66,7 +69,10 @@ export async function renderPage(url: string) {
         <h1>{page.h1}</h1>
         <AnswerBlock>
           {!draft || ready ? (
-            <strong>{content.data.answer}</strong>
+            <>
+              <strong>{answer?.lead}</strong>
+              {answer?.context ? ` ${answer.context}` : null}
+            </>
           ) : kind && kind !== 'cost' && kind !== 'compare' ? (
             <>
               <strong>
@@ -219,13 +225,10 @@ export async function renderPage(url: string) {
           {kind && (
             <QASection question="What needs checking before you order?">
               <p>
-                <strong>Check 4 project details before placing an order.</strong>
+                <strong>Check {checklist.length} project details before placing an order.</strong>
               </p>
               <ul>
-                <li>Confirm each measured section, including tapers and slope.</li>
-                <li>Confirm density, product yield, or coverage with the supplier.</li>
-                <li>Confirm thickness and any waste or compaction allowance.</li>
-                <li>Confirm delivery capacity, fees, and supplier minimums.</li>
+                {checklist.map((item) => <li key={item}>{item}</li>)}
               </ul>
             </QASection>
           )}
