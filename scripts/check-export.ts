@@ -71,7 +71,7 @@ for (const url of urls) {
         const rangeMarkup = renderToStaticMarkup(
           createElement('strong', null, `${money(preview.low)}–${money(preview.high)}`),
         );
-        if (!html.includes('class="guide-quick-estimate"') || !html.includes(rangeMarkup))
+        if (!html.includes('class="guide-quick-estimate"') || !html.replace(/<!--.*?-->/g, '').includes(rangeMarkup))
           errors.push('Guide quick estimate disagrees with cost engine ' + url);
       }
       if (html.includes('class="calculator-shell"'))
