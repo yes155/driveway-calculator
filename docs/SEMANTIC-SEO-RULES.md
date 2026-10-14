@@ -4,6 +4,8 @@ Added October 13, 2026 (Asia/Karachi). Status: operative instructions for future
 
 Updated October 14, 2026 with the owner's complete [microsemantic writing workflow](source-guidance/microsemantic-writing-workflow.txt). Section 9 is now the mandatory staged writing/audit procedure. It replaces the earlier incomplete writing-rule reconstruction; the structure, evidence and launch requirements remain in force.
 
+Further updated October 14, 2026 with [AI SEO Implementation Framework](source-guidance/ai-seo-implementation-framework.md). Section 10 maps all eight modules, all 26 numbered instructions and all 21 framework audit checks to this site's requirements, with explicit applicability, evidence limits and conflicts. The supplied file is preserved unchanged.
+
 The owner requested the semantic audit, structure and writing guidance from the other projects be added here. This rulebook transfers applicable guidance from the automotive audit framework, topical map, content/linking map, keyword review and launch review, and the recovered dental audit decisions. Source identities and retrieval limitations are recorded in [SEMANTIC-SEO-SOURCES.md](SEMANTIC-SEO-SOURCES.md). Driveway-specific additions and conflict resolutions below are explicitly identified.
 
 ## 1. Authority and application
@@ -11,6 +13,8 @@ The owner requested the semantic audit, structure and writing guidance from the 
 Latest owner instructions govern. The [instruction set](source-guidance/instruction-set.txt) and [driveway source document](source-guidance/driveway-calculator.txt) remain the project specification; Sections 10 and 11 take precedence over earlier source sections. This supplement adds editorial and verification gates. Preserve the original [RTF](source-guidance/driveway-calculator.rtf).
 
 The October 14 [supplied writing workflow](source-guidance/microsemantic-writing-workflow.txt) is a direct owner-provided source for content mechanics. Its attribution to Koray Tuğberk Gübür is the attachment's attribution, not a claim of independently authenticated authorship or a documented Google ranking formula. The application decisions in Sections 7 and 9 reconcile it with the driveway page types, evidence records and modes.
+
+The later implementation framework is also a direct owner-provided source. Its interview attribution, patent claims, example traffic losses and numeric ranking thresholds are source assertions, not independently verified facts. Section 10 preserves the useful instructions and records the application decisions; it does not silently promote every source assertion to a Google requirement or authorize off-site execution.
 
 Do not silently weaken a source requirement to make a check pass. Record a conflict with the source section, page, proposed resolution and status. A page with an unresolved mandatory conflict stays a draft. Transferred automotive or dental publication dates, contacts, reviewer identities and credentials do not apply to this site.
 
@@ -205,6 +209,15 @@ As of this instructions-only change, the 51 pages remain drafts. No page is decl
 | New workflow: fix audit violations versus standalone AUDIT report-only | Stage 4 corrects the draft within an authorized WRITE task. A standalone AUDIT reports findings and proposed corrections without changing site files unless rewriting is authorized. |
 | New workflow: no files unless requested | The owner explicitly requested this repository rulebook update; source MDX is already required by the build specification. Do not generate unsolicited separate documents/PDFs/spreadsheets for writing. |
 | New workflow: specificity/quantification versus incomplete data | Gather verified facts before drafting. Do not invent counts, numeric stakes or examples to satisfy a stylistic rule; explicitly retain a blocked/incomplete draft status when evidence is missing. |
+| Framework 2.3: definition → predicate → attribute versus direct heading answers | Definition first applies to definition questions. Cost/how-to/comparison questions receive their actual price, action or comparison first; supporting definitions follow. The mandatory staged writing workflow remains. |
+| Framework 1.4: first 2% token concentration | Identify task/entities/attributes early and naturally. The exact 2% threshold is an unverified source claim, not a mandatory gate or permission to stuff variants. |
+| Framework 1.5: all class/DOM patterns unique | Remove exposed generator boilerplate and use semantic code. Preserve maintainable shared components/theme; vary modules for task relevance, not detection evasion. Identical templates alone are not diagnosed as spam. |
+| Framework 3.1: competitor topics +20–30% | Use scoped competitor gap analysis; no fixed surplus requirement or expansion beyond the mapped driveway boundary. |
+| Framework 3.3/3.4: three-month aging, randomized counts, seven/eight-month schedule and 5% burst failure | Source hypotheses/planning proposals, not verified launch gates. Preserve the existing phased release and actual review capacity. No disguised activity or arbitrary calendar delay. |
+| Framework 3.5: do not edit during click tests | Log changes and avoid unsupported reactive rewrites; fix wrong prices, broken calculations, usability defects and substantiated editorial issues promptly. No automatic two-update freeze. |
+| Framework 2.4/2.5: expert persona and UGC | Real attributed experience or genuine submissions only. Factual driveway sections keep factual style; no invented first-person installation/testing, forum answers or review schema. |
+| Framework 6.1: separate AI Overview versus web impressions | Official Google guidance currently reports AI-feature traffic within Search Console Web data. Do not manufacture a separate metric or infer AI impressions from user-agent logs; recheck capabilities before future reporting. |
+| Framework 4/5/8: links, claim seeding and syndication | Preserve as planning/risk modules. Updating this rulebook does not authorize external messages, publishing, account creation or a campaign. Every claim remains verifiable; source risk flags remain visible. |
 
 ## 8. Official references checked
 
@@ -349,3 +362,105 @@ Include incomplete required checks and conditional applicability notes separatel
 Show the final draft first, then audit tables, corrected passages and the summary in plain text/Markdown. Keep required source frontmatter/MDX in the authorized project repository. Do not generate separate Word/PDF/spreadsheet files unless requested; this explicit rulebook update is authorized.
 
 Skip Stage 3 only when the owner requests it, and label the result as the pure semantic draft without readability revision. The factual rules, locks, audit and release gates still apply. Missing facts are gathered through authorized research first; no invented certainty, scenario, numeric stake, reviewer or source fills a gap.
+
+## 10. Visual semantics and topical authority implementation framework
+
+Source: the owner's [AI_SEO_Implementation_Framework.md](source-guidance/ai-seo-implementation-framework.md), supplied October 14, 2026. It describes eight modules and attributes them to a Julian Goldie interview with Koray Tugberk Gubur, “Google's Ranking Secret? Visual Semantics.” This attachment is an implementation summary, not an independently verified interview transcript. Its original text and risk legend are retained unchanged.
+
+The application register below distinguishes **Adopt**, **Adapt**, **Source hypothesis** and **Planning only**. Adopted/adapted instructions guide future authorized work; a source hypothesis is not a verified algorithmic requirement; planning does not authorize executing an external campaign. Apply the source's standard/gray-area/high-risk labels to future proposed tactics, with the specific recorded decisions below. This instructions-only task runs no site or distribution campaign.
+
+### Modules 1–6 — numbered instruction application register
+
+| Source ID | Source instruction | Driveway application and status |
+| --- | --- | --- |
+| 1.1 | One dominant visual centerpiece | **Adopt:** the first viewport clearly prioritizes the page's function. A tool's inputs/result workspace dominates; a guide's H1 and immediate answer/comparison dominate. Keep navigation, decoration and ads subordinate. Verify phone and desktop renders; do not assert that this alone determines ranking. |
+| 1.2 | Layout matches query class | **Adapt:** tool interface for calculation, editorial structure for explanations, criteria/product data for an actual buying guide. Retain the established theme and source templates. Do not disguise an informational/lead page as a checkout or display a nonexistent price/buy action. |
+| 1.3 | 2–3 valued attribute labels beside the centerpiece | **Adopt as an editorial goal:** select 2–3 truthful attributes relevant to the task, such as US units, editable rates or no tool-registration requirement when accurate. Record competitor/reader evidence and verify the actual feature. An inactive lead feature cannot be advertised as available. |
+| 1.4 | Minimal copy; critical combinations in first 2% of tokens | **Adapt:** introduce the task, primary entities, units and meaningful feature labels early; remove filler. Keep required formulas, sources, assumptions and interpretation. **Source hypothesis:** the exact 2% threshold and token-dilution assertion; do not force synonyms into the opening or use token counts as a ranking score. |
+| 1.5 | Rename generic classes, vary DOM, remove builder signatures | **Adapt:** remove exposed temporary metadata/comments and irrelevant starter content; use meaningful accessible markup and purposeful classes. Preserve shared components, IDs used by scripts/links, tests and the global theme. Change module order only when intent benefits; do not perform arbitrary code churn to evade an AI classifier. Template similarity alone is not a proven abuse finding. |
+| 1.6 | Free tools as ranking assets | **Adopt within scope:** make mapped tools genuinely functional, prominent and useful, with result interpretation. Do not add legal/finance/media tools, new verticals or an unapproved human-service CTA. A calculator does not guarantee immunity from AI answers or ranking changes. |
+| 2.1 | Separate factual and experiential modes | **Adopt:** price, formula, material and technical blocks stay factual. An experiential block needs real attributed experience, clear labeling and a relevant mapped task; keep modes visually distinct. Never fabricate an expert persona or first-person fieldwork. |
+| 2.2 | Format matches comparison, enumeration or direct answer | **Adopt:** use a table for comparable values, a counted list for enumeration and a direct paragraph for a single answer. Competitor formats are research inputs, not permission to copy content or override source templates. Record location/device/date for any claimed current SERP pattern. |
+| 2.3 | Definition → predicate → “X of Y” statement | **Adapt:** this sequence is appropriate where the question asks for a definition. Cost questions start with cost, how-to questions with the action and comparison questions with the distinction. Expand relationships after that answer; use explicit entity names where pronouns become ambiguous, without robotic repetition. |
+| 2.4 | Natural opinionated sections and first-person expertise | **Conditional:** only genuine, evidenced and attributed experience supports first-person opinion. The author remains a researcher/writer unless actual experience or credentials are established. Ordinary driveway factual sections retain Section 9's answer mechanics. |
+| 2.5 | Hybrid factual + UGC/expert Q&A | **Conditional:** genuine user questions/contributions and real attributed replies can have their own section when useful. No staged forum, invented review, repeated keyword answer block or unsupported Q&A markup. No claim that mixing modes doubles AI eligibility. |
+| 2.6 | Minimum sufficient length and AI-language cleanup | **Adapt:** cut generic AI phrasing and use task-specific language, original evidence and the separate readability pass. Length follows task/attributes; retain needed explanatory content. The claimed mathematical detection benefit is unverified; brevity is not a detection-evasion strategy or fixed word-count rule. |
+| 3.1 | Merge approximately eight competitor sitemaps; exceed coverage 20–30% | **Adapt:** when gap research is authorized, inventory relevant competitor topics with source URL/date, classify eligible driveway tasks and record exclusions. Preserve the 51-page map, phases and topical border. **Source hypothesis:** the 20–30% surplus/25% cutoff; do not create irrelevant pages to meet it or claim authority from raw coverage. |
+| 3.2 | QDP/QDH/QDS query classification | **Adopt:** QDP owns a distinct useful page task; QDH is a meaningful sub-intent heading; QDS is a minor variant served by a section/sentence or natural anchor. Record query, destination/Seq, class, intent/EAV rationale, evidence and task-coverage status. Automation can propose; final classification is an explicit editorial review, never labeled human-reviewed without a human. |
+| 3.3 | Property/subfolder aging before scale | **Source hypothesis / scope conflict:** the proposed three-month wait and cited BrowserStack causal example are not verified here. Preserve existing flat URLs and review/phase gates; do not create aged accounts/subreddits or delay an approved accurate release solely by this threshold. |
+| 3.4 | Seven/eight-month randomized publication schedule | **Adapt:** sequence production by actual evidence, editorial/technical review and phase dependencies. Log planned/actual dates. **Source hypotheses:** randomized daily counts, 50–70 pages/day, seven/eight-month window and Module 7's 5% burst failure; they are not mandatory thresholds and cannot replace the ten-page Phase 1 release requirement. No cadence disguise. |
+| 3.5 | Do-not-touch flags through click tests | **Adapt:** maintain a change log, comparison period and evidence for substantive edits; avoid panic rewrites from an isolated traffic fluctuation. Fix factual/calculation/accessibility defects when substantiated. **Source hypothesis:** automatic two-update waiting period/confidence-clock claim; no unconditional edit freeze. |
+| 4.1 | Every publication supplies link, mention and claim | **Planning only:** an authorized external-placement register can record link destination/qualification, genuine brand mention and supported attribute claim. An independently earned mention is useful without forcing an optimized link or claim. No claim that a placement passes a known PageRank amount. |
+| 4.2 | Seed attributes into cross-source consensus | **Planning only, evidence required:** communicate verified actual attributes, not superlatives invented for repetition. Record independent editorial origin, evidence and paid/owned relationships. Repetition across controlled properties does not establish independent corroboration or guarantee an AI answer. No fabricated five-source consensus. |
+| 4.3 | Match linking domain and publication topic | **Adopt for future authorized assessment:** judge audience relevance and the actual page's context, not merely a domain label. Record provenance and disclosures. No automated/paid ranking-link scheme. |
+| 4.4 | External topical map | **Planning only:** track proposed topic, audience/platform, task relationship, supported claim, destination/anchor, disclosure, ownership and status. Keep it separate from the canonical on-site map; a planning row is not authorization to send outreach or publish. |
+| 5.1 | Reformat each asset across media | **Optional planning:** choose formats that help the audience and preserve current figures, scope, author attribution and canonical reference. Record source asset/version and meaningful adaptation. No mandatory video/podcast/ebook/forum pipeline or three-format quota for every tool. |
+| 5.2 | Platform/profile matrix and secondary domains | **Planning only / conditional applicability:** authentic video/podcast/book/community presence requires a real appropriate asset and identity. Do not create IMDb/Scholar/book claims merely to fabricate author status. Secondary sites are not automatically authorized or independently corroborating sources. Preserve the supplied tactic flags and review any proposed campaign's real purpose. |
+| 5.3 | Three short videos daily, three-second hook and comment funnel | **Optional campaign proposal:** define useful audience, format, truthful hook, cadence and working action only in an authorized distribution plan. The source's counts/timing are creative targets, not site-readiness requirements. Do not start posting or install a funnel in this instruction update. |
+| 6.1 | Separate web/AI impressions and crawler analysis | **Adapt with factual correction:** Google's checked guidance includes AI-feature traffic in Search Console's Web totals. Use available page/query/date/device/country metrics; a separate AI-feature figure needs a documented exposed source. Crawler logs show requests, not AI impressions; verify bot identity and log coverage. Keep any manual AI-citation observations distinct from impression counts. |
+| 6.2 | Track first clicks, trajectories and update deltas | **Adopt when data exists:** retain page-specific dates, baseline/window, queries and a change log. Record low sample size and source limits. Use substantiated findings to review intent/layout/content, not to infer a confirmed Google click-test or prohibit needed correction. |
+
+### Executable additions for authorized site work
+
+1. Add the visual/intent check to the page brief: expected first-viewport centerpiece, primary action/result, truthful labels and distractions to remove.
+2. Add QDP/QDH/QDS classification to the keyword/task-coverage record, with reasons and existing destination. Do not change ownership or create URLs solely because a query exists.
+3. Inspect rendered desktop/phone hierarchy, readable labels, keyboard behavior and result visibility. A source/HTML check alone does not prove viewport placement.
+4. Complete the factual/readability/locking workflow in Section 9. Use the answer the heading requires; definitions never delay a cost result or practical action.
+5. Maintain publication/change records and an available-metrics plan. Publish only under existing editorial, data, technical, phase and authorization gates.
+
+These are instructions for future authorized implementation. This update creates no new tools, page drafts, tracking scripts, accounts, outreach or publishing cadence.
+
+### Module 7 — full source checklist and driveway disposition
+
+Record every source checklist row using **Pass, Violation, Not verified or Not applicable**, plus scope/destination, evidence and the application decision. Preserve the source wording in the attached file; the table below provides the operative driveway test. A source hypothesis is marked not applicable as a mandatory gate with its rationale, not counted as a pass. Roll up page/site results separately and list campaign items deferred by scope.
+
+| Source check | Operative test or recorded disposition |
+| --- | --- |
+| Page: single dominant centerpiece (1.1) | Functional centerpiece is visible and primary in actual desktop/phone renders. |
+| Page: query-appropriate layout (1.2) | Layout serves the mapped task; no nonexistent checkout/product function. |
+| Page: 2–3 visible attributes (1.3) | Useful truthful labels appear beside the centerpiece; note a justified task-specific exception. |
+| Page: first 2% entities/n-grams (1.4) | Check natural early task/entity clarity. Exact 2% requirement: source hypothesis, not a mandatory gate. |
+| Page: no filler/minimum viable copy (1.4/2.6) | No dispensable generic prose; required methods, evidence and interpretation remain. |
+| Page: no AI-builder signatures (1.5) | Remove exposed starter/generator debris. Class-name/DOM uniqueness test: not a spam criterion; preserve shared architecture. |
+| Page: factual/opinionated mode (2.1) | Factual answers remain factual; any experiential block is genuine and labeled. |
+| Page: definition/predicate/attribute order (2.3) | Apply to definition intent; every other heading gets its own required answer first. |
+| Page: hybrid factual/UGC with schema (2.5) | Conditional on genuine relevant contributions; fabricated UGC or mandatory hybrid block fails truthful content requirements. |
+| Site: at least 120% merged competitor topics (3.1) | Review scoped gaps and excluded topics. Numeric surplus: source hypothesis, not a launch gate. |
+| Site: all queries QDP/QDH/QDS (3.2) | Every reviewed query has a justified class, destination and coverage status; unresolved intents remain explicit. |
+| Site: properties younger than three months (3.3) | Record age if pertinent to analysis. Automatic three-month failure: source hypothesis, not a release blocker. |
+| Site: randomized daily counts/seven/eight-month plan (3.4) | Check capacity, evidence readiness, dates and source phases. Randomization/calendar quotas: not mandatory. |
+| Site: daily burst above 5% (3.3/3.4) | Review the released batch for useful content and completed gates. Automatic percentage failure: not adopted; retain Phase 1's source requirement. |
+| Site: do-not-touch click-test flags (3.5) | Change log and reasons exist; factual or functional corrections are not blocked by an unsupported click-test inference. |
+| Site: each external link has mention/claim (4.1) | Future authorized placement record is truthful and relevant; compulsory mention/claim is not a ranking requirement. |
+| Site: five independent sources agree on attributes (4.2) | Verify actual independence and claim support where such a claim is made; five-source quota is not a site-wide requirement. |
+| Site: linking-domain topical match (4.3) | For authorized work, assess real audience/content relevance and link/disclosure provenance. |
+| Distribution: core assets in three media types (5.1) | Check only against an authorized useful distribution brief; otherwise record not applicable/deferred. |
+| Distribution: IMDb/podcast/ebook presence (5.2) | Verify genuine applicable publications/identities; no fabricated credentials or compulsory platform profile. |
+| Distribution: AI/web analysis in last 30 days (6.1) | If an authorized measurement plan/data exists, record actual available metrics, period and limits. No invented separate AI-impression totals. |
+
+These **21 framework checks** supplement, rather than replace, the 34 writing rows, 15 driveway editorial checks and existing semantic/runtime gates. Their availability/applicability is visible; no current page is declared compliant by adding them to this document.
+
+### Module 8 — source risk register and execution scope
+
+The source's standard/gray-area/high-risk labels describe proposed tactics. Keep them on any future plan. Standard work stays within the authorized task; gray-area proposals need documented evidence, purpose, scope and outcome monitoring; high-risk proposals require explicit human review before execution. The current rulebook update does not execute any proposal, so no approval question is needed for completing it.
+
+| Tactic recorded by source | Source label | Application here |
+| --- | --- | --- |
+| E-commerce mimicry on a non-commerce page | High risk | Use truthful intent-appropriate presentation. A deceptive buy/checkout claim is not an acceptable layout adaptation. |
+| Mass account/subreddit aging and automation | High risk | Planning record only; no autonomous account creation, posting or activity simulation. Check the actual platform's rules if a real campaign is later proposed. |
+| Exact-match secondary domains for AI seeding | Gray area | Document as a proposed campaign, not an automatic topical-authority tactic or independent corroboration. It is outside the current mapped-site task. |
+| AI-detection evasion via short copy/blacklists | Gray area | Apply concise original writing and remove generic phrasing for reader benefit. Do not use cosmetic rewriting as a substitute for useful content or evidence. |
+| Rapid randomized publishing | Gray area | Release genuinely reviewed work at the source's phases and actual capacity. No random activity pattern as a quality surrogate. |
+
+Do not buy/manufacture ranking credit, invent externally repeated claims or mislabel owned/paid publications as independent evidence. For any authorized advertising/sponsorship, document the relationship and qualify links according to current official guidance. These are concrete applications of the supplied external-link/risk modules, not permission to start a campaign.
+
+### Measurement and factual verification notes
+
+Official references checked October 14, 2026:
+
+- [Google AI features](https://developers.google.com/search/docs/appearance/ai-features): AI-feature traffic is included in Search Console Web reporting; no additional special AI optimization or schema is required. Maintain ordinary technical/content eligibility without inventing a distinct filter.
+- [Google generative AI guidance](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content): review accuracy, quality and relevance, including metadata. Cosmetic class/DOM changes do not establish these qualities.
+- [Google spam policies](https://developers.google.com/search/docs/essentials/spam-policies): assess actual scaled low-value content, deceptive functionality and link-spam practices; do not diagnose a violation from a shared component alone.
+- [Google helpful-content guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content): useful task completion and added value guide copy length; Google states no preferred word count.
+
+The framework's interview/patent assertions, BrowserStack anecdote, first-2% weighting, surplus coverage, property aging, publishing ceilings, click-test recovery, mathematical AI-detection and doubled AI eligibility were not independently verified. Preserve them as attributed source hypotheses; do not repeat them as measured facts or make them hard build failures.

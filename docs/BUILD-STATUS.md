@@ -1,5 +1,13 @@
 # BUILD — Engineering build and sitewide corrections
 
+## AI implementation framework integration — October 14, 2026
+
+Read the complete AI_SEO_Implementation_Framework.md and preserved an unchanged source copy. Rulebook Section 10 maps all eight modules, 26 numbered instructions, 21 framework audit checks and five tactic-risk rows. AGENTS.md, README and provenance now require the applicable visual, query-classification and measurement rules, with explicit conflicts and source-hypothesis status.
+
+Checked official Google guidance for AI-feature reporting, generated-content quality and spam/word-count claims. Instructions preserve answer-first writing, shared components, mapped scope, review/phase gates and real authorship/data. This documentation-only update does not change articles, calculators, analytics, publication status or external distribution.
+
+Verified every numbered source ID and all framework checklist/risk rows, preserved the prior 14-rule workflow, checked documentation links and authored Markdown whitespace, confirmed the byte-identical source copy, and rechecked the unchanged 51-page map (zero published). Runtime/browser tests were not rerun for instruction-only edits.
+
 ## Rulebook update — October 14, 2026
 
 Read the complete Pasted text.txt attachment and preserved an unchanged repository copy. The semantic rulebook now includes all 14 supplied rules, the input/EAV gate, separate draft/lock/readability/audit stages, 34 writing checklist rows, output summary requirements and explicit driveway application notes. AGENTS.md requires this workflow. The earlier missing-list status is resolved in the provenance record.

@@ -8,6 +8,8 @@ Read [AGENTS.md](AGENTS.md), the preserved [instruction set](docs/source-guidanc
 
 The owner-supplied [microsemantic writing workflow](docs/source-guidance/microsemantic-writing-workflow.txt) now supplies the complete 14 rules. Follow Step 0 → semantic draft → lock → readability → audit as separate stages; rulebook Section 9 includes all four audit sections and the output requirements. The earlier missing-list status is resolved.
 
+The owner's [AI SEO Implementation Framework](docs/source-guidance/ai-seo-implementation-framework.md) is mapped in rulebook Section 10. It adds visual hierarchy, intent-matched layout, QDP/QDH/QDS and measurement/planning checks. All eight modules have explicit application decisions; unsupported numeric thresholds are source hypotheses, and external campaigns remain planning-only until separately authorized.
+
 The semantic rules cover page ownership, site structure, writing, numerical consistency, contextual linking and evidence-based audits. An automated keyword/build pass does not establish editorial approval. The current 51 pages remain drafts and need individual editorial correction/review; adding the instructions does not complete that work.
 
 ## File tree

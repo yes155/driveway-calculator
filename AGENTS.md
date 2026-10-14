@@ -5,12 +5,15 @@ Read these sources before writing, auditing or changing the site:
 1. `docs/source-guidance/instruction-set.txt`.
 2. The relevant sections of `docs/source-guidance/driveway-calculator.txt` (the readable extraction of the original RTF). Sections 10 and 11 override earlier sections. Read Sections 2–4 for structure, 7 for data, 8.7/8.8 for writing/audit, 10.4/10.7 for refinements, and the page's Table A/B and Section 11 rows.
 3. `docs/source-guidance/microsemantic-writing-workflow.txt`, the complete owner-supplied workflow added October 14, 2026.
-4. `docs/SEMANTIC-SEO-RULES.md`, including the source-conflict table and Section 9's mandatory stages and audit tables.
-5. `docs/SEMANTIC-SEO-SOURCES.md` when applying a transferred rule or reporting its provenance.
+4. `docs/source-guidance/ai-seo-implementation-framework.md`, the owner's visual semantics/topical authority framework supplied October 14, 2026.
+5. `docs/SEMANTIC-SEO-RULES.md`, including the source-conflict table, Section 9's mandatory stages/audits and Section 10's application register for all eight framework modules.
+6. `docs/SEMANTIC-SEO-SOURCES.md` when applying a transferred rule or reporting its provenance.
 
 The owner requested these cross-project semantic SEO instructions on October 13, 2026 (Asia/Karachi). They apply sitewide. Do not substitute generic SEO advice or a keyword-count report for this workflow.
 
 The October 14 attachment supplies the complete 14 microsemantic rules. Its writing workflow replaces the earlier incomplete reconstruction: Step 0 facts/brief → Stage 1 semantic draft → Stage 2 lock → Stage 3 readability → Stage 4 audit. Do not blend stages. Read the documented driveway-specific application rules before drafting.
+
+The later AI SEO Implementation Framework adds intent-matched visual hierarchy, truthful attribute labels, QDP/QDH/QDS classification, measurement and planning for external publications/distribution. Apply Section 10's recorded decisions: preserve answer-first writing, shared components, mapped scope and phase gates. Unsupported source thresholds are not verified Google requirements. The current request updates instructions; it does not authorize external outreach, distribution, account creation or a publishing campaign.
 
 ## Scope and truth
 
@@ -26,6 +29,8 @@ The October 14 attachment supplies the complete 14 microsemantic rules. Its writ
 - Name external sources in visitor body text without outbound citation links unless explicitly requested; retain their URLs and evidence locations in the research register and Methodology source register. Preserve contextual internal links.
 - Put the actual answer, comparison or functioning tool early. Define inputs and units, show the calculation, interpret the result and explain the next task.
 - Never create multiple sections whose only difference is a keyword synonym. Never write a sentence only to hold a keyword. Record a source conflict or coverage exception instead of manufacturing filler.
+- Classify mapped queries as QDP (distinct page task), QDH (sub-intent heading) or QDS (minor section/sentence variant), with destination, rationale and coverage status. Preserve existing map ownership; do not turn the competitor-coverage percentage into permission for unrelated topics or extra URLs.
+- Match the first viewport to the task: calculator workspace for a tool, H1/direct answer or comparison for a guide. Use 2–3 truthful useful attribute labels where appropriate; keep navigation, decoration, ads and inactive CTAs subordinate. Check the actual desktop/phone render before claiming an above-fold pass.
 - Complete all 14 microsemantic, 11 document-level, 4 bridge and 5 stage-integrity audit rows plus the 15 driveway Section 8.8 checks and semantic audit. Record evidence, locations, fixes and unresolved issues. Fix violations within an authorized WRITE task; standalone AUDIT retains the report-only boundary. Automated checks do not establish editorial approval.
 - Do not mark a page reviewed, compliant, ready to publish or human-reviewed without the corresponding recorded review. Current drafts do not become compliant merely because this file exists.
 
@@ -33,5 +38,6 @@ The October 14 attachment supplies the complete 14 microsemantic rules. Its writ
 
 - Use focused checks for the affected work. Preserve existing correctness and launch gates; reuse valid unchanged evidence. Browser/layout/interaction checks are distinct from source and HTTP checks.
 - Keep private-preview access and draft indexing controls until the existing release requirements are met and launch is authorized. Keep leads disabled until the approved network configuration is complete.
+- Retain the framework's risk labels in any future tactic register. Gray-area plans require logged scope/evidence; high-risk tactics require explicit owner review before execution. Do not fabricate UGC, expertise, external consensus or AI-specific Search Console metrics. No arbitrary aging period, random publishing quota or click-test freeze replaces factual correction or the source launch gates.
 - Start replies with the applicable mode. AUDIT reports findings; rewriting requires authorization. The October 13/14 requests authorize adding/updating project instructions, not rewriting every article in those batches. For writing, present the final draft first, followed by audit tables, corrected passages and the required severity/integrity summary. Do not create separate document/PDF/spreadsheet deliverables unless requested; source MDX and explicitly requested rulebook files remain authorized.
 - Report exactly what changed, what was checked and what remains unverified. Never describe successful tests as a successful content audit.

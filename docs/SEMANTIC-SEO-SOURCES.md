@@ -4,6 +4,8 @@ Retrieved October 13, 2026 (Asia/Karachi). This is an evidence index for [SEMANT
 
 Updated October 14, 2026 after reading the complete owner-supplied **Pasted text.txt**. The previously missing full 14-rule list is now supplied and incorporated; the source's stages, all four audit sections and output requirements are recorded in rulebook Section 9.
 
+Further updated October 14, 2026 after reading the complete **AI_SEO_Implementation_Framework.md**. All eight modules, 26 numbered instructions, 21 framework checklist rows and five tactic-risk rows are mapped in rulebook Section 10; its source hypotheses and conflicts are explicit.
+
 ## Directly read source documents
 
 | Source | Identity/location | Rules transferred |
@@ -11,6 +13,7 @@ Updated October 14, 2026 after reading the complete owner-supplied **Pasted text
 | Driveway calculator.rtf | Current supplied attachment; preserved as `source-guidance/driveway-calculator.rtf` with Pandoc plain-text extraction beside it | Source context; ontology; central intent; topical boundaries; flat URLs; page ownership and phases; page templates; evidence; writing; 15 audit checks; keyword refinements; Section 11 map |
 | Instruction-set.txt | Current supplied attachment; preserved as `source-guidance/instruction-set.txt` | Modes, document precedence, factual/source requirements, source counts, US units, direct answers and audit scope |
 | Pasted text.txt | Current owner-supplied attachment; Library identity `libfile_d13eb60822ac81919df099c9688ddd96`; read directly from the provided scratch path and preserved unchanged as [microsemantic-writing-workflow.txt](source-guidance/microsemantic-writing-workflow.txt) | Step 0 facts/brief, all 14 numbered microsemantic rules, heading/document mechanics, Stage 2 locks, separate Stage 3 readability, four Stage 4 audit sections, severity labels, summary and output rules |
+| AI_SEO_Implementation_Framework.md | Current owner-supplied attachment; Library identity `libfile_bc47e5b4804c8191bd02b678799f8c9d`; read directly from the supplied path and preserved unchanged as [ai-seo-implementation-framework.md](source-guidance/ai-seo-implementation-framework.md) | Visual hierarchy and intent-matched layout, attribute labels, factual/experiential modes, QDP/QDH/QDS, publication/change records, external-map/distribution planning, measurement, full checklist and tactic-risk register |
 | semantic-seo-site-auditor-v4.md | `/Automotive calculator/semantic-seo-site-auditor-v4.md`; Library identity `libfile_ed7796c9edb88191824725cfc3749d51`; full 130-line document read | Audit categories: retrieval, entities/attributes, structure, answers, metadata/media, added value, schema/trust; limitations/conflicts recorded rather than adopting all algorithm assertions |
 | Topical Map_ Mechanical & Performance Calculators.md | `/Automotive calculator/Topical Map_ Mechanical & Performance Calculators.md`; identity `libfile_21e3947777cc819180a52b51deecd854`; full 67-line document read | Source context, central entity/intent, core/supporting relationships, tool-first journey, visual interpretation, method/source/feedback blocks |
 | automotive-topical-map.md | `/Automotive calculator/automotive-topical-map.md`; identity `libfile_2d5ec134c6708191836d3e8fc5da70a0`; full 93-line document read; current repository refinement also read at `/workspace/scratch/a0d3dd777ad3/automotive-calculator-site/docs/TOPICAL-MAP.md` | One task per URL, same-task solver modes, input/unit/relationship/result/interpretation/limitation, contextual links without quotas, independent examples, honest evidence and release boundaries |
@@ -49,3 +52,24 @@ Section 9 incorporates all 14 numbered rules, the Step 0 requirement for 3–6 v
 Driveway application notes are explicit: transitions cannot precede the immediate answer; a faulty locked span returns to Stage 1 and is relocked; hub/table heading exceptions and mapped titles remain; source URLs stay in the Methodology/evidence registers while ordinary body copy names sources; Stage 4 fixes an authorized WRITE draft while standalone AUDIT retains its report-only boundary. The request authorizes updating repository instructions, so the source's restriction on unsolicited document artifacts does not prevent this rulebook update.
 
 This is a rulebook update, not a retrospective claim that existing page drafts passed the new stages or their audits. Original attachments and calculator/site content were not edited.
+
+## AI implementation framework application and verification
+
+The new framework identifies its source as a Julian Goldie interview with Koray Tugberk Gubur titled “Google's Ranking Secret? Visual Semantics.” This is the supplied document's attribution; no video URL, complete transcript or specific patent citation was supplied or independently authenticated during this update. The file is used as owner-provided implementation guidance, not as proof of all stated ranking mechanisms.
+
+Section 10 accounts for every module and numbered instruction, retains the full 21-row source checklist with operative driveway dispositions and records its five tactic-risk labels. Adopted guidance prioritizes the functioning tool/answer, real visible attributes, relevant comparisons, distinct page/heading/section intent, review capacity and measured feedback. Planning-only records do not authorize external outreach, syndication, account creation or any live publishing campaign.
+
+Explicit source conflicts include definition-first wording against immediate cost/how-to answers, DOM uniqueness against shared components, percentage-based topical expansion against the mapped scope, arbitrary property-aging/cadence limits against source phases, and blanket edit freezes against verified corrections. The earlier 14-rule stages, 34 writing checks and 15 driveway checks remain in force.
+
+Official documentation read October 14, 2026:
+
+| Reference | What it supports |
+| --- | --- |
+| [Google AI features](https://developers.google.com/search/docs/appearance/ai-features) | AI-feature traffic is reported within Search Console Web totals; no additional special optimization/schema is required. The framework's proposed separate AI-impression breakdown cannot be assumed available. |
+| [Google generative AI guidance](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content) | Accuracy, quality, relevance and review of generated content/metadata; this does not establish a class-name or word-length detector threshold. |
+| [Google spam policies](https://developers.google.com/search/docs/essentials/spam-policies) | Actual scaled low-value content, misleading functionality and ranking-link abuse; paid/sponsored links need appropriate qualification. |
+| [Google helpful content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) | Original added value and satisfying task completion; no preferred word-count target. |
+
+The framework's exact 2% token weighting, 20–30% competitor surplus, three-month aging, seven/eight-month randomized schedule, 50–70-page daily ceiling, 5% burst failure, two-update recovery gate, five-source consensus quota, doubled AI eligibility, BrowserStack causal anecdote and mathematical detection claims remain attributed source hypotheses. They are not reported as verified Google rules or executed as hard launch gates.
+
+No competitor inventory, live page/layout audit, analytics integration, external-link acquisition or media distribution was performed for this instruction update. The untouched attachment remains available for reviewing the exact source wording against each application decision.
