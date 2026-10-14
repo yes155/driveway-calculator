@@ -7,8 +7,13 @@ import { toolFor, surfaceFor } from '../lib/calc/ui';
 import { computeGuideEstimate } from '../lib/calc/guide';
 import { priceBook, verifiedValue } from '../lib/data';
 import { money } from '../lib/format';
+import { buildNavigationGroups } from '../lib/navigation';
 const errors: string[] = [];
 const quickGuideSeqs = new Set([3, 5, 49]);
+const menuLinks = buildNavigationGroups(pages).flatMap((group) =>
+  group.links.map((link) => link.href),
+);
+const expectedHeaderLinks = [...menuLinks, '/about/'];
 const urls = [...pages.map((p) => p.url), ...trustPages.map((p) => p.url)];
 for (const url of urls) {
   const file = 'out' + url + 'index.html';
@@ -19,6 +24,18 @@ for (const url of urls) {
   const html = fs.readFileSync(file, 'utf8');
   if (!html.includes('<body class="theme-projectone">'))
     errors.push('Missing shared design theme ' + url);
+  const headerNav = html.match(
+    /<nav\\b[^>]*aria-label="Main navigation"[^>]*>[\\s\\S]*?<\\/nav>/,
+  )?.[0];
+  if (!headerNav) {
+    errors.push('Missing main navigation ' + url);
+  } else {
+    const actualLinks = [...headerNav.matchAll(/<a\\b[^>]*href="(\\/[^"#?]*)"/g)].map(
+      (match) => match[1],
+    );
+    if (JSON.stringify(actualLinks) !== JSON.stringify(expectedHeaderLinks))
+      errors.push('Primary navigation has duplicate, missing or misplaced links ' + url);
+  }
   const visibleHtml = html
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '')
     .replace(/<style\b[^>]*>[\s\S]*?<\/style>/g, '');
@@ -107,5 +124,5 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(
-  `Verified ${urls.length} exported pages: routes, canonical tags, internal links, generated examples, and draft indexing controls.`,
+  `Verified ${urls.length} exported pages: routes, canonical tags, single-home main navigation, internal links, generated examples, and draft indexing controls.`,
 );
