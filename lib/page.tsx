@@ -3,6 +3,8 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getPage, getContent, isPublic } from '@/lib/content';
 import { metadataFor, JsonLd, breadcrumbs, pageSchema } from '@/lib/seo';
 import Calculator from '@/components/Calculator';
+import GuideQuickEstimate from '@/components/GuideQuickEstimate';
+import { priceBook, verifiedValue } from '@/lib/data';
 import HelpfulVote from '@/components/HelpfulVote';
 import DraftGuidance from '@/components/DraftGuidance';
 import {
@@ -31,6 +33,12 @@ import {
   ReplacementReference,
 } from '@/components/ResearchModules';
 import { toolExample } from '@/lib/calc/examples';
+const guideEstimatorBySeq: Record<number, { href: string; label: string }> = {
+  3: { href: '/asphalt-driveway-cost-calculator/', label: 'asphalt driveway' },
+  5: { href: '/concrete-driveway-cost-calculator/', label: 'concrete driveway' },
+  49: { href: '/concrete-slab-cost-calculator/', label: 'concrete slab' },
+};
+
 export function pageMetadata(url: string) {
   const page = getPage(url);
   const data = getContent(url).data;
@@ -43,7 +51,11 @@ export async function renderPage(url: string) {
     draft = content.data.status !== 'published',
     ready = content.data.contentReady === true,
     answer = typeof content.data.answer === 'string' ? splitAnswer(content.data.answer) : null,
-    checklist = kind ? orderChecklist(kind, surfaceFor(page.seq)) : [];
+    checklist = kind ? orderChecklist(kind, surfaceFor(page.seq)) : [],
+    guideEstimator = page.type === 'Cost guide' ? guideEstimatorBySeq[page.seq] : undefined,
+    guidePrice = guideEstimator ? priceBook[surfaceFor(page.seq)] : undefined,
+    guideLow = verifiedValue(guidePrice?.installedLow),
+    guideHigh = verifiedValue(guidePrice?.installedHigh);
   const related = page.related.map((r) => ({ ...r, destination: getPage(r.slug) }));
   const material =
     page.seq === 22
@@ -129,7 +141,23 @@ export async function renderPage(url: string) {
           )}
         </div>
       </header>
-      {kind && (
+      {guideEstimator && guideLow !== null && guideHigh !== null && guidePrice && (
+        <GuideQuickEstimate
+          surfaceLabel={guideEstimator.label}
+          installedLow={guideLow}
+          installedHigh={guideHigh}
+          source={guidePrice.installedLow.source!}
+          retrievedOn={guidePrice.installedLow.retrievedOn!}
+          estimatorHref={guideEstimator.href}
+        />
+      )}
+      {guideEstimator && (guideLow === null || guideHigh === null) && (
+        <p className="guide-quick-unavailable">
+          A verified installed rate is unavailable. Review an itemized local quote in the{' '}
+          <Link href={guideEstimator.href}>detailed estimator</Link>.
+        </p>
+      )}
+      {kind && !guideEstimator && (
         <Calculator
           kind={kind}
           surface={surfaceFor(page.seq)}
@@ -139,7 +167,7 @@ export async function renderPage(url: string) {
       )}
       <div className="article-layout">
         <article className="prose">
-          {kind &&
+          {kind && !guideEstimator &&
             (() => {
               const worked = toolExample(kind, material, surfaceFor(page.seq));
               return (
