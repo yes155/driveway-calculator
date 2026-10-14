@@ -51,6 +51,16 @@ for (const url of urls) {
       createElement('meta', { name: 'description', content: page.description }),
     );
     if (!html.includes(meta)) errors.push('Incorrect exported description ' + url);
+    const decisionHeadings: Record<number, string> = {
+      17: 'How do installed paver costs differ by material?',
+      31: 'Which filler fits the crack rather than the product name?',
+      32: 'How do the two documented cold-patch limits compare?',
+      51: 'Which named sealer label matches the surface and coat plan?',
+    };
+    if (decisionHeadings[page.seq] && !visibleHtml.includes(decisionHeadings[page.seq]))
+      errors.push('Missing sourced decision comparison ' + url);
+    if ([4, 6, 50].includes(page.seq) && !html.includes('class="calculator-shell"'))
+      errors.push('Detailed estimator is missing its full calculation interface ' + url);
     const kind = toolFor(page.seq);
     const material =
       page.seq === 22
