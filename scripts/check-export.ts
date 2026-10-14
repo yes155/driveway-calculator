@@ -52,6 +52,36 @@ for (const url of urls) {
     if (dest.startsWith('/_next/') || dest === '/icon.svg') continue;
     if (!urls.includes(dest)) errors.push(`${url}: unknown internal link ${dest}`);
   }
+  if (url === '/') {
+    if (!html.includes('class="hero-area-check"') || !html.includes('<strong>400</strong>'))
+      errors.push('Homepage missing working 20 ft by 20 ft area-check preview');
+    for (const oldSection of [
+      'project-intro',
+      'purpose-section',
+      'lime-ticker',
+      'final-cta',
+      'hero-collage',
+    ]) {
+      if (html.includes(`class="${oldSection}`))
+        errors.push('Homepage still renders repeated section ' + oldSection);
+    }
+    const featuredMarkup = html.match(/class="tool-bento"[\s\S]*?<\/section>/)?.[0];
+    const libraryMarkup = html.match(/class="library-grid"[\s\S]*?<\/section>/)?.[0];
+    if (!featuredMarkup || !libraryMarkup) {
+      errors.push('Homepage missing distinct featured and additional-tool groups');
+    } else {
+      const internalHrefs = (markup: string) =>
+        [...markup.matchAll(/<a\b[^>]*href="(\/[^"#?]*)"/g)].map((match) => match[1]);
+      const featuredHrefs = internalHrefs(featuredMarkup);
+      const additionalHrefs = internalHrefs(libraryMarkup);
+      if (featuredHrefs.length !== 6 || new Set(featuredHrefs).size !== 6)
+        errors.push('Homepage featured cards contain missing or duplicate tools');
+      if (!additionalHrefs.length || new Set(additionalHrefs).size !== additionalHrefs.length)
+        errors.push('Homepage additional-tool library contains duplicate links');
+      if (additionalHrefs.some((href) => featuredHrefs.includes(href)))
+        errors.push('Homepage repeats featured calculators in its additional-tool library');
+    }
+  }
   const page = pages.find((p) => p.url === url);
   if (page) {
     const heading = html
