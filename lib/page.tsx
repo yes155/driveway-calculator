@@ -17,6 +17,7 @@ import {
 } from '@/components/Modules';
 import { toolFor, surfaceFor } from '@/lib/calc/ui';
 import { splitAnswer, orderChecklist } from '@/lib/editorial';
+import relatedHandoffs from '@/data/related-handoffs.json';
 import defaults from '@/data/defaults.json';
 import sources from '@/data/sources.json';
 import reviewers from '@/data/reviewers.json';
@@ -240,8 +241,10 @@ export async function renderPage(url: string) {
                   href={r.slug}
                   anchor={r.destination.h1}
                   relationshipText={
+                    (relatedHandoffs as Record<string, Record<string, string>>)[url]?.[r.slug] ??
                     content.data.related?.find((x: { slug: string }) => x.slug === r.slug)
-                      ?.annotation ?? r.annotation
+                      ?.annotation ??
+                    r.annotation
                   }
                 />
               ))}
