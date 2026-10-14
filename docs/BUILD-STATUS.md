@@ -1,5 +1,13 @@
 # BUILD — Engineering build and sitewide corrections
 
+## Current editorial status — October 13, 2026
+
+The owner rejected the repetitive cost-pillar draft. Earlier technical checks and the phrase “source-grounded content” do not establish useful writing, semantic compliance or publication readiness. All 51 pages remain drafts; their editorial review and correction are outstanding.
+
+The owner requested transferring semantic SEO instructions from the other projects. `AGENTS.md` now requires reading the preserved original driveway instructions plus `docs/SEMANTIC-SEO-RULES.md` before work. `docs/SEMANTIC-SEO-SOURCES.md` records the retrieved sources, adaptations and missing original rule lists. This batch changes project instructions only; it does not rewrite articles or complete a semantic site audit.
+
+Verified for this batch: byte-identical copies of both supplied originals, links among the new instruction documents, clean whitespace in the authored Markdown changes, and the existing map validator (51 pages, zero published). The original RTF retains its original CRLF formatting. Calculator/runtime files and browser behavior were not changed or retested.
+
 The Instruction-set.txt and Driveway calculator.rtf were read completely. Section 10/11 precedence is implemented. The original uploads were not modified.
 
 ## Delivered

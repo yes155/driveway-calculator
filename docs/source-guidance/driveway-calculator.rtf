@@ -1,0 +1,1988 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Driveway Cost & Material Calculators: Topical Map and ChatGPT Build Pack\par
+Prepared 9 October 2026 for a US-facing site. Search figures are Semrush US estimates from your exports and screenshots, written as volume / KD / CPC, with CPC in US dollars. Related keywords overlap, so never add volumes together.\par
+1. How to use this doc\par
+1. Read Sections 2 to 4 for strategy, architecture and build order.\par
+2. Sections 5 and 6 are the topical map. One row is one page and one EAV signature. Keywords in the Fold in column go on that same page, never on new URLs.\par
+3. Section 7 lists the data you must source before any page is written.\par
+4. Section 8 holds the ChatGPT prompts. Paste 8.1 first, then one build prompt at a time, then 8.7 with one map row per page.\par
+5. Section 9 covers launch, links and risks.\par
+2. Foundation Brief\par
+Source Context. A US-facing set of free driveway cost guides and material calculators. Revenue comes from (1) lead or call network payouts when visitors request contractor quotes, (2) display ads on tool pages, and (3) affiliate commissions on repair and sealing products.\par
+Central Entity. Driveway\par
+Brand and domain. Driveway Calculators at drivewaycalc.online. Tagline: Driveway cost guides and material calculators. Author: Farrukh Abdullah, researcher and writer. Write the brand in full as Driveway Calculators. It appears in the home page title, the schema, the footer and the lead disclosure text only, so the other title tags stay under 60 characters.\par
+Ontology (summary).\par
+\f1\bullet  Surfaces: asphalt, concrete (plain and stamped), gravel, pavers, tar and chip, asphalt millings\par
+\bullet  Project types: new installation, replacement, resurfacing or overlay, repair, sealcoating\par
+\bullet  Cost drivers: area in square feet, thickness in inches, base preparation, removal, labor, delivery, regional price level\par
+\bullet  Quantities: tons, cubic yards, square feet, gallons\par
+\bullet  Decisions: concrete vs asphalt, resurface vs replace, DIY vs hire\par
+\bullet  Supporting materials: gravel, rock, pea gravel, river rock, crusher run, road base (bridge to Driveway through gravel driveways)\par
+Central Search Intent. Working out how much a driveway project costs and how much material it needs, so a US homeowner can budget, order materials or request contractor quotes.\par
+Buyer personas.\par
+1. Homeowner planning a driveway project: highest lead value, arrives on cost and estimator pages.\par
+2. DIY builder or small contractor estimating material: arrives on calculators, produces ad revenue and links.\par
+3. Landscaper or homeowner buying aggregate: arrives on gravel and rock calculators, produces ad revenue and feeds gravel driveway pages.\par
+Core Section. Cost guides, cost estimators and the driveway quantity calculators (asphalt, gravel driveway, concrete driveway). Lead payouts and the highest CPCs (1.76 to 3.83 USD on cost terms) sit here.\par
+Outer Section. Aggregate calculators, converters, a material weight reference, repair product guides and a methodology page. They build Historical Data and pass relevance into Core pages as neighborhood content.\par
+Topical border (out of scope). Near me, contractor, company and directory queries; city and state pages; the Asphalt 8 video game and other unrelated senses of asphalt; general construction math unrelated to driveways. Concrete and paver calculators (Phase 3) stay scoped to driveways and flat slabs.\par
+Balance Law note. Aggregate calculators are Medium relevance to Driveway. Keep their copy on quantity, and add one bridging section per page that links to the matching driveway cost page. Do not let landscaping content spread into the cost pages.\par
+Authority sources. Primary: asphaltisbest.com. Its asphalt calculator holds #1 for asphalt calculator and figuring asphalt with roughly 6 to 9 referring domains and 240+ ranking keywords on one URL. Study its single-page tool structure, not its content. Others: pikeindustries.com (calculator with a quote request), concretenetwork.com (754 ranking keywords on one concrete driveway cost page), homewyse.com (estimator-style cost pages), and calculator.net, inchcalculator.com and omnicalculator.com as gravel calculator benchmarks that hold the top three and are not realistic targets.\par
+3. Architecture, tech and monetization modules\par
+URL rules. Flat, one level, lowercase, hyphenated, trailing slash. No dates and no categories in URLs. Navigation groups: Costs, Calculators, Materials, Repair and Maintenance, About.\par
+Page types and templates.\par
+\bullet  Cost guide: answer block, range table, cost factors, quick estimate, Q&A\par
+\bullet  Cost estimator (tool): inputs, low-to-high result, assumptions, quote CTA\par
+\bullet  Quantity calculator (tool): inputs, result, formula, density table\par
+\bullet  Converter or reference: input, result, lookup table\par
+\bullet  Comparison: side-by-side table, decision rules\par
+\bullet  Product guide (affiliate): criteria, picks, how to use\par
+\bullet  Hub or pillar: surface comparison, links to every child page\par
+Modules on every cost and tool page, in this order.\par
+1. Answer block: one declarative sentence with the number or result\par
+2. The calculator or quick estimator\par
+3. Result block with a Get free quotes CTA (ZIP, project type)\par
+4. How it is calculated: formula, default values, editable fields\par
+5. Q&A sections, each starting with the direct answer\par
+6. Related pages, each link with annotation text stating the relationship\par
+7. Sources named in text, last updated date, author\par
+8. Disclosure line for leads and affiliate links\par
+Recommended stack. Next.js (App Router) with TypeScript, Tailwind and MDX; calculators as pure TypeScript functions with unit tests; static generation. Host on Cloudflare Pages or Vercel Pro (Vercel's free Hobby plan is for non-commercial use, so check current terms). The lead endpoint runs as a Cloudflare Pages Function with D1 storage; on Vercel Pro use a Next.js route handler instead. Analytics: GA4 and Search Console. Reserve ad slot heights to prevent layout shift. Schema: Organization, BreadcrumbList, WebApplication for tools, Article with dateModified. Google limits FAQ rich results to a small set of sites, so keep Q&A visible but do not plan around a rich result.\par
+Monetization.\par
+\bullet  Leads: build the CTA module now, but switch it on only after a lead or call network approves you and supplies its consent language and routing details (see 8.5).\par
+\bullet  Ads: apply to AdSense once 15 to 20 pages are live and check eligibility for your country; move to a premium ad network when its traffic threshold is met (verify current thresholds).\par
+\bullet  Affiliate: repair and sealing product guides (Section 6, Seq 31 and 32).\par
+Trust. Real author name and bio, a methodology page, sources named in text, a visible last-updated date. Do not invent a US address, reviewer or contractor credential.\par
+4. Build order and publishing plan\par
+Phase\par
+Seq\par
+Pages\par
+Why\par
+1 Launch set\par
+1 to 10\par
+methodology, asphalt calculator, asphalt driveway cost, asphalt cost estimator, concrete cost, concrete estimator, gravel driveway cost, gravel driveway calculator, gravel calculator, home\par
+Establishes the Core identity: money pages plus the tools that link to them. Publish all ten together.\par
+1b Core cost pages\par
+11 to 20\par
+repave, sealcoating, repair, concrete vs asphalt, replace concrete, stamped, pavers, tar and chip, millings cost, thickness\par
+Completes the cost cluster at 2 to 3 pages per week.\par
+2 Outer tools\par
+21 to 32\par
+sealcoat and millings calculators, material weights, converter, rock, pea gravel, crusher run, road base, concrete calculator, paver calculator, two affiliate guides\par
+Traffic engine and Historical Data. Each links to its matching cost page.\par
+3 Hard terms\par
+33 to 36\par
+driveway cost pillar\par
+Need links and SERP checks first. The pillar waits until 8 or more cost pages exist.\par
+Aim for roughly 10 referring domains per calculator page. The benchmark calculator ranks #1 with 6 to 9.\par
+5. Topical map: Core section\par
+Table A covers the target and the on-page elements. Table B (next) covers what goes inside each page. Seq is the global build order across Sections 5 and 6. Volumes are US monthly searches / KD / CPC in USD. Replace \{\{LOW\}\} and \{\{HIGH\}\} in titles with a sourced price range (Section 7) and add the dollar signs then, or drop the numeric part.\par
+Table A: Core targets and on-page elements\par
+Seq\par
+URL\par
+Type\par
+Primary keyword\par
+Fold in (same page)\par
+Title tag\par
+H1\par
+Meta description\par
+2\par
+/asphalt-calculator/\par
+Quantity tool\par
+asphalt calculator (22.2K / 15 / 1.16)\par
+figuring asphalt (12.1K / 18 / 1.16); asphalt tonnage calculator (1.0K / 10); asphalt calculator online (720 / 25); asphalt driveway calculator (590 / 16); how to calculate asphalt tonnage (390 / 5); how to figure asphalt tonnage (390 / 8); how do you calculate asphalt tonnage (260 / 7); how to figure out asphalt tonnage (210 / 5); how to calculate tons of asphalt (210 / 7); how to figure tons of asphalt (170 / 5); bitumen calculator (14.8K / 15 / 1.16)\par
+Asphalt Calculator: Tons Needed for a Driveway or Lot\par
+Asphalt Calculator\par
+Calculate tons of asphalt from length, width and thickness. Editable density and waste allowance. Free, no sign-up.\par
+3\par
+/asphalt-driveway-cost/\par
+Cost guide\par
+asphalt driveway cost (6.6K / 9 / 3.14)\par
+cost of asphalt driveway (1.6K / 8); how much does it cost to pave a driveway (1.6K / 16 / 2.86); blacktop driveway cost (880 / 9 / 2.91); asphalt driveway cost per square foot (590 / 3 / 2.79); how much does an asphalt driveway cost (720 / 7); how much does it cost to asphalt a driveway (590 / 9); 20x20 asphalt driveway cost (320 / 19 / 2.93); cost of asphalt per ton (170 / 7 / 3.30); hot mix asphalt cost per ton (110 / 13)\par
+Asphalt Driveway Cost: \{\{LOW\}\} to \{\{HIGH\}\} per Sq Ft (2026)\par
+Asphalt Driveway Cost in 2026\par
+Asphalt driveway cost per square foot, per ton and for a 20x20 driveway, plus what moves the price. Includes a free estimator.\par
+4\par
+/asphalt-driveway-cost-calculator/\par
+Cost estimator\par
+asphalt driveway cost calculator (1.9K / 24)\par
+driveway paving cost calculator (720 / 22 / 2.50)\par
+Asphalt Driveway Cost Calculator: Free Estimate\par
+Asphalt Driveway Cost Calculator\par
+Estimate your asphalt driveway cost from size, thickness, base work and removal. Low-to-high range with editable assumptions.\par
+5\par
+/concrete-driveway-cost/\par
+Cost guide\par
+concrete driveway cost (4.4K / 21 / 3.67)\par
+cost of concrete driveway (1.9K / 17); how much does a concrete driveway cost (1.0K / 17); how much does it cost to concrete a driveway (480 / 14); how much does concrete driveway cost (210 / 7); how much does it cost for a concrete driveway (110 / 21); how much does it cost to pour a concrete driveway (110 / 22); how much is a concrete driveway (720 / 15); how much to cement a driveway (720 / 16); how much does it cost to cement a driveway (480 / 31); how much to concrete a driveway (320 / 20); how much does a cement driveway cost (260 / 14); how much to concrete driveway (260 / 10); how much is a concrete driveway per square foot (90 / 13 / 1.72)\par
+Concrete Driveway Cost: \{\{LOW\}\} to \{\{HIGH\}\} per Sq Ft (2026)\par
+Concrete Driveway Cost in 2026\par
+Concrete driveway cost per square foot and in total, with what raises or lowers the price. Includes a free cost estimator.\par
+6\par
+/concrete-driveway-cost-calculator/\par
+Cost estimator\par
+concrete driveway cost calculator (1.3K / 33)\par
+concrete driveway calculator (720 / 21 / 2.26); driveway concrete calculator (170 / 41 / 2.26); how much concrete do i need for a driveway (20)\par
+Concrete Driveway Cost Calculator: Free Estimate\par
+Concrete Driveway Cost Calculator\par
+Estimate concrete driveway cost and cubic yards from size and thickness. Editable price and waste assumptions, low-to-high range.\par
+7\par
+/gravel-driveway-cost/\par
+Cost guide\par
+gravel driveway cost (2.4K / 11 / 1.76)\par
+gravel delivery cost (390 / 2 / 1.07); cost to put in gravel driveway (1.6K / 13); cost to install gravel driveway (590 / 8); driveway gravel cost (590 / 13); gravel driveway cost calculator (590 / 21); driveway gravel prices (2.4K / 15)\par
+Gravel Driveway Cost: \{\{LOW\}\} to \{\{HIGH\}\} per Sq Ft (2026)\par
+Gravel Driveway Cost in 2026\par
+Gravel driveway cost per square foot, per ton and with delivery, plus base layers and upkeep. Includes a free estimator.\par
+8\par
+/gravel-driveway-calculator/\par
+Quantity tool\par
+gravel driveway calculator (1.3K / 20 / 0.44)\par
+how much gravel do i need for a driveway (50 / 15)\par
+Gravel Driveway Calculator: Tons and Yards Needed\par
+Gravel Driveway Calculator\par
+Calculate tons and cubic yards of gravel for a driveway from length, width and depth, with base and surface layers.\par
+10\par
+/\par
+Hub\par
+none (brand and hub)\par
+none\par
+Driveway Calculators: Cost Guides and Material Tools\par
+Driveway Calculators\par
+Free driveway cost guides and calculators for asphalt, concrete, gravel and pavers: tons, cubic yards, square feet and price ranges.\par
+11\par
+/repave-asphalt-driveway-cost/\par
+Cost guide\par
+asphalt resurfacing driveway cost (2.4K / 29)\par
+cost to replace asphalt driveway (2.4K / 41); how much does it cost to repave a driveway (1.0K / 24 / 2.86); asphalt overlay cost (880 / 13 / 3.49)\par
+Repave Asphalt Driveway Cost: Resurface vs Replace (2026)\par
+Cost to Repave an Asphalt Driveway\par
+Repaving cost for an asphalt driveway: overlay, resurfacing and full replacement, with when each option applies.\par
+12\par
+/driveway-sealcoating-cost/\par
+Cost guide\par
+driveway sealcoating (6.6K / 38 / 3.50)\par
+driveway sealcoating cost (390 / 9 / 2.94); sealcoating cost per square foot (90 / 11 / 3.83); driveway sealing (6.6K / 52); how much to seal a driveway (720 / 19); how much does it cost to seal a driveway (590 / 18)\par
+Driveway Sealcoating Cost: \{\{LOW\}\} to \{\{HIGH\}\} per Sq Ft\par
+Driveway Sealcoating Cost\par
+Driveway sealcoating cost per square foot and per driveway, with how often it is needed and what changes the price.\par
+13\par
+/asphalt-driveway-repair-cost/\par
+Cost guide\par
+asphalt driveway repair cost (320 / 20 / 3.80)\par
+asphalt driveway repair (4.4K / 41)\par
+Asphalt Driveway Repair Cost: Cracks, Patches, Potholes\par
+Asphalt Driveway Repair Cost\par
+Asphalt driveway repair cost by repair type: crack filling, patching, potholes and sections, with when repair beats repaving.\par
+14\par
+/concrete-vs-asphalt-driveway/\par
+Comparison\par
+concrete vs asphalt driveway (1.3K / 15 / 1.26)\par
+concrete vs asphalt driveway cost (260 / 11 / 1.91); how long does an asphalt driveway last (320 / 0 / 0.96); how long does a concrete driveway last (170 / 8); asphalt driveway lifespan (70 / 0); concrete driveway lifespan (40 / 9)\par
+Concrete vs Asphalt Driveway: Cost, Lifespan, Upkeep\par
+Concrete vs Asphalt Driveway\par
+Concrete vs asphalt driveway compared on cost, lifespan, maintenance and climate fit, with a side-by-side table.\par
+15\par
+/replace-concrete-driveway-cost/\par
+Cost guide\par
+cost to replace concrete driveway (1.3K / 15)\par
+none\par
+Replace Concrete Driveway Cost: Removal and New Pour\par
+Cost to Replace a Concrete Driveway\par
+Cost to replace a concrete driveway: demolition, disposal and the new pour, with price ranges and when replacement beats repair.\par
+16\par
+/stamped-concrete-driveway-cost/\par
+Cost guide\par
+stamped concrete driveway cost (320 / 15 / 2.43)\par
+none\par
+Stamped Concrete Driveway Cost: \{\{LOW\}\} to \{\{HIGH\}\} per Sq Ft\par
+Stamped Concrete Driveway Cost\par
+Stamped concrete driveway cost per square foot, what pattern and color add, and how it compares with plain concrete.\par
+17\par
+/paver-driveway-cost/\par
+Cost guide\par
+paver driveway cost (880 / 28 / 3.35)\par
+none\par
+Paver Driveway Cost: \{\{LOW\}\} to \{\{HIGH\}\} per Sq Ft (2026)\par
+Paver Driveway Cost\par
+Paver driveway cost per square foot by material, base work and pattern, compared with asphalt and concrete.\par
+18\par
+/tar-and-chip-driveway-cost/\par
+Cost guide\par
+tar and chip driveway cost (480 / 6 / 2.41)\par
+none\par
+Tar and Chip Driveway Cost per Sq Ft (2026)\par
+Tar and Chip Driveway Cost\par
+Tar and chip driveway cost per square foot, how it is laid, lifespan and how it compares with asphalt.\par
+19\par
+/asphalt-millings-cost/\par
+Cost guide\par
+asphalt millings cost (320 / 4 / 2.68)\par
+none\par
+Asphalt Millings Cost: Per Ton and Per Driveway\par
+Asphalt Millings Cost\par
+Asphalt millings cost per ton and per driveway, delivery charges and how much a driveway needs.\par
+20\par
+/asphalt-driveway-thickness/\par
+Spec guide\par
+asphalt driveway thickness (260 / 0 / 2.81)\par
+none\par
+Asphalt Driveway Thickness: How Many Inches Is Needed\par
+Asphalt Driveway Thickness\par
+Recommended asphalt driveway thickness by use, base depth and how thickness changes cost and tonnage.\par
+33\par
+/driveway-cost/\par
+Pillar\par
+driveway cost (590 / 19 / 3.01); new driveway cost (880 / 17 / 3.34); driveway paving cost (1.0K / 15 / 3.35); how much does a driveway cost (590 / 19 / 2.55); cost to pave a driveway (390 / 18 / 2.75); how much will a driveway cost (390 / 25 / 2.55); how much does it cost for a driveway (260 / 23 / 2.57); how much would a new driveway cost (210 / 12 / 3.04); cost of a new driveway (170 / 16 / 3.12); driveway cost per square foot (170 / 17 / 2.24); how much does it cost to build a driveway (170 / 29 / 2.56); how much should a new driveway cost (170 / 9 / 3.04)\par
+none\par
+Driveway Cost by Material: Asphalt, Concrete, Gravel, Pavers\par
+Driveway Cost by Material\par
+Driveway cost compared across asphalt, concrete, gravel and pavers, with price ranges, lifespan and a free estimator for each.\par
+Notes on Table A:\par
+\bullet  Rows 3 and 4, and rows 5 and 6, are guide and tool pairs. The SERP checks of 10 October 2026 showed different top tens for each pair, so keep each pair as two pages (see 10.3).\par
+\bullet  Row 12: the head term driveway sealcoating (6.6K / 38) is harder than its cost variants. Rank the cost variants first and cover the head term in the same page.\par
+\bullet  Row 11 splits into two pages if the SERPs for resurfacing and replacing differ.\par
+\bullet  Row 13 shows no AI Overview and has paid ads in the SERP, which makes it the best repair keyword.\par
+Table B: Core micro-context, bridges and images\par
+Bridge format: the sentence around each link must state the relationship with a verb, using the annotation text in brackets as the model. Anchor text must match the destination page title.\par
+Seq\par
+Micro-context entities (must appear in copy)\par
+Contextual bridges (out and in)\par
+Rel\par
+Prom\par
+Image ALT\par
+2\par
+hot mix asphalt, short ton (2,000 lb), density in lb per cubic foot, thickness in inches, waste allowance, compaction, square feet, base course\par
+Out: /asphalt-driveway-cost-calculator/ (this calculator converts driveway dimensions into tons that the cost estimator then prices); /asphalt-driveway-thickness/ (thickness sets the tonnage); /material-weights/ (the density default comes from the weight chart). In: from /, /asphalt-driveway-cost/, /asphalt-millings-calculator/\par
+H\par
+H\par
+Asphalt calculator with length, width and thickness inputs and a tons result\par
+3\par
+hot mix asphalt, base course, subgrade, thickness, square footage, tonnage, removal and disposal, labor, delivery, regional price level\par
+Out: /asphalt-calculator/ (the calculator turns driveway size into tons to price); /asphalt-driveway-cost-calculator/; /concrete-vs-asphalt-driveway/; /driveway-sealcoating-cost/ (sealcoating adds upkeep cost across the asphalt lifespan); /repave-asphalt-driveway-cost/. In: from /, /driveway-cost/, /asphalt-calculator/, /asphalt-driveway-thickness/\par
+H\par
+H\par
+Freshly paved asphalt driveway with a tape measure across the width\par
+4\par
+square feet, thickness, base preparation, removal, low and high range, cost tier selector, editable assumptions\par
+Out: /asphalt-driveway-cost/ (the guide explains each input and its price range); /asphalt-calculator/. In: from /asphalt-driveway-cost/, /repave-asphalt-driveway-cost/\par
+H\par
+H\par
+Cost estimator form for an asphalt driveway with a price range result\par
+5\par
+concrete slab, slab thickness, reinforcement (rebar, wire mesh), control joints, finish, cubic yards, formwork, subbase, cement (the everyday word searchers use for concrete)\par
+Out: /concrete-driveway-cost-calculator/; /concrete-vs-asphalt-driveway/; /stamped-concrete-driveway-cost/ (stamping adds pattern cost to the base slab price); /replace-concrete-driveway-cost/. In: from /, /driveway-cost/, /concrete-calculator/\par
+H\par
+H\par
+Concrete driveway slab with broom finish and control joints\par
+6\par
+cubic yards, thickness, waste allowance, finish, reinforcement, price per cubic yard, price per square foot\par
+Out: /concrete-driveway-cost/ (the guide explains how finish and reinforcement change price); /concrete-calculator/ (volume math). In: from /concrete-driveway-cost/\par
+H\par
+M\par
+Concrete driveway cost estimator showing cubic yards and a price range\par
+7\par
+crusher run, road base, pea gravel, base layer, surface layer, geotextile fabric, edging, delivery fee, tons, cubic yards\par
+Out: /gravel-driveway-calculator/ (the calculator turns driveway size into tons to price); /gravel-calculator/; /crusher-run-calculator/; /road-base-calculator/; /concrete-vs-asphalt-driveway/. In: from /, /driveway-cost/, /gravel-calculator/\par
+H\par
+M\par
+Gravel driveway with a compacted crushed stone surface and edging\par
+8\par
+base layer, surface layer, depth, compaction, tons per cubic yard, delivery load rounding\par
+Out: /gravel-driveway-cost/ (the cost guide prices the tons this calculator returns); /cubic-yards-to-tons/. In: from /gravel-calculator/, /gravel-driveway-cost/\par
+H\par
+M\par
+Gravel driveway calculator with base and surface layer inputs\par
+10\par
+driveway, cost, calculator, asphalt, concrete, gravel, pavers, tons, cubic yards\par
+Out: every Core page and every tool through the main navigation. In: from every page logo link\par
+H\par
+H\par
+Driveway cost and material calculators site banner\par
+11\par
+overlay, resurfacing, milling, tear-out, base repair, drainage, asphalt lifespan\par
+Out: /asphalt-driveway-repair-cost/ (repair applies while damage is limited); /asphalt-driveway-cost-calculator/; /driveway-sealcoating-cost/. In: from /asphalt-driveway-cost/\par
+H\par
+M\par
+Asphalt driveway with an overlay layer being rolled\par
+12\par
+sealer, coverage per gallon, coats, cure time, crack filling before sealing, sealing frequency\par
+Out: /sealcoat-calculator/ (the calculator converts driveway area into gallons); /asphalt-driveway-repair-cost/. In: from /asphalt-driveway-cost/\par
+H\par
+M\par
+Sealcoat being applied to an asphalt driveway with a squeegee\par
+13\par
+crack filler, cold patch, hot patch, pothole, alligator cracking, sealing\par
+Out: /driveway-crack-filler/; /asphalt-cold-patch/; /repave-asphalt-driveway-cost/ (repaving replaces repair once damage spreads). In: from /asphalt-driveway-cost/, /driveway-sealcoating-cost/\par
+H\par
+M\par
+Cracked asphalt driveway section marked for repair\par
+14\par
+lifespan, upfront cost, maintenance, freeze-thaw, heat, repair, appearance\par
+Out: /asphalt-driveway-cost/; /concrete-driveway-cost/; /driveway-cost/. In: from both cost pages\par
+H\par
+H\par
+Asphalt and concrete driveways side by side\par
+15\par
+demolition, hauling, disposal, subbase, new pour, slab replacement\par
+Out: /concrete-driveway-cost/; /concrete-driveway-cost-calculator/. In: from /concrete-driveway-cost/\par
+H\par
+M\par
+Old concrete driveway being broken up for replacement\par
+16\par
+stamp pattern, color hardener, release agent, sealer, resealing\par
+Out: /concrete-driveway-cost/ (plain concrete sets the base price that stamping adds to). In: from /concrete-driveway-cost/\par
+H\par
+L\par
+Stamped concrete driveway with a slate pattern\par
+17\par
+concrete pavers, brick pavers, natural stone, base depth, bedding sand, edge restraint, joint sand\par
+Out: /paver-calculator/; /driveway-cost/. In: from /driveway-cost/, /concrete-vs-asphalt-driveway/\par
+H\par
+M\par
+Paver driveway with a herringbone pattern\par
+18\par
+bituminous binder, aggregate chips, rolling, chip seal, lifespan\par
+Out: /asphalt-driveway-cost/ (tar and chip is the lower-cost alternative to hot mix asphalt). In: from /asphalt-driveway-cost/\par
+M\par
+L\par
+Tar and chip driveway surface close up\par
+19\par
+reclaimed asphalt pavement, tons, delivery, compaction, base depth\par
+Out: /asphalt-millings-calculator/; /gravel-driveway-cost/. In: from /asphalt-driveway-cost/\par
+M\par
+L\par
+Pile of asphalt millings on a driveway base\par
+20\par
+base thickness, asphalt layers, traffic load, subgrade, compaction\par
+Out: /asphalt-calculator/ (thickness is an input to tonnage); /asphalt-driveway-cost/. In: from /asphalt-calculator/\par
+M\par
+M\par
+Cross section diagram of an asphalt driveway layers\par
+33\par
+asphalt, concrete, gravel, pavers, tar and chip, cost per square foot, lifespan\par
+Out: every cost page and estimator. In: from every cost page\par
+H\par
+H\par
+Four driveway surfaces compared in a grid\par
+6. Topical map: Outer section\par
+Phase notes: rows 35 and 36 are Phase 3. Rows 26, 28 and 34 are merged into rows 9, 25 and 2 after the SERP checks in 10.3, so do not build those three pages. Gravel calculator for fish tank (1.0K / 11) belongs on your aquarium site, not here.\par
+Table A: Outer targets and on-page elements\par
+Seq\par
+URL\par
+Type\par
+Primary keyword\par
+Fold in (same page)\par
+Title tag\par
+H1\par
+Meta description\par
+1\par
+/methodology/\par
+Reference\par
+none (trust page)\par
+none\par
+How We Calculate Driveway Costs and Material Quantities\par
+Methodology\par
+How the formulas, default densities and price ranges on this site are calculated, with sources and update dates.\par
+9\par
+/gravel-calculator/\par
+Quantity tool\par
+gravel calculator (40.5K / 22 / 0.69)\par
+gravel calculator yards (1.0K / 13); how much gravel do i need calculator (320 / 25); how to calculate how much gravel i need (320 / 26); how to calculate how much gravel you need (210 / 14); how to calculate yards of gravel (210 / 16); how to calculate gravel needed (170 / 34); figuring gravel; how much gravel do i need (2.4K / 21 / 0.17); how many yards of gravel do i need (140 / 16 / 0.15); stone calculator (12.1K / 17 / 0.48); crushed stone calculator (2.4K / 20); river stone calculator (880 / 2); 57 stone calculator (720 / 12); stone calculator tons (720 / 14); how much stone do i need calculator (260 / 19)\par
+Gravel Calculator: Tons and Cubic Yards Needed\par
+Gravel Calculator\par
+Calculate tons and cubic yards of gravel from length, width and depth. Editable density and delivery rounding. Free.\par
+21\par
+/sealcoat-calculator/\par
+Quantity tool\par
+sealcoat calculator (390 / 5 / 0.56)\par
+how much sealer do i need (20 / 0.66); driveway sealer calculator (320 / 13); asphalt sealer calculator (170 / 12 / 0.66)\par
+Sealcoat Calculator: Gallons Needed for a Driveway\par
+Sealcoat Calculator\par
+Calculate gallons of sealcoat from driveway area, product coverage and number of coats, with container rounding.\par
+22\par
+/asphalt-millings-calculator/\par
+Quantity tool\par
+asphalt millings calculator (590 / 2 / 0.04)\par
+none\par
+Asphalt Millings Calculator: Tons for a Driveway\par
+Asphalt Millings Calculator\par
+Calculate tons of asphalt millings for a driveway from length, width and depth, with an editable density.\par
+23\par
+/material-weights/\par
+Reference table\par
+asphalt weight per cubic foot (90 / 6)\par
+asphalt density (110 / 10); weight of asphalt (110 / 5); how much does a yard of asphalt weigh (110 / 3); the concrete and gravel weight terms live on Seq 53 and 54 and are linked from the chart\par
+Material Weight Chart: Asphalt, Gravel, Concrete per Cubic Foot\par
+Material Weight Chart\par
+Weight per cubic foot and per cubic yard for asphalt, gravel, crushed stone and concrete, with tons per cubic yard.\par
+24\par
+/cubic-yards-to-tons/\par
+Converter\par
+cubic yards to tons (2.9K / 16 / 0.00)\par
+how many yards in a ton of gravel (1.3K / 19 / 0.93); how many tons in a cubic yard of gravel (70 / 17 / 0.68)\par
+Cubic Yards to Tons Converter by Material\par
+Cubic Yards to Tons\par
+Convert cubic yards to tons for gravel, asphalt, sand and concrete using an editable density for each material.\par
+25\par
+/rock-calculator/\par
+Quantity tool\par
+rock calculator (9.9K / 9 / 0.48)\par
+river rock calculator (3.6K / 7 / 0.27); landscape rock calculator (2.4K / 18); crushed rock calculator (1.3K / 13); how much rock do i need calculator (210 / 19); how much river rock do i need calculator (70 / 1)\par
+Rock Calculator: Tons and Cubic Yards Needed\par
+Rock Calculator\par
+Calculate tons and cubic yards of landscape rock from area and depth, with editable density and coverage.\par
+26\par
+/stone-calculator/\par
+Merged into Seq 9 (do not build)\par
+stone calculator (12.1K / 17 / 0.48)\par
+none\par
+Stone Calculator: Tons and Cubic Yards Needed\par
+Stone Calculator\par
+Calculate tons and cubic yards of crushed stone from area and depth, with editable density.\par
+27\par
+/pea-gravel-calculator/\par
+Quantity tool\par
+pea gravel calculator (4.4K / 9 / 0.38)\par
+calculate pea gravel (320 / 9); calculating pea gravel (110 / 15); how much pea gravel do i need calculator (70 / 18); pea gravel cost calculator (70 / 12)\par
+Pea Gravel Calculator: Tons and Yards Needed\par
+Pea Gravel Calculator\par
+Calculate tons and cubic yards of pea gravel for paths, patios and driveways from area and depth.\par
+28\par
+/river-rock-calculator/\par
+Merged into Seq 25 (do not build)\par
+river rock calculator (3.6K / 7 / 0.27)\par
+none\par
+River Rock Calculator: Tons and Yards Needed\par
+River Rock Calculator\par
+Calculate tons and cubic yards of river rock from area, depth and stone size, with editable density.\par
+29\par
+/crusher-run-calculator/\par
+Quantity tool\par
+crusher run calculator (1.0K / 5 / 0.08)\par
+none\par
+Crusher Run Calculator: Tons Needed for a Base\par
+Crusher Run Calculator\par
+Calculate tons of crusher run for a driveway or path base from area, depth and compaction.\par
+30\par
+/road-base-calculator/\par
+Quantity tool\par
+road base calculator (1.0K / 15 / 0.73)\par
+none\par
+Road Base Calculator: Tons and Yards Needed\par
+Road Base Calculator\par
+Calculate tons and cubic yards of road base from length, width and depth, with a compaction allowance.\par
+31\par
+/driveway-crack-filler/\par
+Product guide\par
+driveway crack filler (3.6K / 40 / 1.35)\par
+none\par
+Best Driveway Crack Filler: How to Choose and Apply\par
+Driveway Crack Filler\par
+How to choose a driveway crack filler by crack width and surface, with application steps and what to avoid.\par
+32\par
+/asphalt-cold-patch/\par
+Product guide\par
+asphalt cold patch (3.6K / 31 / 1.22)\par
+none\par
+Asphalt Cold Patch: How to Use It on Potholes\par
+Asphalt Cold Patch\par
+What asphalt cold patch is, how to apply it to a pothole and how long a cold patch repair lasts.\par
+34\par
+/bitumen-calculator/\par
+Merged into Seq 2 (do not build)\par
+bitumen calculator (14.8K / 15 / 1.16)\par
+none\par
+Bitumen Calculator: Quantity for Paving and Surfacing\par
+Bitumen Calculator\par
+Calculate bitumen quantity for paving from area, application rate and thickness. Merge into the asphalt calculator if the SERP matches.\par
+35\par
+/concrete-calculator/\par
+Quantity tool\par
+concrete calculator (301K / 49 / 0.93)\par
+concrete slab calculator (14.8K / 30); concrete bag calculator (6.6K / 30); concrete pad calculator (6.6K / 40); calculator concrete yards (5.4K / 24); concrete yards calculator (390 / 26 / 0.51); how to calculate concrete (1.9K / 33); how to calculate concrete yards (1.3K / 22); how to calculate yards of concrete (1.3K / 25); how do i calculate yards of concrete (590 / 30); how do you calculate how much concrete you need (590 / 28); concrete calculator bags (4.4K / 25); bag concrete calculator (1.3K / 31); bags of concrete calculator (880 / 30); concrete bags calculator (590 / 28); how many bags of concrete do i need (3.6K / 25 / 0.26); material calculator for concrete slab (3.6K / 28); concrete calculator for slab (1.0K / 43); concrete calculator slab (1.0K / 44); the page needs a bags output and a bags section (see 10.9)\par
+Concrete Calculator: Cubic Yards and Bags Needed\par
+Concrete Calculator\par
+Calculate cubic yards and bags of concrete for slabs and driveways from length, width and thickness, with waste allowance.\par
+36\par
+/paver-calculator/\par
+Quantity tool\par
+paver calculator (6.6K / 42 / 0.51)\par
+paver base calculator (1.9K / 16); paver sand calculator (1.6K / 16); calculate paver sand (480 / 12); cost calculator for paver patio (390 / 36)\par
+Paver Calculator: Pavers, Base and Sand Needed\par
+Paver Calculator\par
+Calculate pavers, base material and sand for a driveway or patio from area, paver size and waste allowance.\par
+Table B: Outer micro-context, bridges and images\par
+Seq\par
+Micro-context entities (must appear in copy)\par
+Contextual bridges (out and in)\par
+Rel\par
+Prom\par
+Image ALT\par
+1\par
+formula, default density, source name, update date, rounding, units\par
+Out: every tool and cost page (each page cites this page for its formulas). In: from every page footer\par
+M\par
+M\par
+Spreadsheet of cost sources and formulas\par
+9\par
+gravel, crushed stone, cubic yards, tons, density, depth, delivery load\par
+Out: /gravel-driveway-calculator/ (driveway projects need separate base and surface layers); /gravel-driveway-cost/; /cubic-yards-to-tons/; /material-weights/. In: from /, /gravel-driveway-cost/\par
+M\par
+H\par
+Gravel pile beside a measured gravel bed\par
+21\par
+sealer, gallons, coverage per gallon, coats, container size\par
+Out: /driveway-sealcoating-cost/ (the cost guide prices the gallons returned). In: from /driveway-sealcoating-cost/\par
+M\par
+L\par
+Sealcoat buckets beside a driveway\par
+22\par
+reclaimed asphalt pavement, tons, depth, compaction\par
+Out: /asphalt-millings-cost/; /asphalt-calculator/. In: from /asphalt-millings-cost/\par
+M\par
+L\par
+Asphalt millings spread on a driveway\par
+23\par
+density, pounds per cubic foot, tons per cubic yard, material list\par
+Out: /asphalt-calculator/; /gravel-calculator/; /cubic-yards-to-tons/. In: from every quantity tool\par
+M\par
+M\par
+Table of material weights per cubic yard\par
+24\par
+cubic yards, tons, density, material type\par
+Out: /material-weights/; /gravel-calculator/. In: from /gravel-calculator/, /gravel-driveway-calculator/\par
+M\par
+M\par
+Cubic yards to tons conversion widget\par
+25\par
+landscape rock, cubic yards, depth, tons\par
+Out: /gravel-calculator/ (rock and gravel differ in size and use); /river-rock-calculator/. In: from /gravel-calculator/\par
+M\par
+L\par
+Landscape rock bed with measured depth\par
+26\par
+crushed stone, cubic yards, depth, tons\par
+Out: /gravel-calculator/; /crusher-run-calculator/. In: from /gravel-calculator/\par
+M\par
+L\par
+Crushed stone pile\par
+27\par
+pea gravel, depth, tons, cubic yards, paths and patios\par
+Out: /gravel-calculator/; /gravel-driveway-cost/. In: from /gravel-calculator/\par
+M\par
+L\par
+Pea gravel path edging\par
+28\par
+river rock, stone size, depth, coverage\par
+Out: /rock-calculator/. In: from /rock-calculator/\par
+L\par
+L\par
+River rock bed along a walkway\par
+29\par
+crusher run, base layer, compaction, tons\par
+Out: /gravel-driveway-calculator/ (crusher run forms the compacted base layer); /gravel-driveway-cost/. In: from /gravel-driveway-calculator/\par
+M\par
+M\par
+Compacted crusher run base\par
+30\par
+road base, base layer, compaction, tons\par
+Out: /gravel-driveway-calculator/; /gravel-driveway-cost/. In: from /gravel-driveway-calculator/\par
+M\par
+M\par
+Road base being graded for a driveway\par
+31\par
+crack filler, sealant, cold pour, hot pour, crack width, cure time\par
+Out: /asphalt-driveway-repair-cost/; /driveway-sealcoating-cost/ (fill cracks before sealcoating). In: from /asphalt-driveway-repair-cost/\par
+M\par
+M\par
+Crack filler applied to an asphalt crack\par
+32\par
+cold patch, pothole, compaction, temporary repair\par
+Out: /asphalt-driveway-repair-cost/. In: from /asphalt-driveway-repair-cost/\par
+M\par
+L\par
+Cold patch compacted into a pothole\par
+34\par
+bitumen, asphalt binder, application rate, tons\par
+Out: /asphalt-calculator/. In: from /asphalt-calculator/\par
+L\par
+L\par
+Bitumen distributor spraying a road surface\par
+35\par
+cubic yards, bags, thickness, slab, waste\par
+Out: /concrete-driveway-cost-calculator/; /concrete-driveway-cost/. In: from /concrete-driveway-cost-calculator/\par
+M\par
+M\par
+Concrete slab being poured and leveled\par
+36\par
+pavers, square feet, base, bedding sand, waste\par
+Out: /paver-driveway-cost/. In: from /paver-driveway-cost/\par
+M\par
+L\par
+Paver layout over a compacted base\par
+7. Data you must source before writing\par
+ChatGPT must not invent prices, densities or coverage rates. Collect the items below, record the source name and retrieval date in a spreadsheet, and give ChatGPT only what is in that sheet.\par
+7.1 Price sheet\par
+Item\par
+What to collect\par
+Source types\par
+Used on\par
+Asphalt, installed\par
+low and high price per square foot\par
+at least 3 named cost guides plus 3 contractor price pages\par
+Seq 3, 4, 11\par
+Asphalt, material\par
+price per delivered ton\par
+state DOT bid tabulations, 3 US asphalt plant or supplier price lists\par
+Seq 3, 4, 19\par
+Concrete, installed\par
+low and high price per square foot, stamped price per square foot\par
+3 named cost guides, 3 contractor pages\par
+Seq 5, 6, 15, 16\par
+Gravel\par
+price per delivered ton, installed price per square foot, delivery fee range\par
+3 supplier price lists, 2 named cost guides\par
+Seq 7, 8, 9\par
+Pavers\par
+installed price per square foot by material\par
+3 named cost guides\par
+Seq 17\par
+Tar and chip, sealcoating\par
+price per square foot\par
+3 named cost guides\par
+Seq 12, 18\par
+Repair items\par
+crack filling, patching, pothole cost\par
+3 named cost guides\par
+Seq 13\par
+Removal and base prep\par
+demolition and base work per square foot\par
+3 named cost guides\par
+Seq 4, 6, 15\par
+Regional tiers\par
+low, average and high cost area multipliers\par
+published regional cost indexes, with the index named\par
+all estimators\par
+7.2 Calculator defaults to verify with a named source\par
+Default\par
+Working value to verify\par
+Notes\par
+Short ton\par
+2,000 lb\par
+exact\par
+Cubic feet per cubic yard\par
+27\par
+exact\par
+Inches per foot\par
+12\par
+exact\par
+Hot mix asphalt density\par
+about 140 to 150 lb per cubic foot\par
+verify, keep editable\par
+Driveway asphalt thickness\par
+about 2 to 3 inches over a base\par
+verify, keep editable\par
+Gravel density\par
+about 1.2 to 1.5 tons per cubic yard\par
+verify, keep editable\par
+Concrete driveway thickness\par
+about 4 inches\par
+verify, keep editable\par
+Waste allowance\par
+about 5 to 10 percent\par
+verify, keep editable\par
+Sealcoat coverage\par
+from the product label\par
+do not default without a named product\par
+7.3 Competitor domains observed in your SERP exports (URLs were truncated in screenshots)\par
+Keyword\par
+Domains ranking\par
+asphalt calculator, figuring asphalt\par
+asphaltisbest.com (#1), procore.com, pikeindustries.com, amerasphalt.com, holcim.co.uk, dominionpaving.com, rakenapp.com\par
+asphalt driveway cost\par
+blacktopconcepts.com, nerdwallet.com, ericksonasphalt.com, asphaltenterprises.com, allamericanasphaltpaving.com, homeadvisor.com, getasiteplan.com\par
+concrete driveway cost\par
+reddit.com, concretenetwork.com, nerdwallet.com, olatheconcretecontractors.com, dirtrockdallas.com, homewyse.com\par
+gravel calculator\par
+calculator.net, inchcalculator.com, omnicalculator.com, gravelshop.com, ficksupply.com, mulzer.com, decorativeaggregates.com\par
+7.4 Semrush pulls still open\par
+\bullet  Done on 10 October 2026: volumes for the Seq 33 pillar are now in Section 5.\par
+\bullet  Done on 10 October 2026: SERP checks for gravel driveway cost and the guide and estimator pairs, see 10.3.\par
+\bullet  Done on 10 October 2026: stone calculator and bitumen calculator are merged into other pages, see 10.3.\par
+8. ChatGPT prompt pack\par
+How to run it.\par
+1. Create a ChatGPT Project and paste 8.1 as the project instructions.\par
+2. Upload this doc as a Markdown file (export it from here) or paste Sections 5 to 7 as a project file.\par
+3. Run one build prompt per chat, in order: 8.2, 8.3, 8.4, 8.5, 8.6. Commit to git after each step and ask ChatGPT to show the tests passing.\par
+4. For every page, paste 8.7 with one map row and the matching data from your sheet, then run 8.8 on the result.\par
+5. If ChatGPT invents a number, reply: Remove every figure that is not in the DATA block and use a placeholder.\par
+8.1 Project rules (paste as the project instructions)\par
+You are a senior full-stack engineer and technical SEO working with me on a US-facing website called Driveway Calculators (drivewaycalc.online): free driveway cost guides and material calculators (asphalt, concrete, gravel, pavers). I am the owner and editor. You build and write; I supply all data.\par
+\par
+PRODUCT\par
+- Central topic: driveways. Every page is a cost guide, a cost estimator, a material quantity calculator, a converter or reference table, a comparison, a product guide or a hub.\par
+- Audience: US homeowners and small contractors. Use US units (feet, inches, square feet, cubic yards, short tons of 2,000 lb, gallons), US dollars and US spelling. Write the site name in full as Driveway Calculators. The author is Farrukh Abdullah, a researcher and writer.\par
+- Revenue: contractor quote leads sent to a lead network, display ads, affiliate links. Lead features stay behind a feature flag until I say a network is approved.\par
+\par
+STACK\par
+- Next.js (App Router), TypeScript strict, Tailwind, MDX content, static generation. Deploy target: Cloudflare Pages with static export. The lead endpoint is a Cloudflare Pages Function in /functions/api/lead.ts with D1 storage, not a Next.js API route.\par
+- Calculators are pure TypeScript functions in /lib/calc with unit tests (Vitest). UI components call these functions and contain no math.\par
+- No database on the public site except the D1 table behind the lead function, which is disabled by default.\par
+\par
+NON-NEGOTIABLE RULES\par
+1. Never invent a price, density, coverage rate, lifespan, statistic, law, standard or credential, and never cite a standard (such as an ACI or ASTM document) for a number unless I supply it in the DATA block. Use only values from the DATA block I provide. If a value is missing, write \{\{DATA: what is needed\}\} and continue.\par
+2. Every number a calculator shows must trace to an input, a formula or an editable default, and the page must show the formula and defaults.\par
+3. Every calculator has editable defaults, input validation, clear error text, and a result that rounds up to practical purchase units where relevant.\par
+4. Accessibility: labelled inputs, keyboard use, visible focus, sufficient contrast, results announced in an aria-live region.\par
+5. Performance: no layout shift (reserve ad slot heights), LCP under 2.5 seconds on mobile, no third-party script before user interaction except analytics.\par
+6. Privacy: no personal data in analytics events or logs.\par
+7. Show full files, not fragments. List the file tree first and the commands to run last. State assumptions in one short list instead of asking questions. If a missing decision blocks the work, ask one question.\par
+\par
+WRITING RULES (for any page copy)\par
+- One macro context per page, set by the H1 and title tag.\par
+- The first sentence under every heading is the direct, certain answer with the number or result. No hedging words (will, should, might, could, may, probably, appears to).\par
+- Headings are short questions that match real search phrasing.\par
+- Use numbers instead of vague quantities (write 4 factors, not several factors).\par
+- Put conditions second: state the answer, then the if-clause.\par
+- Bold the answer span, not the search term.\par
+- Lists use the same part of speech for every item. Every table has one introductory sentence and one closing sentence.\par
+- Name sources in text. Do not link to outside sources except on the methodology page.\par
+- Internal links use annotation text: the sentence around the link states the relationship with a verb.\par
+8.2 Prompt: scaffold the project\par
+Task: scaffold the project described in the project rules.\par
+\par
+Deliver:\par
+1. File tree. Include /app (one route folder per slug in the map), /content (one MDX file per page), /components, /lib/calc, /lib/seo, /data (prices.json, defaults.json, sources.json), /tests.\par
+2. Config: Next.js with static export (no Next.js API routes), TypeScript strict, Tailwind, MDX, ESLint, Vitest, Prettier.\par
+3. Layout: header with navigation groups (Costs, Calculators, Materials, Repair and Maintenance, About), footer with Methodology, Privacy, Terms, Disclosure and Contact links, and breadcrumbs.\par
+4. Components: AnswerBlock, CalculatorShell, ResultCard, QuoteCTA (renders nothing while LEADS_ENABLED is false), FormulaBox, QASection (H2 and H3 question headings), RelatedLink (props: href, anchor, relationshipText), SourceNote, LastUpdated, AdSlot (fixed reserved height, renders nothing until ADS_ENABLED is true), AffiliateBox, Disclosure.\par
+5. SEO: metadata helper from MDX frontmatter (title, description, slug, updated, author), canonical URLs, sitemap.xml with lastmod, robots.txt, Open Graph tags, JSON-LD helpers for Organization, BreadcrumbList, WebApplication (tool pages) and Article (guides, with dateModified).\par
+6. Analytics: GA4 with events calculator_used, result_viewed, quote_cta_viewed, quote_cta_clicked. No personal data.\par
+7. A placeholder page for every slug in the map, so internal links never return a 404.\par
+\par
+Use the URL column of Sections 5 and 6 exactly as the slugs.\par
+8.3 Prompt: calculator engine\par
+Calculator spec (give this table to ChatGPT with the prompt below)\par
+Tool\par
+Inputs\par
+Formula\par
+Output\par
+Area helper\par
+length ft, width ft, list of sections\par
+area_sqft = sum of length times width\par
+area_sqft\par
+Asphalt (Seq 2, 22)\par
+area, thickness in, density lb per cubic foot, waste percent\par
+tons = area times (thickness / 12) times density times (1 + waste) / 2000\par
+tons rounded up to 0.1, cubic feet\par
+Gravel family (Seq 8, 9, 25 to 30)\par
+area, depth in, material, density in tons per cubic yard, compaction percent for base materials, waste, truck capacity\par
+cubic_yards = area times (depth / 12) / 27 times (1 + waste) times (1 + compaction); tons = cubic_yards times density\par
+yards, tons, delivery loads\par
+Concrete (Seq 6, 35)\par
+area, thickness in, waste, bag size and yield per bag from the label\par
+cubic_yards = area times (thickness / 12) / 27 times (1 + waste); bags = ceiling of cubic_yards times 27 / yield_per_bag\par
+yards, bags\par
+Sealcoat (Seq 21)\par
+area, coats, coverage per gallon from the label, container size\par
+gallons = area times coats / coverage; containers = ceiling of gallons / container_size\par
+gallons, containers\par
+Converter (Seq 24)\par
+cubic yards or tons, material\par
+tons = yards times density; yards = tons / density\par
+both directions\par
+Paver (Seq 36)\par
+area, paver length, paver width, waste, base depth, sand depth\par
+pavers = area / paver_area times (1 + waste); base and sand use the gravel formula\par
+pavers, base tons, sand tons\par
+Cost estimator (Seq 4, 6, and quick estimates on cost guides)\par
+area, surface, cost area tier (low, average, high), extras (removal, base prep, delivery)\par
+low = area times unit_low times tier + extras_low; high = area times unit_high times tier + extras_high; unit values come only from /data/prices.json\par
+low-to-high range with a breakdown\par
+Task: implement every calculator in the spec table inside /lib/calc as pure TypeScript functions, then the UI components that call them.\par
+\par
+Rules:\par
+1. All defaults live in /data/defaults.json. Each default has fields: value, unit, source, retrievedOn, verified (true or false).\par
+2. All prices live in /data/prices.json with the same fields. Every price starts as null.\par
+3. In development, show a Default not yet verified badge next to any unverified default. In a production build, fail the build if a page uses an unverified default or a null price.\par
+4. The cost estimator hides its result and shows Price data not loaded whenever a required price is null.\par
+5. Inputs: positive numbers only, a sensible maximum for each field, unit labels always visible, ft and in only (no metric toggle).\par
+6. Results round up to practical purchase units (tons to 0.1, bags and containers to whole numbers). Display the formula with the user's own numbers filled in.\par
+7. Support several sections (add another area) for irregular driveways.\par
+8. Write Vitest tests for every function, including edge cases (zero, negative, very large, empty). Use these arithmetic checks, which test the math only and are not recommended defaults:\par
+   - Asphalt: 20 ft by 20 ft, 2 in thick, density 145 lb per cubic foot, waste 0 gives 4.83 tons.\par
+   - Gravel: 20 ft by 10 ft, 4 in deep, density 1.4 tons per cubic yard, waste 0, compaction 0 gives 2.47 cubic yards and 3.46 tons.\par
+   - Concrete: 12 ft by 40 ft, 4 in thick, waste 10 percent gives 6.52 cubic yards.\par
+9. Also implement the calculator requirements in Section 10.4 of the doc (tapered shapes, slope, delivery and short-load fees, generated worked examples, copy, print and share). 10. Return the file tree, all files in full, and the commands to run the tests.\par
+8.4 Prompt: page templates and MDX components\par
+Task: build the page templates and MDX components for five page types: cost guide, cost estimator, quantity calculator, comparison, hub. Also implement the page requirements in Section 10.4 of the doc (worked example, Before you order checklist, sibling-calculator box, author and reviewer line, last-updated date, helpful vote, copy, print and share).\par
+\par
+Every cost guide and tool page renders these modules in this order:\par
+1. H1 and AnswerBlock (one declarative sentence with the number or result).\par
+2. The calculator or quick estimator (CalculatorShell).\par
+3. ResultCard with QuoteCTA beneath it (QuoteCTA stays hidden while LEADS_ENABLED is false).\par
+4. FormulaBox: the formula, the default values, and which fields are editable.\par
+5. Question sections: each H2 or H3 is a short question and the first sentence under it is the direct answer.\par
+6. Related pages: RelatedLink items, each with annotation text stating the relationship.\par
+7. SourceNote (sources named in text), LastUpdated, author name, Disclosure.\par
+\par
+Template details:\par
+- Cost guide: a range table (rows by project size or surface, columns low, high, typical), a cost-factor list with a fixed number of factors, a quick estimate widget that links to the full estimator, and a DIY versus hire section.\par
+- Cost estimator: inputs on the left and result and breakdown on the right on desktop, stacked on mobile; assumptions shown under the result; a visible reset button.\par
+- Quantity calculator: result first, then the formula, then a density or coverage reference table.\par
+- Comparison: a side-by-side table with one introductory sentence and one closing sentence, then decision rules written as statements followed by their condition.\par
+- Hub: grid of child pages grouped by surface, each card showing the page's primary answer.\par
+\par
+MDX frontmatter fields: title, description, slug, type, updated, author, primaryKeyword, keywords (array of every Fold in keyword for the page), related (array of slug and annotation text).\par
+Build a validator script that fails the build when a page is missing a module, has a heading that is not a question (except hub and table headings), links to an internal slug that does not exist, or is missing any keyword in its keywords array (compared after lowercasing and removing punctuation).\par
+8.5 Prompt: quote request module and lead API\par
+Do not switch this on until a network has approved you and supplied its consent wording. The consent text must name the parties who may contact the visitor. This is not legal advice; follow the network's compliance guidance and get a professional check for your own setup.\par
+Task: build the quote request module and its server endpoint as a Cloudflare Pages Function (functions/api/lead.ts) with D1 storage. Everything is disabled while LEADS_ENABLED is false.\par
+\par
+Form fields: ZIP code (5 digits, validated), project type (new, replace, resurface, repair, seal), surface (asphalt, concrete, gravel, pavers, not sure), approximate size in square feet (prefilled from the calculator result when present), timeline (within 1 month, 1 to 3 months, researching), first name, email, phone, consent checkbox.\par
+\par
+Rules:\par
+- The consent checkbox is unchecked by default. The consent text comes from the environment variable NETWORK_CONSENT_TEXT and is shown next to the checkbox without edits.\par
+- Phone is required only if the network requires it.\par
+- Spam protection: honeypot field, server-side rate limit by IP, Cloudflare Turnstile.\par
+- Function POST /api/lead: validate with a schema, store the lead (id, timestamp, fields, page URL, consent text shown, consent timestamp), then forward to NETWORK_WEBHOOK_URL with retries and a status field. Never log personal data.\par
+- Click-to-call variant: show the tracking phone number from NETWORK_PHONE on mobile only.\par
+- Success screen: confirm what happens next and who may contact the visitor, using wording from NETWORK_SUCCESS_TEXT.\par
+- Link the privacy policy and show a disclosure line (we may be paid when you request quotes).\par
+- Analytics events carry no personal data.\par
+- Add a README section listing the environment variables and a test plan for each failure case: invalid ZIP, duplicate submit, webhook failure, rate limit.\par
+8.6 Prompt: technical SEO\par
+Task: implement technical SEO across the site.\par
+\par
+- Canonical URL on every page, lowercase, with a trailing slash.\par
+- sitemap.xml with lastmod from the MDX frontmatter updated field; robots.txt that allows all public pages and blocks /api/.\par
+- JSON-LD: Organization (site-wide), BreadcrumbList (every page), WebApplication with applicationCategory and a free offer (tool pages), Article with author and dateModified (guides and comparisons).\par
+- Title tag and meta description come from frontmatter. Fail the build when a title is over 60 characters or a description is over 155.\par
+- Internal links: a RelatedLink carries anchor text equal to the destination page title or H1, plus a relationship sentence.\par
+- Images: next/image, width and height set, descriptive alt text taken from the map, lazy loading below the fold, WebP or AVIF.\par
+- Performance budget on a mid-range phone: LCP under 2.5 s, CLS under 0.1, INP under 200 ms. Fail the CI check if the Lighthouse mobile performance score is under 90 on the home page, one calculator page and one cost guide.\par
+- Thank-you pages and API routes are noindex.\par
+- A 404 page that links to the hub and the top calculators.\par
+- A /methodology/ page template that lists formulas, defaults, source names and retrieval dates from /data/sources.json.\par
+8.7 Prompt: write one page\par
+Task: write one page as MDX using the map row, the DATA block and the rules in the project instructions.\par
+\par
+MAP ROW\par
+\{\{paste the Table A row and the Table B row for this page\}\}\par
+\par
+DATA\par
+\{\{paste only sourced figures for this page: price ranges with source names and dates, defaults with sources, statistics. A number that is not listed here must not appear.\}\}\par
+\par
+PAGE TYPE\par
+\{\{cost guide, estimator, quantity calculator, comparison, converter, product guide or hub\}\}, using the module order from the page templates.\par
+\par
+PASS 1: write the page\par
+- Open with an AnswerBlock: one declarative sentence containing the page's main number or result.\par
+- Cover every Fold in keyword by using its exact words at least once in a natural place on this page: a heading, a sentence, a table row, a list item or an example. Spread them across sections and use the primary keyword in the title, the H1, the first sentence and one H2. Never repeat an exact keyword more than 4 times. If an exact keyword is ungrammatical (for example how much for a asphalt driveway), use a natural close variant and list it in the coverage report. Headings are short questions. Do not create extra pages.\par
+- Declare every Micro-context entity from the row in the copy.\par
+- State each fact as a plain statement of entity, attribute and value (for example: A 20 by 20 foot driveway is 400 square feet).\par
+- Put the answer in the first sentence under every heading and match the grammar of the heading.\par
+- Use numerals for counts (4 factors, 5 steps) and list the items straight after the count.\par
+- No hedging words, no filler, no marketing adjectives.\par
+- Place conditions after the statement.\par
+- Bold the answer span in each direct-answer sentence.\par
+- Add a worked example whose numbers come from the calculator function (never typed by hand) and a Before you order checklist of 3 to 5 items. Add the internal links from the Contextual bridges column, each with one sentence of annotation text that states the relationship with a verb.\par
+- Mark Featured Snippet answers (40 words or fewer) with the comment FS and People Also Ask answers with the comment PAA.\par
+- End with a short Disclosure line when the page carries a quote CTA or affiliate links.\par
+\par
+PASS 2: readability\par
+- After the first sentence of each section, vary sentence length, add a one-line transition between sections, and add one worked example per major section using only DATA values or user-entered numbers.\par
+- Do not change any first sentence under a heading, any number, any bolded answer, any heading text or any link anchor.\par
+\par
+PASS 3: audit\par
+- Run the checks in 8.8 and print the table. Fix every violation and print the corrected passages.\par
+\par
+OUTPUT\par
+- The final MDX with frontmatter (title, description, slug, type, updated, author, primaryKeyword, keywords, related).\par
+- A list of every \{\{DATA\}\} placeholder that still needs a source. A keyword coverage report: a table of each Fold in keyword and the heading or section where it appears.\par
+8.8 Prompt: audit a finished page\par
+Audit the page below against these checks. Return a table with columns: Check, Result (Pass or Violation), Location, Fix.\par
+\par
+1. The H1 and title tag share one macro context.\par
+2. The first sentence under every heading is a direct, certain answer.\par
+3. No hedging words: will, should, might, could, may, probably, appears to, can help.\par
+4. Every count is a numeral and the items follow immediately.\par
+5. Every number is a user input, a formula result, or appears in the DATA block. List any that do not.\par
+6. Conditions come after the statement in every if-sentence.\par
+7. Headings are questions, except hub and table headings.\par
+8. Every Fold in keyword from the map row appears with its exact words at least once in a natural sentence, heading, table row or list item. List any that are missing, and flag any keyword repeated more than 4 times.\par
+9. Every Micro-context entity from the map row appears.\par
+10. Every internal link has anchor text matching the destination title and a relationship sentence.\par
+11. The page does not answer the intent of another page in the map. Name any overlap.\par
+12. Units are US units and money is in US dollars.\par
+13. The disclosure line is present when the page has a quote CTA or affiliate links.\par
+14. No claim about licensing, credentials, reviews or guarantees that the site cannot prove.\par
+15. The title is 60 characters or fewer and the meta description is 155 or fewer.\par
+\par
+Finish with counts by severity (High, Medium, Low) and the corrected passages.\par
+9. Launch, links and risks\par
+9.1 Pre-launch checklist\par
+\bullet  Price sheet and defaults complete, with every default verified against a named source\par
+\bullet  All ten launch pages written, audited with 8.8 and read by a human\par
+\bullet  Calculator tests pass, and each calculator works on a phone and with the keyboard only\par
+\bullet  Privacy policy, terms, disclosure, about, contact, author page and methodology page live\par
+\bullet  Search Console and GA4 connected, sitemap submitted\par
+\bullet  Ad slots reserved, ads off until approved\par
+\bullet  Lead module off, with no consent text or network details configured yet\par
+\bullet  Publish all ten launch pages together, then add 2 to 3 pages a week following Section 4\par
+9.2 Link plan\par
+Aim for about 10 referring domains per calculator page. The benchmark ranks #1 with 6 to 9.\par
+\bullet  Pitch each calculator to home improvement and DIY blogs, local contractor sites and landscaping suppliers that lack their own tools, and offer an embed with an attribution link.\par
+\bullet  Offer the calculators to state and regional asphalt and paving associations as a member resource. The benchmark site belongs to one.\par
+\bullet  Answer journalist requests about driveway costs through expert-quote services (check which are active in 2026).\par
+\bullet  Publish an original data page only when it is built from your own sourced price sheet.\par
+\bullet  Do not buy link packages. The sites in your SERP exports show anchors such as 'high quality dofollow backlinks' coming from unrelated shop and casino domains, which look like automated spam.\par
+9.3 Lead network application checklist\par
+\bullet  Apply to Lead Genitel, Service Direct, BuyerLink, eLocal and Home Solutions. Each lists home improvement.\par
+\bullet  Ask each one for: the payout per paving, concrete, gravel and driveway repair lead or call; ZIP coverage; whether publishers outside the US are accepted; payout methods (ACH implies a US bank account, so ask about wire and other options); traffic and content rules; required consent wording; the integration method (API, postback or call tracking); and how rejected leads are reported.\par
+\bullet  Keep the lead module off until you have the answers in writing.\par
+9.4 Risks\par
+\bullet  18 of the 20 cost keywords in your Bulk Analysis show an AI Overview, so expect lower click-through on cost pages. The benchmark calculator page still draws about 4.1K visits a month with an AI Overview present on figuring asphalt.\par
+\bullet  Tools earn little per visit (average CPC 0.52 USD on the calculator keywords) and lead revenue stays unproven until a network confirms payouts. Treat every earlier revenue range as an assumption.\par
+\bullet  Google's spam policies target scaled content that adds little value. Every page needs a working tool or sourced data, human review and a methodology page. Do not publish ChatGPT text that was written without data.\par
+\bullet  A single lead network is a single point of failure, so apply to several.\par
+\bullet  Aggregate calculators can dilute the driveway focus, so keep the bridge sections.\par
+\bullet  Pages competing with the top-three incumbents (calculator.net, Inch Calculator, Omni) will not rank early. Judge them at positions 4 to 8.\par
+9.5 Decision gates (not forecasts)\par
+\bullet  Day 30: all launch pages indexed, and each calculator matches 10 hand-checked examples.\par
+\bullet  Day 90: at least 3 launch pages in the top 20 for their primary keyword. If none, review the SERPs and links before adding pages.\par
+\bullet  Network approval: turn the lead module on only with written terms, then run a 2-week test on a small share of traffic and compare leads accepted with leads submitted.\par
+\bullet  Day 180: compare revenue per 1,000 visits by page type and build more of the type that earns.\par
+9.6 Exit readiness\par
+Keep the code and content owned or properly licensed, document each formula and the update procedure, and track revenue and accepted leads separately. AdSense accounts are generally not transferable, so confirm Google's current terms and plan the handover around the buyer's own ad setup.\par
+10. Additions after review\par
+Added 9 October 2026. Seq 37 to 42 extend the map. The lead endpoint is now a Cloudflare Pages Function, edited into Sections 3, 8.1, 8.2 and 8.5, because a static export cannot run a Next.js API route.\par
+10.1 Extra keywords and new pages\par
+These figures were verified in a Semrush Bulk Analysis export on 10 October 2026, and the Local Pack and AI Overview flags come from the same export. Several look like contractor searches, so check each SERP for a Local Pack first and skip the term if map results fill the page.\par
+Keyword\par
+Volume / KD / CPC (verified 10 Oct 2026)\par
+Suggested home\par
+Check before building\par
+concrete driveway\par
+12.1K / 21 / 5.49\par
+Overview section on /concrete-driveway-cost/, or a new /concrete-driveways/ guide if the SERP is informational\par
+Guide results or contractor results\par
+driveway pavers\par
+12.1K / 30 / 3.97\par
+/paver-driveway-cost/\par
+Product listings or guides\par
+gravel driveway\par
+8.1K / 29 / 2.37\par
+Overview section on /gravel-driveway-cost/\par
+Guide results or product pages\par
+concrete driveway repair\par
+8.1K / 32 / 6.91\par
+New page, Seq 37\par
+Local Pack\par
+driveway repair\par
+9.9K / 26 / 8.30\par
+New page, Seq 38\par
+Local Pack present, and DIY guides rank beneath it\par
+driveway replacement\par
+5.4K / 32 / 6.01\par
+New page, Seq 39\par
+Local Pack\par
+driveway installation\par
+2.9K / 14 / 5.58\par
+Section on /driveway-cost/ (Seq 33)\par
+Local Pack\par
+laying asphalt driveway\par
+2.9K / 11 / 5.92\par
+New how-to page, Seq 40\par
+DIY guides or contractor results\par
+hot mix asphalt\par
+5.4K / 13 / 4.73\par
+New reference page, Seq 41\par
+Definition intent, and the CPC may come from suppliers\par
+chip seal driveway\par
+2.9K / 5 / 3.99\par
+Fold into /tar-and-chip-driveway-cost/ (Seq 18)\par
+Same results as tar and chip\par
+Changes to the existing map\par
+\bullet  Move concrete driveway repair cost (1.3K / 24) from Seq 15 to Seq 37 so repair and replace stay on separate pages. Seq 15 keeps cost to replace concrete driveway.\par
+\bullet  Fold chip seal driveway into Seq 18.\par
+\bullet  Build order: Seq 42 right after Seq 8, Seq 37 to 39 with the Phase 1b cost pages, Seq 40 and 41 in Phase 2.\par
+\bullet  Export the Questions tab for concrete driveway cost, asphalt driveway cost and gravel calculator, and use the questions as Q&A headings on those pages.\par
+New rows (same columns as Section 5, with bridges added)\par
+Seq\par
+URL\par
+Type\par
+Primary keyword\par
+Title tag\par
+H1\par
+Meta description\par
+Micro-context entities\par
+Contextual bridges\par
+37\par
+/concrete-driveway-repair-cost/\par
+Cost guide\par
+concrete driveway repair cost (1.3K / 24 / 4.70) with concrete driveway repair (8.1K / 32 / 6.91) and concrete driveway crack repair (2.9K / 38)\par
+Concrete Driveway Repair Cost: Cracks, Resurfacing, Replacement\par
+Concrete Driveway Repair Cost\par
+Concrete driveway repair cost by repair type: crack filling, resurfacing and slab replacement, with when to repair or replace.\par
+crack filling, resurfacing, slab leveling, mudjacking, control joints\par
+Out: /replace-concrete-driveway-cost/ (replacement applies once damage spreads across slabs); /concrete-driveway-cost/. In: from /concrete-driveway-cost/\par
+38\par
+/driveway-repair-cost/\par
+Cost guide (cross-surface)\par
+driveway repair (9.9K / 26 / 8.30)\par
+Driveway Repair Cost by Surface: Asphalt, Concrete, Gravel\par
+Driveway Repair Cost\par
+Driveway repair cost for asphalt, concrete and gravel, with typical repair types and when repair stops making sense.\par
+crack, pothole, settling, resurfacing, regrading\par
+Out: /asphalt-driveway-repair-cost/; /concrete-driveway-repair-cost/; /driveway-replacement-cost/. In: from /driveway-cost/\par
+39\par
+/driveway-replacement-cost/\par
+Cost guide (cross-surface)\par
+driveway replacement (5.4K / 32 / 6.01)\par
+Driveway Replacement Cost by Surface (2026)\par
+Driveway Replacement Cost\par
+Driveway replacement cost for asphalt, concrete, gravel and pavers, including removal and disposal.\par
+demolition, hauling, disposal, subbase, new surface\par
+Out: /repave-asphalt-driveway-cost/; /replace-concrete-driveway-cost/; /driveway-cost-calculator/. In: from /driveway-repair-cost/\par
+40\par
+/how-to-lay-an-asphalt-driveway/\par
+How-to guide\par
+laying asphalt driveway (2.9K / 11 / 5.92)\par
+How to Lay an Asphalt Driveway: Steps, Tools and Cost\par
+How to Lay an Asphalt Driveway\par
+The steps to lay an asphalt driveway, the tools involved and what a DIY job costs against hiring a paving crew.\par
+excavation, base course, compaction, hot mix asphalt, rolling, curing\par
+Out: /asphalt-calculator/ (the calculator gives the tons to order before the work starts); /asphalt-driveway-cost/. In: from /asphalt-driveway-thickness/\par
+41\par
+/hot-mix-asphalt/\par
+Reference\par
+hot mix asphalt (5.4K / 13 / 4.73)\par
+Hot Mix Asphalt: What It Is and How Driveways Use It\par
+Hot Mix Asphalt\par
+What hot mix asphalt is, what goes into it and how it is used on driveways.\par
+aggregate, asphalt binder, mix temperature, compaction, density\par
+Out: /asphalt-calculator/; /material-weights/. In: from /asphalt-driveway-cost/\par
+42\par
+/driveway-cost-calculator/\par
+Compare estimator\par
+driveway cost calculator (590 / 19 / 2.45) with driveway calculator (260 / 17 / 1.73) and driveway cost estimator (210 / 22 / 2.48)\par
+Driveway Cost Calculator: Compare Asphalt, Concrete, Gravel\par
+Driveway Cost Calculator\par
+Enter your driveway size once and compare estimated cost, lifespan and upkeep for asphalt, concrete, gravel and pavers.\par
+surface, lifespan, upkeep, cost per year, cost area tier\par
+Out: every surface cost guide and estimator. In: from /, /driveway-cost/, every cost guide\par
+10.2 Compare-surfaces estimator spec (Seq 42)\par
+One set of measurements returns a low-to-high cost for each surface side by side. It feeds the comparison and pillar pages and is the strongest place for the quote CTA.\par
+Inputs. Area (several sections allowed), cost area tier (low, average, high), extras (remove old surface, base preparation, delivery), surfaces to compare (asphalt, concrete, stamped concrete, gravel, pavers, tar and chip), and one radio button for the surface the visitor is most interested in.\par
+Outputs per surface. Low and high total, lifespan range in years, annual upkeep items, and cost per year of life (low and high). The default sort is lowest upfront cost, with a toggle to sort by cost per year.\par
+Total for surface s, low and high:\par
+T_s = A \\cdot u_s \\cdot t + e_s\par
+Cost per year of life:\par
+C_s = \\frac\{T_s\}\{L_s\}\par
+A is area in square feet, u_s is the unit price per square foot from /data/prices.json (low and high), t is the cost area tier multiplier, e_s is the extras for that surface, and L_s is the lifespan in years from /data/prices.json.\par
+Rules.\par
+\bullet  Show a range for every surface, never a single price, and label every result as an estimate, not a quote.\par
+\bullet  Cost per year stays hidden for any surface whose lifespan is null.\par
+\bullet  Show the assumptions under the table: tier, extras included, and the source name and date for each price.\par
+\bullet  The quote CTA prefills the radio-button surface and the area from the estimator.\par
+\bullet  Share link: encode the inputs in the URL query string so a result can be sent to someone else. Add a print stylesheet so the result prints as a one-page summary.\par
+\bullet  The SERPs differ: driveway paving cost calculator matches the asphalt estimator SERP, so that term stays on Seq 4 and this page keeps the surface-agnostic terms.\par
+Data to add to the price sheet in 7.1. Lifespan range in years per surface, annual upkeep cost per surface, and which extras apply to which surface. Record the source name and retrieval date for each, and leave each value null until sourced.\par
+Task: build the compare-surfaces estimator for /driveway-cost-calculator/ on top of the existing calculator engine and the cost estimator rules in the project instructions.\par
+\par
+1. Add computeCompare() in /lib/calc/compare.ts. It takes area, tier, extras and the selected surfaces, reads unit prices, lifespans and upkeep from /data/prices.json, and returns for each surface: low total, high total, lifespan range, upkeep items, and cost per year (low and high).\par
+2. Any surface with a null price is hidden and listed under Price data not loaded. Any surface with a null lifespan hides only its cost-per-year column. A production build fails if a displayed value is null.\par
+3. UI: inputs on the left; a results table on the right (stacked on mobile) with one row per surface, a sort toggle (upfront cost or cost per year), and the selected-surface radio button. Assumptions sit under the table.\par
+4. QuoteCTA sits under the table, prefilled with the selected surface and the area. It stays hidden while LEADS_ENABLED is false.\par
+5. Share link through URL query parameters, restored on page load. Print stylesheet for a one-page summary.\par
+6. Vitest tests with fixture values only (not prices): area 400 square feet, tier 1, unit price low 1 and high 2, no extras, lifespan 10 years gives low total 400, high total 800, cost per year low 40 and high 80. Add tests for null price, null lifespan, zero area and several sections.\par
+7. Return the file tree, all files in full and the commands to run the tests.\par
+Write the page copy with prompt 8.7 using the Seq 42 row above and sourced figures only.\par
+10.3 Decisions after SERP checks (10 October 2026)\par
+Where this section and Sections 5 and 6 disagree, this section wins. The row edits above already reflect it. Ignore the Table B rows for Seq 26, 28 and 34, which are merged.\par
+Decisions\par
+Decision\par
+Evidence\par
+Merge bitumen calculator (14.8K / 15 / 1.16) into /asphalt-calculator/ (Seq 2)\par
+The asphalt calculator page ranks #6 for the term. The #1 result is an exact-match domain with Authority Score 0 and 4 referring domains.\par
+Merge stone calculator (12.1K / 17 / 0.48) into /gravel-calculator/ (Seq 9)\par
+The SERP is about aggregate and crushed stone, and the calculator.net gravel calculator ranks #2.\par
+Merge river rock calculator and the landscape and crushed rock terms into /rock-calculator/ (Seq 25)\par
+The rock SERP is led by the calculator.net gravel calculator and generic supplier calculators with Authority Score 5 to 6, and Semrush groups river rock under rock calculator. Exclude rock mass rating calculator (1.9K), which is a geology term.\par
+Keep pea gravel calculator (4.4K / 9 / 0.38) as its own page (Seq 27)\par
+Two dedicated pea gravel pages sit in the top 5: concalculator.com (Authority Score 26) and mining-sentry.com (Authority Score 0, no referring domains).\par
+Give Seq 9, 25 and 27 different copy and defaults\par
+Google ranks the same generic calculator for all three, so each page needs its own material, density, depth guidance and use cases.\par
+Keep each guide and estimator pair as two pages (Seq 3 and 4, Seq 5 and 6)\par
+The asphalt pair shares 3 of its top 10 URLs and the concrete pair shares 1 (Homewyse). I earlier said the concrete pair shared none, which was wrong.\par
+Keep driveway paving cost calculator (720 / 22 / 2.50) on Seq 4\par
+Its SERP matches the asphalt estimator SERP (Dryco, Connecteam, Blacktop Concepts).\par
+Build Seq 42 after the surface pages (Seq 3 to 8) and treat it as a link and conversion page\par
+Its own terms total about 1.1K searches. The top three results hold 4 to 37 referring domains, and an exact-match domain with 984 referring domains and no traffic suggests link spam in that SERP.\par
+Prioritize Seq 7 (gravel driveway cost, 2.4K / 11 / 1.76)\par
+It is the weakest SERP checked: Reddit, Facebook and contractor pages, with Authority Score 12 or lower across the top 10.\par
+Build the Seq 33 pillar after 8 cost pages are live\par
+Its folded-in terms total about 5K searches (overlapping), and the pillar should link to finished child pages.\par
+Skip driveway pavers (12.1K / 30 / 3.97)\par
+The SERP is a Local Pack plus product listings. Paver driveway cost (Seq 17) stays.\par
+Cover concrete driveway (12.1K / 21 / 5.49) as an overview section of Seq 5\par
+The SERP has a Local Pack and an AI Overview.\par
+Verified flags for the Section 10.1 keywords\par
+Keyword\par
+Local Pack\par
+AI Overview\par
+Decision\par
+driveway repair (9.9K / 26 / 8.30)\par
+yes\par
+no\par
+Seq 38 as a DIY and cost hub, since DIY guides rank beneath the pack\par
+concrete driveway repair cost (1.3K / 24 / 4.70)\par
+no\par
+no\par
+Primary term for Seq 37\par
+concrete driveway repair (8.1K / 32 / 6.91)\par
+yes\par
+yes\par
+Secondary term on Seq 37\par
+driveway replacement (5.4K / 32 / 6.01)\par
+yes\par
+no\par
+Seq 39, low priority\par
+driveway installation (2.9K / 14 / 5.58)\par
+yes\par
+no\par
+Section of the Seq 33 pillar only\par
+chip seal driveway (2.9K / 5 / 3.99)\par
+yes\par
+yes\par
+Fold into Seq 18\par
+laying asphalt driveway (2.9K / 11 / 5.92)\par
+no\par
+yes\par
+Seq 40 as planned\par
+hot mix asphalt (5.4K / 13 / 4.73)\par
+no\par
+yes\par
+Seq 41 as planned\par
+gravel driveway (8.1K / 29 / 2.37)\par
+no\par
+yes\par
+New page, Seq 43\par
+New rows (Seq 43 to 48)\par
+Build Seq 43 and 46 with Phase 1b and Seq 44, 45, 47 and 48 in Phase 2. Lifespan terms are folded into Seq 14. The hiring and permit terms have 20 to 30 searches a month each, so they get no pages.\par
+Seq\par
+URL\par
+Type\par
+Primary keyword\par
+Title tag\par
+H1\par
+Meta description\par
+Micro-context entities\par
+Contextual bridges\par
+43\par
+/gravel-driveway/\par
+Guide\par
+gravel driveway (8.1K / 29 / 2.37) with driveway gravel (8.1K / 26), gravel for driveway (3.6K / 41), how to build a gravel driveway (1.3K / 11), how do you lay a gravel driveway (880 / 12), how to gravel driveway (880 / 31), how to make a gravel driveway (880 / 10), how do i lay a gravel driveway (720 / 16) and gravel driveway maintenance (390 / 12 / 2.89)\par
+How to Build a Gravel Driveway: Layers and Maintenance\par
+Gravel Driveway\par
+What a gravel driveway is, which stone to use, the layers it needs and how to maintain it.\par
+crushed stone, base layer, surface layer, geotextile fabric, edging, grading, potholes, regrading\par
+Out: /gravel-driveway-cost/ (the cost guide prices each layer described here); /gravel-driveway-calculator/ (the calculator turns driveway size into tons). In: from /driveway-cost/, /concrete-vs-asphalt-driveway/. Keep cost terms on Seq 7.\par
+44\par
+/asphalt-driveway-maintenance/\par
+Guide\par
+asphalt driveway maintenance (1.3K / 12 / 3.54)\par
+Asphalt Driveway Maintenance: Sealing, Cracks, Cleaning\par
+Asphalt Driveway Maintenance\par
+The maintenance an asphalt driveway needs, how often it is done and what each task costs.\par
+sealcoating, crack filling, cleaning, edging, patching, drainage\par
+Out: /driveway-sealcoating-cost/; /asphalt-driveway-repair-cost/. In: from /asphalt-driveway-cost/\par
+45\par
+/driveway-drainage/\par
+Guide\par
+driveway drainage (1.3K / 26 / 1.81) with driveway slope (210 / 10)\par
+Driveway Drainage: Slope, Drains and Fixes\par
+Driveway Drainage\par
+How much slope a driveway needs, which drains fix standing water and when drainage faults cause damage.\par
+slope, crown, culvert, trench drain, French drain, grading, runoff\par
+Out: /driveway-repair-cost/ (drainage faults are a common cause of surface damage); /gravel-driveway/. In: from /driveway-cost/\par
+46\par
+/standard-driveway-width/\par
+Reference\par
+standard driveway width (1.3K / 10 / 0.00) with standard driveway size (260 / 6 / 3.16)\par
+Standard Driveway Width and Size: 1, 2 and 3 Car\par
+Standard Driveway Width and Size\par
+Standard driveway width and size for one-car, two-car and three-car driveways, with the area each covers.\par
+width, length, one-car, two-car, three-car, turnaround, square feet\par
+Out: /driveway-cost-calculator/ (size sets the cost); /asphalt-calculator/. In: from /driveway-cost/ and the size table on every cost guide\par
+47\par
+/how-to-repair-concrete-driveway-cracks/\par
+How-to\par
+how to repair cracks in concrete driveway (880 / 22) with how to repair driveway cracks (720 / 24), how to repair concrete driveway (320 / 27), how to repair large cracks in concrete driveway (320 / 18) and how to repair concrete driveway cracks (210 / 22)\par
+How to Repair Cracks in a Concrete Driveway\par
+How to Repair Cracks in a Concrete Driveway\par
+How to repair small and large cracks in a concrete driveway, the materials needed and when to replace the slab instead.\par
+crack width, filler, backer rod, patch compound, slab replacement\par
+Out: /concrete-driveway-repair-cost/ (repair cost by crack type); /driveway-crack-filler/. In: from /concrete-driveway-repair-cost/\par
+48\par
+/how-to-repair-asphalt-driveway-cracks/\par
+How-to\par
+how to repair asphalt driveway (390 / 34) with how to repair cracks in asphalt driveway (260 / 28)\par
+How to Repair Cracks in an Asphalt Driveway\par
+How to Repair Cracks in an Asphalt Driveway\par
+How to repair cracks and holes in an asphalt driveway, the filler to use and when to repave instead.\par
+crack filler, cold patch, pothole, cleaning, sealing\par
+Out: /asphalt-driveway-repair-cost/; /driveway-crack-filler/; /asphalt-cold-patch/. In: from /asphalt-driveway-repair-cost/\par
+Content rules from the Questions export\par
+\bullet  Cement vocabulary. Searchers use cement for concrete: how much to cement a driveway (720 / 16), how much does it cost to cement a driveway (480 / 31), how much does a cement driveway cost (260 / 14). Seq 5 states once that concrete is the finished material and cement is one ingredient, then uses cement driveway where the question does.\par
+\bullet  Size table. Seq 3, 5 and 7 each carry a cost-by-size table with rows for a 1-car, 2-car and 3-car driveway and a 100 ft driveway. Sizes come from Seq 46 and every value comes from the price sheet.\par
+\bullet  Generic questions go to the pillar (Seq 33) and the replacement page (Seq 39), not to the surface pages.\par
+Question headings to use\par
+Page\par
+Question headings (volume / KD)\par
+Seq 5\par
+How much does a concrete driveway cost? (1.0K / 17); How much is a concrete driveway? (720 / 15); How much does it cost to cement a driveway? (480 / 31); How much does a cement driveway cost? (260 / 14); How much is a concrete driveway per square foot? (90 / 13); How much does it cost to replace a concrete driveway? (110 / 16), answered in one line and linked to Seq 15; Can I pour my own concrete driveway? (20)\par
+Seq 3\par
+How much for an asphalt driveway? (50 / 3); How much does it cost to asphalt pave a driveway? (30 / 13); What is the average cost of asphalt per square foot? (30 / 23); How much does an asphalt driveway cost per square foot? (30)\par
+Seq 7\par
+How much does it cost to gravel a driveway? (260 / 11); How much does driveway gravel cost? (210 / 11); How much does a 100 ft gravel driveway cost? (170 / 23); How much does a gravel driveway cost? (170 / 5); How much does gravel for a driveway cost? (40 / 11)\par
+Seq 33\par
+How much will a driveway cost? (390 / 25); How much does it cost for a driveway? (260 / 23); How much would a new driveway cost? (210 / 12); How much does it cost to build a driveway? (170 / 29); How much should a new driveway cost? (170 / 9); How much should a driveway cost? (90 / 17)\par
+Seq 39\par
+How much is it to replace a driveway? (110 / 17); How much does it cost to replace a driveway? (40 / 9)\par
+10.4 Requirements from the competitor review (10 October 2026)\par
+Reviewed: Inch Calculator, Omni Calculator, Concrete Calculator Online, Concrete Tools and DrivewaySatellite. Prompts 8.1, 8.3, 8.4 and 8.7 now point here.\par
+#\par
+Requirement\par
+Applies to\par
+Why\par
+1\par
+US units by default and imperial-native math (feet, inches, cubic yards, short tons)\par
+Every tool\par
+Several competitors default to metric, and US visitors expect imperial.\par
+2\par
+Tapered width (start and end width) and a slope or grade input\par
+Seq 2, 4, 6, 8 and any driveway shape tool\par
+One competitor handles tapers and slope, and most do not.\par
+3\par
+Delivery fee, short-load fee and truckload count inputs\par
+Cost estimators and quantity tools\par
+Concrete Tools models short-load fees, and delivery rounding changes the real order.\par
+4\par
+Worked example, Before you order checklist and an irregular-shape fallback\par
+Every tool page\par
+Pattern used by Concrete Calculator Online.\par
+5\par
+Copy, print, share link and reset buttons\par
+Every calculator\par
+Used by Concrete Calculator Online and Omni.\par
+6\par
+Named author, last-updated date, reviewer line and a helpful vote\par
+Every page\par
+Omni shows creators, reviewers and update dates.\par
+7\par
+A hub grouping tools and guides, plus sibling-calculator boxes inside tool pages\par
+Home (Seq 10) and every tool\par
+Inch Calculator and Omni both do this.\par
+8\par
+Embeddable widget with an attribution link\par
+Phase 2, after the Seq 2 calculator ranks\par
+Inch and Omni offer embeds, and embeds earn links.\par
+Shape and slope formulas. A tapered driveway has start width w1 and end width w2. If the visitor measures the length along the slope, use it as entered. If the visitor measures a flat distance and gives a grade, adjust the length.\par
+A = L \\cdot \\frac\{w_1 + w_2\}\{2\}\par
+L_s = L_f \\cdot \\sqrt\{1 + \\left(\\frac\{g\}\{100\}\\right)^2\}\par
+L is length, L_f is the flat distance, L_s is the length along the slope and g is the grade in percent.\par
+Delivery logic. Loads equal tons divided by truck capacity, rounded up. A short-load fee applies when a concrete order is below the supplier minimum in cubic yards. Every fee and minimum comes from /data/prices.json and stays null until sourced.\par
+Worked examples. Generate every worked example by calling the calculator function with the example inputs, and add a test that fails if the page text differs from the function output. One competitor example lists 155 bags of 80 lb for about 5.2 cubic yards, which looks about 40 percent low if concrete weighs about 4,050 lb per cubic yard (the figure on Concrete Tools).\par
+Density and citations. Omni assumes 1.25 metric tonnes per cubic meter for gravel, about 1.05 short tons per cubic yard, so defaults differ by source. Keep every density editable and name its source. Concrete Tools cites ACI 318 for a 10 percent waste buffer, and I cannot confirm that standard sets a waste allowance, so never cite a standard you have not read.\par
+Later phases\par
+\bullet  Address-based measuring on a satellite map (the DrivewaySatellite model). It removes the biggest friction and returns a ZIP for lead routing, but it adds map API costs, map terms and privacy duties. Build it as a Measure on map button inside the estimators and driveway calculators (Seq 4, 6, 8 and 42) that fills in the area, never as its own page, because the related searches total about 90 a month (driveway square footage calculator 30, driveway area calculator 20, how to measure driveway square footage 20, measure driveway 20). Google's Drawing Library has been unavailable since May 2026, so use Terra Draw or a custom drawing layer. Start only after the launch calculators are indexed, a lead network has approved you and it confirms whether verified-address leads pay more. Cover the manual path with a short how-to-measure section on the same calculator pages.\par
+\bullet  A free mobile app (the Concrete Tools model).\par
+\bullet  Garage topics such as door cost and epoxy floors, which Inch covers, only after the driveway pages rank.\par
+Avoid\par
+\bullet  Superlative claims you cannot prove, such as the only calculator that sees your house.\par
+\bullet  Floating video ads and sticky banners, which break the layout-shift budget.\par
+\bullet  Pop-culture or trademarked examples.\par
+\bullet  Metric defaults on a US site.\par
+10.5 Concrete slab and pad pages (Seq 49 and 50)\par
+Verified in Semrush on 10 October 2026. These pages sit in the Outer section. A concrete driveway is a slab, so they bridge to Seq 5 and 6, but keep their copy on slabs, pads and patios and do not let it spread into the driveway pages.\par
+Keywords\par
+Keyword\par
+Volume / KD / CPC\par
+Page\par
+concrete slab cost\par
+6.6K / 18 / 3.13\par
+Seq 49\par
+concrete pad cost\par
+4.4K / 17 / 3.13\par
+Seq 49\par
+concrete slab cost per square foot\par
+880 / 12 / 2.24\par
+Seq 49\par
+garage slab cost\par
+170 / 7 / 2.52\par
+Seq 49\par
+concrete slab cost calculator\par
+5.4K / 22 / 2.04\par
+Seq 50\par
+concrete pad cost calculator\par
+2.4K / 15 / 2.04\par
+Seq 50\par
+concrete patio cost calculator\par
+320 / 27 / 2.62\par
+Seq 50\par
+calculating concrete slab cost\par
+880 / no KD\par
+Seq 50\par
+concrete slab calculator cost\par
+210 / 20\par
+Seq 50\par
+concrete slab installation cost calculator\par
+210 / 33\par
+Seq 50\par
+concrete slab foundation cost calculator\par
+170 / 20\par
+Seq 50\par
+concrete pad installation cost calculator\par
+50 / 15\par
+Seq 50\par
+concrete pad calculator cost\par
+30 / 35\par
+Seq 50\par
+All seven head terms show an AI Overview and none shows a Local Pack. The guide terms total about 12K searches and the estimator terms about 9.7K (overlapping), against 4.4K for concrete driveway cost.\par
+Decisions and evidence\par
+Decision\par
+Evidence\par
+One estimator page for slab, pad and patio (Seq 50)\par
+The slab and pad estimator SERPs share 3 of their top 10 URLs (Spencer Concrete, calculator.net, Lowe's).\par
+Build Seq 50 separately from Seq 6\par
+The slab SERP shares only 2 URLs with the Seq 6 SERP (Spencer Concrete, ConcreteNetwork). Homewyse and Home Project Calculator appear in both with different URLs, so those sites run separate slab and driveway pages.\par
+Link Seq 50 and Seq 35 both ways, with different outputs\par
+calculator.net's concrete calculator ranks #1 for slab cost calculator and #2 for pad cost calculator. Seq 50 outputs cost and volume, and Seq 35 stays the volume-only tool.\par
+The SERP is beatable\par
+Spencer Concrete (Authority Score 0, no referring domains, 2.7K traffic), Ernst Concrete (0, 3.8K), Ready Mix USA (4, 2 referring domains, 11.9K), Home Project Calculator (6) and SlabCalc (5, 1 referring domain, 7.5K) all rank.\par
+One guide page for slab and pad (Seq 49)\par
+Checked on 10 October 2026: the concrete slab cost and concrete pad cost SERPs share 7 of their top 10 URLs (everything except Homewyse, one YouTube video and Lowe's versus Home Depot), so pad stays on the slab guide.\par
+Build Seq 50 first, then Seq 49\par
+Seq 50 has the verified SERP. Build both after Seq 5 and 6 so the concrete price sheet is already done.\par
+New rows\par
+Seq\par
+URL\par
+Type\par
+Primary keyword\par
+Title tag\par
+H1\par
+Meta description\par
+Micro-context entities\par
+Contextual bridges\par
+49\par
+/concrete-slab-cost/\par
+Cost guide\par
+concrete slab cost (6.6K / 18 / 3.13) with concrete pad cost (4.4K / 17 / 3.13), concrete slab cost per square foot (880 / 12 / 2.24), garage slab cost (170 / 7 / 2.52), cost to pour concrete slab (3.6K / 22), cost of concrete slab (2.4K / 20), cost to install concrete slab (1.9K / 22), cost to lay a concrete pad (1.9K / 19), cost to pour concrete pad (1.9K / 15) and cost to install a concrete pad (880 / 14)\par
+Concrete Slab Cost: \{\{LOW\}\} to \{\{HIGH\}\} per Sq Ft (2026)\par
+Concrete Slab Cost\par
+Concrete slab and pad cost per square foot by thickness, finish and reinforcement, with a free estimator.\par
+slab thickness, reinforcement, subbase, finish, control joints, pad, patio, garage floor\par
+Out: /concrete-slab-cost-calculator/ (the estimator prices the size entered here); /concrete-driveway-cost/ (a driveway is a slab built for vehicle loads, so its guide adds base and thickness); /concrete-calculator/. In: from /concrete-driveway-cost/\par
+50\par
+/concrete-slab-cost-calculator/\par
+Cost estimator\par
+concrete slab cost calculator (5.4K / 22 / 2.04) with concrete pad cost calculator (2.4K / 15 / 2.04), concrete patio cost calculator (320 / 27 / 2.62) and the variants above\par
+Concrete Slab Cost Calculator: Free Estimate\par
+Concrete Slab Cost Calculator\par
+Estimate slab, pad and patio cost and cubic yards from size and thickness, with editable price, waste and removal assumptions.\par
+square feet, thickness, cubic yards, waste, removal of the old slab, stone base, delivery, short-load fee\par
+Out: /concrete-slab-cost/ (the guide explains each input); /concrete-calculator/ (volume only); /concrete-driveway-cost-calculator/. In: from /concrete-slab-cost/, /concrete-calculator/\par
+Estimator inputs to copy from the competitor pages\par
+\bullet  Area in square feet, thickness, an optional removal area with the surface being removed, and stone base. Spencer Concrete's estimator uses the same structure.\par
+\bullet  A short estimate-only line beside the result, as SRM Concrete and Concrete Calculator Online do.\par
+\bullet  Use sourced price ranges, never invented margins. Spencer Concrete states standard margins for materials, labor, overhead and profit, and you have no data for those.\par
+\bullet  No chat widgets or overlays, which cover the result on Spencer Concrete's page.\par
+\bullet  Shape presets such as steps, curbs and footings (SRM Concrete and calculator.net) only for Seq 35, and only after the core pages rank, because the scope here is flat slabs and driveways.\par
+Guide page notes (Seq 49)\par
+\bullet  The slab and pad guide SERPs share 7 of 10 URLs, so one page covers both. The guide cluster is now about 24.6K searches (overlapping), counting the added variants in the Seq 49 row.\par
+\bullet  The SERP is weak. Mud Mixer (Authority Score 0, 1 referring domain, 1.0K traffic), Royal Concrete (2, 1 referring domain, 745 traffic), Modernize (10, 2 referring domains), Togal (8, 4) and Jack Cooper (14, 3) all rank in the top 10, alongside a Reddit thread and SlabCalc (5, 1 referring domain, 7.5K).\par
+\bullet  Question headings: How much does a concrete slab cost? (720 / 25); How much does a 12x12 concrete slab cost? (480 / 21); How much does it cost to pour a concrete slab? (480 / 14); How much would it cost to pour a concrete slab? (320 / 9); How much does a 30x50 concrete slab cost? (260 / 2); How much does a 20x40 concrete pad cost? (210 / 9); How much does a concrete pad cost? (140 / 9); How much does it cost for a concrete pad? (110 / 13).\par
+\bullet  Size table: rows for 10x20, 12x12, 20x40 and 30x50, the sizes searchers use, with every value from the price sheet.\par
+10.6 Research results (11 October 2026)\par
+Decisions\par
+Page\par
+Decision\par
+Evidence\par
+Seq 35 /concrete-calculator/ (301K / 49 / 0.93)\par
+Move to Phase 2 and aim for positions 6 to 10\par
+Positions 1 to 5 are calculator.net, Quikrete, ConcreteNetwork and Sakrete, with Authority Score 48 to 68 and 93 to 345 referring domains. Positions 6 to 10 include Smyrna Ready Mix (7, 2 referring domains, 13.8K traffic), Ozinga (27, 8) and concretecalculator.tools (6, 3, 4.3K). No AI Overview.\par
+Seq 36 /paver-calculator/ (6.6K / 42 / 0.51)\par
+Move to Phase 2 and fold in the base and sand terms\par
+Black Diamond Landscape (Authority Score 0, no referring domains) is #2, Western Interlock (13) is #5 and Nicolock (6) is #8. Traffic per page is small, from 88 to 3.5K.\par
+Seq 43 /gravel-driveway/\par
+Build as a how-to guide and raise its priority\par
+Every top-10 result has Authority Score 22 or lower, mostly DIY pages, with an AI Overview present. Driveway gravel near me (2.9K) is excluded, and driveway gravel prices (2.4K / 15) moved to Seq 7.\par
+Seq 37\par
+Keep, and add driveway concrete repair cost (90 / 21)\par
+Only the top 4 were visible: Reddit (0), A1 Concrete (16), Angi (42) and Colorado Concrete (5). Recheck the full top 10.\par
+Seq 38 /driveway-repair-cost/\par
+Build as a repair hub covering patch, resurface or replace\par
+Six of the top 10 organic results have Authority Score 10 or lower, below a Local Pack, People Also Ask and a video carousel, with no AI Overview. Driveway repair near me (5.4K) is excluded.\par
+Research status\par
+\bullet  Closed: Seq 35, 36, 37, 38 and 43.\par
+\bullet  Open: SERPs for concrete slab calculator (14.8K / 30), concrete bag calculator (6.6K / 30), how to repair cracks in concrete driveway and how to repair driveway cracks. The first two decide whether those tools get their own pages or fold into Seq 35. The last two decide whether Seq 47 and 48 merge.\par
+\bullet  Build without a SERP check and watch with rank tracking: Seq 39, 40, 41, 44, 45 and 46, and the second-tier cost pages (Seq 11 to 20). All have low KD and low merge risk. Every page in the map is built and none is dropped. Seq 31 (crack filler, KD 40) is built in Phase 2 with Seq 32, with its SERP checked first because of the higher KD.\par
+10.7 Keyword coverage rules\par
+Every page uses the exact words of each keyword in its row, once or twice, in a natural place. Google matches meaning as well as words, so this helps clarity, snippet matching and long-tail reach, and it does not guarantee rankings.\par
+Where each keyword goes\par
+\bullet  Primary keyword: title tag, H1, first sentence, one H2 and the meta description.\par
+\bullet  Fold-in keywords: question headings, table row labels, worked examples, the Before you order checklist, image alt text and the sentences around sibling links.\par
+\bullet  Question keywords become question headings, and the sentence under each one answers directly.\par
+\bullet  Merged names appear once in a sentence that explains them. On the asphalt calculator, say that some countries call asphalt bitumen, so the page also works as a bitumen calculator. On the gravel calculator, say it also works as a stone calculator and a crushed stone calculator. On the rock calculator, cover river rock and landscape rock.\par
+Limits\par
+\bullet  No exact keyword more than 4 times on a page. This is an editorial guideline, not a Google rule.\par
+\bullet  If an exact keyword is ungrammatical, such as how much for a asphalt driveway, use a natural close variant and note it in the coverage report.\par
+\bullet  Never write a sentence only to hold a keyword.\par
+\bullet  Cement driveway wording follows the Seq 5 rule in 10.3.\par
+Checks. Each page lists its keywords in frontmatter, the build fails when one is missing, and prompt 8.7 prints a coverage report that the 8.8 audit then checks.\par
+10.8 Bulk Analysis results (11 October 2026)\par
+All 23 terms came back. Four findings change the map: a large sealer product term, a separate bag calculator, and two weight cluster pages. The weight, bag and sealer terms have CPC from 0.00 to 0.66 except driveway sealer (3.50), so the weight and bag pages earn from ads and the sealer page is the money page.\par
+New pages (Seq 51 to 54)\par
+Seq\par
+URL\par
+Type\par
+Primary keyword\par
+Title tag\par
+H1\par
+Meta description\par
+Micro-context entities\par
+Contextual bridges\par
+51\par
+/driveway-sealer/\par
+Product guide\par
+driveway sealer (12.1K / 34 / 3.50, commercial) with asphalt driveway sealer (6.6K / 51) and asphalt sealer for driveways (4.4K / 19)\par
+Best Driveway Sealer: Types and How to Choose\par
+Driveway Sealer\par
+The main types of driveway sealer, how to choose one for asphalt or concrete, and how to apply it.\par
+acrylic sealer, asphalt emulsion sealer, coal tar sealer, coverage per gallon, cure time, temperature, primer, crack filling\par
+Out: /driveway-sealcoating-cost/ (the cost guide prices the job this guide describes); /sealcoat-calculator/ (the calculator turns driveway area into gallons); /driveway-crack-filler/ (fill cracks before sealing). In: from /asphalt-driveway-maintenance/, /asphalt-driveway-cost/. Source any state restriction on coal tar sealers before stating one.\par
+52\par
+/concrete-bag-calculator/\par
+Quantity tool\par
+concrete bag calculator (6.6K / 30 / 0.26) with how many bags of concrete do i need (3.6K / 25 / 0.26)\par
+Concrete Bag Calculator: How Many Bags Do You Need\par
+Concrete Bag Calculator\par
+Calculate how many 40, 50, 60 or 80 lb bags of concrete a slab or driveway needs.\par
+bag size, yield per bag, cubic feet, waste, bags per cubic yard\par
+Out: /concrete-calculator/ (volume and yards); /concrete-driveway-cost-calculator/. In: from /concrete-calculator/. Merged into Seq 35 on 11 October 2026 because its SERP shares 6 of 10 URLs with the concrete calculator SERP. Do not build this page.\par
+53\par
+/concrete-weight-per-cubic-yard/\par
+Reference\par
+how much does a yard of concrete weigh (2.9K / 7 / 0.00) with how much does a cubic yard of concrete weigh (720 / 13), concrete weight per cubic yard (170 / 6), how much does a yard of crushed concrete weigh (110 / 2), how much does a yard of cured concrete weigh (90 / 6) and how much does a yard of dry concrete weigh (90 / 10)\par
+How Much Does a Yard of Concrete Weigh?\par
+Concrete Weight per Cubic Yard\par
+The weight of a cubic yard of concrete by mix, with pounds per cubic foot and tons per cubic yard.\par
+normal-weight concrete, lightweight concrete, density, pounds per cubic foot, tons per cubic yard\par
+Out: /concrete-calculator/; /material-weights/. In: from /cubic-yards-to-tons/. Confirmed as a separate page on 11 October 2026, because dedicated concrete weight pages rank.\par
+54\par
+/gravel-weight-per-cubic-yard/\par
+Reference\par
+how much does a yard of gravel weigh (1.9K / 3 / 0.00) with how much does a cubic yard of gravel weigh (480 / 3), how much does a yard of pea gravel weigh (320 / 2), how much does a yard of 3 4 gravel weigh (110 / 0), how much does a cubic yard of pea gravel weigh (90 / 0), cubic yard of gravel weight (210 / 3), gravel weight per cubic yard (140 / 0), how much does a ton of gravel cover (210 / 11 / 0.15), how many cubic feet in a ton of gravel (210 / 29) and how many square feet does a ton of gravel cover (70 / 4 / 0.04)\par
+How Much Does a Yard of Gravel Weigh?\par
+Gravel Weight per Cubic Yard\par
+The weight of a cubic yard of gravel by type, how much area a ton covers and how many cubic feet are in a ton.\par
+crushed stone, pea gravel, road base, density, moisture, coverage depth\par
+Out: /gravel-calculator/; /cubic-yards-to-tons/; /material-weights/. In: from /gravel-calculator/. Confirmed as a separate page on 11 October 2026, because dedicated gravel weight pages rank beside charts.\par
+Build Seq 51 in Phase 2 after Seq 12 is live. Build Seq 52 to 54 in Phase 2. Every weight and yield value on these pages comes from the data sheet.\par
+Folded into existing rows (already edited)\par
+\bullet  Seq 9: how much gravel do i need (2.4K / 21) and how many yards of gravel do i need (140 / 16).\par
+\bullet  Seq 21: driveway sealer calculator (320 / 13), asphalt sealer calculator (170 / 12) and how much sealer do i need (20).\par
+\bullet  Seq 6: driveway concrete calculator (170 / 41 / 2.26) and how much concrete do i need for a driveway (20).\par
+\bullet  Seq 35: concrete yards calculator (390 / 26).\par
+\bullet  Seq 23: asphalt density (110 / 10), weight of asphalt (110 / 5) and how much does a yard of asphalt weigh (110 / 3).\par
+\bullet  Seq 24: how many tons in a cubic yard of gravel (70 / 17).\par
+Open SERP checks (7). driveway sealer, concrete bag calculator, concrete slab calculator, how much does a yard of concrete weigh, how much does a yard of gravel weigh, how to repair cracks in concrete driveway and how to repair driveway cracks. The map is now 51 pages.\par
+10.9 SERP results (11 October 2026)\par
+Decisions\par
+Page\par
+Decision\par
+Evidence\par
+Seq 52 concrete bag calculator (6.6K / 30 / 0.26)\par
+Merged into Seq 35, do not build\par
+Its SERP shares 6 of 10 URLs with the concrete calculator SERP (calculator.net, Quikrete, Sakrete, ConcreteNetwork, Cemex and concretecalculator.tools). The bag terms are folded into Seq 35, which needs a bags output and a bags section.\par
+concrete slab calculator (14.8K / 30 / 1.23)\par
+Folded into Seq 35\par
+It shares 5 URLs with the concrete calculator SERP. Positions 6 to 10 are weak: concretecalculatormax.com (Authority Score 0, 2 referring domains, 10.3K traffic), readymixusa.com (4, 2, 11.9K), concreteblockcalculator.com (0, 3.5K) and ernstconcrete.com (0, 3.7K). An AI Overview shows.\par
+Seq 53 concrete weight (2.9K / 7 / 0.00)\par
+Keep as a separate page\par
+Dedicated weight pages rank: Dumpsters (11, 84 referring domains, 4.5K traffic), U-Cart (2), Hello Gravel (0), Cart-Away (3) and SlabCalc (0). An AI Overview shows.\par
+Seq 54 gravel weight (1.9K / 3 / 0.00)\par
+Keep as a separate page\par
+Dedicated pages rank beside charts: Earth Haulers (2), Select SG (4), a TRORC chart (15) and Reddit (0). Only the top 5 were visible.\par
+Seq 51 driveway sealer (12.1K / 34 / 3.50)\par
+Keep, written as a buying guide\par
+The top 10 is retailer and product pages (Home Depot, Lowe's, Ace, Sherwin-Williams, Amazon). The weak slots are Epoxy Master (2), Asphalt Sealcoating Direct (0) and Friedmans Home (0). Competitive density is 1.00, so advertisers bid hard, and the page will take time.\par
+Seq 47 and 48 crack repair\par
+Keep both, split by surface\par
+The generic and concrete SERPs open with the same Reddit and Home Depot URLs. Seq 47 takes the generic term how to repair driveway cracks (720 / 24 / 1.25) and Seq 48 is asphalt only. Confirm the full top 10 once the pages are live.\par
+New page (Seq 55)\par
+Seq\par
+URL\par
+Type\par
+Primary keyword\par
+Title tag\par
+H1\par
+Meta description\par
+Micro-context entities\par
+Contextual bridges\par
+55\par
+/how-to-seal-a-driveway/\par
+How-to guide\par
+how to seal a driveway (1.0K / 35) with how to seal coat a driveway (880 / 43) and how to seal driveway (720 / 27)\par
+How to Seal a Driveway: Steps, Tools and Timing\par
+How to Seal a Driveway\par
+The steps to seal an asphalt driveway, the tools and sealer needed, and the weather and cure times to plan for.\par
+cleaning, crack filling, primer, sealer, squeegee, coats, cure time, temperature\par
+Out: /driveway-sealer/ (the buying guide covers which sealer to use); /sealcoat-calculator/ (gallons needed); /driveway-sealcoating-cost/ (cost to hire the job); /driveway-crack-filler/. In: from /asphalt-driveway-maintenance/\par
+The cost questions, how much to seal a driveway (720 / 19) and how much does it cost to seal a driveway (590 / 18), are on Seq 12 together with driveway sealing (6.6K / 52). Driveway sealing near me (5.4K) is excluded as a local term.\par
+Research status. All seven SERP checks are closed. The map is now 51 pages: Seq 52 is merged into Seq 35 and Seq 55 is new. The master page list is the next deliverable.\par
+11. Master page list\par
+One row per page, in build order. There are 51 pages: 10 in Phase 1, 18 in Phase 1b, 22 in Phase 2 and 1 in Phase 3. Keywords show volume / KD / CPC. Fold-in keywords go on the same page (Section 10.7). Titles, H1s, meta descriptions, micro-context entities and bridges stay in the earlier tables: Section 5 (Seq 2 to 8, 10 to 20, 33), Section 6 (Seq 1, 9, 21 to 36), 10.1 (Seq 37 to 42), 10.3 (Seq 43 to 48), 10.5 (Seq 49 and 50), 10.8 (Seq 51, 53, 54) and 10.9 (Seq 55). Where this list and an earlier row disagree, this list wins.\par
+Give ChatGPT this prompt once, so every page has its keywords as data for the frontmatter and the coverage check:\par
+Task: convert Tables 11A and 11B of the doc into /data/pages.json.\par
+For each row output: order, seq, url, section, type, phase, primary (the keyword text only), primaryVolume, primaryKd, primaryCpc, keywords (an array of every fold-in keyword as plain text without numbers).\par
+Rules: split the fold-in cell on semicolons. Move the bracketed volume, KD and CPC into numeric fields where they are shown, and treat K as thousands (6.6K is 6600). Use null for a value that is not shown. Output valid JSON only, then print the row count, which must be 51.\par
+Table 11A: Phase 1 and Phase 1b\par
+Order\par
+Seq\par
+URL\par
+Section\par
+Type\par
+Phase\par
+Primary keyword\par
+Fold-in keywords\par
+1\par
+1\par
+/methodology/\par
+Outer\par
+Reference\par
+1\par
+none (trust page)\par
+none\par
+2\par
+2\par
+/asphalt-calculator/\par
+Core\par
+Quantity tool\par
+1\par
+asphalt calculator (22.2K / 15 / 1.16)\par
+figuring asphalt (12.1K / 18 / 1.16); asphalt tonnage calculator (1.0K / 10); asphalt calculator online (720 / 25); asphalt driveway calculator (590 / 16); how to calculate asphalt tonnage (390 / 5); how to figure asphalt tonnage (390 / 8); how do you calculate asphalt tonnage (260 / 7); how to figure out asphalt tonnage (210 / 5); how to calculate tons of asphalt (210 / 7); how to figure tons of asphalt (170 / 5); bitumen calculator (14.8K / 15 / 1.16)\par
+3\par
+3\par
+/asphalt-driveway-cost/\par
+Core\par
+Cost guide\par
+1\par
+asphalt driveway cost (6.6K / 9 / 3.14)\par
+cost of asphalt driveway (1.6K / 8); how much does it cost to pave a driveway (1.6K / 16 / 2.86); blacktop driveway cost (880 / 9 / 2.91); asphalt driveway cost per square foot (590 / 3 / 2.79); how much does an asphalt driveway cost (720 / 7); how much does it cost to asphalt a driveway (590 / 9); 20x20 asphalt driveway cost (320 / 19 / 2.93); cost of asphalt per ton (170 / 7 / 3.30); hot mix asphalt cost per ton (110 / 13)\par
+4\par
+4\par
+/asphalt-driveway-cost-calculator/\par
+Core\par
+Cost estimator\par
+1\par
+asphalt driveway cost calculator (1.9K / 24)\par
+driveway paving cost calculator (720 / 22 / 2.50)\par
+5\par
+5\par
+/concrete-driveway-cost/\par
+Core\par
+Cost guide\par
+1\par
+concrete driveway cost (4.4K / 21 / 3.67)\par
+concrete driveway (12.1K / 21 / 5.49, overview section); cost of concrete driveway (1.9K / 17); how much does a concrete driveway cost (1.0K / 17); how much does it cost to concrete a driveway (480 / 14); how much does concrete driveway cost (210 / 7); how much does it cost for a concrete driveway (110 / 21); how much does it cost to pour a concrete driveway (110 / 22); how much is a concrete driveway (720 / 15); how much to cement a driveway (720 / 16); how much does it cost to cement a driveway (480 / 31); how much to concrete a driveway (320 / 20); how much does a cement driveway cost (260 / 14); how much to concrete driveway (260 / 10); how much is a concrete driveway per square foot (90 / 13 / 1.72)\par
+6\par
+6\par
+/concrete-driveway-cost-calculator/\par
+Core\par
+Cost estimator\par
+1\par
+concrete driveway cost calculator (1.3K / 33)\par
+concrete driveway calculator (720 / 21 / 2.26); driveway concrete calculator (170 / 41 / 2.26); how much concrete do i need for a driveway (20)\par
+7\par
+7\par
+/gravel-driveway-cost/\par
+Core\par
+Cost guide\par
+1\par
+gravel driveway cost (2.4K / 11 / 1.76)\par
+gravel delivery cost (390 / 2 / 1.07); cost to put in gravel driveway (1.6K / 13); cost to install gravel driveway (590 / 8); driveway gravel cost (590 / 13); gravel driveway cost calculator (590 / 21); driveway gravel prices (2.4K / 15)\par
+8\par
+8\par
+/gravel-driveway-calculator/\par
+Core\par
+Quantity tool\par
+1\par
+gravel driveway calculator (1.3K / 20 / 0.44)\par
+how much gravel do i need for a driveway (50 / 15)\par
+9\par
+9\par
+/gravel-calculator/\par
+Outer\par
+Quantity tool\par
+1\par
+gravel calculator (40.5K / 22 / 0.69)\par
+gravel calculator yards (1.0K / 13); how much gravel do i need calculator (320 / 25); how to calculate how much gravel i need (320 / 26); how to calculate how much gravel you need (210 / 14); how to calculate yards of gravel (210 / 16); how to calculate gravel needed (170 / 34); figuring gravel; how much gravel do i need (2.4K / 21 / 0.17); how many yards of gravel do i need (140 / 16 / 0.15); stone calculator (12.1K / 17 / 0.48); crushed stone calculator (2.4K / 20); river stone calculator (880 / 2); 57 stone calculator (720 / 12); stone calculator tons (720 / 14); how much stone do i need calculator (260 / 19)\par
+10\par
+10\par
+/\par
+Core\par
+Hub\par
+1\par
+none (brand and hub)\par
+none\par
+11\par
+42\par
+/driveway-cost-calculator/\par
+Core\par
+Compare estimator\par
+1b\par
+driveway cost calculator (590 / 19 / 2.45)\par
+driveway calculator (260 / 17 / 1.73); driveway cost estimator (210 / 22 / 2.48)\par
+12\par
+50\par
+/concrete-slab-cost-calculator/\par
+Outer\par
+Cost estimator\par
+1b\par
+concrete slab cost calculator (5.4K / 22 / 2.04)\par
+concrete pad cost calculator (2.4K / 15 / 2.04); concrete patio cost calculator (320 / 27 / 2.62); calculating concrete slab cost (880); concrete slab calculator cost (210 / 20); concrete slab installation cost calculator (210 / 33); concrete slab foundation cost calculator (170 / 20); concrete pad installation cost calculator (50 / 15); concrete pad calculator cost (30 / 35)\par
+13\par
+49\par
+/concrete-slab-cost/\par
+Outer\par
+Cost guide\par
+1b\par
+concrete slab cost (6.6K / 18 / 3.13)\par
+concrete pad cost (4.4K / 17 / 3.13); concrete slab cost per square foot (880 / 12 / 2.24); garage slab cost (170 / 7 / 2.52); cost to pour concrete slab (3.6K / 22); cost of concrete slab (2.4K / 20); cost to install concrete slab (1.9K / 22); cost to lay a concrete pad (1.9K / 19); cost to pour concrete pad (1.9K / 15); cost to install a concrete pad (880 / 14)\par
+14\par
+43\par
+/gravel-driveway/\par
+Outer\par
+How-to guide\par
+1b\par
+gravel driveway (8.1K / 29 / 2.37)\par
+driveway gravel (8.1K / 26); gravel for driveway (3.6K / 41); how to build a gravel driveway (1.3K / 11); how do you lay a gravel driveway (880 / 12); how to gravel driveway (880 / 31); how to make a gravel driveway (880 / 10); how do i lay a gravel driveway (720 / 16); gravel driveway maintenance (390 / 12 / 2.89)\par
+15\par
+12\par
+/driveway-sealcoating-cost/\par
+Core\par
+Cost guide\par
+1b\par
+driveway sealcoating (6.6K / 38 / 3.50)\par
+driveway sealcoating cost (390 / 9 / 2.94); sealcoating cost per square foot (90 / 11 / 3.83); driveway sealing (6.6K / 52); how much to seal a driveway (720 / 19); how much does it cost to seal a driveway (590 / 18)\par
+16\par
+11\par
+/repave-asphalt-driveway-cost/\par
+Core\par
+Cost guide\par
+1b\par
+asphalt resurfacing driveway cost (2.4K / 29)\par
+cost to replace asphalt driveway (2.4K / 41); how much does it cost to repave a driveway (1.0K / 24 / 2.86); asphalt overlay cost (880 / 13 / 3.49)\par
+17\par
+13\par
+/asphalt-driveway-repair-cost/\par
+Core\par
+Cost guide\par
+1b\par
+asphalt driveway repair cost (320 / 20 / 3.80)\par
+asphalt driveway repair (4.4K / 41)\par
+18\par
+14\par
+/concrete-vs-asphalt-driveway/\par
+Core\par
+Comparison\par
+1b\par
+concrete vs asphalt driveway (1.3K / 15 / 1.26)\par
+concrete vs asphalt driveway cost (260 / 11 / 1.91); how long does an asphalt driveway last (320 / 0 / 0.96); how long does a concrete driveway last (170 / 8); asphalt driveway lifespan (70 / 0); concrete driveway lifespan (40 / 9)\par
+19\par
+15\par
+/replace-concrete-driveway-cost/\par
+Core\par
+Cost guide\par
+1b\par
+cost to replace concrete driveway (1.3K / 15)\par
+none\par
+20\par
+16\par
+/stamped-concrete-driveway-cost/\par
+Core\par
+Cost guide\par
+1b\par
+stamped concrete driveway cost (320 / 15 / 2.43)\par
+none\par
+21\par
+17\par
+/paver-driveway-cost/\par
+Core\par
+Cost guide\par
+1b\par
+paver driveway cost (880 / 28 / 3.35)\par
+none\par
+22\par
+18\par
+/tar-and-chip-driveway-cost/\par
+Core\par
+Cost guide\par
+1b\par
+tar and chip driveway cost (480 / 6 / 2.41)\par
+chip seal driveway (2.9K / 5 / 3.99)\par
+23\par
+19\par
+/asphalt-millings-cost/\par
+Core\par
+Cost guide\par
+1b\par
+asphalt millings cost (320 / 4 / 2.68)\par
+none\par
+24\par
+20\par
+/asphalt-driveway-thickness/\par
+Core\par
+Spec guide\par
+1b\par
+asphalt driveway thickness (260 / 0 / 2.81)\par
+none\par
+25\par
+37\par
+/concrete-driveway-repair-cost/\par
+Core\par
+Cost guide\par
+1b\par
+concrete driveway repair cost (1.3K / 24 / 4.70)\par
+concrete driveway repair (8.1K / 32 / 6.91); concrete driveway crack repair (2.9K / 38); driveway concrete repair cost (90 / 21)\par
+26\par
+38\par
+/driveway-repair-cost/\par
+Core\par
+Cost hub\par
+1b\par
+driveway repair (9.9K / 26 / 8.30)\par
+none\par
+27\par
+39\par
+/driveway-replacement-cost/\par
+Core\par
+Cost guide\par
+1b\par
+driveway replacement (5.4K / 32 / 6.01)\par
+how much is it to replace a driveway (110 / 17 / 2.81); how much does it cost to replace a driveway (40 / 9)\par
+28\par
+46\par
+/standard-driveway-width/\par
+Outer\par
+Reference\par
+1b\par
+standard driveway width (1.3K / 10 / 0.00)\par
+standard driveway size (260 / 6 / 3.16)\par
+Table 11B: Phase 2 and Phase 3\par
+Order\par
+Seq\par
+URL\par
+Section\par
+Type\par
+Phase\par
+Primary keyword\par
+Fold-in keywords\par
+29\par
+35\par
+/concrete-calculator/\par
+Outer\par
+Quantity tool\par
+2\par
+concrete calculator (301K / 49 / 0.93)\par
+concrete slab calculator (14.8K / 30); concrete bag calculator (6.6K / 30); concrete pad calculator (6.6K / 40); calculator concrete yards (5.4K / 24); concrete yards calculator (390 / 26 / 0.51); how to calculate concrete (1.9K / 33); how to calculate concrete yards (1.3K / 22); how to calculate yards of concrete (1.3K / 25); how do i calculate yards of concrete (590 / 30); how do you calculate how much concrete you need (590 / 28); concrete calculator bags (4.4K / 25); bag concrete calculator (1.3K / 31); bags of concrete calculator (880 / 30); concrete bags calculator (590 / 28); how many bags of concrete do i need (3.6K / 25 / 0.26); material calculator for concrete slab (3.6K / 28); concrete calculator for slab (1.0K / 43); concrete calculator slab (1.0K / 44)\par
+30\par
+36\par
+/paver-calculator/\par
+Outer\par
+Quantity tool\par
+2\par
+paver calculator (6.6K / 42 / 0.51)\par
+paver base calculator (1.9K / 16); paver sand calculator (1.6K / 16); calculate paver sand (480 / 12); cost calculator for paver patio (390 / 36)\par
+31\par
+40\par
+/how-to-lay-an-asphalt-driveway/\par
+Outer\par
+How-to guide\par
+2\par
+laying asphalt driveway (2.9K / 11 / 5.92)\par
+none\par
+32\par
+41\par
+/hot-mix-asphalt/\par
+Outer\par
+Reference\par
+2\par
+hot mix asphalt (5.4K / 13 / 4.73)\par
+none\par
+33\par
+44\par
+/asphalt-driveway-maintenance/\par
+Outer\par
+Guide\par
+2\par
+asphalt driveway maintenance (1.3K / 12 / 3.54)\par
+none\par
+34\par
+45\par
+/driveway-drainage/\par
+Outer\par
+Guide\par
+2\par
+driveway drainage (1.3K / 26 / 1.81)\par
+driveway slope (210 / 10)\par
+35\par
+47\par
+/how-to-repair-concrete-driveway-cracks/\par
+Outer\par
+How-to guide\par
+2\par
+how to repair cracks in concrete driveway (880 / 22 / 1.06)\par
+how to repair driveway cracks (720 / 24 / 1.25); how to repair concrete driveway (320 / 27); how to repair large cracks in concrete driveway (320 / 18); how to repair concrete driveway cracks (210 / 22)\par
+36\par
+48\par
+/how-to-repair-asphalt-driveway-cracks/\par
+Outer\par
+How-to guide\par
+2\par
+how to repair asphalt driveway (390 / 34)\par
+how to repair cracks in asphalt driveway (260 / 28)\par
+37\par
+21\par
+/sealcoat-calculator/\par
+Outer\par
+Quantity tool\par
+2\par
+sealcoat calculator (390 / 5 / 0.56)\par
+how much sealer do i need (20 / 0.66); driveway sealer calculator (320 / 13); asphalt sealer calculator (170 / 12 / 0.66)\par
+38\par
+22\par
+/asphalt-millings-calculator/\par
+Outer\par
+Quantity tool\par
+2\par
+asphalt millings calculator (590 / 2 / 0.04)\par
+none\par
+39\par
+23\par
+/material-weights/\par
+Outer\par
+Reference table\par
+2\par
+asphalt weight per cubic foot (90 / 6)\par
+asphalt density (110 / 10); weight of asphalt (110 / 5); how much does a yard of asphalt weigh (110 / 3)\par
+40\par
+24\par
+/cubic-yards-to-tons/\par
+Outer\par
+Converter\par
+2\par
+cubic yards to tons (2.9K / 16 / 0.00)\par
+how many yards in a ton of gravel (1.3K / 19 / 0.93); how many tons in a cubic yard of gravel (70 / 17 / 0.68)\par
+41\par
+25\par
+/rock-calculator/\par
+Outer\par
+Quantity tool\par
+2\par
+rock calculator (9.9K / 9 / 0.48)\par
+river rock calculator (3.6K / 7 / 0.27); landscape rock calculator (2.4K / 18); crushed rock calculator (1.3K / 13); how much rock do i need calculator (210 / 19); how much river rock do i need calculator (70 / 1)\par
+42\par
+27\par
+/pea-gravel-calculator/\par
+Outer\par
+Quantity tool\par
+2\par
+pea gravel calculator (4.4K / 9 / 0.38)\par
+calculate pea gravel (320 / 9); calculating pea gravel (110 / 15); how much pea gravel do i need calculator (70 / 18); pea gravel cost calculator (70 / 12)\par
+43\par
+29\par
+/crusher-run-calculator/\par
+Outer\par
+Quantity tool\par
+2\par
+crusher run calculator (1.0K / 5 / 0.08)\par
+none\par
+44\par
+30\par
+/road-base-calculator/\par
+Outer\par
+Quantity tool\par
+2\par
+road base calculator (1.0K / 15 / 0.73)\par
+none\par
+45\par
+53\par
+/concrete-weight-per-cubic-yard/\par
+Outer\par
+Reference\par
+2\par
+how much does a yard of concrete weigh (2.9K / 7 / 0.00)\par
+how much does a cubic yard of concrete weigh (720 / 13); concrete weight per cubic yard (170 / 6); how much does a yard of crushed concrete weigh (110 / 2); how much does a yard of cured concrete weigh (90 / 6); how much does a yard of dry concrete weigh (90 / 10)\par
+46\par
+54\par
+/gravel-weight-per-cubic-yard/\par
+Outer\par
+Reference\par
+2\par
+how much does a yard of gravel weigh (1.9K / 3 / 0.00)\par
+how much does a cubic yard of gravel weigh (480 / 3); how much does a yard of pea gravel weigh (320 / 2); how much does a yard of 3 4 gravel weigh (110 / 0); how much does a cubic yard of pea gravel weigh (90 / 0); cubic yard of gravel weight (210 / 3); gravel weight per cubic yard (140 / 0); how much does a ton of gravel cover (210 / 11 / 0.15); how many cubic feet in a ton of gravel (210 / 29); how many square feet does a ton of gravel cover (70 / 4 / 0.04)\par
+47\par
+51\par
+/driveway-sealer/\par
+Outer\par
+Product guide\par
+2\par
+driveway sealer (12.1K / 34 / 3.50)\par
+asphalt driveway sealer (6.6K / 51); asphalt sealer for driveways (4.4K / 19)\par
+48\par
+55\par
+/how-to-seal-a-driveway/\par
+Outer\par
+How-to guide\par
+2\par
+how to seal a driveway (1.0K / 35)\par
+how to seal coat a driveway (880 / 43); how to seal driveway (720 / 27)\par
+49\par
+31\par
+/driveway-crack-filler/\par
+Outer\par
+Product guide\par
+2\par
+driveway crack filler (3.6K / 40 / 1.35)\par
+none\par
+50\par
+32\par
+/asphalt-cold-patch/\par
+Outer\par
+Product guide\par
+2\par
+asphalt cold patch (3.6K / 31 / 1.22)\par
+none\par
+51\par
+33\par
+/driveway-cost/\par
+Core\par
+Pillar\par
+3\par
+driveway cost (590 / 19 / 3.01)\par
+driveway installation (2.9K / 14 / 5.58, section); new driveway cost (880 / 17 / 3.34); driveway paving cost (1.0K / 15 / 3.35); how much does a driveway cost (590 / 19 / 2.55); cost to pave a driveway (390 / 18 / 2.75); how much will a driveway cost (390 / 25 / 2.55); how much does it cost for a driveway (260 / 23 / 2.57); how much would a new driveway cost (210 / 12 / 3.04); cost of a new driveway (170 / 16 / 3.12); driveway cost per square foot (170 / 17 / 2.24); how much does it cost to build a driveway (170 / 29 / 2.56); how much should a new driveway cost (170 / 9 / 3.04)\par
+Merged, not built. Seq 26 (stone calculator) is merged into Seq 9, Seq 28 (river rock calculator) into Seq 25, Seq 34 (bitumen calculator) into Seq 2 and Seq 52 (concrete bag calculator) into Seq 35. Their keywords are listed in the rows above.\par
+Build notes\par
+\bullet  Seq 9, 25 and 27 share one calculator engine but need different copy, defaults and use cases, or Google will rank only one of them.\par
+\bullet  Seq 51 is a buying guide, because the SERP is retailer and product pages. Seq 31 needs its SERP checked before it is written, because its KD is 40.\par
+\bullet  Seq 42 goes live after Seq 3 to 8, and Seq 33 goes live after 8 cost pages exist.\par
+\bullet  Seq 39 and 38 have a Local Pack above the organic results, so keep their copy to cost and repair-method content and not contractor hiring.\par
+\bullet  Every price, density and coverage value on any page comes from the data sheet in Section 7.\f0\par
+}
+ 

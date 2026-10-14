@@ -2,6 +2,12 @@
 
 A researched draft build for **drivewaycalc.online**, using Next.js App Router, strict TypeScript, Tailwind, MDX, and a static export for Cloudflare Pages connected to GitHub.
 
+## Mandatory source and semantic SEO instructions
+
+Read [AGENTS.md](AGENTS.md), the preserved [instruction set](docs/source-guidance/instruction-set.txt), the [driveway source document](docs/source-guidance/driveway-calculator.txt), and [SEMANTIC-SEO-RULES.md](docs/SEMANTIC-SEO-RULES.md) before site work. [SEMANTIC-SEO-SOURCES.md](docs/SEMANTIC-SEO-SOURCES.md) records the other-project guidance actually recovered and its applicability.
+
+The semantic rules cover page ownership, site structure, writing, numerical consistency, contextual linking and evidence-based audits. An automated keyword/build pass does not establish editorial approval. The current 51 pages remain drafts and need individual editorial correction/review; adding the instructions does not complete that work.
+
 ## File tree
 
 ```text
