@@ -1,0 +1,308 @@
+{
+  "audit": {
+    "date": "2026-10-14",
+    "timezone": "Asia/Karachi",
+    "site": "https://driveway-calculators-review.ekselllondon.chatgpt.site",
+    "liveVersion": 5,
+    "liveSourceCommit": "f4db28e728ed1713796834ed981d616827797532",
+    "auditedLocalCommit": "2d41f3a9633e4dbd10563af101892d44f3bcd402",
+    "webSourceDiffSinceLive": "none; intervening commits changed instructions only",
+    "scope": "51 mapped pages + 6 trust pages, authenticated HTML/source audit; no browser execution",
+    "sourceAndExportChecks": "validate and check-export passed; no rebuild or full formula-suite rerun",
+    "browserLimit": "Managed Sites skill requires control-browser; capability not available. No server/browser workaround used."
+  },
+  "checks": [
+    {
+      "url": "/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/about/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/asphalt-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/asphalt-cold-patch/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/asphalt-driveway-cost-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/asphalt-driveway-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/asphalt-driveway-maintenance/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/asphalt-driveway-repair-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/asphalt-driveway-thickness/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/asphalt-millings-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/asphalt-millings-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/author/farrukh-abdullah/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/concrete-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/concrete-driveway-cost-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/concrete-driveway-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/concrete-driveway-repair-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/concrete-slab-cost-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/concrete-slab-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/concrete-vs-asphalt-driveway/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/concrete-weight-per-cubic-yard/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/contact/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/crusher-run-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/cubic-yards-to-tons/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/disclosure/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/driveway-cost-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/driveway-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/driveway-crack-filler/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/driveway-drainage/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/driveway-repair-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/driveway-replacement-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/driveway-sealcoating-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/driveway-sealer/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/gravel-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/gravel-driveway-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/gravel-driveway-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/gravel-driveway/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/gravel-weight-per-cubic-yard/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/hot-mix-asphalt/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/how-to-lay-an-asphalt-driveway/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/how-to-repair-asphalt-driveway-cracks/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/how-to-repair-concrete-driveway-cracks/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/how-to-seal-a-driveway/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/material-weights/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/methodology/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/paver-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/paver-driveway-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/pea-gravel-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/privacy/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/repave-asphalt-driveway-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/replace-concrete-driveway-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/road-base-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/rock-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/sealcoat-calculator/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/stamped-concrete-driveway-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/standard-driveway-width/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/tar-and-chip-driveway-cost/",
+      "status": 200,
+      "liveMatchesExport": true
+    },
+    {
+      "url": "/terms/",
+      "status": 200,
+      "liveMatchesExport": true
+    }
+  ],
+  "robots": "User-Agent: *; Disallow: /",
+  "sitemap": "empty urlset",
+  "unknownPath": {
+    "path": "/audit-missing-route-check/",
+    "status": 404
+  },
+  "auxiliaryRoutes": "/404/ and /_not-found/ are explicit exported utility routes returning 200; not treated as unknown-route soft 404s."
+}
