@@ -2317,6 +2317,104 @@ caption {
 .home-hero {
   min-height: 660px;
 }
+.guide-quick-estimate {
+  margin: 24px 0 36px;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 3px 0 var(--ink);
+  padding: 24px;
+}
+.guide-quick-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+.guide-quick-intro h2 {
+  font-size: clamp(22px, 2.4vw, 30px);
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+  margin: 8px 0 8px;
+}
+.guide-quick-intro p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.guide-quick-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(235px, 0.8fr);
+  gap: 24px;
+  align-items: stretch;
+}
+.guide-quick-fields .field {
+  margin-bottom: 6px;
+}
+.guide-quick-caveat {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 12px 0 0;
+}
+.guide-quick-result {
+  background: var(--ink);
+  color: white;
+  border-radius: 5px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+}
+.guide-quick-result .eyebrow,
+.guide-quick-result > span:last-child {
+  color: #d6ddca;
+}
+.guide-quick-result strong {
+  font-size: clamp(23px, 3vw, 37px);
+  letter-spacing: -0.04em;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+.guide-quick-result p {
+  margin: 0;
+  font-size: 14px;
+}
+.guide-quick-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  border-top: 1px solid var(--line);
+  margin-top: 20px;
+  padding-top: 16px;
+}
+.guide-quick-footer p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+.guide-quick-footer a,
+.guide-quick-unavailable a {
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.guide-quick-unavailable {
+  padding: 16px;
+  background: var(--cream);
+  border-left: 3px solid var(--ink);
+}
+@media (max-width: 680px) {
+  .guide-quick-estimate { padding: 18px; }
+  .guide-quick-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .guide-quick-intro h2 { font-size: 24px; }
+  .guide-quick-result strong { font-size: 29px; }
+}
+
 .reference-panel {
   margin: 30px 0;
 }
