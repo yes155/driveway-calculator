@@ -25,12 +25,12 @@ for (const url of urls) {
   if (!html.includes('<body class="theme-projectone">'))
     errors.push('Missing shared design theme ' + url);
   const headerNav = html.match(
-    /<nav\\b[^>]*aria-label="Main navigation"[^>]*>[\\s\\S]*?<\\/nav>/,
+    /<nav\b[^>]*aria-label="Main navigation"[^>]*>[\s\S]*?<\/nav>/,
   )?.[0];
   if (!headerNav) {
     errors.push('Missing main navigation ' + url);
   } else {
-    const actualLinks = [...headerNav.matchAll(/<a\\b[^>]*href="(\\/[^"#?]*)"/g)].map(
+    const actualLinks = [...headerNav.matchAll(/<a\b[^>]*href="(\/[^"#?]*)"/g)].map(
       (match) => match[1],
     );
     if (JSON.stringify(actualLinks) !== JSON.stringify(expectedHeaderLinks))
