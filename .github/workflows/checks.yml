@@ -17,6 +17,13 @@ jobs:
       - run: npm run build
       - name: Mobile performance budgets
         run: npx lhci autorun
+      - name: Keep mobile Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-mobile-reports
+          path: .lighthouseci/reports
+          if-no-files-found: ignore
       - uses: actions/upload-artifact@v4
         with:
           name: cloudflare-static-export
