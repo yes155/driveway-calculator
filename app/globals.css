@@ -2481,7 +2481,7 @@ caption {
   padding: 16px 20px 8px;
   overflow: auto;
   overscroll-behavior: contain;
-  max-height: clamp(165px, calc(100svh - 400px), 350px);
+  max-height: clamp(165px, calc(100svh - 420px), 350px);
   scrollbar-gutter: stable;
 }
 .calculator-fields:focus-visible {
@@ -3070,6 +3070,20 @@ caption {
     display: block;
   }
   .guide-quick-intro .unit-badge {
+    display: none;
+  }
+}
+
+.input-scroll-note {
+  margin: 0;
+  padding: 3px 16px;
+  font-size: 11px;
+  line-height: 18px;
+  background: var(--cream);
+  color: #43453f;
+}
+@media print {
+  .input-scroll-note {
     display: none;
   }
 }

@@ -108,8 +108,7 @@ export default function Home() {
         <div className="hero-copy">
           <span className="eyebrow hero-kicker">Free driveway planning tools</span>
           <h1>
-            Driveway
-            <br />
+            Driveway <br />
             Calculators.
           </h1>
           <p className="hero-description">

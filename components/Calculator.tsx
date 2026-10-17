@@ -731,6 +731,7 @@ export default function Calculator({
             {error}
           </p>
         )}
+        <p className="input-scroll-note">Scroll inside the form for more inputs and settings ↕</p>
         <div className="form-actions" aria-label="Calculation actions">
           <button className="button primary" type="submit">
             {cost
