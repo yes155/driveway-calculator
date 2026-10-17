@@ -39,8 +39,10 @@ export default function Navigation({ groups }: { groups: Group[] }) {
         if (
           event.relatedTarget instanceof Node &&
           !event.currentTarget.contains(event.relatedTarget)
-        )
+        ) {
           setOpen(null);
+          setMobileOpen(false);
+        }
       }}
     >
       <button

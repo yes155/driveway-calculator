@@ -61,7 +61,10 @@ try {
   ]) {
     await tab.setViewport(viewport);
     for (const page of [pages.find((p) => p.url === '/'), ...toolPages]) {
-      await tab.goto(origin + page.url, { waitUntil: 'networkidle0' });
+      await tab.goto(origin + page.url, { waitUntil: 'load' });
+      await tab.evaluate(
+        () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
+      );
       const quick = [3, 5, 49].includes(page.seq);
       const selectors =
         page.url === '/'
@@ -98,7 +101,10 @@ try {
       );
       const record = { page: page.url, viewport, checks, overflow };
       observations.push(record);
-      if (overflow || checks.some((check) => !check.visible)) failures.push(record);
+      if (overflow || checks.some((check) => !check.visible)) {
+        failures.push(record);
+        console.log('Placement failure:', JSON.stringify(record));
+      }
       if (
         [
           '/',
@@ -112,6 +118,13 @@ try {
         });
       }
     }
+    fs.writeFileSync(
+      path.join(screenshots, 'placement.json'),
+      JSON.stringify({ observations, failures }, null, 2),
+    );
+    console.log(
+      `Checked ${viewport.width}×${viewport.height}; ${failures.length} placement failures so far.`,
+    );
   }
   // Exercise the changed submission path and confirm the visible cost result.
   await tab.setViewport({ width: 1280, height: 600 });

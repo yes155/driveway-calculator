@@ -143,6 +143,20 @@ export default function Calculator({
     </label>
   );
   const cost = kind === 'cost' || kind === 'compare';
+  const selectedRow =
+    result?.rows?.find((row) => row.name === state.selectedSurface) ?? result?.rows?.[0];
+  const primaryMetric =
+    kind === 'compare' && selectedRow
+      ? {
+          label: `${human(selectedRow.name)} installed estimate`,
+          value: `${money(selectedRow.low)}–${money(selectedRow.high)}`,
+          unit: 'USD',
+        }
+      : kind === 'converter' && state.fields.direction !== 'tons-to-yards'
+        ? result?.metrics.find((metric) => metric.label === 'Weight')
+        : result?.metrics[0];
+  const secondaryMetrics = result?.metrics.filter((metric) => metric !== primaryMetric) ?? [];
+
   async function copy(text: string) {
     try {
       await navigator.clipboard.writeText(text);
@@ -168,6 +182,7 @@ export default function Calculator({
       >
         <div
           className="calculator-fields"
+          role="group"
           tabIndex={0}
           aria-label="Measurements and assumptions; scroll for more inputs"
         >
@@ -765,7 +780,7 @@ export default function Calculator({
           {result ? (
             <>
               <dl className="metrics primary-metric">
-                {result.metrics.slice(0, 1).map((m) => (
+                {(primaryMetric ? [primaryMetric] : []).map((m) => (
                   <div key={m.label}>
                     <dt>{m.label}</dt>
                     <dd>
@@ -775,11 +790,13 @@ export default function Calculator({
                   </div>
                 ))}
               </dl>
-              {result.metrics.length > 1 && (
+              {secondaryMetrics.length > 0 && (
                 <details className="result-explanation secondary-metrics">
-                  <summary>Area and quantity breakdown</summary>
+                  <summary>
+                    {cost ? 'Area and cost breakdown' : 'Area and quantity breakdown'}
+                  </summary>
                   <dl className="metrics">
-                    {result.metrics.slice(1).map((m) => (
+                    {secondaryMetrics.map((m) => (
                       <div key={m.label}>
                         <dt>{m.label}</dt>
                         <dd>

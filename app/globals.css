@@ -3058,3 +3058,9 @@ caption {
     gap: 8px 10px;
   }
 }
+
+@media print {
+  .calculator-inputs {
+    display: none;
+  }
+}

@@ -178,13 +178,17 @@ export async function renderPage(url: string) {
             !guideEstimator &&
             (() => {
               const worked = toolExample(kind, material, surfaceFor(page.seq));
+              const primary =
+                kind === 'converter'
+                  ? worked.result.metrics.find((metric) => metric.label === 'Weight')!
+                  : worked.result.metrics[0];
               return (
                 <QASection question="What does a worked example look like?">
                   <p>
                     <strong>
                       {worked.result.rows?.length
                         ? `For the illustrative 400 ft² area, the comparison shows ${worked.result.rows.map((row) => `${row.name}: ${row.low.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })}–${row.high.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })}`).join('; ')}.`
-                        : `The illustrative inputs produce ${worked.result.metrics[0].value} ${worked.result.metrics[0].unit ?? ''} (${worked.result.metrics[0].label.toLowerCase()}).`}
+                        : `The illustrative inputs produce ${primary.value} ${primary.unit ?? ''} (${primary.label.toLowerCase()}).`}
                     </strong>{' '}
                     {worked.context}
                   </p>
