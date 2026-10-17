@@ -136,7 +136,9 @@ export default function Home() {
         <div className="section-title">
           <span className="eyebrow">Material quantity calculators</span>
           <h2>Calculate the material you need</h2>
-          <p>Choose a surface to calculate quantities in short tons, cubic yards, pavers, or gallons.</p>
+          <p>
+            Choose a surface to calculate quantities in short tons, cubic yards, pavers, or gallons.
+          </p>
         </div>
         <div className="tool-bento">
           {featured.map((f) => {
@@ -216,8 +218,8 @@ export default function Home() {
             <span className="process-number">03 / Order</span>
             <h3>Use supplier specifications</h3>
             <p>
-              Enter the material density, bag yield or sealer-label coverage. Review allowances
-              and purchase rounding in the selected tool.
+              Enter the material density, bag yield or sealer-label coverage. Review allowances and
+              purchase rounding in the selected tool.
             </p>
             <span className="process-equation">Volume × specified density = weight</span>
           </div>
@@ -229,8 +231,11 @@ export default function Home() {
       <section className="home-section library-section" id="library">
         <div className="section-title">
           <span className="eyebrow">Specialized calculations and references</span>
-          <h2>More tools for specific jobs</h2>
-          <p>Additional tools not shown in the featured calculator cards above.</p>
+          <h2>More calculators and material references</h2>
+          <p>
+            Calculate specialized material quantities, estimate installed costs, and check material
+            weights.
+          </p>
         </div>
         <div className="library-grid">
           {[
@@ -247,7 +252,9 @@ export default function Home() {
             <div className="library-column" key={g.label}>
               <h3>{g.label}</h3>
               {pages
-                .filter((p) => g.filter(p.type) && p.seq !== 1 && !featured.some((f) => f.seq === p.seq))
+                .filter(
+                  (p) => g.filter(p.type) && p.seq !== 1 && !featured.some((f) => f.seq === p.seq),
+                )
                 .map((p) => (
                   <Link href={p.url} key={p.url}>
                     <span>{p.h1}</span>

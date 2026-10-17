@@ -63,8 +63,20 @@ export default function Calculator({
   function field(key: string, val: string) {
     change({ ...state, fields: { ...state.fields, [key]: val } });
   }
-  function calculate(event: FormEvent) {
+  function calculate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
+    const invalid = form.querySelector<HTMLInputElement | HTMLSelectElement>(':invalid');
+    if (invalid) {
+      let parent = invalid.parentElement;
+      while (parent && parent !== form) {
+        if (parent instanceof HTMLDetailsElement) parent.open = true;
+        parent = parent.parentElement;
+      }
+      invalid.scrollIntoView({ block: 'nearest' });
+      form.reportValidity();
+      return;
+    }
     try {
       const r = evaluateTool(kind, state, surface);
       setResult(r);
@@ -147,540 +159,564 @@ export default function Calculator({
     void copy(url.toString());
   };
   return (
-    <div className="calculator-shell" id="calculator">
-      <form className="calculator-inputs" onSubmit={calculate}>
-        <div className="panel-heading">
-          <span className="eyebrow">
-            01 /{' '}
-            {surface === 'repair'
-              ? 'Patch area'
-              : surface === 'concrete-repair'
-                ? 'Resurfacing area'
-                : 'Your measurements'}
-          </span>
-          <span className="unit-badge">US units</span>
-        </div>
-        {kind === 'converter' ? (
-          <>
-            <label className="field">
-              <span>Conversion direction</span>
-              <select
-                value={state.fields.direction ?? 'yards-to-tons'}
-                onChange={(e) => field('direction', e.target.value)}
-              >
-                <option value="yards-to-tons">Cubic yards to short tons</option>
-                <option value="tons-to-yards">Short tons to cubic yards</option>
-              </select>
-            </label>
-            {input(
-              'amount',
-              'Quantity',
-              state.fields.direction === 'tons-to-yards' ? 'short tons' : 'yd³',
-            )}
-            {input(
-              'density',
-              `${human(material)} density`,
-              'short tons/yd³',
-              true,
-              'Enter the density from your supplier.',
-            )}
-          </>
-        ) : (
-          <>
-            {state.sections.map((section, index) => (
-              <fieldset className="measurement-section" key={index}>
-                <legend>Section {index + 1}</legend>
-                <div className="field-grid">
-                  {(['length', 'width'] as const).map((key) => (
-                    <label className="field" key={key}>
-                      <span>
-                        {key === 'length' ? 'Length' : section.tapered ? 'Start width' : 'Width'}
-                      </span>
-                      <div className="input-wrap">
-                        <input
-                          name={`section-${index}-${key}`}
-                          type="number"
-                          step="any"
-                          required
-                          value={section[key]}
-                          onChange={(e) =>
-                            change({
-                              ...state,
-                              sections: state.sections.map((s, i) =>
-                                i === index ? { ...s, [key]: e.target.value } : s,
-                              ),
-                            })
-                          }
-                        />
-                        <span>ft</span>
-                      </div>
-                    </label>
-                  ))}
-                </div>
-                <div className="section-options">
-                  <label className="check">
-                    <input
-                      type="checkbox"
-                      checked={section.tapered}
-                      onChange={(e) =>
-                        change({
-                          ...state,
-                          sections: state.sections.map((s, i) =>
-                            i === index ? { ...s, tapered: e.target.checked } : s,
-                          ),
-                        })
-                      }
-                    />
-                    Tapered width
-                  </label>
-                  <label className="check">
-                    <input
-                      type="checkbox"
-                      checked={section.sloped}
-                      onChange={(e) =>
-                        change({
-                          ...state,
-                          sections: state.sections.map((s, i) =>
-                            i === index ? { ...s, sloped: e.target.checked } : s,
-                          ),
-                        })
-                      }
-                    />
-                    Add slope
-                  </label>
-                </div>
-                {section.tapered && (
-                  <label className="field">
-                    <span>End width</span>
-                    <div className="input-wrap">
-                      <input
-                        type="number"
-                        step="any"
-                        required
-                        value={section.endWidth}
-                        onChange={(e) =>
-                          change({
-                            ...state,
-                            sections: state.sections.map((s, i) =>
-                              i === index ? { ...s, endWidth: e.target.value } : s,
-                            ),
-                          })
-                        }
-                      />
-                      <span>ft</span>
-                    </div>
-                  </label>
-                )}
-                {section.sloped && (
-                  <div className="field-grid">
-                    <label className="field">
-                      <span>Grade</span>
-                      <div className="input-wrap">
-                        <input
-                          type="number"
-                          step="any"
-                          required
-                          value={section.grade}
-                          onChange={(e) =>
-                            change({
-                              ...state,
-                              sections: state.sections.map((s, i) =>
-                                i === index ? { ...s, grade: e.target.value } : s,
-                              ),
-                            })
-                          }
-                        />
-                        <span>%</span>
-                      </div>
-                    </label>
-                    <label className="field">
-                      <span>Length measured</span>
-                      <select
-                        value={section.measured}
-                        onChange={(e) =>
-                          change({
-                            ...state,
-                            sections: state.sections.map((s, i) =>
-                              i === index
-                                ? { ...s, measured: e.target.value as 'flat' | 'slope' }
-                                : s,
-                            ),
-                          })
-                        }
-                      >
-                        <option value="flat">Along flat ground</option>
-                        <option value="slope">Along the slope</option>
-                      </select>
-                    </label>
-                  </div>
-                )}
-                {state.sections.length > 1 && (
-                  <button
-                    type="button"
-                    className="text-button"
-                    onClick={() =>
-                      change({ ...state, sections: state.sections.filter((_, i) => i !== index) })
-                    }
-                  >
-                    Remove section {index + 1}
-                  </button>
-                )}
-              </fieldset>
-            ))}
-            <button
-              type="button"
-              className="add-section"
-              disabled={state.sections.length >= 100}
-              onClick={() =>
-                change({ ...state, sections: [...state.sections, emptyState().sections[0]] })
-              }
-            >
-              ＋ Add another area
-            </button>
-            <p className="input-hint">
-              Divide an irregular driveway into measured sections. Each section adds to the total
-              area.
-            </p>
-          </>
-        )}
-        {kind !== 'converter' && (
-          <div className="panel-heading subheading">
-            <span className="eyebrow">02 / {cost ? 'Cost assumptions' : 'Material inputs'}</span>
+    <div className="calculator-shell" id="calculator" data-compact-workspace="true">
+      <form
+        className="calculator-inputs"
+        onSubmit={calculate}
+        noValidate
+        aria-label="Calculator inputs"
+      >
+        <div
+          className="calculator-fields"
+          tabIndex={0}
+          aria-label="Measurements and assumptions; scroll for more inputs"
+        >
+          <div className="panel-heading">
+            <span className="eyebrow">
+              01 /{' '}
+              {surface === 'repair'
+                ? 'Patch area'
+                : surface === 'concrete-repair'
+                  ? 'Resurfacing area'
+                  : 'Your measurements'}
+            </span>
+            <span className="unit-badge">US units</span>
           </div>
-        )}
-        {cost ? (
-          <>
-            <label className="field">
-              <span>Price basis</span>
-              <select
-                value={state.fields.tier ?? 'baseline'}
-                onChange={(e) => field('tier', e.target.value)}
-              >
-                <option value="baseline">Published benchmark · no regional adjustment</option>
-                <option value="low" disabled>
-                  Low-cost region · index unavailable
-                </option>
-                <option value="average" disabled>
-                  Average-cost region · index unavailable
-                </option>
-                <option value="high" disabled>
-                  High-cost region · index unavailable
-                </option>
-              </select>
-              <small>
-                Baseline uses the published range unchanged. No regional multiplier is assumed.
-              </small>
-            </label>
-            {kind !== 'compare' && (
-              <>
-                <p className="benchmark-note">
-                  {pricingAvailable ? (
-                    <>
-                      Reference: {currentPrice.installedLow.source}. $
-                      {currentPrice.installedLow.value}–${currentPrice.installedHigh.value}/ft².
-                      Retrieved {currentPrice.installedLow.retrievedOn}.
-                    </>
-                  ) : (
-                    'Published pricing is unavailable for this scope. Measure area or enter an itemized quote.'
+          {kind === 'converter' ? (
+            <>
+              <label className="field">
+                <span>Conversion direction</span>
+                <select
+                  value={state.fields.direction ?? 'yards-to-tons'}
+                  onChange={(e) => field('direction', e.target.value)}
+                >
+                  <option value="yards-to-tons">Cubic yards to short tons</option>
+                  <option value="tons-to-yards">Short tons to cubic yards</option>
+                </select>
+              </label>
+              {input(
+                'amount',
+                'Quantity',
+                state.fields.direction === 'tons-to-yards' ? 'short tons' : 'yd³',
+              )}
+              {input(
+                'density',
+                `${human(material)} density`,
+                'short tons/yd³',
+                true,
+                'Enter the density from your supplier.',
+              )}
+            </>
+          ) : (
+            <>
+              {state.sections.map((section, index) => (
+                <fieldset className="measurement-section" key={index}>
+                  <legend>Section {index + 1}</legend>
+                  <div className="field-grid">
+                    {(['length', 'width'] as const).map((key) => (
+                      <label className="field" key={key}>
+                        <span>
+                          {key === 'length' ? 'Length' : section.tapered ? 'Start width' : 'Width'}
+                        </span>
+                        <div className="input-wrap">
+                          <input
+                            name={`section-${index}-${key}`}
+                            type="number"
+                            step="any"
+                            required
+                            value={section[key]}
+                            onChange={(e) =>
+                              change({
+                                ...state,
+                                sections: state.sections.map((s, i) =>
+                                  i === index ? { ...s, [key]: e.target.value } : s,
+                                ),
+                              })
+                            }
+                          />
+                          <span>ft</span>
+                        </div>
+                      </label>
+                    ))}
+                  </div>
+                  <details className="geometry-options optional-inputs">
+                    <summary>
+                      Taper or slope <span>Optional</span>
+                    </summary>
+                    <div className="section-options">
+                      <label className="check">
+                        <input
+                          type="checkbox"
+                          checked={section.tapered}
+                          onChange={(e) =>
+                            change({
+                              ...state,
+                              sections: state.sections.map((s, i) =>
+                                i === index ? { ...s, tapered: e.target.checked } : s,
+                              ),
+                            })
+                          }
+                        />
+                        Tapered width
+                      </label>
+                      <label className="check">
+                        <input
+                          type="checkbox"
+                          checked={section.sloped}
+                          onChange={(e) =>
+                            change({
+                              ...state,
+                              sections: state.sections.map((s, i) =>
+                                i === index ? { ...s, sloped: e.target.checked } : s,
+                              ),
+                            })
+                          }
+                        />
+                        Add slope
+                      </label>
+                    </div>
+                    {section.tapered && (
+                      <label className="field">
+                        <span>End width</span>
+                        <div className="input-wrap">
+                          <input
+                            type="number"
+                            step="any"
+                            required
+                            value={section.endWidth}
+                            onChange={(e) =>
+                              change({
+                                ...state,
+                                sections: state.sections.map((s, i) =>
+                                  i === index ? { ...s, endWidth: e.target.value } : s,
+                                ),
+                              })
+                            }
+                          />
+                          <span>ft</span>
+                        </div>
+                      </label>
+                    )}
+                    {section.sloped && (
+                      <div className="field-grid">
+                        <label className="field">
+                          <span>Grade</span>
+                          <div className="input-wrap">
+                            <input
+                              type="number"
+                              step="any"
+                              required
+                              value={section.grade}
+                              onChange={(e) =>
+                                change({
+                                  ...state,
+                                  sections: state.sections.map((s, i) =>
+                                    i === index ? { ...s, grade: e.target.value } : s,
+                                  ),
+                                })
+                              }
+                            />
+                            <span>%</span>
+                          </div>
+                        </label>
+                        <label className="field">
+                          <span>Length measured</span>
+                          <select
+                            value={section.measured}
+                            onChange={(e) =>
+                              change({
+                                ...state,
+                                sections: state.sections.map((s, i) =>
+                                  i === index
+                                    ? { ...s, measured: e.target.value as 'flat' | 'slope' }
+                                    : s,
+                                ),
+                              })
+                            }
+                          >
+                            <option value="flat">Along flat ground</option>
+                            <option value="slope">Along the slope</option>
+                          </select>
+                        </label>
+                      </div>
+                    )}
+                  </details>
+                  {state.sections.length > 1 && (
+                    <button
+                      type="button"
+                      className="text-button"
+                      onClick={() =>
+                        change({ ...state, sections: state.sections.filter((_, i) => i !== index) })
+                      }
+                    >
+                      Remove section {index + 1}
+                    </button>
                   )}
-                </p>
-                {checkbox('customRates', 'Use my quoted unit rates')}
-                {state.fields.customRates === 'true' && (
-                  <div className="field-grid">
-                    {input('unitLow', 'Quoted low rate', 'USD/ft²')}
-                    {input('unitHigh', 'Quoted high rate', 'USD/ft²')}
-                  </div>
-                )}
-              </>
-            )}
-            <details className="optional-inputs">
-              <summary>
-                Additional quoted work <span>Optional</span>
-              </summary>
+                </fieldset>
+              ))}
+              <button
+                type="button"
+                className="add-section"
+                disabled={state.sections.length >= 100}
+                onClick={() =>
+                  change({ ...state, sections: [...state.sections, emptyState().sections[0]] })
+                }
+              >
+                ＋ Add another area
+              </button>
               <p className="input-hint">
-                Add only work excluded from the installed range. Removal and ordinary base work
-                already included in a quote stay excluded here.
+                Divide an irregular driveway into measured sections. Each section adds to the total
+                area.
               </p>
-              {checkbox('removal', 'Add separate removal and disposal')}
-              {state.fields.removal === 'true' && (
-                <div className="field-grid">
-                  {input('removalLow', 'Removal low rate', 'USD/ft²', true)}
-                  {input('removalHigh', 'Removal high rate', 'USD/ft²', true)}
-                </div>
-              )}
-              {checkbox('base', 'Add separate base preparation')}
-              {state.fields.base === 'true' && (
-                <div className="field-grid">
-                  {input('baseLow', 'Additional base low rate', 'USD/ft²', true)}
-                  {input('baseHigh', 'Additional base high rate', 'USD/ft²', true)}
-                </div>
-              )}
-              {checkbox('delivery', 'Add separately quoted delivery')}
-              {state.fields.delivery === 'true' && (
-                <div className="field-grid">
-                  {input('loads', 'Truckload count', 'loads')}
-                  {input('deliveryFee', 'Quoted delivery fee', 'USD/load')}
-                </div>
-              )}
-              {(surface === 'concrete' || surface === 'slab') && (
+            </>
+          )}
+          {kind !== 'converter' && (
+            <div className="panel-heading subheading">
+              <span className="eyebrow">02 / {cost ? 'Cost assumptions' : 'Material inputs'}</span>
+            </div>
+          )}
+          {cost ? (
+            <details
+              className="optional-inputs cost-settings"
+              open={kind === 'compare' ? true : undefined}
+            >
+              <summary>
+                Rates and additional work <span>Editable</span>
+              </summary>
+              <label className="field">
+                <span>Price basis</span>
+                <select
+                  value={state.fields.tier ?? 'baseline'}
+                  onChange={(e) => field('tier', e.target.value)}
+                >
+                  <option value="baseline">Published benchmark · no regional adjustment</option>
+                  <option value="low" disabled>
+                    Low-cost region · index unavailable
+                  </option>
+                  <option value="average" disabled>
+                    Average-cost region · index unavailable
+                  </option>
+                  <option value="high" disabled>
+                    High-cost region · index unavailable
+                  </option>
+                </select>
+                <small>
+                  Baseline uses the published range unchanged. No regional multiplier is assumed.
+                </small>
+              </label>
+              {kind !== 'compare' && (
                 <>
-                  <div className="field-grid">
-                    {input('depth', 'Slab thickness', 'in', false)}
-                    {input('waste', 'Concrete contingency', '%', false)}
-                  </div>
-                  {checkbox('shortLoad', 'Check quoted concrete short-load fee')}
-                  {state.fields.shortLoad === 'true' && (
+                  <p className="benchmark-note">
+                    {pricingAvailable ? (
+                      <>
+                        Reference: {currentPrice.installedLow.source}. $
+                        {currentPrice.installedLow.value}–${currentPrice.installedHigh.value}/ft².
+                        Retrieved {currentPrice.installedLow.retrievedOn}.
+                      </>
+                    ) : (
+                      'Published pricing is unavailable for this scope. Measure area or enter an itemized quote.'
+                    )}
+                  </p>
+                  {checkbox('customRates', 'Use my quoted unit rates')}
+                  {state.fields.customRates === 'true' && (
                     <div className="field-grid">
-                      {input('minimumOrder', 'Supplier minimum', 'yd³')}
-                      {input('shortLoadFee', 'Quoted short-load fee', 'USD')}
+                      {input('unitLow', 'Quoted low rate', 'USD/ft²')}
+                      {input('unitHigh', 'Quoted high rate', 'USD/ft²')}
                     </div>
                   )}
                 </>
               )}
-            </details>
-            {kind !== 'compare' &&
-              ['asphalt', 'overlay', 'asphalt-replacement'].includes(surface) && (
-                <details className="optional-inputs">
-                  <summary>
-                    Asphalt material quantity <span>Optional</span>
-                  </summary>
-                  <div className="field-grid">
-                    {input('depth', 'Planned asphalt thickness', 'in', false)}
-                    {input('density', 'Producer mix density', 'lb/ft³', false)}
-                    {input('waste', 'Quantity allowance', '%', false)}
-                  </div>
-                  <p className="input-hint">
-                    Enter thickness and producer density together. These calculate tonnage
-                    separately; they do not invent a price adjustment.
-                  </p>
-                </details>
-              )}
-            {kind === 'compare' && (
-              <fieldset>
-                <legend>Surfaces to compare</legend>
-                <div className="surface-choices">
-                  {surfaces.map((s) => (
-                    <label className="check" key={s}>
-                      <input
-                        type="checkbox"
-                        checked={state.surfaces.includes(s)}
-                        onChange={(e) =>
-                          change({
-                            ...state,
-                            surfaces: e.target.checked
-                              ? [...state.surfaces, s]
-                              : state.surfaces.filter((x) => x !== s),
-                            selectedSurface:
-                              !e.target.checked && state.selectedSurface === s
-                                ? (state.surfaces.find((x) => x !== s) ?? s)
-                                : state.selectedSurface,
-                          })
-                        }
-                      />
-                      {human(s)}
-                    </label>
-                  ))}
-                </div>
-                <fieldset>
-                  <legend>Surface of interest</legend>
-                  <div className="surface-choices">
-                    {surfaces
-                      .filter((s) => state.surfaces.includes(s))
-                      .map((s) => (
-                        <label key={s} className="check">
-                          <input
-                            type="radio"
-                            name="surface-of-interest"
-                            value={s}
-                            checked={state.selectedSurface === s}
-                            onChange={() => change({ ...state, selectedSurface: s })}
-                          />
-                          {human(s)}
-                        </label>
-                      ))}
-                  </div>
-                </fieldset>
-                <label className="field">
-                  <span>Sort results by</span>
-                  <select
-                    value={state.sort}
-                    onChange={(e) =>
-                      change({ ...state, sort: e.target.value as 'upfront' | 'annual' })
-                    }
-                  >
-                    <option value="upfront">Lowest upfront cost</option>
-                    <option value="annual">Lowest cost per year of life</option>
-                  </select>
-                </label>
-              </fieldset>
-            )}
-            <p className="input-hint">
-              Estimate only. Installed work and material-only prices cover different scopes.
-            </p>
-          </>
-        ) : kind === 'sealcoat' ? (
-          <>
-            <label className="field">
-              <span>Product coverage reference</span>
-              <select
-                value={state.fields.product ?? 'custom'}
-                onChange={(e) => {
-                  const p = sealcoatPresets.find((p) => p.id === e.target.value);
-                  change({
-                    ...state,
-                    fields: {
-                      ...state.fields,
-                      product: e.target.value,
-                      coverage: p?.selectedCoverageSqFtPerGallon
-                        ? String(p.selectedCoverageSqFtPerGallon)
-                        : '',
-                      coats: p?.coats ? String(p.coats) : '',
-                      containerSize: p?.containerGallons ? String(p.containerGallons) : '',
-                    },
-                  });
-                }}
-              >
-                <option value="custom">Enter my product label values</option>
-                {sealcoatPresets.map((p) => (
-                  <option value={p.id} key={p.id}>
-                    {p.name}
-                  </option>
-                ))}
-              </select>
-              <small>
-                Coverage is per coat. Named references differ by surface condition and product.
-                Check your current container label; lower published coverage is used for planning.
-              </small>
-            </label>
-            <div className="field-grid">
-              {input('coats', 'Number of coats', 'coats')}
-              {input('coverage', 'Label coverage', 'ft²/gal')}
-              {input('containerSize', 'Container size', 'gal')}
-            </div>
-          </>
-        ) : kind === 'paver' ? (
-          <div className="field-grid">
-            {input('paverLength', 'Paver length', 'in')}
-            {input('paverWidth', 'Paver width', 'in')}
-            {input('waste', 'Waste allowance', '%')}
-            {input('baseDepth', 'Base depth', 'in')}
-            {input('sandDepth', 'Bedding sand depth', 'in')}
-            {input('baseDensity', 'Base density', 'short tons/yd³')}
-            {input('sandDensity', 'Sand density', 'short tons/yd³')}
-            {input('compaction', 'Base compaction allowance', '%')}
-          </div>
-        ) : kind !== 'converter' ? (
-          <>
-            <div className="field-grid">
-              {input(
-                'depth',
-                kind === 'layers' ? 'Surface layer depth' : 'Thickness / depth',
-                'in',
-              )}
-              {input('waste', 'Waste allowance', '%', true, 'Enter 0 to exclude waste.')}
-            </div>
-            {kind === 'layers' && (
-              <div className="field-grid">
-                {input('baseDepth', 'Base layer depth', 'in')}
-                {input('baseDensity', 'Base density', 'short tons/yd³')}
-              </div>
-            )}
-            {kind !== 'concrete' &&
-              input(
-                'density',
-                kind === 'layers' ? 'Surface density' : `${human(material)} density`,
-                kind === 'asphalt' ? 'lb/ft³' : 'short tons/yd³',
-                true,
-                'Use the density provided by your supplier.',
-              )}
-            {densityKey && defaultBook[densityKey]?.verified && (
-              <p className="input-hint">
-                Reference: {defaultBook[densityKey].source}. {defaultBook[densityKey].scope} Every
-                value stays editable.
-              </p>
-            )}
-            {(material === 'gravel' || kind === 'layers') && (
-              <button
-                className="text-button"
-                type="button"
-                onClick={() => field('density', String(defaultBook.crushedStoneDensity.value))}
-              >
-                Use Two Rivers 5/8-inch crushed-stone reference: 1.4 short tons/yd³
-              </button>
-            )}
-            {material === 'asphalt millings' && (
-              <p className="input-hint">
-                Enter a supplier density matching the measured material condition. Stockpile density
-                and compacted thickness describe different volumes.
-              </p>
-            )}
-            {(kind === 'gravel' || kind === 'layers') &&
-              input(
-                'compaction',
-                'Compaction allowance',
-                '%',
-                true,
-                'Enter 0 to exclude compaction allowance.',
-              )}
-            {kind === 'concrete' && (
               <details className="optional-inputs">
                 <summary>
-                  Bag quantities <span>Optional</span>
+                  Additional quoted work <span>Optional</span>
                 </summary>
-                <button
-                  type="button"
-                  className="text-button"
-                  onClick={() =>
+                <p className="input-hint">
+                  Add only work excluded from the installed range. Removal and ordinary base work
+                  already included in a quote stay excluded here.
+                </p>
+                {checkbox('removal', 'Add separate removal and disposal')}
+                {state.fields.removal === 'true' && (
+                  <div className="field-grid">
+                    {input('removalLow', 'Removal low rate', 'USD/ft²', true)}
+                    {input('removalHigh', 'Removal high rate', 'USD/ft²', true)}
+                  </div>
+                )}
+                {checkbox('base', 'Add separate base preparation')}
+                {state.fields.base === 'true' && (
+                  <div className="field-grid">
+                    {input('baseLow', 'Additional base low rate', 'USD/ft²', true)}
+                    {input('baseHigh', 'Additional base high rate', 'USD/ft²', true)}
+                  </div>
+                )}
+                {checkbox('delivery', 'Add separately quoted delivery')}
+                {state.fields.delivery === 'true' && (
+                  <div className="field-grid">
+                    {input('loads', 'Truckload count', 'loads')}
+                    {input('deliveryFee', 'Quoted delivery fee', 'USD/load')}
+                  </div>
+                )}
+                {(surface === 'concrete' || surface === 'slab') && (
+                  <>
+                    <div className="field-grid">
+                      {input('depth', 'Slab thickness', 'in', false)}
+                      {input('waste', 'Concrete contingency', '%', false)}
+                    </div>
+                    {checkbox('shortLoad', 'Check quoted concrete short-load fee')}
+                    {state.fields.shortLoad === 'true' && (
+                      <div className="field-grid">
+                        {input('minimumOrder', 'Supplier minimum', 'yd³')}
+                        {input('shortLoadFee', 'Quoted short-load fee', 'USD')}
+                      </div>
+                    )}
+                  </>
+                )}
+              </details>
+              {kind !== 'compare' &&
+                ['asphalt', 'overlay', 'asphalt-replacement'].includes(surface) && (
+                  <details className="optional-inputs">
+                    <summary>
+                      Asphalt material quantity <span>Optional</span>
+                    </summary>
+                    <div className="field-grid">
+                      {input('depth', 'Planned asphalt thickness', 'in', false)}
+                      {input('density', 'Producer mix density', 'lb/ft³', false)}
+                      {input('waste', 'Quantity allowance', '%', false)}
+                    </div>
+                    <p className="input-hint">
+                      Enter thickness and producer density together. These calculate tonnage
+                      separately; they do not invent a price adjustment.
+                    </p>
+                  </details>
+                )}
+              {kind === 'compare' && (
+                <fieldset>
+                  <legend>Surfaces to compare</legend>
+                  <div className="surface-choices">
+                    {surfaces.map((s) => (
+                      <label className="check" key={s}>
+                        <input
+                          type="checkbox"
+                          checked={state.surfaces.includes(s)}
+                          onChange={(e) =>
+                            change({
+                              ...state,
+                              surfaces: e.target.checked
+                                ? [...state.surfaces, s]
+                                : state.surfaces.filter((x) => x !== s),
+                              selectedSurface:
+                                !e.target.checked && state.selectedSurface === s
+                                  ? (state.surfaces.find((x) => x !== s) ?? s)
+                                  : state.selectedSurface,
+                            })
+                          }
+                        />
+                        {human(s)}
+                      </label>
+                    ))}
+                  </div>
+                  <fieldset>
+                    <legend>Surface of interest</legend>
+                    <div className="surface-choices">
+                      {surfaces
+                        .filter((s) => state.surfaces.includes(s))
+                        .map((s) => (
+                          <label key={s} className="check">
+                            <input
+                              type="radio"
+                              name="surface-of-interest"
+                              value={s}
+                              checked={state.selectedSurface === s}
+                              onChange={() => change({ ...state, selectedSurface: s })}
+                            />
+                            {human(s)}
+                          </label>
+                        ))}
+                    </div>
+                  </fieldset>
+                  <label className="field">
+                    <span>Sort results by</span>
+                    <select
+                      value={state.sort}
+                      onChange={(e) =>
+                        change({ ...state, sort: e.target.value as 'upfront' | 'annual' })
+                      }
+                    >
+                      <option value="upfront">Lowest upfront cost</option>
+                      <option value="annual">Lowest cost per year of life</option>
+                    </select>
+                  </label>
+                </fieldset>
+              )}
+              <p className="input-hint">
+                Estimate only. Installed work and material-only prices cover different scopes.
+              </p>
+            </details>
+          ) : kind === 'sealcoat' ? (
+            <>
+              <label className="field">
+                <span>Product coverage reference</span>
+                <select
+                  value={state.fields.product ?? 'custom'}
+                  onChange={(e) => {
+                    const p = sealcoatPresets.find((p) => p.id === e.target.value);
                     change({
                       ...state,
                       fields: {
                         ...state.fields,
-                        bagSize: '80',
-                        bagYield: String(defaultBook.bagYield.value),
+                        product: e.target.value,
+                        coverage: p?.selectedCoverageSqFtPerGallon
+                          ? String(p.selectedCoverageSqFtPerGallon)
+                          : '',
+                        coats: p?.coats ? String(p.coats) : '',
+                        containerSize: p?.containerGallons ? String(p.containerGallons) : '',
                       },
-                    })
-                  }
+                    });
+                  }}
                 >
-                  Use QUIKRETE Concrete Mix 1101 · 80 lb bag reference
-                </button>
+                  <option value="custom">Enter my product label values</option>
+                  {sealcoatPresets.map((p) => (
+                    <option value={p.id} key={p.id}>
+                      {p.name}
+                    </option>
+                  ))}
+                </select>
+                <small>
+                  Coverage is per coat. Named references differ by surface condition and product.
+                  Check your current container label; lower published coverage is used for planning.
+                </small>
+              </label>
+              <div className="field-grid">
+                {input('coats', 'Number of coats', 'coats')}
+                {input('coverage', 'Label coverage', 'ft²/gal')}
+                {input('containerSize', 'Container size', 'gal')}
+              </div>
+            </>
+          ) : kind === 'paver' ? (
+            <div className="field-grid">
+              {input('paverLength', 'Paver length', 'in')}
+              {input('paverWidth', 'Paver width', 'in')}
+              {input('waste', 'Waste allowance', '%')}
+              {input('baseDepth', 'Base depth', 'in')}
+              {input('sandDepth', 'Bedding sand depth', 'in')}
+              {input('baseDensity', 'Base density', 'short tons/yd³')}
+              {input('sandDensity', 'Sand density', 'short tons/yd³')}
+              {input('compaction', 'Base compaction allowance', '%')}
+            </div>
+          ) : kind !== 'converter' ? (
+            <>
+              <div className="field-grid">
+                {input(
+                  'depth',
+                  kind === 'layers' ? 'Surface layer depth' : 'Thickness / depth',
+                  'in',
+                )}
+                {input('waste', 'Waste allowance', '%', true, 'Enter 0 to exclude waste.')}
+              </div>
+              {kind === 'layers' && (
                 <div className="field-grid">
-                  {input(
-                    'bagSize',
-                    'Bag weight',
-                    'lb',
-                    false,
-                    'Weight alone does not set yield. Enter the matching bag-label yield.',
-                  )}
-                  {input('bagYield', 'Label yield per bag', 'ft³/bag', false)}
+                  {input('baseDepth', 'Base layer depth', 'in')}
+                  {input('baseDensity', 'Base density', 'short tons/yd³')}
                 </div>
-                <p className="input-hint">The yield printed on the bag determines the bag count.</p>
-              </details>
-            )}
-            <details className="optional-inputs">
-              <summary>
-                Delivery loads <span>Optional</span>
-              </summary>
-              {input(
-                'capacity',
-                'Truck capacity',
-                kind === 'concrete' ? 'yd³/load' : 'short tons/load',
-                false,
               )}
-              <p className="input-hint">
-                Enter usable capacity per truckload to calculate the number of loads.
-              </p>
-            </details>
-          </>
-        ) : null}
-        {!cost && kind !== 'converter' && (
-          <p className="input-hint">Use your supplier or product label for material values.</p>
-        )}
+              {kind !== 'concrete' &&
+                input(
+                  'density',
+                  kind === 'layers' ? 'Surface density' : `${human(material)} density`,
+                  kind === 'asphalt' ? 'lb/ft³' : 'short tons/yd³',
+                  true,
+                  'Use the density provided by your supplier.',
+                )}
+              {densityKey && defaultBook[densityKey]?.verified && (
+                <p className="input-hint">
+                  Reference: {defaultBook[densityKey].source}. {defaultBook[densityKey].scope} Every
+                  value stays editable.
+                </p>
+              )}
+              {(material === 'gravel' || kind === 'layers') && (
+                <button
+                  className="text-button"
+                  type="button"
+                  onClick={() => field('density', String(defaultBook.crushedStoneDensity.value))}
+                >
+                  Use Two Rivers 5/8-inch crushed-stone reference: 1.4 short tons/yd³
+                </button>
+              )}
+              {material === 'asphalt millings' && (
+                <p className="input-hint">
+                  Enter a supplier density matching the measured material condition. Stockpile
+                  density and compacted thickness describe different volumes.
+                </p>
+              )}
+              {(kind === 'gravel' || kind === 'layers') &&
+                input(
+                  'compaction',
+                  'Compaction allowance',
+                  '%',
+                  true,
+                  'Enter 0 to exclude compaction allowance.',
+                )}
+              {kind === 'concrete' && (
+                <details className="optional-inputs">
+                  <summary>
+                    Bag quantities <span>Optional</span>
+                  </summary>
+                  <button
+                    type="button"
+                    className="text-button"
+                    onClick={() =>
+                      change({
+                        ...state,
+                        fields: {
+                          ...state.fields,
+                          bagSize: '80',
+                          bagYield: String(defaultBook.bagYield.value),
+                        },
+                      })
+                    }
+                  >
+                    Use QUIKRETE Concrete Mix 1101 · 80 lb bag reference
+                  </button>
+                  <div className="field-grid">
+                    {input(
+                      'bagSize',
+                      'Bag weight',
+                      'lb',
+                      false,
+                      'Weight alone does not set yield. Enter the matching bag-label yield.',
+                    )}
+                    {input('bagYield', 'Label yield per bag', 'ft³/bag', false)}
+                  </div>
+                  <p className="input-hint">
+                    The yield printed on the bag determines the bag count.
+                  </p>
+                </details>
+              )}
+              <details className="optional-inputs">
+                <summary>
+                  Delivery loads <span>Optional</span>
+                </summary>
+                {input(
+                  'capacity',
+                  'Truck capacity',
+                  kind === 'concrete' ? 'yd³/load' : 'short tons/load',
+                  false,
+                )}
+                <p className="input-hint">
+                  Enter usable capacity per truckload to calculate the number of loads.
+                </p>
+              </details>
+            </>
+          ) : null}
+          {!cost && kind !== 'converter' && (
+            <p className="input-hint">Use your supplier or product label for material values.</p>
+          )}
+        </div>
         {error && (
           <p className="error" role="alert">
             {error}
           </p>
         )}
-        <div className="form-actions">
+        <div className="form-actions" aria-label="Calculation actions">
           <button className="button primary" type="submit">
             {cost
               ? pricingAvailable || state.fields.customRates === 'true' || kind === 'compare'
@@ -720,11 +756,16 @@ export default function Calculator({
               : 'Ready for inputs'}
           </span>
         </div>
+        <ul className="workspace-attributes" aria-label="Calculator features">
+          <li>US units</li>
+          <li>{cost ? 'Editable rates' : 'Editable inputs'}</li>
+          <li>Visible formula</li>
+        </ul>
         <ResultCard>
           {result ? (
             <>
-              <dl className="metrics">
-                {result.metrics.map((m) => (
+              <dl className="metrics primary-metric">
+                {result.metrics.slice(0, 1).map((m) => (
                   <div key={m.label}>
                     <dt>{m.label}</dt>
                     <dd>
@@ -734,6 +775,22 @@ export default function Calculator({
                   </div>
                 ))}
               </dl>
+              {result.metrics.length > 1 && (
+                <details className="result-explanation secondary-metrics">
+                  <summary>Area and quantity breakdown</summary>
+                  <dl className="metrics">
+                    {result.metrics.slice(1).map((m) => (
+                      <div key={m.label}>
+                        <dt>{m.label}</dt>
+                        <dd>
+                          {m.value}
+                          <small>{m.unit}</small>
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                </details>
+              )}
               {!!result.missing?.length && (
                 <div className="data-note">
                   <strong>Price data not loaded</strong>
@@ -793,8 +850,8 @@ export default function Calculator({
                   <p className="estimate-note">
                     Estimate only. This result is not a contractor quote.
                   </p>
-                  <div className="result-assumptions">
-                    <strong>Assumptions</strong>
+                  <details className="result-assumptions result-explanation">
+                    <summary>Price basis and included work</summary>
                     <p>
                       Price basis:{' '}
                       {state.fields.customRates === 'true'
@@ -807,7 +864,7 @@ export default function Calculator({
                     {result.assumptions?.map((a) => (
                       <p key={a}>{a}</p>
                     ))}
-                  </div>
+                  </details>
                 </>
               )}
             </>
@@ -820,7 +877,9 @@ export default function Calculator({
               )}
               <h3>
                 {cost
-                  ? 'Your measured area'
+                  ? pricingAvailable || kind === 'compare'
+                    ? 'Estimated installed cost'
+                    : 'Your measured area'
                   : kind === 'converter'
                     ? 'Your converted quantity'
                     : 'Your material quantity'}
@@ -840,14 +899,7 @@ export default function Calculator({
         </ResultCard>
         {result && (
           <>
-            <h3 className="worked-inputs">Worked example from your inputs</h3>
-            <FormulaBox>
-              <code>{result.formula}</code>
-              {result.steps.map((step) => (
-                <p key={step}>{step}</p>
-              ))}
-            </FormulaBox>
-            <div className="result-actions">
+            <div className="result-actions result-actions-primary">
               <button onClick={() => void copy(result.summary)}>Copy result</button>
               <button onClick={() => window.print()}>Print</button>
               <button onClick={share}>Share link</button>
@@ -855,6 +907,16 @@ export default function Calculator({
             <p className="input-hint" role="status">
               {message}
             </p>
+            <details className="result-explanation">
+              <summary>Formula and calculation steps</summary>
+              <h3 className="worked-inputs">Worked example from your inputs</h3>
+              <FormulaBox>
+                <code>{result.formula}</code>
+                {result.steps.map((step) => (
+                  <p key={step}>{step}</p>
+                ))}
+              </FormulaBox>
+            </details>
             <QuoteCTA
               area={result.area}
               surface={kind === 'compare' ? state.selectedSurface : surface}

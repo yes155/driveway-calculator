@@ -24,9 +24,7 @@ for (const url of urls) {
   const html = fs.readFileSync(file, 'utf8');
   if (!html.includes('<body class="theme-projectone">'))
     errors.push('Missing shared design theme ' + url);
-  const headerNav = html.match(
-    /<nav\b[^>]*aria-label="Main navigation"[^>]*>[\s\S]*?<\/nav>/,
-  )?.[0];
+  const headerNav = html.match(/<nav\b[^>]*aria-label="Main navigation"[^>]*>[\s\S]*?<\/nav>/)?.[0];
   if (!headerNav) {
     errors.push('Missing main navigation ' + url);
   } else {
@@ -128,12 +126,21 @@ for (const url of urls) {
         const rangeMarkup = renderToStaticMarkup(
           createElement('strong', null, `${money(preview.low)}–${money(preview.high)}`),
         );
-        if (!html.includes('class="guide-quick-estimate"') || !html.replace(/<!--.*?-->/g, '').includes(rangeMarkup))
+        if (
+          !html.includes('class="guide-quick-estimate"') ||
+          !html.replace(/<!--.*?-->/g, '').includes(rangeMarkup)
+        )
           errors.push('Guide quick estimate disagrees with cost engine ' + url);
       }
       if (html.includes('class="calculator-shell"'))
         errors.push('Guide unexpectedly duplicates the full estimator ' + url);
     } else if (kind) {
+      if (
+        !html.includes('data-compact-workspace="true"') ||
+        !html.includes('class="calculator-fields"') ||
+        !html.includes('aria-label="Calculation actions"')
+      )
+        errors.push('Missing compact primary calculation controls ' + url);
       const result = toolExample(kind, material, surfaceFor(page.seq)).result;
       const expectedFormula = renderToStaticMarkup(createElement('code', null, result.formula));
       if (!html.includes(expectedFormula))

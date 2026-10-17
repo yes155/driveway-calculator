@@ -34,7 +34,7 @@ export default function GuideQuickEstimate({
   }
 
   return (
-    <section className="guide-quick-estimate" aria-labelledby={id + '-heading'}>
+    <section id="quick-estimate" className="guide-quick-estimate" aria-labelledby={id + '-heading'}>
       <div className="guide-quick-intro">
         <div>
           <span className="eyebrow">Quick budget / 01</span>
@@ -58,6 +58,8 @@ export default function GuideQuickEstimate({
                   step="any"
                   min="0.01"
                   max="10000"
+                  aria-invalid={result === null || undefined}
+                  aria-describedby={result === null ? id + '-error' : undefined}
                   value={length}
                   onChange={(event) => setLength(event.target.value)}
                 />
@@ -73,6 +75,8 @@ export default function GuideQuickEstimate({
                   step="any"
                   min="0.01"
                   max="10000"
+                  aria-invalid={result === null || undefined}
+                  aria-describedby={result === null ? id + '-error' : undefined}
                   value={width}
                   onChange={(event) => setWidth(event.target.value)}
                 />
@@ -89,11 +93,15 @@ export default function GuideQuickEstimate({
           {result ? (
             <>
               <span className="eyebrow">Illustrative installed range</span>
-              <strong>{money(result.low)}–{money(result.high)}</strong>
+              <strong>
+                {money(result.low)}–{money(result.high)}
+              </strong>
               <span>{number(result.area)} ft² · base rate only</span>
             </>
           ) : (
-            <p>Enter positive length and width measurements (up to 10,000 ft each).</p>
+            <p id={id + '-error'}>
+              Enter positive length and width measurements (up to 10,000 ft each).
+            </p>
           )}
         </div>
       </div>

@@ -44,6 +44,8 @@ export default function HeroAreaCheck() {
             min="0.01"
             max="10000"
             step="any"
+            aria-invalid={area === null || undefined}
+            aria-describedby={area === null ? id + '-error' : undefined}
             value={length}
             onChange={(event) => setLength(event.target.value)}
           />
@@ -57,6 +59,8 @@ export default function HeroAreaCheck() {
             min="0.01"
             max="10000"
             step="any"
+            aria-invalid={area === null || undefined}
+            aria-describedby={area === null ? id + '-error' : undefined}
             value={width}
             onChange={(event) => setWidth(event.target.value)}
           />
@@ -74,12 +78,16 @@ export default function HeroAreaCheck() {
             </span>
           </>
         ) : (
-          <p role="status">Enter positive dimensions up to 10,000 ft each.</p>
+          <p id={id + '-error'} role="status">
+            Enter positive dimensions up to 10,000 ft each.
+          </p>
         )}
       </div>
       <div className="hero-area-next">
         <p>Area only. The asphalt tool adds thickness, density, and ordering quantities.</p>
-        <Link href="/asphalt-calculator/">Calculate asphalt tons <span aria-hidden="true">↗</span></Link>
+        <Link href="/asphalt-calculator/">
+          Calculate asphalt tons <span aria-hidden="true">↗</span>
+        </Link>
       </div>
     </section>
   );

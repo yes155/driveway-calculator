@@ -173,14 +173,20 @@ export async function renderPage(url: string) {
         />
       )}
       <div className="article-layout">
-        <article className="prose">
-          {kind && !guideEstimator &&
+        <article className="prose" id="page-explanation">
+          {kind &&
+            !guideEstimator &&
             (() => {
               const worked = toolExample(kind, material, surfaceFor(page.seq));
               return (
                 <QASection question="What does a worked example look like?">
                   <p>
-                    <strong>The calculator engine generates this example.</strong> {worked.context}
+                    <strong>
+                      {worked.result.rows?.length
+                        ? `For the illustrative 400 ft² area, the comparison shows ${worked.result.rows.map((row) => `${row.name}: ${row.low.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })}–${row.high.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })}`).join('; ')}.`
+                        : `The illustrative inputs produce ${worked.result.metrics[0].value} ${worked.result.metrics[0].unit ?? ''} (${worked.result.metrics[0].label.toLowerCase()}).`}
+                    </strong>{' '}
+                    {worked.context}
                   </p>
                   <FormulaBox>
                     <code>{worked.result.formula}</code>
@@ -269,7 +275,9 @@ export async function renderPage(url: string) {
                 <strong>Check {checklist.length} project details before placing an order.</strong>
               </p>
               <ul>
-                {checklist.map((item) => <li key={item}>{item}</li>)}
+                {checklist.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
             </QASection>
           )}
@@ -300,7 +308,14 @@ export async function renderPage(url: string) {
           <Disclosure />
           {(!draft || ready) && <HelpfulVote />}
         </article>
-        <aside className="article-sidebar">
+        <aside className="article-sidebar" aria-label="Page navigation">
+          <nav className="side-box page-shortcuts" aria-label="On this page">
+            <span className="eyebrow">On this page</span>
+            {kind && !guideEstimator && <a href="#calculator">Calculator and result</a>}
+            {guideEstimator && <a href="#quick-estimate">Quick budget estimate</a>}
+            <a href="#page-explanation">Explanation and next steps</a>
+            <Link href="/methodology/">Methodology and sources</Link>
+          </nav>
           <div className="side-box">
             <span className="eyebrow">The method</span>
             <h3>Inspect the method.</h3>
