@@ -3,6 +3,8 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getPage, getContent, isPublic } from '@/lib/content';
 import { metadataFor, JsonLd, breadcrumbs, pageSchema } from '@/lib/seo';
 import Calculator from '@/components/Calculator';
+import GuideQuickEstimate from '@/components/GuideQuickEstimate';
+import { priceBook, verifiedValue } from '@/lib/data';
 import HelpfulVote from '@/components/HelpfulVote';
 import DraftGuidance from '@/components/DraftGuidance';
 import {
@@ -16,11 +18,14 @@ import {
   Disclosure,
 } from '@/components/Modules';
 import { toolFor, surfaceFor } from '@/lib/calc/ui';
+import { splitAnswer, orderChecklist } from '@/lib/editorial';
+import relatedHandoffs from '@/data/related-handoffs.json';
 import defaults from '@/data/defaults.json';
 import sources from '@/data/sources.json';
 import reviewers from '@/data/reviewers.json';
 import {
   CostReference,
+  SlabSizeExamples,
   SurfaceComparison,
   MaterialReferences,
   WeightReference,
@@ -29,6 +34,18 @@ import {
   ReplacementReference,
 } from '@/components/ResearchModules';
 import { toolExample } from '@/lib/calc/examples';
+import {
+  PaverMaterialDecision,
+  SealerProductDecision,
+  CrackFillerDecision,
+  ColdPatchDecision,
+} from '@/components/DecisionTables';
+const guideEstimatorBySeq: Record<number, { href: string; label: string }> = {
+  3: { href: '/asphalt-driveway-cost-calculator/', label: 'asphalt driveway' },
+  5: { href: '/concrete-driveway-cost-calculator/', label: 'concrete driveway' },
+  49: { href: '/concrete-slab-cost-calculator/', label: 'concrete slab' },
+};
+
 export function pageMetadata(url: string) {
   const page = getPage(url);
   const data = getContent(url).data;
@@ -39,8 +56,16 @@ export async function renderPage(url: string) {
     content = getContent(url),
     kind = toolFor(page.seq),
     draft = content.data.status !== 'published',
-    ready = content.data.contentReady === true;
+    ready = content.data.contentReady === true,
+    answer = typeof content.data.answer === 'string' ? splitAnswer(content.data.answer) : null,
+    checklist = kind ? orderChecklist(kind, surfaceFor(page.seq)) : [],
+    guideEstimator = page.type === 'Cost guide' ? guideEstimatorBySeq[page.seq] : undefined,
+    guidePrice = guideEstimator ? priceBook[surfaceFor(page.seq)] : undefined,
+    guideLow = verifiedValue(guidePrice?.installedLow),
+    guideHigh = verifiedValue(guidePrice?.installedHigh);
   const related = page.related.map((r) => ({ ...r, destination: getPage(r.slug) }));
+  const nextCalculator =
+    !kind && !guideEstimator ? related.find((item) => toolFor(item.destination.seq)) : undefined;
   const material =
     page.seq === 22
       ? 'asphalt millings'
@@ -66,7 +91,10 @@ export async function renderPage(url: string) {
         <h1>{page.h1}</h1>
         <AnswerBlock>
           {!draft || ready ? (
-            <strong>{content.data.answer}</strong>
+            <>
+              <strong>{answer?.lead}</strong>
+              {answer?.context ? ` ${answer.context}` : null}
+            </>
           ) : kind && kind !== 'cost' && kind !== 'compare' ? (
             <>
               <strong>
@@ -122,7 +150,31 @@ export async function renderPage(url: string) {
           )}
         </div>
       </header>
-      {kind && (
+      {nextCalculator && (
+        <div className="guide-next-action">
+          <span className="eyebrow">Next step</span>
+          <Link href={nextCalculator.destination.url}>
+            {nextCalculator.destination.h1} <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
+      )}
+      {guideEstimator && guideLow !== null && guideHigh !== null && guidePrice && (
+        <GuideQuickEstimate
+          surfaceLabel={guideEstimator.label}
+          installedLow={guideLow}
+          installedHigh={guideHigh}
+          source={guidePrice.installedLow.source!}
+          retrievedOn={guidePrice.installedLow.retrievedOn!}
+          estimatorHref={guideEstimator.href}
+        />
+      )}
+      {guideEstimator && (guideLow === null || guideHigh === null) && (
+        <p className="guide-quick-unavailable">
+          A verified installed rate is unavailable. Review an itemized local quote in the{' '}
+          <Link href={guideEstimator.href}>detailed estimator</Link>.
+        </p>
+      )}
+      {kind && !guideEstimator && (
         <Calculator
           kind={kind}
           surface={surfaceFor(page.seq)}
@@ -131,14 +183,24 @@ export async function renderPage(url: string) {
         />
       )}
       <div className="article-layout">
-        <article className="prose">
+        <article className="prose" id="page-explanation">
           {kind &&
+            !guideEstimator &&
             (() => {
               const worked = toolExample(kind, material, surfaceFor(page.seq));
+              const primary =
+                kind === 'converter'
+                  ? worked.result.metrics.find((metric) => metric.label === 'Weight')!
+                  : worked.result.metrics[0];
               return (
                 <QASection question="What does a worked example look like?">
                   <p>
-                    <strong>The calculator engine generates this example.</strong> {worked.context}
+                    <strong>
+                      {worked.result.rows?.length
+                        ? `For the illustrative 400 ft² area, the comparison shows ${worked.result.rows.map((row) => `${row.name}: ${row.low.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })}–${row.high.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })}`).join('; ')}.`
+                        : `The illustrative inputs produce ${primary.value} ${primary.unit ?? ''} (${primary.label.toLowerCase()}).`}
+                    </strong>{' '}
+                    {worked.context}
                   </p>
                   <FormulaBox>
                     <code>{worked.result.formula}</code>
@@ -207,25 +269,29 @@ export async function renderPage(url: string) {
                 FormulaBox,
                 QASection,
                 CostReference,
+                SlabSizeExamples,
                 SurfaceComparison,
                 MaterialReferences,
                 WeightReference,
                 ResearchRegister,
                 RepairReference,
                 ReplacementReference,
+                PaverMaterialDecision,
+                SealerProductDecision,
+                CrackFillerDecision,
+                ColdPatchDecision,
               }}
             />
           )}
           {kind && (
             <QASection question="What needs checking before you order?">
               <p>
-                <strong>Check 4 project details before placing an order.</strong>
+                <strong>Check {checklist.length} project details before placing an order.</strong>
               </p>
               <ul>
-                <li>Confirm each measured section, including tapers and slope.</li>
-                <li>Confirm density, product yield, or coverage with the supplier.</li>
-                <li>Confirm thickness and any waste or compaction allowance.</li>
-                <li>Confirm delivery capacity, fees, and supplier minimums.</li>
+                {checklist.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
             </QASection>
           )}
@@ -237,8 +303,10 @@ export async function renderPage(url: string) {
                   href={r.slug}
                   anchor={r.destination.h1}
                   relationshipText={
+                    (relatedHandoffs as Record<string, Record<string, string>>)[url]?.[r.slug] ??
                     content.data.related?.find((x: { slug: string }) => x.slug === r.slug)
-                      ?.annotation ?? r.annotation
+                      ?.annotation ??
+                    r.annotation
                   }
                 />
               ))}
@@ -254,7 +322,14 @@ export async function renderPage(url: string) {
           <Disclosure />
           {(!draft || ready) && <HelpfulVote />}
         </article>
-        <aside className="article-sidebar">
+        <aside className="article-sidebar" aria-label="Page navigation">
+          <nav className="side-box page-shortcuts" aria-label="On this page">
+            <span className="eyebrow">On this page</span>
+            {kind && !guideEstimator && <a href="#calculator">Calculator and result</a>}
+            {guideEstimator && <a href="#quick-estimate">Quick budget estimate</a>}
+            <a href="#page-explanation">Explanation and next steps</a>
+            <Link href="/methodology/">Methodology and sources</Link>
+          </nav>
           <div className="side-box">
             <span className="eyebrow">The method</span>
             <h3>Inspect the method.</h3>

@@ -206,7 +206,7 @@
     "seq": 5,
     "url": "/concrete-driveway-cost/",
     "keyword": "concrete driveway",
-    "exactOccurrences": 10,
+    "exactOccurrences": 11,
     "variant": null,
     "status": "exact"
   },
@@ -696,7 +696,7 @@
     "seq": 49,
     "url": "/concrete-slab-cost/",
     "keyword": "concrete pad cost",
-    "exactOccurrences": 2,
+    "exactOccurrences": 1,
     "variant": null,
     "status": "exact"
   },
@@ -772,7 +772,7 @@
     "seq": 43,
     "url": "/gravel-driveway/",
     "keyword": "gravel driveway",
-    "exactOccurrences": 8,
+    "exactOccurrences": 9,
     "variant": null,
     "status": "exact"
   },
@@ -812,17 +812,25 @@
     "seq": 43,
     "url": "/gravel-driveway/",
     "keyword": "how to gravel driveway",
-    "exactOccurrences": 1,
-    "variant": null,
-    "status": "exact"
+    "exactOccurrences": 0,
+    "variant": {
+      "keyword": "how to gravel driveway",
+      "variant": "How do you calculate gravel driveway sections with different depths?",
+      "reason": "Repair ungrammatical question heading while retaining gravel layer intent."
+    },
+    "status": "variant"
   },
   {
     "seq": 43,
     "url": "/gravel-driveway/",
     "keyword": "how to make a gravel driveway",
-    "exactOccurrences": 1,
-    "variant": null,
-    "status": "exact"
+    "exactOccurrences": 0,
+    "variant": {
+      "keyword": "how to make a gravel driveway",
+      "variant": "gravel driveway plan",
+      "reason": "Uses natural wording instead of keyword-stuffed how-to phrasing."
+    },
+    "status": "variant"
   },
   {
     "seq": 43,
@@ -844,7 +852,7 @@
     "seq": 12,
     "url": "/driveway-sealcoating-cost/",
     "keyword": "driveway sealcoating",
-    "exactOccurrences": 1,
+    "exactOccurrences": 2,
     "variant": null,
     "status": "exact"
   },
@@ -900,13 +908,9 @@
     "seq": 11,
     "url": "/repave-asphalt-driveway-cost/",
     "keyword": "cost to replace asphalt driveway",
-    "exactOccurrences": 0,
-    "variant": {
-      "keyword": "cost to replace asphalt driveway",
-      "variant": "cost to replace an asphalt driveway",
-      "reason": "Adds the article required for natural US English."
-    },
-    "status": "variant"
+    "exactOccurrences": 1,
+    "variant": null,
+    "status": "exact"
   },
   {
     "seq": 11,
@@ -1060,7 +1064,7 @@
     "seq": 37,
     "url": "/concrete-driveway-repair-cost/",
     "keyword": "concrete driveway repair",
-    "exactOccurrences": 3,
+    "exactOccurrences": 2,
     "variant": null,
     "status": "exact"
   },
@@ -1097,7 +1101,7 @@
     "seq": 39,
     "url": "/driveway-replacement-cost/",
     "keyword": "driveway replacement",
-    "exactOccurrences": 2,
+    "exactOccurrences": 3,
     "variant": null,
     "status": "exact"
   },
@@ -1319,7 +1323,7 @@
     "seq": 36,
     "url": "/paver-calculator/",
     "keyword": "paver calculator",
-    "exactOccurrences": 1,
+    "exactOccurrences": 2,
     "variant": null,
     "status": "exact"
   },
@@ -1354,7 +1358,8 @@
     "exactOccurrences": 0,
     "variant": {
       "keyword": "cost calculator for paver patio",
-      "variant": "cost calculator for a paver patio"
+      "variant": "paver patio cost estimate",
+      "reason": "This is a quantity-only tool; the cost intent belongs to a priced quote rather than a misleading cost-calculator heading."
     },
     "status": "variant"
   },
@@ -1634,7 +1639,7 @@
     "seq": 27,
     "url": "/pea-gravel-calculator/",
     "keyword": "pea gravel calculator",
-    "exactOccurrences": 1,
+    "exactOccurrences": 3,
     "variant": null,
     "status": "exact"
   },
@@ -1670,7 +1675,11 @@
     "url": "/pea-gravel-calculator/",
     "keyword": "pea gravel cost calculator",
     "exactOccurrences": 1,
-    "variant": null,
+    "variant": {
+      "keyword": "pea gravel cost calculator",
+      "variant": "pea gravel cost calculator",
+      "reason": "The question is answered as a capability limitation; quantities are supplied without a price input."
+    },
     "status": "exact"
   },
   {
@@ -1891,7 +1900,7 @@
     "seq": 33,
     "url": "/driveway-cost/",
     "keyword": "driveway cost",
-    "exactOccurrences": 7,
+    "exactOccurrences": 5,
     "variant": null,
     "status": "exact"
   },
@@ -1907,7 +1916,7 @@
     "seq": 33,
     "url": "/driveway-cost/",
     "keyword": "new driveway cost",
-    "exactOccurrences": 3,
+    "exactOccurrences": 2,
     "variant": null,
     "status": "exact"
   },
@@ -1939,25 +1948,37 @@
     "seq": 33,
     "url": "/driveway-cost/",
     "keyword": "how much will a driveway cost",
-    "exactOccurrences": 1,
-    "variant": null,
-    "status": "exact"
+    "exactOccurrences": 0,
+    "variant": {
+      "keyword": "how much will a driveway cost",
+      "variant": "How much does a driveway cost?",
+      "reason": "Same price-comparison intent; avoid duplicate question sections."
+    },
+    "status": "variant"
   },
   {
     "seq": 33,
     "url": "/driveway-cost/",
     "keyword": "how much does it cost for a driveway",
-    "exactOccurrences": 1,
-    "variant": null,
-    "status": "exact"
+    "exactOccurrences": 0,
+    "variant": {
+      "keyword": "how much does it cost for a driveway",
+      "variant": "How much does a driveway cost?",
+      "reason": "Same price-comparison intent; avoid duplicate question sections."
+    },
+    "status": "variant"
   },
   {
     "seq": 33,
     "url": "/driveway-cost/",
     "keyword": "how much would a new driveway cost",
-    "exactOccurrences": 1,
-    "variant": null,
-    "status": "exact"
+    "exactOccurrences": 0,
+    "variant": {
+      "keyword": "how much would a new driveway cost",
+      "variant": "How much does a driveway cost?",
+      "reason": "Same price-comparison intent; avoid duplicate question sections."
+    },
+    "status": "variant"
   },
   {
     "seq": 33,

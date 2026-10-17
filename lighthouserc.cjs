@@ -7,8 +7,10 @@ module.exports = {
         'http://localhost/asphalt-driveway-cost/',
         'http://localhost/',
       ],
-      numberOfRuns: 1,
-      settings: { preset: 'mobile' },
+      // Use a median across repeat runs rather than a single noisy measurement.
+      numberOfRuns: 3,
+      // Lighthouse defaults to mobile emulation; 'mobile' is not a valid preset.
+      settings: { formFactor: 'mobile' },
     },
     assert: {
       assertions: {

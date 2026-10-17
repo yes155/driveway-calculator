@@ -1,0 +1,302 @@
+{
+  "/methodology/": {
+    "/asphalt-calculator/": "Apply the area, thickness and mix-density formulas to an asphalt tonnage order.",
+    "/asphalt-driveway-cost/": "Inspect the sourced installed asphalt rate and scope used in cost examples.",
+    "/asphalt-driveway-cost-calculator/": "Test the asphalt installation range against your measured square footage.",
+    "/concrete-driveway-cost/": "Trace the plain concrete installed benchmark back to its named source.",
+    "/concrete-driveway-cost-calculator/": "Apply the concrete installation benchmark to the measured driveway area.",
+    "/gravel-driveway-cost/": "Compare the gravel installed-price basis with the quantity assumptions.",
+    "/gravel-driveway-calculator/": "Convert gravel driveway dimensions and layer depths into material quantities.",
+    "/gravel-calculator/": "Calculate aggregate volume and supplier-density-based short tons.",
+    "/": "Return to the calculator directory after reviewing unit and source rules.",
+    "/driveway-cost-calculator/": "Use the common measured area to compare available surface price ranges.",
+    "/concrete-slab-cost-calculator/": "Apply the slab estimator's unit prices to a specific measured slab.",
+    "/concrete-slab-cost/": "Read the slab guide's cost inclusions before editing an estimate.",
+    "/gravel-driveway/": "Check how gravel driveway layer measurements affect order quantities.",
+    "/driveway-sealcoating-cost/": "Trace sealcoating price ranges separately from product coverage calculations.",
+    "/repave-asphalt-driveway-cost/": "Check repaving scope against new-asphalt installation assumptions.",
+    "/asphalt-driveway-repair-cost/": "Distinguish repair pricing from full replacement when interpreting a result.",
+    "/concrete-vs-asphalt-driveway/": "Compare asphalt and concrete rates on the same measured area.",
+    "/replace-concrete-driveway-cost/": "Review the removal and new-concrete scope behind replacement costs.",
+    "/stamped-concrete-driveway-cost/": "Identify finish-related pricing differences for stamped concrete.",
+    "/paver-driveway-cost/": "Check generic paver benchmark assumptions against the selected paver material.",
+    "/tar-and-chip-driveway-cost/": "Inspect the tar-and-chip installed benchmark used in surface comparisons.",
+    "/asphalt-millings-cost/": "Separate asphalt millings material pricing from delivery and placement.",
+    "/asphalt-driveway-thickness/": "Check how finished compacted thickness changes asphalt volume and tonnage.",
+    "/concrete-driveway-repair-cost/": "Review concrete repair price scope separately from slab installation rates.",
+    "/driveway-repair-cost/": "Compare repair scopes before treating a repair as full replacement.",
+    "/driveway-replacement-cost/": "Identify the demolition and preparation items in replacement estimates.",
+    "/standard-driveway-width/": "Measure driveway widths before turning plan dimensions into square footage.",
+    "/concrete-calculator/": "Convert slab dimensions and thickness into concrete volume or bag counts.",
+    "/paver-calculator/": "Calculate paver counts and the distinct base and bedding quantities.",
+    "/how-to-lay-an-asphalt-driveway/": "Read the laying sequence alongside the asphalt thickness and tonnage inputs.",
+    "/hot-mix-asphalt/": "Distinguish hot-mix plant pickup pricing from installed driveway prices.",
+    "/asphalt-driveway-maintenance/": "Check maintenance tasks before choosing resealing or repair cost estimates.",
+    "/driveway-drainage/": "Review drainage measurements and site conditions omitted from area-only rates.",
+    "/how-to-repair-concrete-driveway-cracks/": "Match concrete crack conditions to the appropriate repair scope.",
+    "/how-to-repair-asphalt-driveway-cracks/": "Match asphalt crack conditions to filler, patching or larger repair work.",
+    "/sealcoat-calculator/": "Apply product-label coverage and coat counts to a sealcoat quantity.",
+    "/asphalt-millings-calculator/": "Convert asphalt millings area and depth into a density-based order.",
+    "/material-weights/": "Look up material density requirements before converting volume to weight.",
+    "/cubic-yards-to-tons/": "Convert known cubic yards and supplier-specified density into short tons.",
+    "/rock-calculator/": "Estimate loose-rock quantities using the selected product's density.",
+    "/pea-gravel-calculator/": "Enter pea-gravel depth and density to calculate a material order.",
+    "/crusher-run-calculator/": "Size a crusher-run base layer using its actual compacted depth.",
+    "/road-base-calculator/": "Calculate road-base material volume for the specified layer depth.",
+    "/concrete-weight-per-cubic-yard/": "Find the concrete weight reference and its stated density assumptions.",
+    "/gravel-weight-per-cubic-yard/": "Check gravel weight per cubic yard before converting truck quantities.",
+    "/driveway-sealer/": "Select a sealer by label coverage and substrate requirements.",
+    "/how-to-seal-a-driveway/": "Use the sealing workflow to connect surface preparation and coat counts.",
+    "/driveway-crack-filler/": "Check crack-filler product suitability before estimating repair work.",
+    "/asphalt-cold-patch/": "Distinguish packaged cold patch from asphalt used for full paving.",
+    "/driveway-cost/": "Return to the surface comparison that groups installed-price benchmarks."
+  },
+  "/asphalt-calculator/": {
+    "/asphalt-driveway-cost-calculator/": "Price the measured asphalt surface with an installed-rate estimator rather than a tonnage-only result.",
+    "/asphalt-driveway-thickness/": "Choose finished asphalt thickness before converting the paved area to volume.",
+    "/material-weights/": "Check which asphalt density input turns cubic feet into US short tons."
+  },
+  "/asphalt-driveway-cost/": {
+    "/asphalt-calculator/": "Calculate asphalt material tons from finished area, thickness and density.",
+    "/asphalt-driveway-cost-calculator/": "Turn the same measured area into a low-to-high installed asphalt estimate.",
+    "/concrete-vs-asphalt-driveway/": "Compare new asphalt and concrete installations on a matching square-foot basis.",
+    "/driveway-sealcoating-cost/": "Separate recurring sealcoating work from the new-installation budget.",
+    "/repave-asphalt-driveway-cost/": "Compare repaving and base-work scope with the price of new asphalt."
+  },
+  "/asphalt-driveway-cost-calculator/": {
+    "/asphalt-driveway-cost/": "Review what the installed asphalt rate includes before entering optional job extras.",
+    "/asphalt-calculator/": "Calculate asphalt tons separately from the installed labor-and-material estimate."
+  },
+  "/concrete-driveway-cost/": {
+    "/concrete-driveway-cost-calculator/": "Apply the installed concrete price range to your measured driveway square footage.",
+    "/concrete-vs-asphalt-driveway/": "Contrast plain concrete and asphalt upfront scope and upkeep.",
+    "/stamped-concrete-driveway-cost/": "Check how a decorative stamped finish differs from plain concrete pricing.",
+    "/replace-concrete-driveway-cost/": "Compare removal plus replacement with a new-concrete installation quote."
+  },
+  "/concrete-driveway-cost-calculator/": {
+    "/concrete-driveway-cost/": "Check the published concrete installation rate and what the bid covers.",
+    "/concrete-calculator/": "Calculate concrete cubic yards from slab area and thickness separately from installed cost."
+  },
+  "/gravel-driveway-cost/": {
+    "/gravel-driveway-calculator/": "Size base and top gravel layers before applying a delivered or installed price.",
+    "/gravel-calculator/": "Estimate material volume and short tons for a single aggregate layer.",
+    "/crusher-run-calculator/": "Measure crusher-run base volume independently from the finish gravel.",
+    "/road-base-calculator/": "Calculate the road-base layer at its specified finished depth.",
+    "/concrete-vs-asphalt-driveway/": "Use the surface comparison to assess gravel against paved alternatives."
+  },
+  "/gravel-driveway-calculator/": {
+    "/gravel-driveway-cost/": "Compare gravel layer quantities with the installation-rate scope for a complete driveway.",
+    "/cubic-yards-to-tons/": "Convert the resulting cubic yards to short tons using supplier density."
+  },
+  "/gravel-calculator/": {
+    "/gravel-driveway-calculator/": "Add separate driveway layers when one gravel volume does not describe the entire base.",
+    "/gravel-driveway-cost/": "Check installed gravel work separately from a loose-aggregate material order.",
+    "/cubic-yards-to-tons/": "Convert the calculated cubic yards into short tons at the selected density.",
+    "/material-weights/": "Confirm which material weight assumption is needed for tonnage."
+  },
+  "/driveway-cost-calculator/": {
+    "/asphalt-driveway-cost/": "Inspect what the asphalt installed-price range includes before comparing totals.",
+    "/asphalt-driveway-cost-calculator/": "Open the dedicated asphalt estimator to adjust that surface's cost assumptions.",
+    "/concrete-driveway-cost/": "Read the plain concrete cost basis and exclusions behind the comparison.",
+    "/concrete-driveway-cost-calculator/": "Use the concrete-only estimator to adjust the project's installed scope.",
+    "/gravel-driveway-cost/": "Inspect gravel's installed cost basis before comparing it with paved surfaces.",
+    "/concrete-slab-cost-calculator/": "Price a measured slab separately when the project is a pad rather than a driveway.",
+    "/concrete-slab-cost/": "Check slab thickness and finishing scope behind the concrete slab price.",
+    "/driveway-sealcoating-cost/": "Estimate sealcoating upkeep separately from initial driveway installation.",
+    "/repave-asphalt-driveway-cost/": "Compare asphalt repaving against new construction for an existing driveway.",
+    "/asphalt-driveway-repair-cost/": "Check asphalt repair pricing for local damage rather than full resurfacing.",
+    "/replace-concrete-driveway-cost/": "Assess concrete removal-and-replacement scope before selecting a new surface.",
+    "/stamped-concrete-driveway-cost/": "Identify stamped-finishing costs that do not apply to plain concrete.",
+    "/paver-driveway-cost/": "Compare paver installation pricing while accounting for product selection.",
+    "/tar-and-chip-driveway-cost/": "Review tar-and-chip coverage and installed-cost scope as a separate surface option.",
+    "/asphalt-millings-cost/": "Distinguish reclaimed asphalt millings material cost from finished pavement rates.",
+    "/concrete-driveway-repair-cost/": "Compare concrete patch or resurfacing costs with new installation.",
+    "/driveway-repair-cost/": "Identify which surface repair category matches the observed damage.",
+    "/driveway-replacement-cost/": "Check the included removal and base work in full replacement prices."
+  },
+  "/concrete-slab-cost-calculator/": {
+    "/concrete-slab-cost/": "Read slab cost assumptions for finishing, thickness and reinforcement.",
+    "/concrete-calculator/": "Calculate concrete volume or bag count rather than installed labor cost.",
+    "/concrete-driveway-cost-calculator/": "Compare a driveway installation quote with a smaller slab or pad scope."
+  },
+  "/concrete-slab-cost/": {
+    "/concrete-slab-cost-calculator/": "Apply the slab price assumptions to entered dimensions and optional work.",
+    "/concrete-driveway-cost/": "Check driveway-specific concrete paving prices before using slab rates for a driveway.",
+    "/concrete-calculator/": "Calculate concrete cubic yards separately from the installed slab quote."
+  },
+  "/gravel-driveway/": {
+    "/gravel-driveway-cost/": "Review the installed gravel budget after planning each driveway layer.",
+    "/gravel-driveway-calculator/": "Convert the planned base and finish layers into separate material quantities."
+  },
+  "/driveway-sealcoating-cost/": {
+    "/sealcoat-calculator/": "Calculate sealer gallons from measured area, coat count and product-label coverage.",
+    "/asphalt-driveway-repair-cost/": "Compare coating upkeep with repair work when cracks or damage are present."
+  },
+  "/repave-asphalt-driveway-cost/": {
+    "/asphalt-driveway-repair-cost/": "Check whether localized damage belongs in an asphalt repair estimate instead.",
+    "/asphalt-driveway-cost-calculator/": "Estimate installed asphalt cost for the measured resurfacing area.",
+    "/driveway-sealcoating-cost/": "Compare resurfacing expenses with routine sealcoating only when the pavement is sound."
+  },
+  "/asphalt-driveway-repair-cost/": {
+    "/driveway-crack-filler/": "Review crack-filler selection for narrow defects before requesting broader repair work.",
+    "/asphalt-cold-patch/": "Check packaged cold patch for localized potholes, not full-depth paving.",
+    "/repave-asphalt-driveway-cost/": "Compare spot repairs with the removal and overlay scope of repaving."
+  },
+  "/concrete-vs-asphalt-driveway/": {
+    "/asphalt-driveway-cost/": "Inspect the source and scope behind the asphalt installation benchmark.",
+    "/concrete-driveway-cost/": "Inspect the source and scope behind the concrete installation benchmark.",
+    "/driveway-cost/": "Compare asphalt, concrete, gravel, pavers and tar-and-chip costs in one table."
+  },
+  "/replace-concrete-driveway-cost/": {
+    "/concrete-driveway-cost/": "Compare the cost of new concrete with the extra work required to remove the old slab.",
+    "/concrete-driveway-cost-calculator/": "Run a measured-area concrete estimate before adding separate demolition items."
+  },
+  "/stamped-concrete-driveway-cost/": {
+    "/concrete-driveway-cost/": "Compare a stamped finish with the published plain-concrete installed baseline."
+  },
+  "/paver-driveway-cost/": {
+    "/paver-calculator/": "Calculate individual paver counts and base material before requesting a delivered quote.",
+    "/driveway-cost/": "Compare generic paver installation ranges with other driveway surfaces."
+  },
+  "/tar-and-chip-driveway-cost/": {
+    "/asphalt-driveway-cost/": "Compare tar-and-chip installed rates and project scope with asphalt paving."
+  },
+  "/asphalt-millings-cost/": {
+    "/asphalt-millings-calculator/": "Convert the millings layer into cubic yards and density-based tons before ordering.",
+    "/gravel-driveway-cost/": "Compare reclaimed millings with a gravel surface rather than assuming asphalt equivalence."
+  },
+  "/asphalt-driveway-thickness/": {
+    "/asphalt-calculator/": "Enter the specified compacted layer depth to see the resulting asphalt tonnage.",
+    "/asphalt-driveway-cost/": "See how asphalt thickness affects the quantity within an installed-cost project."
+  },
+  "/concrete-driveway-repair-cost/": {
+    "/replace-concrete-driveway-cost/": "Compare patching or resurfacing with removal and concrete replacement.",
+    "/concrete-driveway-cost/": "Check new concrete installation prices before deciding whether to replace."
+  },
+  "/driveway-repair-cost/": {
+    "/asphalt-driveway-repair-cost/": "Estimate asphalt-specific patch and repair scope for damaged blacktop.",
+    "/concrete-driveway-repair-cost/": "Estimate concrete-specific crack or surface repair separately from asphalt.",
+    "/driveway-replacement-cost/": "Compare total replacement with the repair options for your surface."
+  },
+  "/driveway-replacement-cost/": {
+    "/repave-asphalt-driveway-cost/": "Review asphalt repaving when the base can remain rather than funding full removal.",
+    "/replace-concrete-driveway-cost/": "Check concrete demolition and replacement as a distinct full-depth job.",
+    "/driveway-cost-calculator/": "Compare available new-driveway material rates after defining removal scope."
+  },
+  "/standard-driveway-width/": {
+    "/driveway-cost-calculator/": "Use measured length and width to compare installed driveway surface costs.",
+    "/asphalt-calculator/": "Turn driveway dimensions into asphalt volume and short tons."
+  },
+  "/concrete-calculator/": {
+    "/concrete-driveway-cost-calculator/": "Compare concrete material volume against the installed driveway price.",
+    "/concrete-driveway-cost/": "Review labor, base and finish items excluded from a concrete volume result."
+  },
+  "/paver-calculator/": {
+    "/paver-driveway-cost/": "Check installed paver cost separately from paver, base and sand quantities."
+  },
+  "/how-to-lay-an-asphalt-driveway/": {
+    "/asphalt-calculator/": "Measure asphalt tonnage after the layer plan establishes a finished depth.",
+    "/asphalt-driveway-cost/": "Review the installed paving price and labor scope for contractor work."
+  },
+  "/hot-mix-asphalt/": {
+    "/asphalt-calculator/": "Convert a specified hot-mix layer depth and density into US short tons.",
+    "/material-weights/": "Check where density assumptions enter the hot-mix material calculation."
+  },
+  "/asphalt-driveway-maintenance/": {
+    "/driveway-sealcoating-cost/": "Estimate coating costs when the surface is suitable for resealing.",
+    "/asphalt-driveway-repair-cost/": "Check repair scope when damage extends beyond routine maintenance."
+  },
+  "/driveway-drainage/": {
+    "/driveway-repair-cost/": "Compare repair costs for pavement damage after drainage issues are assessed.",
+    "/gravel-driveway/": "Review gravel layer and grading quantities that affect water movement."
+  },
+  "/how-to-repair-concrete-driveway-cracks/": {
+    "/concrete-driveway-repair-cost/": "Compare crack treatment with a larger concrete repair estimate.",
+    "/driveway-crack-filler/": "Check whether the filler type suits concrete rather than asphalt."
+  },
+  "/how-to-repair-asphalt-driveway-cracks/": {
+    "/asphalt-driveway-repair-cost/": "Review the price scope for asphalt crack and patch repair.",
+    "/driveway-crack-filler/": "Compare filler types for narrow surface cracks and joints.",
+    "/asphalt-cold-patch/": "Check cold-patch suitability when damage forms a pothole."
+  },
+  "/sealcoat-calculator/": {
+    "/driveway-sealcoating-cost/": "Convert calculated sealer gallons into a coating budget using the selected product quote."
+  },
+  "/asphalt-millings-calculator/": {
+    "/asphalt-millings-cost/": "Check material pricing and delivery scope for the calculated millings tons.",
+    "/asphalt-calculator/": "Compare the millings order with the hot-mix asphalt quantity method."
+  },
+  "/material-weights/": {
+    "/asphalt-calculator/": "Apply asphalt material density to a measured paved volume.",
+    "/gravel-calculator/": "Calculate gravel order tons using the corresponding aggregate density.",
+    "/cubic-yards-to-tons/": "Convert any known cubic-yard quantity with a supplier-confirmed density."
+  },
+  "/cubic-yards-to-tons/": {
+    "/material-weights/": "Select the correct density and material condition before converting units.",
+    "/gravel-calculator/": "Calculate gravel cubic yards from area and depth before converting to tons."
+  },
+  "/rock-calculator/": {
+    "/gravel-calculator/": "Check how a general gravel calculation handles a different aggregate grade.",
+    "/gravel-driveway-cost/": "Compare the rock material order with the scope of a finished gravel driveway."
+  },
+  "/pea-gravel-calculator/": {
+    "/gravel-calculator/": "Use the gravel tool when the specified aggregate is not pea gravel.",
+    "/gravel-driveway-cost/": "Check gravel installation pricing separately from this quantity-only estimate."
+  },
+  "/crusher-run-calculator/": {
+    "/gravel-driveway-calculator/": "Include crusher-run as a measured base layer beneath the gravel surface.",
+    "/gravel-driveway-cost/": "Review installed gravel cost after calculating the crusher-run material order."
+  },
+  "/road-base-calculator/": {
+    "/gravel-driveway-calculator/": "Calculate the road-base layer alongside the top gravel layer.",
+    "/gravel-driveway-cost/": "Compare the completed base material order with installed gravel pricing."
+  },
+  "/concrete-weight-per-cubic-yard/": {
+    "/concrete-calculator/": "Calculate cubic yards from a measured concrete slab before converting to weight.",
+    "/material-weights/": "Compare density references for material-specific volume-to-weight calculations."
+  },
+  "/gravel-weight-per-cubic-yard/": {
+    "/gravel-calculator/": "Estimate gravel volume from a measured section before using a tonnage factor.",
+    "/cubic-yards-to-tons/": "Convert gravel cubic yards to US short tons using supplier density.",
+    "/material-weights/": "Check how the weight reference varies between aggregate products."
+  },
+  "/driveway-sealer/": {
+    "/driveway-sealcoating-cost/": "Compare application pricing with a DIY product purchase.",
+    "/sealcoat-calculator/": "Calculate container needs using the chosen sealer's label coverage.",
+    "/driveway-crack-filler/": "Identify crack-preparation products before applying a sealer."
+  },
+  "/how-to-seal-a-driveway/": {
+    "/driveway-sealer/": "Check product-label suitability, drying conditions and coverage.",
+    "/sealcoat-calculator/": "Calculate gallons for the measured area and planned coat count.",
+    "/driveway-sealcoating-cost/": "Compare contractor sealcoating rates with the DIY material requirement.",
+    "/driveway-crack-filler/": "Identify cracks to fill before the coating process."
+  },
+  "/driveway-crack-filler/": {
+    "/asphalt-driveway-repair-cost/": "Compare a packaged crack repair with larger asphalt repair pricing.",
+    "/driveway-sealcoating-cost/": "Check whether coating is appropriate after crack preparation."
+  },
+  "/asphalt-cold-patch/": {
+    "/asphalt-driveway-repair-cost/": "Compare a pothole patch with the quoted scope for larger asphalt damage."
+  },
+  "/driveway-cost/": {
+    "/asphalt-driveway-cost/": "Check the asphalt installed benchmark and the work included in that rate.",
+    "/asphalt-driveway-cost-calculator/": "Calculate asphalt-only installed costs for the measured driveway area.",
+    "/concrete-driveway-cost/": "Review plain-concrete installation pricing and prep assumptions.",
+    "/concrete-driveway-cost-calculator/": "Run the dedicated concrete installation estimate with chosen options.",
+    "/gravel-driveway-cost/": "Compare gravel installed prices with the needed base layers.",
+    "/driveway-cost-calculator/": "Compare the main surface price ranges using one common measured area.",
+    "/concrete-slab-cost-calculator/": "Price a small slab separately from a complete driveway.",
+    "/concrete-slab-cost/": "Review concrete slab finishing and thickness costs as a different project scope.",
+    "/driveway-sealcoating-cost/": "Factor sealcoating into asphalt maintenance rather than installation cost.",
+    "/repave-asphalt-driveway-cost/": "Compare an asphalt overlay with full-depth replacement work.",
+    "/asphalt-driveway-repair-cost/": "Compare localized asphalt repairs with resurfacing and replacement.",
+    "/replace-concrete-driveway-cost/": "Check demolition and new-concrete work in a replacement estimate.",
+    "/stamped-concrete-driveway-cost/": "Assess the premium for a stamped finish versus plain concrete.",
+    "/paver-driveway-cost/": "Check installed paver benchmarks and material-specific price differences.",
+    "/tar-and-chip-driveway-cost/": "Review tar-and-chip pricing for an alternative surface specification.",
+    "/asphalt-millings-cost/": "Separate millings purchase and hauling from a new-asphalt installation.",
+    "/concrete-driveway-repair-cost/": "Compare concrete repairs with removing and installing a new slab.",
+    "/driveway-repair-cost/": "Review repair cost categories before treating damage as replacement.",
+    "/driveway-replacement-cost/": "Check the removal and preparation items in full driveway replacement."
+  }
+}

@@ -1,15 +1,7 @@
 import Link from 'next/link';
 import { pages } from '@/lib/content';
 import Navigation from './Navigation';
-const groups = [
-  { label: 'Costs', filter: (type: string) => /Cost|Compare|Pillar/.test(type) },
-  { label: 'Calculators', filter: (type: string) => /tool|estimator|Converter/.test(type) },
-  { label: 'Materials', filter: (type: string) => /Reference|Spec/.test(type) },
-  {
-    label: 'Repair & Maintenance',
-    filter: (_: string, url: string) => /repair|seal|maintenance|patch|filler/.test(url),
-  },
-];
+import { buildNavigationGroups } from '@/lib/navigation';
 export default function Header() {
   return (
     <header className="site-header">
@@ -27,14 +19,7 @@ export default function Header() {
           </span>
           <span>Driveway Calculators</span>
         </Link>
-        <Navigation
-          groups={groups.map((group) => ({
-            label: group.label,
-            links: pages
-              .filter((page) => group.filter(page.type, page.url))
-              .map((page) => ({ href: page.url, label: page.h1 })),
-          }))}
-        />
+        <Navigation groups={buildNavigationGroups(pages)} />
         <Link href="/#workbench" className="header-tool">
           Choose a calculator <span aria-hidden="true">↗</span>
         </Link>

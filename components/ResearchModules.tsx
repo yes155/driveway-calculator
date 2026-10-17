@@ -81,6 +81,43 @@ export function CostReference({ surface }: { surface: string }) {
     </section>
   );
 }
+export function SlabSizeExamples() {
+  const p = priceBook.slab;
+  const low = verifiedValue(p?.installedLow),
+    high = verifiedValue(p?.installedHigh);
+  if (low === null || high === null)
+    return <p>Slab size totals require verified installed rates.</p>;
+  const sizes = [
+    { length: 12, width: 12 },
+    { length: 20, width: 40 },
+    { length: 30, width: 50 },
+  ];
+  return (
+    <div className="table-scroll">
+      <table>
+        <caption>Concrete slab sizes · {rateMoney(low)}–{rateMoney(high)}/ft² installed · no extras</caption>
+        <thead>
+          <tr><th>Illustrative dimensions</th><th>Area</th><th>Installed baseline range</th></tr>
+        </thead>
+        <tbody>
+          {sizes.map(({ length, width }) => {
+            const area = length * width;
+            const cost = computeCost({ area, unit: { low, high }, tier: 1, extras: [] });
+            return (
+              <tr key={length + 'x' + width}>
+                <th>{length} × {width} ft</th>
+                <td>{number(area)} ft²</td>
+                <td>{cost ? `${money(cost.low)}–${money(cost.high)}` : 'Not available'}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      <p>Illustrative rectangular areas use HomeGuide's named flat-slab baseline, not a structural design or local quote. Excluded work remains subject to the installer’s scope.</p>
+    </div>
+  );
+}
+
 export function SurfaceComparison({ pairOnly = false }: { pairOnly?: boolean }) {
   const allKeys = ['asphalt', 'concrete', 'stamped-concrete', 'gravel', 'pavers', 'tar-and-chip'];
   const keys = pairOnly ? ['asphalt', 'concrete'] : allKeys;
