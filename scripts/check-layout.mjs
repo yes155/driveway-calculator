@@ -264,7 +264,16 @@ try {
       el.select();
     });
     await tab.type('.hero-area-fields input', '55');
-    await tab.select('.hero-next-choice select', choice);
+    console.log(`Checking homepage handoff: ${choice}`);
+    await tab.$eval(
+      '.hero-next-choice select',
+      (select, value) => {
+        select.value = value;
+        select.dispatchEvent(new Event('input', { bubbles: true }));
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+      },
+      choice,
+    );
     await Promise.all([
       tab.waitForNavigation({ waitUntil: 'networkidle0' }),
       tab.click('.hero-area-next a'),
@@ -302,9 +311,13 @@ try {
   await tab.waitForFunction(() =>
     document.querySelector('.primary-metric')?.textContent.includes('$2,800–$5,200'),
   );
+  await tab.$eval('.calculator-output', (el) =>
+    el.scrollIntoView({ behavior: 'instant', block: 'start' }),
+  );
   await tab.screenshot({ path: path.join(screenshots, 'cost-calculated-360.png') });
   await tab.goto(origin + '/concrete-driveway-cost/', { waitUntil: 'networkidle0' });
   await tab.click('.article-contents > summary');
+  console.log('Checking mobile article navigation');
   const anchor = await tab.$('.article-contents a[href*="can-i-pour"]');
   assert(anchor, 'DIY question is exposed in mobile article contents.');
   await anchor.click();
