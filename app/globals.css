@@ -2236,7 +2236,7 @@ caption {
   color: #d6ddca;
 }
 .guide-quick-result strong {
-  font-size: clamp(23px, 3vw, 37px);
+  font-size: clamp(23px, 2.2vw, 30px);
   letter-spacing: -0.04em;
   line-height: 1.25;
   overflow-wrap: anywhere;
@@ -2699,8 +2699,8 @@ caption {
   line-height: 1.4;
 }
 .guide-quick-footer {
-  padding-top: 9px;
-  margin-top: 10px;
+  padding-top: 6px;
+  margin-top: 6px;
   gap: 6px 18px;
 }
 .guide-quick-footer a {
