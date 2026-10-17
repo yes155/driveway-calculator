@@ -1440,6 +1440,16 @@
       "kind": "contractor-guide",
       "region": "US",
       "publishedOn": null
+    },
+    {
+      "id": "concrete-cn-diy",
+      "name": "Concrete Network — Can You Pour a Concrete Driveway Yourself?",
+      "url": "https://www.concretenetwork.com/concrete/concrete_driveways/diy.html",
+      "publisher": "Concrete Network",
+      "retrievedOn": "2026-10-18",
+      "publishedOn": null,
+      "region": "US",
+      "kind": "technical-guide"
     }
   ],
   "observations": [
@@ -5593,6 +5603,17 @@
         "general-root-nds-drainage"
       ],
       "researchGroup": "general"
+    },
+    {
+      "item": "concreteDrivewayDIY",
+      "sourceIds": [
+        "concrete-cn-diy"
+      ],
+      "fact": "Concrete Network describes driveway placement as demanding DIY work and recommends professional installation. Its guide covers drainage, subgrade, forms, placement, finishing, joints and curing.",
+      "location": "Introduction and GOOD PLANNING, SUBGRADE PREP, FORM ASSEMBLY, FINISHING, JOINTS and CURING sections; retrieved page lines 76–108.",
+      "retrievedOn": "2026-10-18",
+      "sourceRef": "turn6view0",
+      "researchGroup": "concrete"
     }
   ],
   "productPresets": [

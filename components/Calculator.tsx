@@ -31,6 +31,14 @@ export default function Calculator({
   const [expandedInputs, setExpandedInputs] = useState(false);
   const id = useId();
   const outputRef = useRef<HTMLDivElement>(null);
+  const fieldsRef = useRef<HTMLDivElement>(null);
+  function editMeasurements() {
+    const fields = fieldsRef.current;
+    if (!fields) return;
+    fields.scrollTop = 0;
+    fields.querySelector<HTMLInputElement>('input[type="number"]')?.focus({ preventScroll: true });
+    fields.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+  }
   const currentPrice = priceBook[surface];
   const pricingAvailable = hasPrice(surface);
   const densityKey =
@@ -206,6 +214,7 @@ export default function Calculator({
         aria-label="Calculator inputs"
       >
         <div
+          ref={fieldsRef}
           id={id + '-fields'}
           className={'calculator-fields' + (expandedInputs ? ' inputs-expanded' : '')}
           role="group"
@@ -827,23 +836,32 @@ export default function Calculator({
                   </div>
                 ))}
               </dl>
-              {secondaryMetrics.length > 0 && (
-                <details className="result-explanation secondary-metrics">
-                  <summary>
-                    {cost ? 'Area and cost breakdown' : 'Area and quantity breakdown'}
-                  </summary>
-                  <dl className="metrics">
-                    {secondaryMetrics.map((m) => (
-                      <div key={m.label}>
-                        <dt>{m.label}</dt>
-                        <dd>
-                          {m.value}
-                          <small>{m.unit}</small>
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
-                </details>
+              <div className="result-measurements">
+                {result.area !== undefined ? (
+                  <span>
+                    {state.sections.length === 1 &&
+                    !state.sections[0].tapered &&
+                    !state.sections[0].sloped
+                      ? `${state.sections[0].length} × ${state.sections[0].width} ft · `
+                      : `${state.sections.length} measured section${state.sections.length === 1 ? '' : 's'} · `}
+                    {number(result.area)} ft²
+                  </span>
+                ) : (
+                  <span>Conversion from your entered quantity and density</span>
+                )}
+                <button type="button" onClick={editMeasurements}>
+                  Edit {kind === 'converter' ? 'inputs' : 'measurements'}
+                </button>
+              </div>
+              <div className="result-actions result-actions-primary">
+                <button onClick={() => void copy(result.summary)}>Copy result</button>
+                <button onClick={() => window.print()}>Print</button>
+                <button onClick={share}>Share link</button>
+              </div>
+              {message && (
+                <p className="input-hint" role="status">
+                  {message}
+                </p>
               )}
               {!!result.missing?.length && (
                 <div className="data-note">
@@ -854,72 +872,10 @@ export default function Calculator({
                   </p>
                 </div>
               )}
-              {!!result.rows?.length && (
-                <div className="table-scroll">
-                  <table>
-                    <caption>Estimated surface costs, using the selected assumptions.</caption>
-                    <thead>
-                      <tr>
-                        <th>Surface</th>
-                        <th>Estimate</th>
-                        <th>Lifespan</th>
-                        <th>Cost / year</th>
-                        <th>Annual upkeep</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {result.rows.map((r) => (
-                        <tr key={r.name}>
-                          <th>
-                            {r.name === 'stamped-concrete'
-                              ? 'Basic stamped concrete'
-                              : human(r.name)}
-                          </th>
-                          <td>
-                            {money(r.low)}–{money(r.high)}
-                          </td>
-                          <td>
-                            {r.lifespan
-                              ? `${number(r.lifespan.low)}–${number(r.lifespan.high)} years`
-                              : 'Not available'}
-                          </td>
-                          <td>
-                            {r.annual
-                              ? `${money(r.annual.low)}–${money(r.annual.high)}`
-                              : 'Not available'}
-                          </td>
-                          <td>{r.upkeep.length ? r.upkeep.join('; ') : 'Not available'}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                  <p>
-                    Cost per year divides the upfront range by the lifespan range; upkeep is
-                    separate.
-                  </p>
-                </div>
-              )}
               {cost && (
-                <>
-                  <p className="estimate-note">
-                    Estimate only. This result is not a contractor quote.
-                  </p>
-                  <details className="result-assumptions result-explanation">
-                    <summary>Price basis and included work</summary>
-                    <p>
-                      Price basis:{' '}
-                      {state.fields.customRates === 'true'
-                        ? 'your quoted rates'
-                        : (state.fields.tier ?? 'baseline')}
-                      . Removal: {state.fields.removal === 'true' ? 'included' : 'excluded'}. Base
-                      work: {state.fields.base === 'true' ? 'included' : 'excluded'}. Delivery:{' '}
-                      {state.fields.delivery === 'true' ? 'included' : 'excluded'}.
-                    </p>
-                    {result.assumptions?.map((a) => (
-                      <p key={a}>{a}</p>
-                    ))}
-                  </details>
-                </>
+                <p className="estimate-note">
+                  Estimate only. This result is not a contractor quote.
+                </p>
               )}
             </>
           ) : (
@@ -951,33 +907,6 @@ export default function Calculator({
             </div>
           )}
         </ResultCard>
-        {result && (
-          <>
-            <div className="result-actions result-actions-primary">
-              <button onClick={() => void copy(result.summary)}>Copy result</button>
-              <button onClick={() => window.print()}>Print</button>
-              <button onClick={share}>Share link</button>
-            </div>
-            <p className="input-hint" role="status">
-              {message}
-            </p>
-            <details className="result-explanation">
-              <summary>Formula and calculation steps</summary>
-              <h3 className="worked-inputs">Worked example from your inputs</h3>
-              <FormulaBox>
-                <code>{result.formula}</code>
-                {result.steps.map((step) => (
-                  <p key={step}>{step}</p>
-                ))}
-              </FormulaBox>
-            </details>
-            <QuoteCTA
-              area={result.area}
-              surface={kind === 'compare' ? state.selectedSurface : surface}
-              slug={slug}
-            />
-          </>
-        )}
         {!result && (
           <div className="output-note">
             <span aria-hidden="true">↳</span>
@@ -991,6 +920,100 @@ export default function Calculator({
           </div>
         )}
       </div>
+      {result && (
+        <section className="calculator-details" aria-label="Result details">
+          {secondaryMetrics.length > 0 && (
+            <details className="result-explanation secondary-metrics">
+              <summary>{cost ? 'Area and cost breakdown' : 'Area and quantity breakdown'}</summary>
+              <dl className="metrics">
+                {secondaryMetrics.map((m) => (
+                  <div key={m.label}>
+                    <dt>{m.label}</dt>
+                    <dd>
+                      {m.value}
+                      <small>{m.unit}</small>
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </details>
+          )}
+          {!!result.rows?.length && (
+            <div className="table-scroll">
+              <table>
+                <caption>Estimated surface costs, using the selected assumptions.</caption>
+                <thead>
+                  <tr>
+                    <th>Surface</th>
+                    <th>Estimate</th>
+                    <th>Lifespan</th>
+                    <th>Cost / year</th>
+                    <th>Annual upkeep</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {result.rows.map((r) => (
+                    <tr key={r.name}>
+                      <th>
+                        {r.name === 'stamped-concrete' ? 'Basic stamped concrete' : human(r.name)}
+                      </th>
+                      <td>
+                        {money(r.low)}–{money(r.high)}
+                      </td>
+                      <td>
+                        {r.lifespan
+                          ? `${number(r.lifespan.low)}–${number(r.lifespan.high)} years`
+                          : 'Not available'}
+                      </td>
+                      <td>
+                        {r.annual
+                          ? `${money(r.annual.low)}–${money(r.annual.high)}`
+                          : 'Not available'}
+                      </td>
+                      <td>{r.upkeep.length ? r.upkeep.join('; ') : 'Not available'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <p>
+                Cost per year divides the upfront range by the lifespan range; upkeep is separate.
+              </p>
+            </div>
+          )}
+          {cost && (
+            <details className="result-assumptions result-explanation">
+              <summary>Price basis and included work</summary>
+              <p>
+                Price basis:{' '}
+                {state.fields.customRates === 'true'
+                  ? 'your quoted rates'
+                  : (state.fields.tier ?? 'baseline')}
+                . Removal: {state.fields.removal === 'true' ? 'included' : 'excluded'}. Base work:{' '}
+                {state.fields.base === 'true' ? 'included' : 'excluded'}. Delivery:{' '}
+                {state.fields.delivery === 'true' ? 'included' : 'excluded'}.
+              </p>
+              {result.assumptions?.map((a) => (
+                <p key={a}>{a}</p>
+              ))}
+            </details>
+          )}
+          <details className="result-explanation">
+            <summary>Formula and calculation steps</summary>
+            <h3 className="worked-inputs">Worked example from your inputs</h3>
+            <FormulaBox>
+              <code>{result.formula}</code>
+              {result.steps.map((step) => (
+                <p key={step}>{step}</p>
+              ))}
+            </FormulaBox>
+          </details>
+          <QuoteCTA
+            area={result.area}
+            surface={kind === 'compare' ? state.selectedSurface : surface}
+            slug={slug}
+          />
+        </section>
+      )}
     </div>
   );
 }

@@ -27,3 +27,18 @@ describe('order checklists', () => {
     expect(orderChecklist('cost', 'slab')).not.toEqual(orderChecklist('cost', 'asphalt'));
   });
 });
+
+// Navigation must use the same fragments as rendered article headings.
+import { articleHeadings, sectionId } from '@/lib/headings';
+
+describe('article section navigation', () => {
+  it('creates stable fragments from punctuation, units and formatted headings', () => {
+    expect(sectionId('What does $7–$13 / ft² include?')).toBe('section-what-does-7-13-ft2-include');
+    expect(
+      articleHeadings('## **Cost** and [scope](/methodology/)?\n\nText.\n\n### A detail?'),
+    ).toEqual([{ title: 'Cost and scope?', id: 'section-cost-and-scope' }]);
+  });
+  it('does not create repeated navigation entries for one heading', () => {
+    expect(articleHeadings('## What is included?\n\n## What is included?')).toHaveLength(1);
+  });
+});

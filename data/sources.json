@@ -1437,5 +1437,15 @@
     "kind": "contractor-guide",
     "region": "US",
     "publishedOn": null
+  },
+  {
+    "id": "concrete-cn-diy",
+    "name": "Concrete Network — Can You Pour a Concrete Driveway Yourself?",
+    "url": "https://www.concretenetwork.com/concrete/concrete_driveways/diy.html",
+    "publisher": "Concrete Network",
+    "retrievedOn": "2026-10-18",
+    "publishedOn": null,
+    "region": "US",
+    "kind": "technical-guide"
   }
 ]

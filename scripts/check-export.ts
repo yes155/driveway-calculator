@@ -80,6 +80,11 @@ for (const url of urls) {
         errors.push('Homepage repeats featured calculators in its additional-tool library');
     }
   }
+  const fragmentIds = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]));
+  for (const fragment of html.matchAll(/<a\b[^>]*href="#([^"]+)"/g)) {
+    if (!fragmentIds.has(decodeURIComponent(fragment[1])))
+      errors.push(`Missing local fragment ${fragment[1]} on ${url}`);
+  }
   const page = pages.find((p) => p.url === url);
   if (page) {
     const heading = html

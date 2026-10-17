@@ -111,6 +111,14 @@ try {
           }),
         selectors,
       );
+      const badFragments = await tab.$$eval(
+        '.page-shortcuts a[href^="#"], .article-contents a[href^="#"]',
+        (links) =>
+          links
+            .filter((link) => !document.getElementById(decodeURIComponent(link.hash.slice(1))))
+            .map((link) => link.hash),
+      );
+      assert.deepEqual(badFragments, [], `Article navigation destinations exist on ${page.url}`);
       const overflow = await tab.evaluate(
         () => document.documentElement.scrollWidth > innerWidth + 1,
       );
@@ -127,6 +135,7 @@ try {
           '/paver-calculator/',
           '/asphalt-driveway-cost/',
           '/asphalt-driveway-thickness/',
+          '/concrete-driveway-cost/',
         ].includes(page.url)
       ) {
         await tab.screenshot({
@@ -156,6 +165,61 @@ try {
     'The calculated installed-cost range remains above the fold.',
   );
   await tab.screenshot({ path: path.join(screenshots, 'cost-calculated-1280x600.png') });
+  // Expanded detail panels must not grow the measurement/result row.
+  const coreHeight = await tab.$eval(
+    '.calculator-inputs',
+    (el) => el.getBoundingClientRect().height,
+  );
+  await tab.$$eval('.calculator-details details', (items) =>
+    items.forEach((el) => {
+      el.open = true;
+    }),
+  );
+  assert.equal(
+    await tab.$eval('.calculator-inputs', (el) => el.getBoundingClientRect().height),
+    coreHeight,
+    'Expanded results do not stretch the form column.',
+  );
+  assert(
+    await tab.evaluate(() => {
+      const detail = document.querySelector('.calculator-details').getBoundingClientRect();
+      const output = document.querySelector('.calculator-output').getBoundingClientRect();
+      const action = document.querySelector('.result-actions').getBoundingClientRect();
+      const primary = document.querySelector('.primary-metric dd');
+      const secondary = document.querySelector('.secondary-metrics dd');
+      return (
+        detail.top >= output.bottom - 1 &&
+        action.bottom <= detail.top &&
+        parseFloat(getComputedStyle(primary).fontSize) >
+          parseFloat(getComputedStyle(secondary).fontSize)
+      );
+    }),
+    'Details sit below the core row; actions stay near the larger primary result.',
+  );
+  await tab.$eval('.calculator-fields', (el) => {
+    el.scrollTop = el.scrollHeight;
+  });
+  await tab.click('.result-measurements button');
+  assert(
+    await tab.$eval('.calculator-fields', (el) => el.scrollTop === 0),
+    'Edit measurements returns to the first inputs.',
+  );
+  assert.equal(
+    await tab.$eval('input[name="section-0-length"]', (el) => el === document.activeElement),
+    true,
+    'Edit measurements focuses the input.',
+  );
+  await tab.screenshot({
+    path: path.join(screenshots, 'cost-expanded-details-1280.png'),
+    fullPage: true,
+  });
+  await tab.$$eval('.calculator-details details', (items) =>
+    items.forEach((el) => {
+      el.open = false;
+    }),
+  );
+  interactions.resultDetailLayout = 'passed';
+  interactions.editMeasurements = 'passed';
   const compactHeight = await tab.$eval('.calculator-fields', (el) => el.clientHeight);
   await tab.click('.input-scroll-note button');
   assert(
@@ -225,6 +289,34 @@ try {
     null,
     'Invalid measurements cannot be transferred.',
   );
+  await tab.goto(origin + '/concrete-driveway-cost/', { waitUntil: 'networkidle0' });
+  await tab.screenshot({
+    path: path.join(screenshots, 'concrete-guide-full-1280.png'),
+    fullPage: true,
+  });
+  await tab.setViewport({ width: 360, height: 740 });
+  await tab.goto(origin + '/asphalt-driveway-cost-calculator/', { waitUntil: 'networkidle0' });
+  await tab.type('input[name="section-0-length"]', '20');
+  await tab.type('input[name="section-0-width"]', '20');
+  await tab.click('.form-actions button[type="submit"]');
+  await tab.waitForFunction(() =>
+    document.querySelector('.primary-metric')?.textContent.includes('$2,800–$5,200'),
+  );
+  await tab.screenshot({ path: path.join(screenshots, 'cost-calculated-360.png') });
+  await tab.goto(origin + '/concrete-driveway-cost/', { waitUntil: 'networkidle0' });
+  await tab.click('.article-contents > summary');
+  const anchor = await tab.$('.article-contents a[href*="can-i-pour"]');
+  assert(anchor, 'DIY question is exposed in mobile article contents.');
+  await anchor.click();
+  await tab.waitForFunction(() => location.hash.includes('can-i-pour'));
+  assert(
+    await tab.$eval('h2[id*="can-i-pour"]', (el) =>
+      el.nextElementSibling.textContent.startsWith('Yes,'),
+    ),
+    'The DIY heading has a direct feasibility answer.',
+  );
+  interactions.articleContents = 'passed';
+  await tab.setViewport({ width: 1280, height: 600 });
   await tab.goto(origin, { waitUntil: 'networkidle0' });
   await tab.screenshot({ path: path.join(screenshots, 'home-full-1280.png'), fullPage: true });
   await tab.$eval('.site-footer', (el) => el.scrollIntoView({ behavior: 'instant', block: 'end' }));

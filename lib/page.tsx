@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { Children, isValidElement, type ReactNode } from 'react';
+import { articleHeadings, sectionId } from '@/lib/headings';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getPage, getContent, isPublic } from '@/lib/content';
 import { metadataFor, JsonLd, breadcrumbs, pageSchema } from '@/lib/seo';
@@ -46,6 +48,19 @@ const guideEstimatorBySeq: Record<number, { href: string; label: string }> = {
   49: { href: '/concrete-slab-cost-calculator/', label: 'concrete slab' },
 };
 
+function textContent(node: ReactNode): string {
+  return Children.toArray(node)
+    .map((child) =>
+      isValidElement<{ children?: ReactNode }>(child)
+        ? textContent(child.props.children)
+        : String(child),
+    )
+    .join('');
+}
+function ArticleHeading({ children }: { children?: ReactNode }) {
+  return <h2 id={sectionId(textContent(children))}>{children}</h2>;
+}
+
 export function pageMetadata(url: string) {
   const page = getPage(url);
   const data = getContent(url).data;
@@ -64,6 +79,21 @@ export async function renderPage(url: string) {
     guideLow = verifiedValue(guidePrice?.installedLow),
     guideHigh = verifiedValue(guidePrice?.installedHigh);
   const related = page.related.map((r) => ({ ...r, destination: getPage(r.slug) }));
+  const headings = ready ? articleHeadings(content.content) : [];
+  const contentsLinks = (
+    <>
+      {kind && !guideEstimator && <a href="#calculator">Calculator and result</a>}
+      {guideEstimator && <a href="#quick-estimate">Quick budget estimate</a>}
+      {headings.slice(0, 5).map((heading) => (
+        <a key={heading.id} href={'#' + heading.id}>
+          {heading.title}
+        </a>
+      ))}
+      {kind && <a href="#before-ordering">Before you order</a>}
+      {!headings.length && <a href="#page-explanation">Explanation and next steps</a>}
+      <Link href="/methodology/">Methodology and sources</Link>
+    </>
+  );
   const nextCalculator =
     !kind && !guideEstimator ? related.find((item) => toolFor(item.destination.seq)) : undefined;
   const material =
@@ -183,6 +213,10 @@ export async function renderPage(url: string) {
         />
       )}
       <div className="article-layout">
+        <details className="article-contents">
+          <summary>On this page</summary>
+          <nav aria-label="Article contents">{contentsLinks}</nav>
+        </details>
         <article className="prose" id="page-explanation">
           {kind &&
             !guideEstimator &&
@@ -265,6 +299,7 @@ export async function renderPage(url: string) {
             <MDXRemote
               source={content.content}
               components={{
+                h2: ArticleHeading,
                 AnswerBlock,
                 FormulaBox,
                 QASection,
@@ -284,7 +319,7 @@ export async function renderPage(url: string) {
             />
           )}
           {kind && (
-            <QASection question="What needs checking before you order?">
+            <QASection id="before-ordering" question="What needs checking before you order?">
               <p>
                 <strong>Check {checklist.length} project details before placing an order.</strong>
               </p>
@@ -325,10 +360,7 @@ export async function renderPage(url: string) {
         <aside className="article-sidebar" aria-label="Page navigation">
           <nav className="side-box page-shortcuts" aria-label="On this page">
             <span className="eyebrow">On this page</span>
-            {kind && !guideEstimator && <a href="#calculator">Calculator and result</a>}
-            {guideEstimator && <a href="#quick-estimate">Quick budget estimate</a>}
-            <a href="#page-explanation">Explanation and next steps</a>
-            <Link href="/methodology/">Methodology and sources</Link>
+            {contentsLinks}
           </nav>
           <div className="side-box">
             <span className="eyebrow">The method</span>

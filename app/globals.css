@@ -945,7 +945,7 @@ mark {
   background: var(--ink);
   color: white;
 }
-.calculator-output p {
+:is(.calculator-output, .calculator-details) p {
   color: #c7cebb;
 }
 .panel-heading {
@@ -1290,13 +1290,13 @@ summary::-webkit-details-marker {
   font-size: 13px;
   margin: 12px 0 0;
 }
-.calculator-output .formula-box {
+:is(.calculator-output, .calculator-details) .formula-box {
   background: #2e3326;
   color: #eef3e5;
   border-color: #5c674b;
   border-left-color: var(--lime);
 }
-.calculator-output .formula-box > .eyebrow {
+:is(.calculator-output, .calculator-details) .formula-box > .eyebrow {
   color: var(--lime);
 }
 .result-actions {
@@ -1332,7 +1332,7 @@ summary::-webkit-details-marker {
   font-size: 13px;
   margin: 5px 0 0;
 }
-.calculator-output .data-note p {
+:is(.calculator-output, .calculator-details) .data-note p {
   color: inherit;
 }
 .surface-choices {
@@ -1502,15 +1502,15 @@ caption {
   font-size: 13px;
   color: var(--muted);
 }
-.calculator-output table th,
-.calculator-output table td {
+:is(.calculator-output, .calculator-details) table th,
+:is(.calculator-output, .calculator-details) table td {
   border-color: #5d6851;
 }
-.calculator-output thead {
+:is(.calculator-output, .calculator-details) thead {
   background: #2c3423;
   color: var(--lime);
 }
-.calculator-output caption {
+:is(.calculator-output, .calculator-details) caption {
   color: #c7cebb;
 }
 .ad-slot {
@@ -2128,7 +2128,7 @@ caption {
     background: white;
     color: black;
   }
-  .calculator-output p,
+  :is(.calculator-output, .calculator-details) p,
   .metrics dt,
   .metrics dd,
   .metrics dd small {
@@ -2147,7 +2147,7 @@ caption {
     font-size: 24px;
   }
   .formula-box,
-  .calculator-output .formula-box {
+  :is(.calculator-output, .calculator-details) .formula-box {
     font-size: 10px;
     padding: 10px;
     margin: 15px 0;
@@ -2159,10 +2159,10 @@ caption {
   .formula-box code {
     font-size: 10px;
   }
-  .calculator-output .formula-box > .eyebrow {
+  :is(.calculator-output, .calculator-details) .formula-box > .eyebrow {
     color: black;
   }
-  .calculator-output .panel-heading {
+  :is(.calculator-output, .calculator-details) .panel-heading {
     margin: 15px 0;
   }
   .status-dot {
@@ -2558,47 +2558,47 @@ caption {
   max-height: clamp(240px, calc(100svh - 260px), 440px);
   overflow: auto;
 }
-.calculator-output .panel-heading {
+:is(.calculator-output, .calculator-details) .panel-heading {
   margin-bottom: 12px;
 }
-.calculator-output .empty-result {
+:is(.calculator-output, .calculator-details) .empty-result {
   padding: 0;
   text-align: left;
 }
-.calculator-output .empty-result .shape-diagram {
+:is(.calculator-output, .calculator-details) .empty-result .shape-diagram {
   max-width: 120px;
   margin: 0 auto 8px;
 }
-.calculator-output .empty-result h3 {
+:is(.calculator-output, .calculator-details) .empty-result h3 {
   font-size: 23px;
   margin-bottom: 8px;
 }
-.calculator-output .empty-result p {
+:is(.calculator-output, .calculator-details) .empty-result p {
   font-size: 13px;
   margin: 0 0 10px;
   max-width: none;
 }
-.calculator-output .empty-rule {
+:is(.calculator-output, .calculator-details) .empty-rule {
   padding-top: 10px;
 }
-.calculator-output .output-note {
+:is(.calculator-output, .calculator-details) .output-note {
   margin-top: 12px;
   gap: 10px;
 }
-.calculator-output .metrics > div {
+:is(.calculator-output, .calculator-details) .metrics > div {
   padding: 10px 0;
 }
-.calculator-output .primary-metric dd {
+:is(.calculator-output, .calculator-details) .primary-metric dd {
   font-size: clamp(30px, 3.4vw, 46px);
 }
-.calculator-output .estimate-note {
+:is(.calculator-output, .calculator-details) .estimate-note {
   margin: 9px 0;
 }
-.calculator-output .result-explanation {
+:is(.calculator-output, .calculator-details) .result-explanation {
   margin: 10px 0;
   border-top: 1px solid #58624a;
 }
-.calculator-output .result-explanation > summary {
+:is(.calculator-output, .calculator-details) .result-explanation > summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2607,22 +2607,22 @@ caption {
   font-weight: 600;
   color: #eef3e5;
 }
-.calculator-output .result-explanation > summary::after {
+:is(.calculator-output, .calculator-details) .result-explanation > summary::after {
   content: '+';
   font-size: 18px;
 }
-.calculator-output .result-explanation[open] > summary::after {
+:is(.calculator-output, .calculator-details) .result-explanation[open] > summary::after {
   content: '−';
 }
-.calculator-output .result-actions {
+:is(.calculator-output, .calculator-details) .result-actions {
   margin-top: 8px;
 }
-.calculator-output .conversion-diagram {
+:is(.calculator-output, .calculator-details) .conversion-diagram {
   padding: 12px;
   margin: 0 0 10px;
   font-size: 14px;
 }
-.calculator-output .input-hint:empty {
+:is(.calculator-output, .calculator-details) .input-hint:empty {
   display: none;
 }
 .home-hero {
@@ -2891,22 +2891,22 @@ caption {
     padding: 12px 14px;
     max-height: 300px;
   }
-  .calculator-output .empty-result .shape-diagram,
-  .calculator-output .output-note,
-  .calculator-output .empty-rule {
+  :is(.calculator-output, .calculator-details) .empty-result .shape-diagram,
+  :is(.calculator-output, .calculator-details) .output-note,
+  :is(.calculator-output, .calculator-details) .empty-rule {
     display: none;
   }
-  .calculator-output .panel-heading {
+  :is(.calculator-output, .calculator-details) .panel-heading {
     margin-bottom: 6px;
   }
-  .calculator-output .empty-result h3 {
+  :is(.calculator-output, .calculator-details) .empty-result h3 {
     font-size: 20px;
   }
-  .calculator-output .empty-result p {
+  :is(.calculator-output, .calculator-details) .empty-result p {
     margin-bottom: 0;
     font-size: 12px;
   }
-  .calculator-output .primary-metric dd {
+  :is(.calculator-output, .calculator-details) .primary-metric dd {
     font-size: 32px;
   }
   .home-hero {
@@ -3021,10 +3021,10 @@ caption {
     max-height: none;
     overflow: visible;
   }
-  .calculator-output details > :not(summary) {
+  :is(.calculator-output, .calculator-details) details > :not(summary) {
     display: block !important;
   }
-  .calculator-output details > summary {
+  :is(.calculator-output, .calculator-details) details > summary {
     display: none;
   }
   .nav-mobile-toggle {
@@ -3328,7 +3328,7 @@ caption {
   .calculator-output {
     padding-top: 8px;
   }
-  .calculator-output .panel-heading {
+  :is(.calculator-output, .calculator-details) .panel-heading {
     margin-bottom: 4px;
   }
   .workspace-attributes {
@@ -3337,5 +3337,118 @@ caption {
   .calculator-inputs .form-actions {
     padding-top: 6px;
     padding-bottom: 6px;
+  }
+}
+
+/* Expanded explanations occupy their own row, keeping the main workspace compact. */
+.calculator-details {
+  grid-column: 1 / -1;
+  min-width: 0;
+  padding: 10px 20px 16px;
+  background: var(--ink);
+  color: white;
+  border-top: 1px solid #58624a;
+}
+.calculator-details p {
+  color: #c7cebb;
+}
+.calculator-details .secondary-metrics .metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px 24px;
+}
+.calculator-details .metrics > div dd {
+  font-size: 24px;
+}
+.result-measurements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  padding: 8px 0;
+  font-size: 12px;
+  color: #d6ddca;
+}
+.result-measurements button {
+  padding: 5px 0;
+  background: none;
+  color: white;
+  border: 0;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.home-section {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+.section-title {
+  margin-bottom: 30px;
+}
+.article-contents {
+  display: none;
+}
+.prose h2[id] {
+  scroll-margin-top: 20px;
+}
+.page-shortcuts a {
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 8px 0;
+}
+@media (max-width: 760px) {
+  .calculator-details {
+    padding: 8px 14px 12px;
+  }
+  .calculator-details .secondary-metrics .metrics {
+    grid-template-columns: 1fr;
+  }
+  .home-section {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .section-title {
+    margin-bottom: 24px;
+  }
+  .article-contents {
+    display: block;
+    border: 1px solid var(--line);
+    background: var(--cream);
+    padding: 10px 14px;
+  }
+  .article-contents > summary {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .article-contents > summary::after {
+    content: ' +';
+  }
+  .article-contents[open] > summary::after {
+    content: ' −';
+  }
+  .article-contents nav a {
+    display: block;
+    padding: 9px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    text-decoration: underline;
+  }
+  .article-sidebar {
+    display: none;
+  }
+}
+@media print {
+  .article-contents {
+    display: none;
+  }
+  .calculator-details {
+    background: white;
+    color: black;
+  }
+  .calculator-details p {
+    color: black;
   }
 }
