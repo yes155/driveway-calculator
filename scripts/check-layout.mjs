@@ -228,7 +228,9 @@ try {
   await tab.goto(origin, { waitUntil: 'networkidle0' });
   await tab.screenshot({ path: path.join(screenshots, 'home-full-1280.png'), fullPage: true });
   await tab.$eval('.site-footer', (el) => el.scrollIntoView({ behavior: 'instant', block: 'end' }));
-  await tab.screenshot({ path: path.join(screenshots, 'footer-1280.png') });
+  await (
+    await tab.$('.site-footer')
+  ).screenshot({ path: path.join(screenshots, 'footer-1280.png') });
   await tab.setViewport({ width: 360, height: 740 });
   await tab.goto(origin, { waitUntil: 'networkidle0' });
   await tab.$eval('.site-footer', (el) => el.scrollIntoView({ behavior: 'instant', block: 'end' }));
@@ -236,7 +238,9 @@ try {
     await tab.$eval('.site-footer', (el) => el.scrollWidth <= innerWidth),
     'Footer fits phone width.',
   );
-  await tab.screenshot({ path: path.join(screenshots, 'footer-360.png') });
+  await (
+    await tab.$('.site-footer')
+  ).screenshot({ path: path.join(screenshots, 'footer-360.png') });
   assert.equal(failures.length, 0, JSON.stringify(failures, null, 2));
   console.log(
     `Verified ${observations.length} page/viewport placements, cost submission and collapsed-required-field validation.`,

@@ -28,7 +28,7 @@ const groups = [
       ['Material weights', '/material-weights/'],
       ['About Driveway Calculators', '/about/'],
       ['Author: Farrukh Abdullah', '/author/farrukh-abdullah/'],
-      ['Contact & corrections', '/contact/'],
+      ['Contact', '/contact/'],
     ],
   },
 ];

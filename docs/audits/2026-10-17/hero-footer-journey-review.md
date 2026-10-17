@@ -39,3 +39,7 @@ Typecheck, 169 existing tests, source/research validation and static export chec
 Private Sites deployment must use the exact pushed GitHub branch source. The preview audience, noindex controls, public launch flags and disabled leads/ads remain unchanged. No release approval is recorded by this work.
 
 The first expanded CI run recorded 200 page/viewport observations. All new interactions passed; the 360×740 homepage continuation exceeded the fold by 31 px, and the tar-and-chip cost result by 10 px. The homepage heading/intro and result whitespace were shortened; mobile calculator spacing was tightened. Assertions were retained. Footer screenshots use immediate scrolling so the capture records the footer rather than an unfinished smooth-scroll animation. See the final branch CI artifact for the rerun evidence.
+
+## Remaining trust and usability work
+
+The existing Contact page explicitly awaits a verified publisher contact method. The footer retains its Contact link without claiming an active corrections channel. A verified contact destination and any independent reviewer appointment require genuine owner-provided details before launch. No address, form delivery, certification or approval has been invented. Direct area/volume input, more measurement illustrations and manual keyboard/zoom checks remain separate future improvements.
