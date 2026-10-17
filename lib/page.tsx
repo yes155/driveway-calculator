@@ -64,6 +64,8 @@ export async function renderPage(url: string) {
     guideLow = verifiedValue(guidePrice?.installedLow),
     guideHigh = verifiedValue(guidePrice?.installedHigh);
   const related = page.related.map((r) => ({ ...r, destination: getPage(r.slug) }));
+  const nextCalculator =
+    !kind && !guideEstimator ? related.find((item) => toolFor(item.destination.seq)) : undefined;
   const material =
     page.seq === 22
       ? 'asphalt millings'
@@ -148,6 +150,14 @@ export async function renderPage(url: string) {
           )}
         </div>
       </header>
+      {nextCalculator && (
+        <div className="guide-next-action">
+          <span className="eyebrow">Next step</span>
+          <Link href={nextCalculator.destination.url}>
+            {nextCalculator.destination.h1} <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
+      )}
       {guideEstimator && guideLow !== null && guideHigh !== null && guidePrice && (
         <GuideQuickEstimate
           surfaceLabel={guideEstimator.label}

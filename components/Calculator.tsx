@@ -14,6 +14,7 @@ import { track } from '@/lib/analytics';
 import { FormulaBox, ResultCard } from './Modules';
 import ShapeDiagram from './ShapeDiagram';
 import QuoteCTA from './QuoteCTA';
+import { computeArea } from '@/lib/calc';
 import { initialToolState, priceBook, hasPrice, sealcoatPresets, defaultBook } from '@/lib/data';
 const human = (text: string) => text.replace(/-/g, ' ').replace(/^./, (x) => x.toUpperCase());
 type Props = { kind: ToolKind; slug: string; surface?: string; material?: string };
@@ -27,6 +28,7 @@ export default function Calculator({
   const [result, setResult] = useState<ToolResult | null>(null);
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
+  const [expandedInputs, setExpandedInputs] = useState(false);
   const id = useId();
   const outputRef = useRef<HTMLDivElement>(null);
   const currentPrice = priceBook[surface];
@@ -44,7 +46,8 @@ export default function Calculator({
               ? 'asphaltDensity'
               : null;
   useEffect(() => {
-    const raw = new URLSearchParams(location.search).get('inputs');
+    const params = new URLSearchParams(location.search);
+    const raw = params.get('inputs');
     if (raw)
       try {
         const shared = restoreState(raw);
@@ -53,6 +56,28 @@ export default function Calculator({
       } catch (e) {
         setError(e instanceof Error ? e.message : 'Invalid shared inputs.');
       }
+    else if (params.has('length') && params.has('width') && kind !== 'converter') {
+      try {
+        const length = params.get('length')!,
+          width = params.get('width')!;
+        computeArea([
+          {
+            length: Number(length),
+            startWidth: Number(width),
+            endWidth: Number(width),
+            grade: 0,
+            measured: 'flat',
+          },
+        ]);
+        setState((current) => ({
+          ...current,
+          sections: [{ ...current.sections[0], length, width }],
+        }));
+        // Only measurements transfer. Material inputs and scope still need checking.
+      } catch {
+        setError('The transferred measurements are invalid. Enter your dimensions below.');
+      }
+    }
   }, [kind, surface]);
   function change(next: ToolState) {
     setState(next);
@@ -181,7 +206,8 @@ export default function Calculator({
         aria-label="Calculator inputs"
       >
         <div
-          className="calculator-fields"
+          id={id + '-fields'}
+          className={'calculator-fields' + (expandedInputs ? ' inputs-expanded' : '')}
           role="group"
           tabIndex={0}
           aria-label="Measurements and assumptions; scroll for more inputs"
@@ -731,7 +757,17 @@ export default function Calculator({
             {error}
           </p>
         )}
-        <p className="input-scroll-note">Scroll inside the form for more inputs and settings ↕</p>
+        <div className="input-scroll-note">
+          <span>{expandedInputs ? 'All inputs visible' : 'More inputs and settings ↕'}</span>
+          <button
+            type="button"
+            aria-expanded={expandedInputs}
+            aria-controls={id + '-fields'}
+            onClick={() => setExpandedInputs(!expandedInputs)}
+          >
+            {expandedInputs ? 'Compact view' : 'Show all inputs'}
+          </button>
+        </div>
         <div className="form-actions" aria-label="Calculation actions">
           <button className="button primary" type="submit">
             {cost

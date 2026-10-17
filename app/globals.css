@@ -3087,3 +3087,228 @@ caption {
     display: none;
   }
 }
+
+/* Task routes and truthful access information stay close to the first action. */
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  padding: 0;
+  margin: 0 0 16px;
+  list-style: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+.hero-trust li::before,
+.footer-trust li::before {
+  content: '✓';
+  margin-right: 6px;
+  color: #396500;
+}
+.hero-trust a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.hero-method-link {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+.hero-next-choice {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.hero-next-choice select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+}
+.hero-area-next a {
+  display: flex;
+  justify-content: space-between;
+  min-height: 44px;
+  margin: 6px 0;
+  padding: 6px 10px;
+  background: var(--lime);
+  border: 1px solid var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+}
+.hero-next-disabled {
+  display: block;
+  font-size: 12px;
+  padding: 8px 0;
+}
+.input-scroll-note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.input-scroll-note button {
+  flex-shrink: 0;
+  padding: 5px 0;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--ink);
+}
+.calculator-fields.inputs-expanded {
+  max-height: none;
+  overflow: visible;
+}
+.calculator-output {
+  max-height: none;
+  overflow: visible;
+}
+.site-footer {
+  padding-bottom: 0;
+}
+.footer-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #41463a;
+  margin-bottom: 28px;
+}
+.footer-intro p {
+  margin: 10px 0 0;
+  max-width: 480px;
+  color: #c3c9b8;
+  font-size: 14px;
+}
+.footer-trust {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  line-height: 2;
+}
+.footer-trust li::before {
+  color: var(--lime);
+}
+.footer-main {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+.footer-main nav h2 {
+  color: var(--lime);
+  margin: 0 0 16px;
+  font-size: 11px;
+}
+.footer-main nav a {
+  display: block;
+  width: fit-content;
+  font-size: 14px;
+  padding: 7px 0;
+}
+.footer-scope {
+  color: #c3c9b8;
+  font-size: 12px;
+  line-height: 1.6;
+  max-width: 760px;
+  margin: 28px 0 0;
+}
+.footer-bottom {
+  margin-top: 22px;
+}
+.footer-bottom nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+@media (max-width: 760px) {
+  .hero-trust {
+    grid-row: 3;
+    margin: 0;
+    gap: 5px 12px;
+    font-size: 11px;
+  }
+  .hero-area-check {
+    grid-row: 4;
+  }
+  .hero-description {
+    grid-row: 5;
+  }
+  .hero-actions {
+    grid-row: 6;
+  }
+  .hero-method-link {
+    grid-row: 7;
+    margin: 0;
+    font-size: 11px;
+  }
+  .hero-next-choice {
+    font-size: 11px;
+    gap: 8px;
+  }
+  .hero-area-next a {
+    font-size: 12px;
+  }
+  .hero-area-check > p {
+    margin-bottom: 8px;
+  }
+  .hero-area-result {
+    padding: 8px 12px;
+  }
+  .footer-intro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .footer-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    line-height: 1.5;
+  }
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 16px;
+  }
+  .footer-main nav:last-child {
+    grid-column: 1 / -1;
+  }
+  .footer-main nav a {
+    min-height: 40px;
+  }
+}
+.guide-next-action {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  max-width: fit-content;
+}
+.guide-next-action a {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 34px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.page-container:not(.tool-page) .article-layout {
+  margin-top: 32px;
+}

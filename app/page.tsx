@@ -111,6 +111,13 @@ export default function Home() {
             Driveway <br />
             Calculators.
           </h1>
+          <ul className="hero-trust" aria-label="Calculator access and transparency">
+            <li>Free to use</li>
+            <li>No login required</li>
+            <li>
+              <Link href="/methodology/">Formulas &amp; sources</Link>
+            </li>
+          </ul>
           <p className="hero-description">
             Calculate asphalt tons, concrete cubic yards, gravel quantities, and paver counts from
             your measurements. Use the cost estimators to budget an installed driveway.
@@ -123,11 +130,9 @@ export default function Home() {
               Estimate driveway cost <span aria-hidden="true">↗</span>
             </Link>
           </div>
-          <ul className="hero-attributes" aria-label="Calculator features">
-            <li>US units</li>
-            <li>Editable assumptions</li>
-            <li>Visible formulas</li>
-          </ul>
+          <p className="hero-method-link">
+            US units · Editable assumptions · Copy, print and share results
+          </p>
         </div>
         <HeroAreaCheck />
       </section>
