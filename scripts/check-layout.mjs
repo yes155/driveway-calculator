@@ -236,6 +236,41 @@ try {
   await tab.click('.input-scroll-note button');
   assert.equal(await tab.$eval('.calculator-fields', (el) => el.clientHeight), compactHeight);
   interactions.expandedInputs = 'passed';
+  // Regional indexes were assessed, but no compatible factor was adopted for these benchmarks.
+  await tab.$eval('.cost-settings', (el) => {
+    el.open = true;
+  });
+  assert.equal(await tab.$('select option[value="low"]'), null);
+  assert(
+    await tab.$eval('[data-price-basis]', (el) =>
+      el.textContent.includes('No regional adjustment'),
+    ),
+    'The supported price basis is visible without inactive regional choices.',
+  );
+  await tab.click('.cost-settings input[type="checkbox"]');
+  await tab.type('input[name="unitLow"]', '3');
+  await tab.type('input[name="unitHigh"]', '4');
+  await tab.click('.form-actions button[type="submit"]');
+  await tab.waitForFunction(() =>
+    document.querySelector('.primary-metric')?.textContent.includes('$1,200–$1,600'),
+  );
+  assert(
+    await tab.$eval('[data-price-basis]', (el) =>
+      el.textContent.includes('Your quoted unit rates'),
+    ),
+    'Quoted rates replace and are distinguished from the benchmark.',
+  );
+  await tab.screenshot({ path: path.join(screenshots, 'quoted-price-basis-1280.png') });
+  const methodLink = await tab.$eval('[data-price-basis] a', (el) => el.getAttribute('href'));
+  await tab.goto(origin + methodLink, { waitUntil: 'networkidle0' });
+  assert(
+    await tab.$eval('h2[id="section-how-are-regional-prices-handled"]', (el) =>
+      el.nextElementSibling.textContent.includes('no regional adjustment'),
+    ),
+    'The price-basis link reaches the methodology answer.',
+  );
+  await tab.goto(origin + '/asphalt-driveway-cost-calculator/', { waitUntil: 'networkidle0' });
+  interactions.priceBasisAndQuotedRates = 'passed';
   // Required fields inside a collapsed settings panel must reopen on validation.
   await tab.click('.form-actions button[type="button"]');
   await tab.type('input[name="section-0-length"]', '20');

@@ -1450,6 +1450,72 @@
       "publishedOn": null,
       "region": "US",
       "kind": "technical-guide"
+    },
+    {
+      "id": "regional-rsmeans-method",
+      "name": "Gordian RSMeans — City Cost Index methodology",
+      "url": "https://www.gordian.com/resources/city-cost-index-everything-need-know/",
+      "publisher": "Gordian RSMeans",
+      "retrievedOn": "2026-10-18",
+      "publishedOn": "2022-05-25",
+      "region": "US and Canadian cities",
+      "kind": "index publisher methodology",
+      "sourceRef": "turn4view1"
+    },
+    {
+      "id": "regional-rsmeans-2026",
+      "name": "Gordian RSMeans — 2026 cost book updates",
+      "url": "https://www.rsmeans.com/landing-pages/2026-rsmeans-cost-index",
+      "publisher": "Gordian RSMeans",
+      "retrievedOn": "2026-10-18",
+      "publishedOn": null,
+      "region": "US and Canadian cities",
+      "kind": "index publisher methodology",
+      "sourceRef": "turn8view1"
+    },
+    {
+      "id": "regional-enr-method",
+      "name": "Engineering News-Record — Using ENR Indexes",
+      "url": "https://www.enr.com/economics/faq",
+      "publisher": "Engineering News-Record",
+      "retrievedOn": "2026-10-18",
+      "publishedOn": null,
+      "region": "US national and tracked cities",
+      "kind": "index publisher methodology",
+      "sourceRef": "turn8view0"
+    },
+    {
+      "id": "regional-fhwa-method",
+      "name": "Federal Highway Administration — NHCCI frequently asked questions",
+      "url": "https://www.fhwa.dot.gov/policy/otps/nhcci/faq.cfm",
+      "publisher": "Federal Highway Administration",
+      "retrievedOn": "2026-10-18",
+      "publishedOn": "2021-03-25",
+      "region": "US state transportation department highway contracts",
+      "kind": "index publisher methodology",
+      "sourceRef": "turn4view2"
+    },
+    {
+      "id": "regional-bls-method",
+      "name": "Bureau of Labor Statistics — Regional indexes for new nonresidential building construction",
+      "url": "https://www.bls.gov/ppi/notices/2016/ppi-introduces-regional-indexes-for-new-nonresidential-building-construction.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "retrievedOn": "2026-10-18",
+      "publishedOn": "2016-12-14",
+      "region": "US Northeast, South, Midwest and West",
+      "kind": "index publisher methodology",
+      "sourceRef": "turn4view3"
+    },
+    {
+      "id": "regional-bea-method",
+      "name": "Bureau of Economic Analysis — Technical notes on regional price parities",
+      "url": "https://www.bea.gov/news/technical-notes-regional-price-parities-and-implicit-regional-price-deflators",
+      "publisher": "Bureau of Economic Analysis",
+      "retrievedOn": "2026-10-18",
+      "publishedOn": null,
+      "region": "US states and metropolitan areas",
+      "kind": "index publisher methodology",
+      "sourceRef": "turn6view0"
     }
   ],
   "observations": [
@@ -4697,11 +4763,22 @@
       "selectedHigh": null,
       "unit": "dimensionless multiplier",
       "sourceIds": [
-        "surfaces-rsmeans-cci"
+        "surfaces-rsmeans-cci",
+        "regional-rsmeans-method",
+        "regional-rsmeans-2026",
+        "regional-enr-method",
+        "regional-fhwa-method",
+        "regional-bls-method",
+        "regional-bea-method"
       ],
-      "selectionReason": "RSMeans CCI compares a standardized construction project, not driveway-specific low/average/high homeowner tiers. No justified universal multipliers found. Keep tiers unavailable; national benchmark uses identity1 only as arithmetic, not regional claim.",
-      "conflicts": [],
-      "researchGroup": "surfaces"
+      "selectionReason": "Expanded primary-source review on 2026-10-18: no compatible low/average/high driveway multipliers established for the selected publisher benchmarks. RSMeans is a conditional future location-data candidate; ENR/FHWA measure cost trends, BLS covers nonresidential price movements, and BEA covers consumer price levels. No source ratios were averaged or applied. Identity 1 means no adjustment, not an average-cost region.",
+      "conflicts": [
+        "The original cost-tier selector requirement remains deferred for lack of a compatible dataset and baseline mapping.",
+        "Construction-index publisher methodology is not independent validation of a driveway-specific numerical factor."
+      ],
+      "researchGroup": "surfaces",
+      "reviewedOn": "2026-10-18",
+      "evidenceFile": "data/research/regional-index-review.json"
     },
     {
       "item": "gravelDeliveredNationalTon",

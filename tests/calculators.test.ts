@@ -235,9 +235,7 @@ describe('The same engine drives page results and worked examples', () => {
     s.sections[0].length = '20';
     s.sections[0].width = '20';
     s.fields.tier = 'low';
-    const r = evaluateTool('cost', s);
-    expect(r.missing).toEqual(['asphalt']);
-    expect(r.metrics).toHaveLength(1);
+    expect(() => evaluateTool('cost', s)).toThrow(/regional price adjustment is unsupported/);
   });
   it('restores a shared input set and rejects malformed payloads', () => {
     const s = emptyState();

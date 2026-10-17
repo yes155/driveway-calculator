@@ -433,27 +433,17 @@ export default function Calculator({
               <summary>
                 Rates and additional work <span>Editable</span>
               </summary>
-              <label className="field">
-                <span>Price basis</span>
-                <select
-                  value={state.fields.tier ?? 'baseline'}
-                  onChange={(e) => field('tier', e.target.value)}
-                >
-                  <option value="baseline">Published benchmark · no regional adjustment</option>
-                  <option value="low" disabled>
-                    Low-cost region · index unavailable
-                  </option>
-                  <option value="average" disabled>
-                    Average-cost region · index unavailable
-                  </option>
-                  <option value="high" disabled>
-                    High-cost region · index unavailable
-                  </option>
-                </select>
-                <small>
-                  Baseline uses the published range unchanged. No regional multiplier is assumed.
-                </small>
-              </label>
+              <p className="benchmark-note" data-price-basis>
+                <strong>Price basis: </strong>
+                {kind !== 'compare' && state.fields.customRates === 'true'
+                  ? 'Your quoted unit rates'
+                  : kind === 'compare'
+                    ? 'Published benchmark for each surface'
+                    : 'Published benchmark'}
+                . No regional adjustment.{' '}
+                <a href="/methodology/#section-how-are-regional-prices-handled">Methodology</a>{' '}
+                explains regional pricing.
+              </p>
               {kind !== 'compare' && (
                 <>
                   <p className="benchmark-note">
@@ -985,10 +975,11 @@ export default function Calculator({
               <summary>Price basis and included work</summary>
               <p>
                 Price basis:{' '}
-                {state.fields.customRates === 'true'
+                {kind !== 'compare' && state.fields.customRates === 'true'
                   ? 'your quoted rates'
-                  : (state.fields.tier ?? 'baseline')}
-                . Removal: {state.fields.removal === 'true' ? 'included' : 'excluded'}. Base work:{' '}
+                  : 'published benchmark'}
+                . No regional adjustment. Removal:{' '}
+                {state.fields.removal === 'true' ? 'included' : 'excluded'}. Base work:{' '}
                 {state.fields.base === 'true' ? 'included' : 'excluded'}. Delivery:{' '}
                 {state.fields.delivery === 'true' ? 'included' : 'excluded'}.
               </p>
