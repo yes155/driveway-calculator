@@ -126,6 +126,7 @@ try {
           '/asphalt-driveway-cost-calculator/',
           '/paver-calculator/',
           '/asphalt-driveway-cost/',
+          '/asphalt-driveway-thickness/',
         ].includes(page.url)
       ) {
         await tab.screenshot({
@@ -226,11 +227,11 @@ try {
   );
   await tab.goto(origin, { waitUntil: 'networkidle0' });
   await tab.screenshot({ path: path.join(screenshots, 'home-full-1280.png'), fullPage: true });
-  await tab.$eval('.site-footer', (el) => el.scrollIntoView());
+  await tab.$eval('.site-footer', (el) => el.scrollIntoView({ behavior: 'instant', block: 'end' }));
   await tab.screenshot({ path: path.join(screenshots, 'footer-1280.png') });
   await tab.setViewport({ width: 360, height: 740 });
   await tab.goto(origin, { waitUntil: 'networkidle0' });
-  await tab.$eval('.site-footer', (el) => el.scrollIntoView());
+  await tab.$eval('.site-footer', (el) => el.scrollIntoView({ behavior: 'instant', block: 'end' }));
   assert(
     await tab.$eval('.site-footer', (el) => el.scrollWidth <= innerWidth),
     'Footer fits phone width.',

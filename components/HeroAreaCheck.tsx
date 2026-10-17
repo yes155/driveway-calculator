@@ -42,8 +42,8 @@ export default function HeroAreaCheck() {
         <span className="eyebrow">Quick area check</span>
         <span className="hero-area-unit">ft → ft²</span>
       </div>
-      <h2 id={id + '-heading'}>Measure a rectangular driveway</h2>
-      <p>Enter length and width. Choose your next calculation below.</p>
+      <h2 id={id + '-heading'}>Rectangular driveway area</h2>
+      <p>Enter length and width in feet.</p>
       <div className="hero-area-fields">
         <label htmlFor={id + '-length'}>
           Length <span>(ft)</span>

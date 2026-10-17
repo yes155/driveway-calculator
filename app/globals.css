@@ -3312,3 +3312,30 @@ caption {
 .page-container:not(.tool-page) .article-layout {
   margin-top: 32px;
 }
+.hero-area-heading {
+  margin-bottom: 12px;
+}
+.hero-area-fields {
+  margin-bottom: 10px;
+}
+.hero-area-result {
+  min-height: 108px;
+}
+@media (max-width: 760px) {
+  .hero-area-result {
+    min-height: 98px;
+  }
+  .calculator-output {
+    padding-top: 8px;
+  }
+  .calculator-output .panel-heading {
+    margin-bottom: 4px;
+  }
+  .workspace-attributes {
+    margin-bottom: 6px;
+  }
+  .calculator-inputs .form-actions {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
