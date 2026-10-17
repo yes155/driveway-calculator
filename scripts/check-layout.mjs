@@ -75,7 +75,7 @@ try {
                 'h1',
                 '.calculator-fields input[type="number"]',
                 '.form-actions button[type="submit"]',
-                '.calculator-output .panel-heading',
+                '.calculator-output .result-card',
               ];
       const checks = await tab.evaluate(
         (selectors) =>
@@ -134,6 +134,10 @@ try {
   await tab.click('.form-actions button[type="submit"]');
   await tab.waitForFunction(() =>
     document.querySelector('.primary-metric')?.textContent.includes('$2,800–$5,200'),
+  );
+  assert(
+    await tab.$eval('.primary-metric', (el) => el.getBoundingClientRect().bottom <= innerHeight),
+    'The calculated installed-cost range remains above the fold.',
   );
   await tab.screenshot({ path: path.join(screenshots, 'cost-calculated-1280x600.png') });
   // Required fields inside a collapsed settings panel must reopen on validation.

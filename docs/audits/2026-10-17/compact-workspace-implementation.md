@@ -15,7 +15,7 @@ Owner authorization: October 17, 2026, apply the screenshot/framework recommenda
 
 Stage 1: the shared example opening now states the engine-generated result for the existing illustrative inputs instead of saying that an engine generates an example. No price, default, formula or quantity was invented or changed.
 
-Stage 2 locks: for each existing `toolExample(kind, material, surface)`, the first metric value/unit/label is inserted unchanged in the bold first answer. Compare-mode answers use each existing comparison row's surface and low/high values. Existing example inputs, context, formula and complete metric list remain the source of truth; the explanatory formula and metrics are retained immediately below. The heading stays `What does a worked example look like?` and existing bridge destinations remain unchanged.
+Stage 2 locks: for each existing `toolExample(kind, material, surface)`, the task's primary existing metric value/unit/label is inserted unchanged in the bold first answer. Compare-mode example answers use each existing comparison row's surface and low/high values; the live result leads with the selected surface. Converter examples lead with the converted weight for the example's yards-to-tons direction. Existing example inputs, context, formula and complete metric list remain the source of truth; the explanatory formula and metrics are retained immediately below. The heading stays `What does a worked example look like?` and existing bridge destinations remain unchanged.
 
 Stage 3: supporting context is retained unchanged; no readability rewrite of locked quantities or external factual claims. This shared renderer correction does not retrospectively certify all page MDX or complete missing historical page locks.
 
@@ -24,10 +24,12 @@ Stage 4: existing unit tests, source/keyword validation and exported example com
 ## Verification contract
 
 - `scripts/check-export.ts` verifies the compact workspace marker, scrollable-input region and calculation actions on every full-calculator export, in addition to prior route/metadata/noindex/engine-example checks.
-- `scripts/check-layout.mjs` runs in GitHub CI using its existing Chrome. It measures the H1, first primary numeric input, Calculate action and result heading at 1280×600, 1366×620, 390×844 and 360×740. Homepage and quick-guide variants check their input, live result and detailed-tool CTA. It saves screenshots and raw placement records, exercises a 20×20 asphalt cost submission and confirms collapsed required quoted rates reopen on validation.
+- `scripts/check-layout.mjs` runs in GitHub CI using its existing Chrome. It measures the H1, first primary numeric input, Calculate action and initial result card at 1280×600, 1366×620, 390×844 and 360×740. Homepage and quick-guide variants check their input, live result and detailed-tool CTA. It saves screenshots and raw placement records, exercises a 20×20 asphalt cost submission and confirms collapsed required quoted rates reopen on validation.
 - These checks assert primary-control placement at the recorded sizes, not that all advanced fields and every supporting result fit every device. Larger input sets scroll inside the card while the action row remains outside that scroll area. Keyboard/zoom/manual accessibility remain distinct checks.
 - See the latest branch CI artifact `workspace-layout-checks` for actual results. Do not label a check passed before that run completes. Supported local browser control is unavailable in this session; no local browser was installed or improvised.
 
 ## Preserved release boundaries
 
 No URL, map phase, price/default record, author/reviewer approval, launch flag, lead activation or public audience change. The draft PR is not merged. Existing release gates remain in force.
+
+The initial CI run caught Calculate below the laptop fold and guide CTAs below the narrow-phone fold. Input-panel height and guide ordering were corrected; the viewport assertions were retained. Raw latest-run results remain authoritative.

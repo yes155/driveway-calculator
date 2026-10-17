@@ -23,6 +23,7 @@ jobs:
         with:
           name: workspace-layout-checks
           path: .layout-checks
+          include-hidden-files: true
           if-no-files-found: ignore
       - name: Mobile performance budgets
         run: npx lhci autorun

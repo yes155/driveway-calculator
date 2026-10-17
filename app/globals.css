@@ -2481,7 +2481,7 @@ caption {
   padding: 16px 20px 8px;
   overflow: auto;
   overscroll-behavior: contain;
-  max-height: clamp(165px, calc(100svh - 335px), 350px);
+  max-height: clamp(165px, calc(100svh - 400px), 350px);
   scrollbar-gutter: stable;
 }
 .calculator-fields:focus-visible {
@@ -2566,7 +2566,7 @@ caption {
   text-align: left;
 }
 .calculator-output .empty-result .shape-diagram {
-  max-width: 170px;
+  max-width: 120px;
   margin: 0 auto 8px;
 }
 .calculator-output .empty-result h3 {
@@ -2879,7 +2879,7 @@ caption {
   }
   .calculator-fields {
     padding: 10px 14px 5px;
-    max-height: clamp(145px, calc(100svh - 470px), 260px);
+    max-height: clamp(145px, calc(100svh - 610px), 210px);
   }
   .calculator-fields .panel-heading {
     margin-bottom: 6px;
@@ -3061,6 +3061,15 @@ caption {
 
 @media print {
   .calculator-inputs {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .guide-quick-intro {
+    display: block;
+  }
+  .guide-quick-intro .unit-badge {
     display: none;
   }
 }

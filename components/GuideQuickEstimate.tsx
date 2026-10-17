@@ -38,7 +38,7 @@ export default function GuideQuickEstimate({
       <div className="guide-quick-intro">
         <div>
           <span className="eyebrow">Quick budget / 01</span>
-          <h2 id={id + '-heading'}>Estimate {surfaceLabel} from your dimensions</h2>
+          <h2 id={id + '-heading'}>Quick budget estimate</h2>
           <p>
             Rectangular area only. The published installed range is {money(installedLow)}–
             {money(installedHigh)} per square foot.
@@ -84,10 +84,6 @@ export default function GuideQuickEstimate({
               </div>
             </label>
           </div>
-          <p className="guide-quick-caveat">
-            No demolition, additional base work, delivery, regional adjustment or product-specific
-            quantity is added. Check what the installed rate already includes.
-          </p>
         </div>
         <div className="guide-quick-result" aria-live="polite" aria-atomic="true">
           {result ? (
@@ -111,6 +107,10 @@ export default function GuideQuickEstimate({
         </p>
         <Link href={estimatorHref}>Open the detailed {surfaceLabel} estimator →</Link>
       </div>
+      <p className="guide-quick-caveat">
+        No demolition, additional base work, delivery, regional adjustment or product-specific
+        quantity is added. Check what the installed rate already includes.
+      </p>
     </section>
   );
 }
