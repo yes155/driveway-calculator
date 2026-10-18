@@ -1,44 +1,71 @@
-'use client';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+
+const groups = [
+  {
+    title: 'Calculators',
+    links: [
+      ['Asphalt tons', '/asphalt-calculator/'],
+      ['Concrete volume', '/concrete-calculator/'],
+      ['Gravel & base layers', '/gravel-driveway-calculator/'],
+      ['Pavers & bedding', '/paver-calculator/'],
+      ['All material calculators', '/#workbench'],
+    ],
+  },
+  {
+    title: 'Driveway costs',
+    links: [
+      ['Compare driveway costs', '/driveway-cost-calculator/'],
+      ['Asphalt cost guide', '/asphalt-driveway-cost/'],
+      ['Concrete cost guide', '/concrete-driveway-cost/'],
+      ['Gravel cost guide', '/gravel-driveway-cost/'],
+      ['Paver cost guide', '/paver-driveway-cost/'],
+    ],
+  },
+  {
+    title: 'About & help',
+    links: [
+      ['Methodology & sources', '/methodology/'],
+      ['Material weights', '/material-weights/'],
+      ['About Driveway Calculators', '/about/'],
+      ['Author: Farrukh Abdullah', '/author/farrukh-abdullah/'],
+      ['Contact', '/contact/'],
+    ],
+  },
+];
+
 export default function Footer() {
-  const home = usePathname() === '/';
   return (
-    <footer className={'site-footer' + (home ? ' footer-home' : '')}>
+    <footer className="site-footer">
       <div className="footer-main">
-        <div>
+        <div className="footer-brand-block">
           <Link href="/" className="footer-brand">
             Driveway Calculators
           </Link>
-          <p>
-            Driveway cost guides and material calculators.
-            <br />
-            US units. Formulas you can inspect.
+          <p>Driveway cost estimates and material quantities in US units.</p>
+          <p className="footer-planning-note">
+            Planning estimates. Confirm site conditions and work scope locally.
           </p>
         </div>
-        <div>
-          <span className="eyebrow">Tools</span>
-          <Link href="/asphalt-calculator/">Asphalt Calculator</Link>
-          <Link href="/gravel-driveway-calculator/">Gravel Driveway Calculator</Link>
-          <Link href="/concrete-calculator/">Concrete Calculator</Link>
-        </div>
-        <div>
-          <span className="eyebrow">About the site</span>
-          <Link href="/methodology/">Methodology</Link>
-          <Link href="/author/farrukh-abdullah/">Farrukh Abdullah</Link>
-          <Link href="/contact/">Contact</Link>
-        </div>
+        {groups.map((group) => (
+          <nav key={group.title} aria-label={group.title}>
+            <h2>{group.title}</h2>
+            <ul>
+              {group.links.map(([label, href]) => (
+                <li key={href}>
+                  <Link href={href}>{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))}
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getUTCFullYear()} Driveway Calculators</span>
-        <div>
+        <nav aria-label="Site policies">
           <Link href="/privacy/">Privacy</Link>
           <Link href="/terms/">Terms</Link>
           <Link href="/disclosure/">Disclosure</Link>
-        </div>
-      </div>
-      <div className="footer-watermark" aria-hidden="true">
-        Driveway<span>Calculators.</span>
+        </nav>
       </div>
     </footer>
   );

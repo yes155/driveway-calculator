@@ -168,28 +168,23 @@
     "sections": [
       {
         "question": "How much does a concrete driveway cost?",
-        "answer": "**The cost of concrete driveway installation starts with area multiplied by an installed square-foot range**, rather than the delivered concrete price alone.",
-        "text": "HomeGuide’s standard range is $6–$10 per square foot. Concrete Network lists plain gray concrete at $5–$8, while Angi separates plain finishes at $6–$8 from broom finishes at $8–$12. These scopes differ; Driveway Calculators uses HomeGuide’s named standard benchmark without averaging them. Compare the concrete slab, slab thickness, reinforcement, formwork, finish, control joints, and subbase described in each proposal."
+        "answer": "HomeGuide’s standard gray concrete driveway benchmark is $6–$10 per square foot installed.",
+        "text": "Concrete Network lists plain gray concrete at $5–$8, while Angi separates plain finishes at $6–$8 from broom finishes at $8–$12. These scopes differ; Driveway Calculators uses HomeGuide’s named standard benchmark without averaging them. A “cement driveway” refers to the same concrete installation scope in this guide."
       },
       {
-        "question": "How much is a concrete driveway per square foot?",
-        "answer": "**The price per square foot includes installation work**, whereas a price per cubic yard describes the ready-mix material.",
-        "text": "Slab thickness changes cubic yards. Rebar and wire mesh describe reinforcement; the quote identifies the reinforcement specified for the job. Ask whether formwork, subbase preparation, curing, sealing, and hauling are included. Our [concrete driveway cost calculator](/concrete-driveway-cost-calculator/) applies measurements to the selected price range and reports quantity separately."
+        "question": "Which work does the installed rate cover?",
+        "answer": "The installed rate covers concrete placement and finishing; the quote identifies the rest of the job scope.",
+        "text": "Compare the cost of concrete driveway work using the slab thickness, reinforcement, formwork, finish, control joints and subbase in each proposal. Ask whether subbase preparation, curing, sealing and hauling are included. Rebar and wire mesh describe reinforcement; the quote identifies the reinforcement specified for the job. The [Concrete Driveway Cost Calculator](/concrete-driveway-cost-calculator/) applies your measured area to the selected installed rate."
       },
       {
-        "question": "How much does it cost to cement a driveway?",
-        "answer": "**A cement driveway uses concrete; cement is an ingredient of the finished material.**",
-        "text": "The questions “How much to cement a driveway?” and “How much does a cement driveway cost?” refer to this same installation scope. How much does it cost to pour a concrete driveway? The installed benchmark includes the pour and finishing, rather than just the truck’s concrete. The [stamped concrete driveway cost guide](/stamped-concrete-driveway-cost/) prices pattern and color separately from a plain finish."
-      },
-      {
-        "question": "How much does it cost to replace a concrete driveway?",
-        "answer": "**Replacement combines removal with a new slab**, unless the contractor’s installed quote already includes demolition.",
-        "text": "The [concrete replacement cost guide](/replace-concrete-driveway-cost/) explains demolition, disposal, and the new pour. The [concrete versus asphalt comparison](/concrete-vs-asphalt-driveway/) compares the surface options under stated maintenance and lifespan assumptions."
+        "question": "How does replacement change the project total?",
+        "answer": "Replacement adds demolition and disposal to the new-concrete installation scope when those charges are excluded from the installation quote.",
+        "text": "The [Cost to Replace a Concrete Driveway](/replace-concrete-driveway-cost/) explains demolition, disposal, and the new pour. The [Concrete vs Asphalt Driveway](/concrete-vs-asphalt-driveway/) compares the surface options under stated maintenance and lifespan assumptions. The [Stamped Concrete Driveway Cost](/stamped-concrete-driveway-cost/) separates pattern and color pricing from a plain finish."
       },
       {
         "question": "Can I pour my own concrete driveway?",
-        "answer": "**A driveway pour requires measurement, prepared support, placement, finishing, and curing.**",
-        "text": "Confirm the concrete specification and crew before ordering. Verify the subbase, reinforcement, control joints, and delivery access with the installer. Use the engine-generated worked example below to inspect area, cubic yards, and the estimate range."
+        "answer": "Yes, but a concrete driveway requires placement and finishing skills; Concrete Network recommends professional installation.",
+        "text": "Its DIY guide identifies drainage, subgrade preparation, formwork, jointing and curing as responsibilities the owner takes on. Confirm the concrete specification, site access and crew before ordering.\n\nThe fixed 20 × 20 ft example below shows area and installed cost. The [Concrete Calculator](/concrete-calculator/) uses area and slab thickness to calculate cubic yards separately."
       }
     ],
     "sourceIds": [

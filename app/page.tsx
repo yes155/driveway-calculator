@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { pages, getPage } from '@/lib/content';
 import { pageMetadata } from '@/lib/page';
 import { breadcrumbs, JsonLd } from '@/lib/seo';
-import HeroCollage from '@/components/HeroCollage';
+import HeroAreaCheck from '@/components/HeroAreaCheck';
 import MaterialGraphic from '@/components/MaterialGraphic';
 export const metadata = pageMetadata('/');
 const featured = [
@@ -47,25 +47,25 @@ const materials = [
   {
     key: 'asphalt' as const,
     label: 'Asphalt',
-    line: 'Thickness. Tonnage. Base work.',
+    line: 'Installed paving costs, thickness and base preparation.',
     href: '/asphalt-driveway-cost/',
   },
   {
     key: 'concrete' as const,
     label: 'Concrete',
-    line: 'Volume. Finish. Reinforcement.',
+    line: 'Installed concrete pricing, surface finish and scope.',
     href: '/concrete-driveway-cost/',
   },
   {
     key: 'gravel' as const,
     label: 'Gravel',
-    line: 'Layers. Material weight. Delivery.',
+    line: 'Gravel surface and base costs by project area.',
     href: '/gravel-driveway-cost/',
   },
   {
     key: 'paver' as const,
     label: 'Pavers',
-    line: 'Paver size. Base. Bedding sand.',
+    line: 'Installed paver prices, material choice and base work.',
     href: '/paver-driveway-cost/',
   },
 ];
@@ -105,107 +105,44 @@ export default function Home() {
   return (
     <>
       <section className="home-hero">
-        <div className="hero-halo" aria-hidden="true" />
         <div className="hero-copy">
-          <span className="eyebrow hero-kicker">
-            <span className="accent-dot" />
-            Your driveway, worked out.
-          </span>
+          <span className="eyebrow hero-kicker">Free driveway planning tools</span>
           <h1>
-            Driveway
-            <br />
-            <em>Calculators.</em>
+            Driveway <br />
+            Calculators.
           </h1>
+          <ul className="hero-trust" aria-label="Calculator access and transparency">
+            <li>Free to use</li>
+            <li>No login required</li>
+            <li>
+              <Link href="/methodology/">Formulas &amp; sources</Link>
+            </li>
+          </ul>
           <p className="hero-description">
-            Your measurements. Your materials. The math in view.
-            <br />
-            Free tools for asphalt, concrete, gravel, and pavers.
+            Calculate asphalt tons, concrete cubic yards, gravel quantities, and paver counts from
+            your measurements. Use the cost estimators to budget an installed driveway.
           </p>
           <div className="hero-actions">
             <Link href="#workbench" className="button primary">
-              Calculate material <span aria-hidden="true">↗</span>
+              Browse material calculators <span aria-hidden="true">↗</span>
             </Link>
             <Link href="/driveway-cost-calculator/" className="button secondary">
-              Estimate project cost <span aria-hidden="true">↗</span>
+              Estimate driveway cost <span aria-hidden="true">↗</span>
             </Link>
           </div>
-          <div className="hero-materials" aria-label="Choose your driveway material">
-            {[
-              { label: 'Asphalt', href: '/asphalt-calculator/' },
-              { label: 'Concrete', href: '/concrete-calculator/' },
-              { label: 'Gravel', href: '/gravel-driveway-calculator/' },
-              { label: 'Pavers', href: '/paver-calculator/' },
-            ].map((m) => (
-              <Link href={m.href} key={m.label}>
-                {m.label}
-              </Link>
-            ))}
-          </div>
-          <p className="hero-footnote">
-            US units <span>·</span> Editable inputs <span>·</span> No sign-up
+          <p className="hero-method-link">
+            US units · Editable assumptions · Copy, print and share results
           </p>
         </div>
-        <HeroCollage />
-        <span className="hero-handwritten" aria-hidden="true">
-          a little planning.
-          <br />a clearer order. ↗
-        </span>
-      </section>
-      <section className="project-intro section-wrap">
-        <div className="planning-list">
-          <div className="planning-row">
-            <span className="step-check" aria-hidden="true">
-              ✓
-            </span>
-            Measure each section <span>01</span>
-          </div>
-          <div className="planning-row">
-            <span className="step-check" aria-hidden="true">
-              ✓
-            </span>
-            Choose your material <span>02</span>
-          </div>
-          <div className="planning-row planning-active">
-            <span className="step-check" aria-hidden="true">
-              ↗
-            </span>
-            See the quantity and formula <span>03</span>
-          </div>
-          <div className="planning-row">
-            <span className="step-check" aria-hidden="true">
-              ✓
-            </span>
-            Check the supplier values <span>04</span>
-          </div>
-          <Link className="planning-link" href="/methodology/">
-            The calculation method <span aria-hidden="true">↗</span>
-          </Link>
-        </div>
-        <div className="intro-copy">
-          <span className="eyebrow">Start with the measurements</span>
-          <h2>
-            One project.
-            <br />
-            Every input,
-            <br />
-            <mark>in view.</mark>
-          </h2>
-          <p>
-            From the first measurement to material quantities. Keep the dimensions, density,
-            allowances, and formula together.
-          </p>
-          <span className="handwritten">measure first. order second.</span>
-        </div>
+        <HeroAreaCheck />
       </section>
       <section className="home-section workbench-section" id="workbench">
         <div className="section-title">
-          <span className="eyebrow">Meet your workbench</span>
-          <h2>
-            Your material.
-            <br />
-            <mark>Your calculator.</mark>
-          </h2>
-          <p>Pick a tool. Enter your measurements. Inspect the result.</p>
+          <span className="eyebrow">Material quantity calculators</span>
+          <h2>Calculate the material you need</h2>
+          <p>
+            Choose a surface to calculate quantities in short tons, cubic yards, pavers, or gallons.
+          </p>
         </div>
         <div className="tool-bento">
           {featured.map((f) => {
@@ -228,92 +165,13 @@ export default function Home() {
           })}
         </div>
       </section>
-      <section className="home-section steps-section">
-        <div className="section-title">
-          <span className="eyebrow">A calculation you can follow</span>
-          <h2>
-            Measure. Enter.
-            <br />
-            <mark>Understand.</mark>
-          </h2>
-        </div>
-        <div className="process-grid">
-          <div className="process-card">
-            <span className="process-number">01</span>
-            <h3>Map the area.</h3>
-            <p>
-              Enter length and width. Add sections for an irregular driveway, or use different end
-              widths for a taper.
-            </p>
-            <span className="process-equation">L × W → ft²</span>
-          </div>
-          <div className="process-card">
-            <span className="process-number">02</span>
-            <h3>Set the inputs.</h3>
-            <p>
-              Enter your depth and allowances. Use supplier density or product-label yield and
-              coverage.
-            </p>
-            <span className="process-equation">Area × depth → volume</span>
-          </div>
-          <div className="process-card">
-            <span className="process-number">03</span>
-            <h3>Read the result.</h3>
-            <p>
-              See quantities, purchase rounding, and the formula. Copy, print, or share the
-              calculation.
-            </p>
-            <span className="process-equation">Volume × density → weight</span>
-          </div>
-        </div>
-      </section>
-      <div className="lime-ticker" aria-label="Calculator features">
-        <span>
-          US units <b aria-hidden="true">✳</b> Your supplier values <b aria-hidden="true">✳</b>{' '}
-          Visible formulas <b aria-hidden="true">✳</b> Separate layers <b aria-hidden="true">✳</b>{' '}
-          Copy. Print. Share.
-        </span>
-      </div>
-      <section className="purpose-section">
-        <span className="eyebrow">The method behind the number</span>
-        <h2>
-          Every measurement.
-          <br />
-          Every allowance.
-          <br />
-          <mark>Out in the open.</mark>
-        </h2>
-        <p>
-          The tools show the math behind the result. Material density, yield, and coverage follow
-          the values you supply.
-        </p>
-        <Link href="/methodology/" className="button primary">
-          Explore the method <span aria-hidden="true">↗</span>
-        </Link>
-        <span className="purpose-formula formula-left" aria-hidden="true">
-          ft² × in
-          <br />
-          <strong>÷ 12 ÷ 27</strong>
-          <span>cubic yards</span>
-        </span>
-        <span className="purpose-formula formula-right" aria-hidden="true">
-          yd³ × density
-          <br />
-          <strong>= short tons</strong>
-          <span>supplier values</span>
-        </span>
-      </section>
       <section className="home-section surface-section" id="surfaces">
         <div className="section-title">
-          <span className="eyebrow">Plan by surface</span>
-          <h2>
-            Different materials.
-            <br />
-            <mark>Different inputs.</mark>
-          </h2>
+          <span className="eyebrow">Driveway cost research</span>
+          <h2>Driveway costs by surface</h2>
           <p>
-            Explore the matching cost guide for your surface. Each published benchmark includes its
-            source and scope.
+            Read the installed-price basis, scope and cost drivers for asphalt, concrete, gravel, or
+            pavers before comparing quotes.
           </p>
         </div>
         <div className="surface-gallery">
@@ -332,29 +190,75 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <section className="home-section steps-section" id="how-it-works">
+        <div className="section-title">
+          <span className="eyebrow">How the numbers work</span>
+          <h2>How are driveway material quantities calculated?</h2>
+          <p>
+            Dimensions give the area. Depth gives the volume. Material density, product yield, or
+            coverage converts that volume or area into an ordering quantity.
+          </p>
+        </div>
+        <div className="process-grid">
+          <div className="process-card">
+            <span className="process-number">01 / Area</span>
+            <h3>Measure the surface</h3>
+            <p>
+              Enter length and width in feet. Split irregular driveways into sections or use average
+              width for a taper.
+            </p>
+            <span className="process-equation">Length × average width = ft²</span>
+          </div>
+          <div className="process-card">
+            <span className="process-number">02 / Volume</span>
+            <h3>Enter the layer depth</h3>
+            <p>
+              Add thickness in inches to calculate volume. Keep base and surface layers separate
+              when they use different materials.
+            </p>
+            <span className="process-equation">ft² × depth (in) ÷ 12 ÷ 27 = yd³</span>
+          </div>
+          <div className="process-card">
+            <span className="process-number">03 / Order</span>
+            <h3>Use supplier specifications</h3>
+            <p>
+              Enter the material density, bag yield or sealer-label coverage. Review allowances and
+              purchase rounding in the selected tool.
+            </p>
+            <span className="process-equation">Volume × specified density = weight</span>
+          </div>
+        </div>
+        <p className="steps-method-link">
+          <Link href="/methodology/">See formulas, unit conversions and source methodology →</Link>
+        </p>
+      </section>
       <section className="home-section library-section" id="library">
         <div className="section-title">
-          <span className="eyebrow">More ways to work it out</span>
-          <h2>
-            The full
-            <br />
-            <mark>tool library.</mark>
-          </h2>
-          <p>Quantity calculators, cost tools, and material references in one place.</p>
+          <span className="eyebrow">Specialized calculations and references</span>
+          <h2>More calculators and material references</h2>
+          <p>
+            Calculate specialized material quantities, estimate installed costs, and check material
+            weights.
+          </p>
         </div>
         <div className="library-grid">
           {[
-            { label: 'Quantity calculators', filter: (t: string) => t === 'Quantity tool' },
-            { label: 'Cost estimators', filter: (t: string) => /estimator|Compare/.test(t) },
+            {
+              label: 'More quantity calculators',
+              filter: (t: string) => t === 'Quantity tool' || t === 'Converter',
+            },
+            { label: 'Cost estimators', filter: (t: string) => /estimator/.test(t) },
             {
               label: 'Material references',
-              filter: (t: string) => /Reference|Converter|Spec/.test(t),
+              filter: (t: string) => /Reference|Spec/.test(t),
             },
           ].map((g) => (
             <div className="library-column" key={g.label}>
               <h3>{g.label}</h3>
               {pages
-                .filter((p) => g.filter(p.type) && p.seq !== 1)
+                .filter(
+                  (p) => g.filter(p.type) && p.seq !== 1 && !featured.some((f) => f.seq === p.seq),
+                )
                 .map((p) => (
                   <Link href={p.url} key={p.url}>
                     <span>{p.h1}</span>
@@ -367,7 +271,7 @@ export default function Home() {
       </section>
       <section className="faq-section section-wrap" id="faqs">
         <span className="eyebrow">A few things to know</span>
-        <h2>FAQs.</h2>
+        <h2>Frequently asked questions</h2>
         <div className="faq-list">
           {faqs.map((faq) => (
             <details key={faq.question}>
@@ -387,18 +291,6 @@ export default function Home() {
             Read the method <span aria-hidden="true">↗</span>
           </Link>
         </div>
-      </section>
-      <section className="home-section final-cta">
-        <span className="eyebrow">Your next step</span>
-        <h2>
-          Start with
-          <br />
-          <mark>a measurement.</mark>
-        </h2>
-        <p>Choose a material calculator and work through your project.</p>
-        <Link href="#workbench" className="button primary">
-          Choose a calculator <span aria-hidden="true">↗</span>
-        </Link>
       </section>
       <JsonLd data={breadcrumbs(getPage('/'))} />
     </>

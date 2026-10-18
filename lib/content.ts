@@ -44,7 +44,7 @@ export const trustPages = [
   {
     url: '/author/farrukh-abdullah/',
     title: 'Farrukh Abdullah',
-    description: 'Farrukh Abdullah, researcher and writer.',
+    description: 'Farrukh Abdullah, SEO specialist, research blogger, researcher and writer.',
   },
   {
     url: '/privacy/',

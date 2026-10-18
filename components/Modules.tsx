@@ -12,9 +12,17 @@ export function FormulaBox({ children }: { children: ReactNode }) {
     </div>
   );
 }
-export function QASection({ question, children }: { question: string; children: ReactNode }) {
+export function QASection({
+  question,
+  children,
+  id,
+}: {
+  question: string;
+  children: ReactNode;
+  id?: string;
+}) {
   return (
-    <section className="qa">
+    <section className="qa" id={id}>
       <h2>{question}</h2>
       {children}
     </section>

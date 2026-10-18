@@ -182,9 +182,12 @@ export function evaluateTool(kind: ToolKind, state: ToolState, surface = 'asphal
   let notice: string | undefined;
   let assumptions: string[] = [];
   if (kind === 'cost' || kind === 'compare') {
-    const tierName = ['low', 'average', 'high'].includes(fields.tier) ? fields.tier : 'baseline';
-    const tier =
-      tierName === 'baseline' ? 1 : known(prices.tiers[tierName as keyof typeof prices.tiers]);
+    if (fields.tier && fields.tier !== 'baseline')
+      throw new Error(
+        'This regional price adjustment is unsupported. Reset the calculator to use the published benchmark or enter your quoted unit rates in a single-surface cost calculator.',
+      );
+    // Identity only: the selected publisher's range is used unchanged. This is not a regional index.
+    const tier = 1;
     const list = kind === 'compare' ? state.surfaces : [surface];
     assumptions =
       kind !== 'compare' && fields.customRates === 'true'
@@ -266,7 +269,7 @@ export function evaluateTool(kind: ToolKind, state: ToolState, surface = 'asphal
             unit: 'USD',
           },
           {
-            label: 'Area × unit price × tier',
+            label: 'Area × unit price',
             value: `${money(total.material.low)}–${money(total.material.high)}`,
           },
           {
@@ -274,11 +277,13 @@ export function evaluateTool(kind: ToolKind, state: ToolState, surface = 'asphal
             value: `${money(total.extras.low)}–${money(total.extras.high)}`,
           },
         );
-        formula = `${number(area)} ft² × $${p.unit!.low}–$${p.unit!.high}/ft² × ${tier} + ${money(total.extras.low)}–${money(total.extras.high)} extras`;
+        formula = `${number(area)} ft² × $${p.unit!.low}–$${p.unit!.high}/ft² + ${money(total.extras.low)}–${money(total.extras.high)} extras`;
       }
     }
-    if (!formula)
-      formula = 'Total = area × sourced unit price × sourced tier multiplier + selected extras';
+    if (!formula) formula = 'Total = area × unit price + selected extras. No regional adjustment.';
+    assumptions.push(
+      'No regional adjustment is applied to unit rates or separately selected extras.',
+    );
     if (fields.removal === 'true')
       assumptions.push(
         `Removal: ${fields.removalLow || 'published low'}–${fields.removalHigh || 'published high'} USD/ft², separately selected.`,
@@ -293,7 +298,9 @@ export function evaluateTool(kind: ToolKind, state: ToolState, surface = 'asphal
       );
     notice = missing?.length
       ? 'Required price data is unavailable for selected items.'
-      : 'Published benchmark estimate. Local quotes and site conditions determine the project price.';
+      : kind !== 'compare' && fields.customRates === 'true'
+        ? 'Estimate from your quoted unit rates. Add only work excluded from those rates.'
+        : 'Published benchmark estimate. Local quotes and site conditions determine the project price.';
     if (['asphalt', 'overlay', 'asphalt-replacement'].includes(surface) && fields.depth?.trim()) {
       const quantity = computeAsphalt({
         area,

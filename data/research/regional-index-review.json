@@ -1,0 +1,93 @@
+{
+  "reviewedOn": "2026-10-18",
+  "item": "regionalTierMultipliers",
+  "status": "NOT FOUND",
+  "low": null,
+  "high": null,
+  "unit": "dimensionless multiplier",
+  "implementedRegionalAdjustments": [],
+  "independentPublishers": 5,
+  "decision": "No automatic regional adjustment is supported for the current driveway benchmarks. Preserve quoted-rate entry on single-surface estimators and unchanged published benchmarks on the comparison tool.",
+  "candidates": [
+    {
+      "sourceId": "regional-rsmeans-method",
+      "low": null,
+      "high": null,
+      "unit": "dimensionless driveway location multiplier",
+      "location": "What costs are in the City Cost Index?; How is the City Cost Index produced?; Common mistakes",
+      "scope": "Standardized building construction model; material, labor and equipment; location relative to its national baseline.",
+      "status": "conditional-future-candidate",
+      "applicability": "Potential future source with matched paving items, geography, period, baseline and permitted data use. Its composite building model does not validate a multiplier for selected Angi/HomeGuide driveway ranges."
+    },
+    {
+      "sourceId": "regional-rsmeans-2026",
+      "low": null,
+      "high": null,
+      "unit": "dimensionless driveway location multiplier",
+      "location": "Access Quarterly Construction Cost Index Updates",
+      "scope": "Quarterly cost-index publication and data-access information; historical-index values are time measures.",
+      "status": "not-adopted",
+      "applicability": "No driveway-specific location factor or low/average/high mapping was adopted from this page. Historical-index levels are not regional factors."
+    },
+    {
+      "sourceId": "regional-enr-method",
+      "low": null,
+      "high": null,
+      "unit": "dimensionless driveway location multiplier",
+      "location": "Do the indexes measure cost differentials between cities?; Do ENR cost indexes capture all factors?",
+      "scope": "Construction and building input-cost trends; the publisher explicitly rejects city-index comparisons as cost differentials.",
+      "status": "rejected-spatial-use",
+      "applicability": "Reject as a spatial multiplier, including city-index divided by national-index ratios."
+    },
+    {
+      "sourceId": "regional-fhwa-method",
+      "low": null,
+      "high": null,
+      "unit": "dimensionless driveway location multiplier",
+      "location": "What is the NHCCI?; How can I compare NHCCI to my State index?",
+      "scope": "Price changes over time in state-purchased roadway construction; different indexes require comparable percentage changes.",
+      "status": "rejected-spatial-use",
+      "applicability": "Reject for residential driveway location factors: temporal index and public-highway procurement scope."
+    },
+    {
+      "sourceId": "regional-bls-method",
+      "low": null,
+      "high": null,
+      "unit": "dimensionless driveway location multiplier",
+      "location": "Introductory methodology above Tables 1 and 2",
+      "scope": "Price movements within regions for new nonresidential buildings and contractor groups, including concrete foundations and structures.",
+      "status": "rejected-scope-and-spatial-use",
+      "applicability": "Reject for residential driveway price-level multipliers. A common index base does not establish equal initial regional price levels."
+    },
+    {
+      "sourceId": "regional-bea-method",
+      "low": null,
+      "high": null,
+      "unit": "dimensionless driveway location multiplier",
+      "location": "Regional price parities paragraphs; CPI and housing-rent inputs",
+      "scope": "Consumer goods and services price levels, using household consumption prices and housing rents.",
+      "status": "rejected-scope",
+      "applicability": "Reject as a driveway installation multiplier: consumer purchasing-power scope is not driveway contractor installation scope."
+    }
+  ],
+  "acceptanceRequirements": [
+    "Named reusable data and edition/period",
+    "Explicit location coverage and assignment",
+    "Paving work scope matched to material and operation",
+    "Compatible documented source baseline and component weights",
+    "Separate treatment of quoted fees without double indexing",
+    "Justified tier boundaries or explicit location selection",
+    "Reproducible field-level evidence and tests"
+  ],
+  "pricingFields": [
+    "tiers.low",
+    "tiers.average",
+    "tiers.high"
+  ],
+  "affectedTools": [
+    "/asphalt-driveway-cost-calculator/",
+    "/concrete-driveway-cost-calculator/",
+    "/concrete-slab-cost-calculator/",
+    "/driveway-cost-calculator/"
+  ]
+}

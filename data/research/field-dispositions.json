@@ -1082,21 +1082,21 @@
     "unit": "multiplier",
     "status": "NOT FOUND",
     "value": null,
-    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+    "reason": "Reviewed 2026-10-18 against Gordian RSMeans, ENR, FHWA, BLS and BEA methodologies. No compatible driveway factor or defensible tier mapping for the selected published ranges. Keep null; see data/research/regional-index-review.json."
   },
   {
     "item": "tiers.average",
     "unit": "multiplier",
     "status": "NOT FOUND",
     "value": null,
-    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+    "reason": "Reviewed 2026-10-18 against Gordian RSMeans, ENR, FHWA, BLS and BEA methodologies. No compatible driveway factor or defensible tier mapping for the selected published ranges. Keep null; see data/research/regional-index-review.json."
   },
   {
     "item": "tiers.high",
     "unit": "multiplier",
     "status": "NOT FOUND",
     "value": null,
-    "reason": "No compatible universal value. Use a product/supplier quote or retain unavailable output; original observations are in the research register."
+    "reason": "Reviewed 2026-10-18 against Gordian RSMeans, ENR, FHWA, BLS and BEA methodologies. No compatible driveway factor or defensible tier mapping for the selected published ranges. Keep null; see data/research/regional-index-review.json."
   },
   {
     "item": "asphaltDensity",

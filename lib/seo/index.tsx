@@ -1,6 +1,28 @@
 import type { Metadata } from 'next';
 import { SITE } from '@/lib/config';
 import type { PageRecord } from '@/lib/content';
+import profile from '@/data/author-profile.json';
+export function authorPerson() {
+  return {
+    '@type': 'Person',
+    '@id': SITE.url + '/author/farrukh-abdullah/#person',
+    name: profile.name,
+    url: SITE.url + '/author/farrukh-abdullah/',
+    description: profile.description,
+    jobTitle: profile.role,
+    sameAs: [profile.website, profile.linkedin],
+    email: profile.email,
+  };
+}
+export function authorProfileSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    url: SITE.url + '/author/farrukh-abdullah/',
+    dateModified: profile.updatedOn,
+    mainEntity: authorPerson(),
+  };
+}
 export function metadataFor(
   page: Pick<PageRecord, 'title' | 'description' | 'url'>,
   published = false,
@@ -70,7 +92,14 @@ export function pageSchema(page: PageRecord) {
     '@type': 'Article',
     headline: page.h1,
     dateModified: page.updated,
-    author: { '@type': 'Person', name: page.author, url: SITE.url + '/author/farrukh-abdullah/' },
+    author: {
+      '@type': 'Person',
+      ...(page.author === profile.name
+        ? { '@id': SITE.url + '/author/farrukh-abdullah/#person' }
+        : {}),
+      name: page.author,
+      url: SITE.url + '/author/farrukh-abdullah/',
+    },
     publisher: { '@id': SITE.url + '/#organization' },
   };
 }
