@@ -46,6 +46,18 @@ for (const url of urls) {
   if (!html.includes('https://drivewaycalc.online' + url)) errors.push('Missing canonical ' + url);
   if (process.env.SITE_STAGE !== 'launch' && !html.includes('noindex'))
     errors.push('Draft missing noindex ' + url);
+  const footer = visibleHtml.match(
+    /<footer\b[^>]*class="site-footer"[^>]*>[\s\S]*?<\/footer>/,
+  )?.[0];
+  if (
+    !footer ||
+    ['Calculators', 'Driveway costs', 'About &amp; help', 'Site policies'].some(
+      (label) => !footer.includes(`aria-label="${label}"`),
+    )
+  )
+    errors.push('Missing standard footer directories or policy row ' + url);
+  if (footer && /class="footer-(?:intro|trust|scope|watermark)"/.test(footer))
+    errors.push('Footer retains superseded promotional sections ' + url);
   if (['/author/farrukh-abdullah/', '/contact/'].includes(url)) {
     if (!visibleHtml.includes('mailto:' + authorProfile.email))
       errors.push('Author/contact page is missing the supplied public email ' + url);

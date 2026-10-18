@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const groups = [
   {
-    title: 'Calculate materials',
+    title: 'Calculators',
     links: [
       ['Asphalt tons', '/asphalt-calculator/'],
       ['Concrete volume', '/concrete-calculator/'],
@@ -12,7 +12,7 @@ const groups = [
     ],
   },
   {
-    title: 'Plan your budget',
+    title: 'Driveway costs',
     links: [
       ['Compare driveway costs', '/driveway-cost-calculator/'],
       ['Asphalt cost guide', '/asphalt-driveway-cost/'],
@@ -22,7 +22,7 @@ const groups = [
     ],
   },
   {
-    title: 'Understand the estimate',
+    title: 'About & help',
     links: [
       ['Methodology & sources', '/methodology/'],
       ['Material weights', '/material-weights/'],
@@ -36,37 +36,29 @@ const groups = [
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <div className="footer-intro">
-        <div>
+      <div className="footer-main">
+        <div className="footer-brand-block">
           <Link href="/" className="footer-brand">
             Driveway Calculators
           </Link>
-          <p>
-            Measure your driveway. Check material quantities. Compare the scope behind the cost.
+          <p>Driveway cost estimates and material quantities in US units.</p>
+          <p className="footer-planning-note">
+            Planning estimates. Confirm site conditions and work scope locally.
           </p>
         </div>
-        <ul className="footer-trust" aria-label="Calculator access">
-          <li>Free calculators</li>
-          <li>No login required</li>
-          <li>US units &amp; USD</li>
-        </ul>
-      </div>
-      <div className="footer-main">
         {groups.map((group) => (
           <nav key={group.title} aria-label={group.title}>
-            <h2 className="eyebrow">{group.title}</h2>
-            {group.links.map(([label, href]) => (
-              <Link key={href} href={href}>
-                {label}
-              </Link>
-            ))}
+            <h2>{group.title}</h2>
+            <ul>
+              {group.links.map(([label, href]) => (
+                <li key={href}>
+                  <Link href={href}>{label}</Link>
+                </li>
+              ))}
+            </ul>
           </nav>
         ))}
       </div>
-      <p className="footer-scope">
-        Planning estimates depend on measurements, material properties and work scope. Confirm
-        product values with your supplier and compare itemized local quotes.
-      </p>
       <div className="footer-bottom">
         <span>© {new Date().getUTCFullYear()} Driveway Calculators</span>
         <nav aria-label="Site policies">

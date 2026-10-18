@@ -393,8 +393,59 @@ try {
     }
   }
   interactions.authorAndContact = 'passed: desktop and phone';
+  async function checkContrast(selector) {
+    const checks = await tab.$$eval(selector, (elements) => {
+      const rgb = (value) => (value.match(/[\d.]+/g) ?? []).map(Number);
+      const luminance = (color) =>
+        color
+          .slice(0, 3)
+          .map((v) => {
+            v /= 255;
+            return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
+          })
+          .reduce((sum, v, i) => sum + v * [0.2126, 0.7152, 0.0722][i], 0);
+      return elements
+        .filter((el) => el.getBoundingClientRect().width > 0)
+        .map((el) => {
+          let ancestor = el;
+          let background;
+          while (ancestor) {
+            const candidate = rgb(getComputedStyle(ancestor).backgroundColor);
+            if (candidate.length === 3 || candidate[3] === 1) {
+              background = candidate;
+              break;
+            }
+            ancestor = ancestor.parentElement;
+          }
+          const foreground = rgb(getComputedStyle(el).color);
+          const levels = [luminance(foreground), luminance(background ?? [255, 255, 255])].sort(
+            (a, b) => a - b,
+          );
+          return {
+            text: el.textContent.trim().slice(0, 70),
+            ratio: (levels[1] + 0.05) / (levels[0] + 0.05),
+          };
+        });
+    });
+    assert(checks.length > 0, 'Contrast targets exist: ' + selector);
+    assert(
+      checks.every((item) => item.ratio >= 4.5),
+      JSON.stringify(checks.filter((item) => item.ratio < 4.5)),
+    );
+    return checks;
+  }
   await tab.setViewport({ width: 1280, height: 600 });
   await tab.goto(origin, { waitUntil: 'networkidle0' });
+  await checkContrast(
+    '.site-footer .footer-brand, .site-footer h2, .site-footer p, .site-footer nav a, .footer-bottom > span',
+  );
+  assert.equal(
+    await tab.$eval(
+      '.footer-main',
+      (el) => getComputedStyle(el).gridTemplateColumns.split(' ').length,
+    ),
+    4,
+  );
   await tab.screenshot({ path: path.join(screenshots, 'home-full-1280.png'), fullPage: true });
   await tab.$eval('.site-footer', (el) => el.scrollIntoView({ behavior: 'instant', block: 'end' }));
   await (
@@ -410,6 +461,34 @@ try {
   await (
     await tab.$('.site-footer')
   ).screenshot({ path: path.join(screenshots, 'footer-360.png') });
+  await checkContrast(
+    '.site-footer .footer-brand, .site-footer h2, .site-footer p, .site-footer nav a',
+  );
+  await tab.setViewport({ width: 1280, height: 600 });
+  await tab.goto(origin + '/asphalt-driveway-cost-calculator/', { waitUntil: 'networkidle0' });
+  await tab.type('input[name="section-0-length"]', '20');
+  await tab.type('input[name="section-0-width"]', '20');
+  await tab.click('.form-actions button[type="submit"]');
+  await tab.waitForSelector('.primary-metric');
+  await tab.$$eval('.calculator-details details', (items) =>
+    items.forEach((el) => {
+      el.open = true;
+    }),
+  );
+  const detailsBackground = await tab.$eval(
+    '.calculator-details',
+    (el) => getComputedStyle(el).backgroundColor,
+  );
+  assert.equal(detailsBackground, 'rgb(240, 242, 233)');
+  await checkContrast(
+    '.primary-metric dd, .form-actions button[type="submit"], .calculator-details summary, .calculator-details .metrics dt, .calculator-details .metrics dd, .calculator-details code',
+  );
+  await tab.screenshot({
+    path: path.join(screenshots, 'palette-expanded-cost-1280.png'),
+    fullPage: true,
+  });
+  interactions.paletteAndFooter =
+    'passed: light details, four desktop columns, phone layout and text contrast';
   assert.equal(failures.length, 0, JSON.stringify(failures, null, 2));
   console.log(
     `Verified ${observations.length} page/viewport placements, cost submission and collapsed-required-field validation.`,
