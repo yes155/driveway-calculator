@@ -1563,6 +1563,17 @@ caption {
 .trust-container .prose {
   margin-top: 30px;
 }
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  margin: 20px 0 30px;
+}
+.profile-links a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 @media (max-width: 1180px) {
   .header-tool {
     display: none;

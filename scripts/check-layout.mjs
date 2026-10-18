@@ -364,6 +364,35 @@ try {
     'The DIY heading has a direct feasibility answer.',
   );
   interactions.articleContents = 'passed';
+  for (const viewport of [
+    { width: 1280, height: 600 },
+    { width: 360, height: 740 },
+  ]) {
+    await tab.setViewport(viewport);
+    for (const route of ['/author/farrukh-abdullah/', '/contact/']) {
+      await tab.goto(origin + route, { waitUntil: 'networkidle0' });
+      assert(await tab.$('.trust-container a[href="mailto:f.abdullah79@gmail.com"]'));
+      assert(
+        await tab.$eval('.trust-container', (el) => el.scrollWidth <= innerWidth),
+        'Author/contact content fits the viewport without horizontal scrolling.',
+      );
+      assert(
+        await tab.$eval(
+          '.trust-container',
+          (el) => !/CarSpecMath|Usman Salim/.test(el.textContent),
+        ),
+        'Project-specific author/reviewer relationships are not imported.',
+      );
+      await tab.screenshot({
+        path: path.join(
+          screenshots,
+          `${route.includes('author') ? 'author' : 'contact'}-${viewport.width}.png`,
+        ),
+        fullPage: true,
+      });
+    }
+  }
+  interactions.authorAndContact = 'passed: desktop and phone';
   await tab.setViewport({ width: 1280, height: 600 });
   await tab.goto(origin, { waitUntil: 'networkidle0' });
   await tab.screenshot({ path: path.join(screenshots, 'home-full-1280.png'), fullPage: true });

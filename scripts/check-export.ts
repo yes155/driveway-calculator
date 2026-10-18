@@ -8,6 +8,7 @@ import { computeGuideEstimate } from '../lib/calc/guide';
 import { priceBook, verifiedValue } from '../lib/data';
 import { money } from '../lib/format';
 import { buildNavigationGroups } from '../lib/navigation';
+import authorProfile from '../data/author-profile.json';
 const errors: string[] = [];
 const quickGuideSeqs = new Set([3, 5, 49]);
 const menuLinks = buildNavigationGroups(pages).flatMap((group) =>
@@ -45,6 +46,33 @@ for (const url of urls) {
   if (!html.includes('https://drivewaycalc.online' + url)) errors.push('Missing canonical ' + url);
   if (process.env.SITE_STAGE !== 'launch' && !html.includes('noindex'))
     errors.push('Draft missing noindex ' + url);
+  if (['/author/farrukh-abdullah/', '/contact/'].includes(url)) {
+    if (!visibleHtml.includes('mailto:' + authorProfile.email))
+      errors.push('Author/contact page is missing the supplied public email ' + url);
+    if (
+      /CarSpecMath|Usman Salim|mechanical-workbench-review|awaits a verified publisher/i.test(
+        visibleHtml,
+      )
+    )
+      errors.push(
+        'Author/contact page contains another project or a stale contact placeholder ' + url,
+      );
+  }
+  if (url === '/author/farrukh-abdullah/') {
+    const schemas = [
+      ...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g),
+    ].map((match) => JSON.parse(match[1]));
+    const profile = schemas.find((schema) => schema['@type'] === 'ProfilePage');
+    if (
+      profile?.mainEntity?.name !== authorProfile.name ||
+      profile?.mainEntity?.email !== authorProfile.email ||
+      !profile?.mainEntity?.sameAs?.includes(authorProfile.linkedin) ||
+      !profile?.mainEntity?.sameAs?.includes(authorProfile.website) ||
+      !visibleHtml.includes(authorProfile.linkedin) ||
+      !visibleHtml.includes(authorProfile.website)
+    )
+      errors.push('Author profile schema and supplied visible identity links disagree.');
+  }
   for (const href of html.matchAll(/href="(\/[^"?#]*)"/g)) {
     const dest = href[1];
     if (dest.startsWith('/_next/') || dest === '/icon.svg') continue;
